@@ -14,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Vyukovy system
+          Vítejte do výukového systemu SelfEd
         </a>
       </header>
     </div>
