@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/SelfEd.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/selfed.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/selfed.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
@@ -16,6 +19,7 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1VWeiMonPHYRZfZ6xJo0qsTDF22" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -62,8 +66,6 @@
       <updated>1577373404299</updated>
       <workItem from="1577373408686" duration="251000" />
       <workItem from="1577374224729" duration="201000" />
-      <workItem from="1577374627537" duration="51000" />
-      <workItem from="1577374697381" duration="84000" />
     </task>
     <servers />
   </component>
@@ -71,25 +73,33 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1659" height="269" key="GridCell.Tab.0.bottom" timestamp="1577374430765">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1898" height="277" key="GridCell.Tab.0.bottom" timestamp="1577375026643">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.bottom/0.23.1680.995@0.23.1680.995" timestamp="1577374430765" />
-    <state width="1659" height="269" key="GridCell.Tab.0.center" timestamp="1577374430763">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1898" height="277" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375026643" />
+    <state width="1898" height="277" key="GridCell.Tab.0.center" timestamp="1577375026643">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.center/0.23.1680.995@0.23.1680.995" timestamp="1577374430763" />
-    <state width="1659" height="269" key="GridCell.Tab.0.left" timestamp="1577374430760">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1898" height="277" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375026643" />
+    <state width="1898" height="277" key="GridCell.Tab.0.left" timestamp="1577375026642">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.left/0.23.1680.995@0.23.1680.995" timestamp="1577374430760" />
-    <state width="1659" height="269" key="GridCell.Tab.0.right" timestamp="1577374430765">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1898" height="277" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375026642" />
+    <state width="1898" height="277" key="GridCell.Tab.0.right" timestamp="1577375026643">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.right/0.23.1680.995@0.23.1680.995" timestamp="1577374430765" />
-    <state x="623" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577374722036">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1898" height="277" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375026643" />
+    <state x="672" y="235" key="MultipleFileMergeDialog" timestamp="1577375021717">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="444" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.995@0.23.1680.995" timestamp="1577374722036" />
+    <state x="672" y="235" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375021717" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577375011127">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375011127" />
   </component>
 </project>

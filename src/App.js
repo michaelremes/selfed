@@ -14,7 +14,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Vítejte do výukového systemu SelfEd
+          Vítejte do výukového systemu SelfEd made by michael Remes
         </a>
       </header>
     </div>
