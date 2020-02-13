@@ -1,22 +1,22 @@
 import React from 'react';
-import logo from './EduLogo.png';
 import './App.css';
-import Login from "./login/Login";
+import { BrowserRouter as Router, Route} from "react-router-dom"
+
+import Login from "./components/Login/Login";
+import Dashboard from "./components/Dashboard/Dashboard";
+import {AuthProvider} from "./components/Auth/Auth";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-          Vítejte do výukového systemu SelfEd
-      </header>
-
-        <Login />
-
-    </div>
+      <AuthProvider>
+        <Router>
+            <div>
+                <Route exact path = "/" component={Dashboard} />
+                <Route exact path = "/" component={Login} />
+            </div>
+        </Router>
+      </AuthProvider>
   );
-
-
 }
 
 export default App;

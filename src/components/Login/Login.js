@@ -1,14 +1,11 @@
 import React, { useState } from "react";
 import { Button, FormGroup, FormControl } from "react-bootstrap";
 import "./Login.css";
+import logo from "../../img/EduLogo.png";
 
 export default function Login() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-
-    // function validateForm() {
-    //     return username.length > 0 && password.length > 0;
-    // }
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -16,6 +13,10 @@ export default function Login() {
 
     return (
         <div className="Login">
+            <header className="App-header">
+                <img src={logo} className="App-logo" alt="logo" />
+                Vítejte do výukového systemu SelfEd
+            </header>
 
             <form onSubmit={handleSubmit}>
 
