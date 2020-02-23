@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/app/styles/Dashboard/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +98,7 @@
       <workItem from="1581681036881" duration="1006000" />
       <workItem from="1582460987254" duration="580000" />
       <workItem from="1582462492639" duration="319000" />
-      <workItem from="1582464694926" duration="15102000" />
+      <workItem from="1582464694926" duration="16055000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -156,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582480296642</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="login and dashboard prototype">
+      <created>1582484845062</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582484845062</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -170,17 +170,18 @@
     <MESSAGE value="firebase integretation" />
     <MESSAGE value="mern update" />
     <MESSAGE value="mern login form" />
-    <option name="LAST_COMMIT_MESSAGE" value="mern login form" />
+    <MESSAGE value="login and dashboard prototype" />
+    <option name="LAST_COMMIT_MESSAGE" value="login and dashboard prototype" />
   </component>
   <component name="WindowStateProjectService">
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1582467947053">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1582480294505">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1582484842967">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582480294505" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582484842967" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1581457638822">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -205,10 +206,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="235" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375021717" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1582480299603">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1582484849290">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582480299603" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582484849290" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582464732237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
