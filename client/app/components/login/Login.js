@@ -7,6 +7,9 @@ import {
   getFromStorage,
   setInStorage
 } from '../../utils/storage'
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
+import Dashboard from "../Dashboard/Dashboard";
 
 class Login extends Component {
   constructor(props) {
@@ -67,20 +70,20 @@ class Login extends Component {
   onSignIn() {
     // Grab state
     const {
-      signInEmail,
+      signInUsername,
       signInPassword,
     } = this.state;
     this.setState({
       isLoading: true,
     });
     // Post request to backend
-    fetch('/api/account/signin', {
+    fetch('/api/account/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        email: signInEmail,
+        username: signInUsername,
         password: signInPassword,
       }),
     }).then(res => res.json())
@@ -92,7 +95,7 @@ class Login extends Component {
             signInError: json.message,
             isLoading: false,
             signInPassword: '',
-            signInEmail: '',
+            signInUsername: '',
             token: json.token,
           });
         } else {
@@ -115,38 +118,53 @@ class Login extends Component {
     if (isLoading) {
       return (<div><p>Loading...</p></div>);
     }
-    return (
-      <div className="Login">
-        <header className="Login-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          Vítejte do výukového systemu SelfEd
-        </header>
-        <form>
+    if (!token) {
+      return (
+        <div>
+          <div>
+            {
+              (signInError) ? (
+                <p>{signInError}</p>
+              ) : (null)
+            }
+        <div className="Login">
+          <header className="Login-header">
+            <img src={logo} className="App-logo" alt="logo"/>
+            Vítejte do výukového systému SelfEd
+          </header>
+          <form>
 
-          <FormGroup controlId="username" bsSize="large">
+            <FormGroup controlId="username" bsSize="large">
 
-            <FormControl
-              type="username"
-              placeholder="Uživatelské jméno"
-              value={signInUsername}
-              onChange={this.onTextBoxChangeSignInUsername}
-            />
-          </FormGroup>
-          <FormGroup controlId="password" bsSize="large">
+              <FormControl
+                type="username"
+                placeholder="Uživatelské jméno"
+                value={signInUsername}
+                onChange={this.onTextBoxChangeSignInUsername}
+              />
+            </FormGroup>
+            <FormGroup controlId="password" bsSize="large">
 
-            <FormControl
-              type="password"
-              placeholder="Heslo"
-              value={signInPassword}
-              onChange={this.onTextBoxChangeSignInPassword}
-            />
-          </FormGroup>
-          <button onClick={this.onSignIn}>
-            Přihlásit se
-          </button>
-        </form>
-      </div>
-    );
+              <FormControl
+                type="password"
+                placeholder="Heslo"
+                value={signInPassword}
+                onChange={this.onTextBoxChangeSignInPassword}
+              />
+            </FormGroup>
+            <button onClick={this.onSignIn}>
+              Přihlásit se
+            </button>
+          </form>
+        </div>
+          </div>
+        </div>
+      );
+    }
+    //successful login
+
+      this.props.history.push('/dashboard');
+
   }
 }
 

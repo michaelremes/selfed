@@ -11,7 +11,7 @@ module.exports = (app) => {
             password
         } = body;
         let {
-            email
+            username
         } = body;
 
         if (!firstName) {
@@ -26,10 +26,10 @@ module.exports = (app) => {
                 message: 'Error: Last name cannot be blank.'
             });
         }
-        if (!email) {
+        if (!username) {
             return res.send({
                 success: false,
-                message: 'Error: Email cannot be blank.'
+                message: 'Error: Username cannot be blank.'
             });
         }
         if (!password) {
@@ -39,13 +39,11 @@ module.exports = (app) => {
             });
         }
 
-        email = email.toLowerCase();
-
         //steps:
-        //1. verifiy email
+        //1. verifiy username
         //2. save
         User.find({
-            email: email
+          username: username
         }, (err, previousUsers) => {
             if (err) {
                 return res.send({
@@ -62,7 +60,7 @@ module.exports = (app) => {
 
             const newUser = new User();
 
-            newUser.email = email;
+            newUser.username = username;
             newUser.firstName = firstName;
             newUser.lastName = lastName;
             newUser.password = newUser.generateHash(password);
@@ -75,7 +73,7 @@ module.exports = (app) => {
                 }
                 return res.send({
                     success: true,
-                    message: 'Signed in'
+                    message: 'User was created.'
                 });
             })
 
@@ -111,7 +109,6 @@ module.exports = (app) => {
           username: username
         }, (err, users) => {
             if (err) {
-                console.log('err 2:', err);
                 return res.send({
                     success: false,
                     message: 'Error: server error.'
@@ -126,9 +123,10 @@ module.exports = (app) => {
 
             const user = users[0];
             if (!user.validPassword(password)) {
+
                 return res.send({
                     success: false,
-                    message: 'Error: Invalid.'
+                    message: 'Error: Invalid password.'
                 });
             }
             //correct user
@@ -143,7 +141,7 @@ module.exports = (app) => {
                 }
                 return res.send({
                     success: true,
-                    message: 'Valid sign in',
+                    message: 'Valid login',
                     token: doc._id
                 });
 
@@ -177,7 +175,7 @@ module.exports = (app) => {
                 // DO ACTION
                 return res.send({
                     success: true,
-                    message: 'Good'
+                    message: 'Verified'
                 });
             }
         });
@@ -206,7 +204,7 @@ module.exports = (app) => {
           }
           return res.send({
             success: true,
-            message: 'Good'
+            message: 'Successful'
           });
         });
       });
