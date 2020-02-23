@@ -30,6 +30,11 @@ module.exports = {
 
   module: {
     rules: [
+      // css files
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
       // JS files
       {
         test: /\.jsx?$/,
@@ -37,33 +42,23 @@ module.exports = {
         loader: 'babel-loader'
       },
 
-      // SCSS files
+      // image
+
       {
-        test: /\.scss$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: [
-            {
-              loader: 'css-loader',
-              options: {
-                'sourceMap': true,
-                'importLoaders': 1
-              }
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: [
+          'file-loader',
+          {
+            loader: 'image-webpack-loader',
+            options: {
+              bypassOnDebug: true, // webpack@1.x
+              disable: true, // webpack@2.x and newer
             },
-            {
-              loader: 'postcss-loader',
-              options: {
-                plugins: () => [
-                  autoprefixer
-                ]
-              }
-            },
-            'sass-loader'
-          ]
-        })
-      }
-    ]
+          },
+        ],
+      }]
   },
+
 
   plugins: [
     new webpack.HotModuleReplacementPlugin(),

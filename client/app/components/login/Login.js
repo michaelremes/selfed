@@ -1,48 +1,153 @@
-import React, { useState } from "react";
-import { Button, FormGroup, FormControl } from "react-bootstrap";
-import "./Login.css";
+import React, {useState, Component} from "react";
+import {Button, FormGroup, FormControl} from "react-bootstrap";
+import "../../styles/Login/Login.css";
+import logo from './../../../public/assets/img/EduLogo.png';
 
-export default function Login() {
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
+import {
+  getFromStorage,
+  setInStorage
+} from '../../utils/storage'
 
-    // function validateForm() {
-    //     return username.length > 0 && password.length > 0;
-    // }
+class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isLoading: true,
+      token: '',
+      signUpError: '',
+      signInError: '',
+      signInUsername: '',
+      signInPassword: '',
+    };
 
-    function handleSubmit(event) {
-        event.preventDefault();
+    this.onTextBoxChangeSignInUsername = this.onTextBoxChangeSignInUsername.bind(this);
+    this.onTextBoxChangeSignInPassword = this.onTextBoxChangeSignInPassword.bind(this);
+
+    this.onSignIn = this.onSignIn.bind(this);
+  }
+
+  componentDidMount() {
+    const obj = getFromStorage('the_main_app');
+    if (obj && obj.token) {
+      const {token} = obj;
+      // Verify token
+      fetch('/api/account/verify?token=' + token)
+        .then(res => res.json())
+        .then(json => {
+          if (json.success) {
+            this.setState({
+              token,
+              isLoading: false
+            });
+          } else {
+            this.setState({
+              isLoading: false,
+            });
+          }
+        });
+    } else {
+      this.setState({
+        isLoading: false,
+      });
     }
+  }
 
+  onTextBoxChangeSignInUsername(event) {
+    this.setState({
+      signInUsername: event.target.value,
+    });
+  }
+
+  onTextBoxChangeSignInPassword(event) {
+    this.setState({
+      signInPassword: event.target.value,
+    });
+  }
+
+  onSignIn() {
+    // Grab state
+    const {
+      signInEmail,
+      signInPassword,
+    } = this.state;
+    this.setState({
+      isLoading: true,
+    });
+    // Post request to backend
+    fetch('/api/account/signin', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        email: signInEmail,
+        password: signInPassword,
+      }),
+    }).then(res => res.json())
+      .then(json => {
+        console.log('json', json);
+        if (json.success) {
+          setInStorage('the_main_app', {token: json.token});
+          this.setState({
+            signInError: json.message,
+            isLoading: false,
+            signInPassword: '',
+            signInEmail: '',
+            token: json.token,
+          });
+        } else {
+          this.setState({
+            signInError: json.message,
+            isLoading: false,
+          });
+        }
+      });
+  }
+
+  render() {
+    const {
+      isLoading,
+      token,
+      signInError,
+      signInUsername,
+      signInPassword,
+    } = this.state;
+    if (isLoading) {
+      return (<div><p>Loading...</p></div>);
+    }
     return (
-        <div className="Login">
+      <div className="Login">
+        <header className="Login-header">
+          <img src={logo} className="App-logo" alt="logo"/>
+          Vítejte do výukového systemu SelfEd
+        </header>
+        <form>
 
-            <form onSubmit={handleSubmit}>
+          <FormGroup controlId="username" bsSize="large">
 
+            <FormControl
+              type="username"
+              placeholder="Uživatelské jméno"
+              value={signInUsername}
+              onChange={this.onTextBoxChangeSignInUsername}
+            />
+          </FormGroup>
+          <FormGroup controlId="password" bsSize="large">
 
-                <FormGroup controlId="username" bsSize="large">
-
-                    <FormControl
-                        autoFocus
-                        type="username"
-                        placeholder="Uživatelské jméno"
-                        value={username}
-                        onChange={e => setUsername(e.target.value)}
-                    />
-                </FormGroup>
-                <FormGroup controlId="password" bsSize="large">
-
-                    <FormControl
-                        value={password}
-                        placeholder="Heslo"
-                        onChange={e => setPassword(e.target.value)}
-                        type="password"
-                    />
-                </FormGroup>
-                <Button block bsSize="large" type="submit">
-                    Přihlásit se
-                </Button>
-            </form>
-        </div>
+            <FormControl
+              type="password"
+              placeholder="Heslo"
+              value={signInPassword}
+              onChange={this.onTextBoxChangeSignInPassword}
+            />
+          </FormGroup>
+          <button onClick={this.onSignIn}>
+            Přihlásit se
+          </button>
+        </form>
+      </div>
     );
+  }
 }
+
+export default Login;

@@ -83,19 +83,19 @@ module.exports = (app) => {
     });
 
 
-    app.post('/api/account/signin', (req, res, next) => {
+    app.post('/api/account/login', (req, res, next) => {
         const { body } = req;
         const {
             password
         } = body;
         let {
-            email
+            username
         } = body;
 
-        if (!email) {
+        if (!username) {
             return res.send({
                 success: false,
-                message: 'Error: Email cannot be blank.'
+                message: 'Error: Username cannot be blank.'
             });
         }
         if (!password) {
@@ -106,11 +106,9 @@ module.exports = (app) => {
         }
 
 
-        email = email.toLowerCase();
-        email = email.trim();
 
         User.find({
-            email: email
+          username: username
         }, (err, users) => {
             if (err) {
                 console.log('err 2:', err);
@@ -119,7 +117,7 @@ module.exports = (app) => {
                     message: 'Error: server error.'
                 });
             }
-            if (users.length != 1) {
+            if (users.length !== 1) {
                 return res.send({
                     success: false,
                     message: 'Error: Invalid.'
@@ -170,7 +168,7 @@ module.exports = (app) => {
                     message: 'Error: Server error'
                 });
             }
-            if (sessions.length != 1) {
+            if (sessions.length !== 1) {
                 return res.send({
                     success: false,
                     message: 'Error: Invalid'

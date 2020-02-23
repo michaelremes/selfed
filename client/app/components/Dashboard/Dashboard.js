@@ -6,7 +6,7 @@ import {
   setInStorage
 } from '../../utils/storage'
 
-class Home extends Component {
+class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -37,6 +37,7 @@ class Home extends Component {
   }
 
   componentDidMount() {
+
     const obj = getFromStorage('the_main_app');
     if (obj && obj.token) {
       const { token } = obj;
@@ -218,11 +219,6 @@ class Home extends Component {
       signInError,
       signInEmail,
       signInPassword,
-      signUpFirstName,
-      signUpLastName,
-      signUpEmail,
-      signUpPassword,
-      signUpError,
     } = this.state;
     if (isLoading) {
       return (<div><p>Loading...</p></div>);
@@ -234,7 +230,7 @@ class Home extends Component {
             {
               (signInError) ? (
                 <p>{signInError}</p>
-              ) : (null)
+              ) : null
             }
             <p>Sign In</p>
             <input
@@ -253,42 +249,8 @@ class Home extends Component {
             <br />
             <button onClick={this.onSignIn}>Sign In</button>
           </div>
-          <br />
-          <br />
-          <div>
-            {
-              (signUpError) ? (
-                <p>{signUpError}</p>
-              ) : (null)
-            }
-            <p>Sign Up</p>
-            <input
-              type="text"
-              placeholder="First Name"
-              value={signUpFirstName}
-              onChange={this.onTextboxChangeSignUpFirstName}
-            /><br />
-            <input
-              type="text"
-              placeholder="Last Name"
-              value={signUpLastName}
-              onChange={this.onTextboxChangeSignUpLastName}
-            /><br />
-            <input
-              type="email"
-              placeholder="Email"
-              value={signUpEmail}
-              onChange={this.onTextboxChangeSignUpEmail}
-            /><br />
-            <input
-              type="password"
-              placeholder="Password"
-              value={signUpPassword}
-              onChange={this.onTextboxChangeSignUpPassword}
-            /><br />
-            <button onClick={this.onSignUp}>Sign Up</button>
-          </div>
         </div>
+
       );
     }
     return (
