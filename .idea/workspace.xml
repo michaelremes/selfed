@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/app/components/SignUp/SignUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/app/components/App/App.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/app/components/Homework/Homework.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/app/components/Materials/Materials.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/app/components/Tests/Tests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/app/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/User.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/User.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/SignUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/styles/Dashboard/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/styles/Dashboard/Dashboard.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/app/components" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/app/components/App" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -53,16 +56,19 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\App" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Exercise" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Materials" />
+      <recent name="$PROJECT_DIR$/client/app/components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\Login" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public\assets\img" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\src\img" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\src\components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/client/app/components" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
     </key>
   </component>
   <component name="RunManager">
@@ -189,26 +195,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582484842967" />
-    <state width="1659" height="269" key="GridCell.Tab.0.bottom" timestamp="1582558024296">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1582714816282">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.bottom/0.23.1680.995@0.23.1680.995" timestamp="1582558024296" />
-    <state width="1899" height="168" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1581457638822" />
-    <state width="1659" height="269" key="GridCell.Tab.0.center" timestamp="1582558024271">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1899" height="168" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582714816282" />
+    <state width="1899" height="168" key="GridCell.Tab.0.center" timestamp="1582714816281">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.center/0.23.1680.995@0.23.1680.995" timestamp="1582558024271" />
-    <state width="1899" height="168" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1581457638822" />
-    <state width="1659" height="269" key="GridCell.Tab.0.left" timestamp="1582558024270">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1899" height="168" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582714816281" />
+    <state width="1899" height="168" key="GridCell.Tab.0.left" timestamp="1582714816281">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.left/0.23.1680.995@0.23.1680.995" timestamp="1582558024270" />
-    <state width="1899" height="168" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1581457638821" />
-    <state width="1659" height="269" key="GridCell.Tab.0.right" timestamp="1582558024272">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1899" height="168" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582714816281" />
+    <state width="1899" height="168" key="GridCell.Tab.0.right" timestamp="1582714816281">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.right/0.23.1680.995@0.23.1680.995" timestamp="1582558024272" />
-    <state width="1899" height="168" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1581457638822" />
+    <state width="1899" height="168" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582714816281" />
     <state x="672" y="235" key="MultipleFileMergeDialog" timestamp="1577375021717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

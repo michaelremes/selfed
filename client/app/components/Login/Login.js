@@ -17,7 +17,6 @@ class Login extends Component {
     this.state = {
       isLoading: true,
       token: '',
-      signUpError: '',
       signInError: '',
       signInUsername: '',
       signInPassword: '',
@@ -125,7 +124,7 @@ class Login extends Component {
             {
               (signInError) ? (
                 <p>{signInError}</p>
-              ) : (null)
+              ) : null
             }
         <div className="Login">
           <header className="Login-header">
