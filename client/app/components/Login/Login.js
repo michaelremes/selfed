@@ -145,11 +145,11 @@ class Login extends Component {
             <FormGroup controlId="password" bsSize="large">
 
               <FormControl
-                type="password"
-                placeholder="Heslo"
-                value={signInPassword}
-                onChange={this.onTextBoxChangeSignInPassword}
-              />
+              type="password"
+              placeholder="Heslo"
+              value={signInPassword}
+              onChange={this.onTextBoxChangeSignInPassword}
+            />
             </FormGroup>
             <button onClick={this.onSignIn}>
               Přihlásit se

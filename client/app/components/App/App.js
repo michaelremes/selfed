@@ -5,7 +5,6 @@ import logo from "../../../public/assets/img/EduLogo.png";
 const App = ({ children }) => (
   <>
 
-
     <main>
 
       <div className="sidenav">
