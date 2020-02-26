@@ -8,6 +8,7 @@ module.exports = (app) => {
         const {
             firstName,
             lastName,
+            role,
             password
         } = body;
         let {
@@ -32,6 +33,12 @@ module.exports = (app) => {
                 message: 'Error: Username cannot be blank.'
             });
         }
+      if (!role) {
+        return res.send({
+          success: false,
+          message: 'Error: Role cannot be blank.'
+        });
+      }
         if (!password) {
             return res.send({
                 success: false,
@@ -63,6 +70,7 @@ module.exports = (app) => {
             newUser.username = username;
             newUser.firstName = firstName;
             newUser.lastName = lastName;
+            newUser.role = role;
             newUser.password = newUser.generateHash(password);
             newUser.save((err, user) => {
                 if (err) {
@@ -141,7 +149,7 @@ module.exports = (app) => {
                 }
                 return res.send({
                     success: true,
-                    message: 'Valid login',
+                    message: 'Valid SignUp',
                     token: doc._id
                 });
 

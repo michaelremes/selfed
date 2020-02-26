@@ -1,6 +1,5 @@
 import React, {useState, Component} from "react";
 import {Button, FormGroup, FormControl} from "react-bootstrap";
-import "../../styles/Login/Login.css";
 import logo from './../../../public/assets/img/EduLogo.png';
 
 import {
@@ -11,7 +10,7 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import Dashboard from "../Dashboard/Dashboard";
 
-class Login extends Component {
+class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -26,34 +25,9 @@ class Login extends Component {
     this.onTextBoxChangeSignInUsername = this.onTextBoxChangeSignInUsername.bind(this);
     this.onTextBoxChangeSignInPassword = this.onTextBoxChangeSignInPassword.bind(this);
 
-    this.onSignIn = this.onSignIn.bind(this);
+    this.onSignUp = this.onSignUp.bind(this);
   }
 
-  componentDidMount() {
-    const obj = getFromStorage('the_main_app');
-    if (obj && obj.token) {
-      const {token} = obj;
-      // Verify token
-      fetch('/api/account/verify?token=' + token)
-        .then(res => res.json())
-        .then(json => {
-          if (json.success) {
-            this.setState({
-              token,
-              isLoading: false
-            });
-          } else {
-            this.setState({
-              isLoading: false,
-            });
-          }
-        });
-    } else {
-      this.setState({
-        isLoading: false,
-      });
-    }
-  }
 
   onTextBoxChangeSignInUsername(event) {
     this.setState({
@@ -161,11 +135,11 @@ class Login extends Component {
         </div>
       );
     }
-    //successful login
+    //successful SignUp
 
       this.props.history.push('/dashboard');
 
   }
 }
 
-export default Login;
+export default SignUp;

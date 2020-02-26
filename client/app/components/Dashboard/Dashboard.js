@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import {Route} from "react-router-dom";
 import {getFromStorage} from '../../utils/storage';
 
 import "../../styles/Dashboard/Dashboard.css";
 import logo from "../../../public/assets/img/EduLogo.png";
+import Sidebar from "react-sidebar";
 
 class Dashboard extends Component {
   constructor(props) {
@@ -14,44 +15,16 @@ class Dashboard extends Component {
     };
 
     this.logout = this.logout.bind(this);
-    };
+  };
 
 
-  componentDidMount() {
-    const obj = getFromStorage('the_main_app');
-    if (obj && obj.token) {
-      const { token } = obj;
-      // Verify token
-      fetch('/api/account/verify?token=' + token)
-        .then(res => res.json())
-        .then(json => {
-          if (json.success) {
-            this.setState({
-              token,
-              isLoading: false
-            });
-          } else {
-            this.setState({
-              isLoading: false,
-            });
-          }
-        });
-    } else {
-      this.setState({
-        isLoading: false,
-      });
-    }
-  }
-
-
-
-  logout(){
+  logout() {
     this.setState({
       isLoading: true
     });
     const obj = getFromStorage('the_main_app');
     if (obj && obj.token) {
-      const { token } = obj;
+      const {token} = obj;
       // Verify token
       fetch('/api/account/logout?token=' + token)
         .then(res => res.json())
@@ -76,18 +49,19 @@ class Dashboard extends Component {
 
   render() {
     return (
-<div>
-        <header className="Dashboard-header">
-          <img src={logo} className="App-logo" alt="logo"/>
-          Hlavní stránka
-          <button class="button login" onClick={this.logout}>Odhlásit se</button>
-        </header>
+      <header className="Dashboard-header">
+        <img src={logo} className="App-logo" alt="logo"/>
+        Hlavní stránka
+        <button className="button login" onClick={this.logout}>Odhlásit se</button>
+      </header>
 
 
-      </div>
-    );
 
-  }
+
+
+  );
+
+}
 }
 
 export default Dashboard;
