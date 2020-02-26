@@ -197,25 +197,20 @@ class SignUp extends Component {
                   onChange={this.onTextBoxChangeSignUpLastName}
                 />
 
-                <FormControl
-                  type="text"
-                  placeholder="Role"
-                  value={signUpRole}
-                  onChange={this.onTextBoxChangeSignUpRole}
-                />
               </FormGroup>
 
               <h2>Role:</h2>
               <div className="form-check">
-                  <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                         value="option1" checked/>
+                <input type="radio"
+                        value={"teacher"}
+                       onChange={this.onTextBoxChangeSignUpRole} />
                   <label className="form-check-label" htmlFor="gridRadios1">
                     Učitel
                   </label>
                 </div>
                 <div className="form-check">
-                  <input className="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                         value="option2"/>
+                  <input type="radio"
+                         onChange={this.onTextBoxChangeSignUpRole} />
                   <label className="form-check-label" htmlFor="gridRadios2">
                     Student
                   </label>
