@@ -14,6 +14,7 @@ import Dashboard from './components/Dashboard/Dashboard';
 import SignUp from './components/SignUp/SignUp';
 import Materials from './components/Materials/Materials';
 import Tests from './components/Tests/Tests';
+import Questions from './components/Questions/Questions';
 import Homework from './components/Homework/Homework';
 
 render((
@@ -26,6 +27,7 @@ render((
         <Route exact path="/signup" component={SignUp}/>
         <Route exact path="/materials" component={Materials}/>
         <Route exact path="/tests" component={Tests}/>
+        <Route exact path="/questions" component={Questions}/>
         <Route exact path="/homework" component={Homework}/>
         <Route component={NotFound}/>
       </Switch>

@@ -160,7 +160,7 @@ class Login extends Component {
         </div>
       );
     }
-    //successful SignUp
+    //successful Questions
 
       this.props.history.push('/dashboard');
 

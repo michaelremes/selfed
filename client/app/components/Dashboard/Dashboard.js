@@ -6,25 +6,6 @@ import "../../styles/Dashboard/Dashboard.css";
 import logo from "../../../public/assets/img/EduLogo.png";
 import Sidebar from "react-sidebar";
 
-const routes = [
-  {
-    path: '/dashboard',
-    exact: true,
-    sidebar: () => <div>Home</div>,
-    main: () => <h2>Home</h2>
-  }
-  ,
-  {
-    path: '/tests',
-    sidebar: () => <div>Tests</div>,
-    main: () => <h2>Test</h2>
-  },
-  {
-    path: '/materials',
-    sidebar: () => <div>Materials</div>,
-    main: () => <h2>Materials</h2>
-  },
-]
 
 class Dashboard extends Component {
   constructor(props) {

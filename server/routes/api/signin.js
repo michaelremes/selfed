@@ -62,7 +62,7 @@ module.exports = (app) => {
                 }
                 return res.send({
                     success: true,
-                    message: 'Valid SignUp',
+                    message: 'Valid Questions',
                     token: doc._id
                 });
 
