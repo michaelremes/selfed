@@ -201,21 +201,16 @@ class SignUp extends Component {
 
               <h2>Role:</h2>
               <div className="form-check">
-                <input type="radio"
-                        value={"teacher"}
-                       onChange={this.onTextBoxChangeSignUpRole} />
-                  <label className="form-check-label" htmlFor="gridRadios1">
-                    Učitel
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input type="radio"
-                         onChange={this.onTextBoxChangeSignUpRole} />
-                  <label className="form-check-label" htmlFor="gridRadios2">
-                    Student
-                  </label>
-                </div>
-
+                <input type="radio" name="role" value={"teacher"} onChange={this.onTextBoxChangeSignUpRole}/>
+                <label className="form-check-label" htmlFor="gridRadios1">
+                  Učitel
+                </label>
+                <br/>
+                <input type="radio" name="role" value={"student"} onChange={this.onTextBoxChangeSignUpRole}/>
+                <label className="form-check-label" htmlFor="gridRadios1">
+                  Student
+                </label>
+              </div>
               <button onClick={this.onSignUp}>
                 Přidat nového uživatele
               </button>
@@ -224,6 +219,8 @@ class SignUp extends Component {
           </div>
         </div>
       </div>
+
+
     );
   }
 }
