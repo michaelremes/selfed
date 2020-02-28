@@ -15,7 +15,13 @@
   .CreateQuestion {
     alignment: center;
   }
-
+  .CreateQuestion form {
+    margin: 0 auto;
+    max-width: 320px;
+    background-color: lightgray;
+    padding: 70px;
+    text-align: center;
+  }
   body {
     background-color: #282c34;
   }
