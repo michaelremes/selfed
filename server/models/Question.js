@@ -12,10 +12,10 @@ const QuestionSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
-  answer: {
-    type: String,
-    default: ''
-  },
+  // answer: {
+  //   type: String,
+  //   default: ''
+  // },
 
 
 });

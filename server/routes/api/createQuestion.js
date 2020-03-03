@@ -30,12 +30,12 @@ module.exports = (app) => {
         message: 'Error: Type cannot be blank.'
       });
     }
-    if (!answer) {
-      return res.send({
-        success: false,
-        message: 'Error: Role cannot be blank.'
-      });
-    }
+    // if (!answer) {
+    //   return res.send({
+    //     success: false,
+    //     message: 'Error: Role cannot be blank.'
+    //   });
+    // }
 
     Question.find({
       title: title
@@ -57,7 +57,7 @@ module.exports = (app) => {
       newQuestion.title = title;
       newQuestion.task = task;
       newQuestion.type = type;
-      newQuestion.answer = answer;
+      // newQuestion.answer = answer;
 
       newQuestion.save((err, question) => {
         if (err) {

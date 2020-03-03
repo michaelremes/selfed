@@ -10,17 +10,74 @@ class Questions extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      questionType: 'text'
+      createQuestionError: '',
+      title: '',
+      task: '',
+      type: 'text',
+
     };
 
-    this.onSelectCorrectAnswer = this.onSelectCorrectAnswer.bind(this);
+    this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
+    this.onTextBoxChangeTask = this.onTextBoxChangeTask.bind(this);
 
+    this.onSelectQuestionType = this.onSelectQuestionType.bind(this);
+    this.onCreateQuestion = this.onCreateQuestion.bind(this);
   }
 
-  onSelectCorrectAnswer(event) {
+  onTextBoxChangeTitle(event) {
     this.setState({
-      questionType: event.target.value,
+      title: event.target.value,
     });
+  }
+
+  onTextBoxChangeTask(event) {
+    this.setState({
+      task: event.target.value,
+    });
+  }
+
+
+  onSelectQuestionType(event) {
+    this.setState({
+      type: event.target.value,
+    });
+  }
+
+  onCreateQuestion() {
+    //grab state
+    const {
+      title,
+      task,
+      type,
+    } = this.state;
+
+    // Post request to backend
+    fetch('/api/add/question', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: title,
+        task: task,
+        type: type,
+      }),
+    }).then(res => res.json())
+      .then(json => {
+
+        if (json.success) {
+          this.setState({
+            createQuestionError: json.message,
+            title: '',
+            task: '',
+            type: '',
+          });
+        } else {
+          this.setState({
+            createQuestionError: json.message,
+          });
+        }
+      });
   }
 
   renderCorrectAnswer(param) {
@@ -97,6 +154,12 @@ class Questions extends Component {
   }
 
   render() {
+    const {
+      title,
+      task,
+      type,
+      createQuestionError
+    } = this.state;
     return (
       <div>
         <header className="Questions-header">
@@ -108,16 +171,20 @@ class Questions extends Component {
             <FormGroup controlId="task" bsSize="large">
               <FormControl
                 type="text"
+                value={title}
+                onChange={this.onTextBoxChangeTitle}
               />
             </FormGroup>
             <h2>Zadání</h2>
             <FormGroup controlId="task" bsSize="large">
               <FormControl
                 type="text"
+                value={task}
+                onChange={this.onTextBoxChangeTask}
               />
             </FormGroup>
             <h2>Typ odpovědi</h2>
-            <select id="selectAnswer" onChange={this.onSelectCorrectAnswer}>
+            <select id="selectAnswer" value={type} onChange={this.onSelectQuestionType}>
               <option value="text">Otevřená odpověd</option>
               <option value="checkbox">Více odpovědí</option>
               <option value="radio">Jedná správná odpověď</option>
@@ -125,11 +192,13 @@ class Questions extends Component {
 
             <h2>Správná odpověď</h2>
 
-            {/*{this.state.questionType}*/}
             <div>
-              {this.renderCorrectAnswer(this.state.questionType)}
+              {this.renderCorrectAnswer(this.state.type)}
             </div>
 
+            <button onClick={this.onCreateQuestion}>
+              Vytvořit otázku
+            </button>
 
           </form>
         </div>
