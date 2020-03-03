@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/models/Test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/api/createTest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/app/components/SideBar/SideBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Questions/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/Questions/Questions.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/styles/Questions/Questions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

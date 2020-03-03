@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
 
 import {
   BrowserRouter as Router,
@@ -16,19 +16,31 @@ import Materials from './components/Materials/Materials';
 import Tests from './components/Tests/Tests';
 import Questions from './components/Questions/Questions';
 import Homework from './components/Homework/Homework';
+import logo from "../public/assets/img/EduLogo.png";
+import SideBar from './components/SideBar/SideBar';
+
+const sitesAfterLogin = [
+  '/dashboard',
+  '/signup',
+  '/materials',
+  '/tests',
+  '/questions',
+  '/homework'
+];
+
 
 render((
-
   <Router>
     <App>
+      <Route path={sitesAfterLogin} component={SideBar} />
       <Switch>
         <Route exact path="/" component={Login}/>
-        <Route exact path="/dashboard" component={Dashboard}/>
-        <Route exact path="/signup" component={SignUp}/>
-        <Route exact path="/materials" component={Materials}/>
-        <Route exact path="/tests" component={Tests}/>
-        <Route exact path="/questions" component={Questions}/>
-        <Route exact path="/homework" component={Homework}/>
+        <Route path="/dashboard" component={Dashboard}/>
+        <Route path="/signup" component={SignUp}/>
+        <Route path="/materials" component={Materials}/>
+        <Route path="/tests" component={Tests}/>
+        <Route path="/questions" component={Questions}/>
+        <Route path="/homework" component={Homework}/>
         <Route component={NotFound}/>
       </Switch>
     </App>
