@@ -62,7 +62,7 @@ module.exports = (app) => {
                 }
                 return res.send({
                     success: true,
-                    message: 'Valid Questions',
+                    message: 'Valid CreateQuestion',
                     token: doc._id
                 });
 

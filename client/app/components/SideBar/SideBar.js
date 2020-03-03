@@ -7,7 +7,8 @@ const SideBar = () => (
     <a href='/dashboard'>Domů</a>
     <a href="/materials">Materiály</a>
     <a href="/tests">Testy</a>
-    <a href="/questions">Vytvořit otázku</a>
+    <a href="/add/question">Vytvořit otázku</a>
+    <a href="/questions">Všechny otázky</a>
     <a href="/homework">Úkoly</a>
     <a href="/signup">Přidat uživatele</a>
   </div>

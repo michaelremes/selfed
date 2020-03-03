@@ -15,6 +15,7 @@ import SignUp from './components/SignUp/SignUp';
 import Materials from './components/Materials/Materials';
 import Tests from './components/Tests/Tests';
 import Questions from './components/Questions/Questions';
+import CreateQuestion from './components/CreateQuestion/CreateQuestion';
 import Homework from './components/Homework/Homework';
 import logo from "../public/assets/img/EduLogo.png";
 import SideBar from './components/SideBar/SideBar';
@@ -24,7 +25,7 @@ const sitesAfterLogin = [
   '/signup',
   '/materials',
   '/tests',
-  '/questions',
+  '/add/question',
   '/homework'
 ];
 
@@ -39,7 +40,7 @@ render((
         <Route path="/signup" component={SignUp}/>
         <Route path="/materials" component={Materials}/>
         <Route path="/tests" component={Tests}/>
-        <Route path="/questions" component={Questions}/>
+        <Route path="/add/question" component={CreateQuestion}/>
         <Route path="/homework" component={Homework}/>
         <Route component={NotFound}/>
       </Switch>

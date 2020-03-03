@@ -48,7 +48,7 @@ module.exports = (app) => {
       } else if (previousQuestions.length > 0) {
         return res.send({
           success: false,
-          message: 'Error: Question already exists.'
+          message: 'Error: CreateQuestion already exists.'
         });
       }
 
