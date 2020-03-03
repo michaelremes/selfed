@@ -1,7 +1,9 @@
 import React, {useState, Component} from "react";
 import {Button, FormGroup, FormControl} from "react-bootstrap";
 import "../../styles/Questions/Questions.css";
-
+import Checkbox from '@material-ui/core/Checkbox';
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Radio from "@material-ui/core/Radio";
 
 class Questions extends Component {
 
@@ -12,6 +14,7 @@ class Questions extends Component {
     };
 
     this.onSelectCorrectAnswer = this.onSelectCorrectAnswer.bind(this);
+
   }
 
   onSelectCorrectAnswer(event) {
@@ -19,22 +22,75 @@ class Questions extends Component {
       questionType: event.target.value,
     });
   }
+
   renderCorrectAnswer(param) {
-    switch(param) {
+    switch (param) {
       case 'text':
         return <FormControl
           type="text"
         />;
       case 'checkbox':
-        return <input
-          name="isGoing"
-          type="checkbox"
-        />;
+        return (
+          <FormGroup>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  // checked={state.checkedB}
+                  // onChange={handleChange('checkedB')}
+                  value="checkedB"
+                  color="primary"
+                />
+              }
+              label="First"
+            /><br/>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  value="checkedB"
+                  color="primary"
+                />
+              }
+              label="Second"
+            /><br/>
+            <FormControlLabel
+              control={
+                <Checkbox
+                  value="checkedB"
+                  color="primary"
+                />
+              }
+              label="Third"
+            />
+          </FormGroup>
+
+        );
+
       case 'radio':
-        return <input
-          name="isGoing2"
-          type="radio"
-        />;
+        return (
+          <div>
+            <Radio
+              // checked={selectedValue === 'a'}
+              // onChange={handleChange}
+              value="a"
+              name="radio-button-demo"
+              inputProps={{'aria-label': 'A'}}
+            /><br/>
+            <Radio
+              // checked={selectedValue === 'b'}
+              // onChange={handleChange}
+              value="b"
+              name="radio-button-demo"
+              inputProps={{'aria-label': 'B'}}
+            /><br/>
+            <Radio
+              // checked={selectedValue === 'a'}
+              // onChange={handleChange}
+              value="a"
+              name="radio-button-demo"
+              inputProps={{'aria-label': 'A'}}
+            />
+          </div>
+        );
       default:
         return null;
     }
@@ -70,9 +126,9 @@ class Questions extends Component {
             <h2>Správná odpověď</h2>
 
             {/*{this.state.questionType}*/}
-        <div>
-        {this.renderCorrectAnswer(this.state.questionType)}
-        </div>
+            <div>
+              {this.renderCorrectAnswer(this.state.questionType)}
+            </div>
 
 
           </form>
