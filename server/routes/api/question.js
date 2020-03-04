@@ -74,6 +74,16 @@ module.exports = (app) => {
     })
   });
 
+  app.get('/api/questions', (req, res)  => {
+    Question.find(function(err, questions) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json(questions);
+      }
+    });
+  });
+
 }
 
 

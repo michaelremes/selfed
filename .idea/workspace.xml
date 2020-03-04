@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/app/components/CreateQuestion/CreateQuestion.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/components/Users/Users.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/app/styles/CreateQuestion/CreateQuestion.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/Questions/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/Questions/Questions.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/styles/Questions/Questions.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/createQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/createQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/createQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +106,7 @@
       <workItem from="1582464694926" duration="16055000" />
       <workItem from="1582793132848" duration="8882000" />
       <workItem from="1582908051287" duration="7417000" />
+      <workItem from="1583346987861" duration="1615000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -237,10 +230,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1583268966420">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1583271493738">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583268966420" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583271493738" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1583257660017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -265,11 +258,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="235" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375021717" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1583268971182">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1583271497929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583268971182" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583271497929" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582464732237">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -296,7 +289,6 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/client/app/index.js</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
