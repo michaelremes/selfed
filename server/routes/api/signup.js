@@ -99,7 +99,6 @@ module.exports = (app) => {
       isDeleted: false
     }, (err, sessions) => {
       if (err) {
-        console.log(err);
         return res.send({
           success: false,
           message: 'Error: Server error'

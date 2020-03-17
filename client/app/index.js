@@ -33,7 +33,7 @@ const sitesAfterLogin = [
 render((
   <Router>
     <App>
-      <Route path={sitesAfterLogin} component={SideBar} />
+      {/*<Route path={sitesAfterLogin} component={SideBar} />*/}
       <Switch>
         <Route exact path="/" component={Login}/>
         <Route path="/dashboard" component={Dashboard}/>

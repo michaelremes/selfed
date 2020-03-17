@@ -2,6 +2,7 @@ import React, {useState, Component} from "react";
 import {Button, FormGroup, FormControl} from "react-bootstrap";
 import "../../styles/SignUp/SignUp.css";
 import logo from './../../../public/assets/img/EduLogo.png';
+import {addNotification} from '../App/Notification';
 
 import {
   getFromStorage,
@@ -118,8 +119,8 @@ class SignUp extends Component {
       }),
     }).then(res => res.json())
       .then(json => {
-        console.log('json', json);
         if (json.success) {
+          addNotification("Úspěch", "Uživatel přidán.", "success");
           this.setState({
             signUpError: json.message,
             isLoading: false,
@@ -130,6 +131,7 @@ class SignUp extends Component {
             signUpRole: ''
           });
         } else {
+          addNotification("Error", "Uživatel ji6 existuje.", "danger");
           this.setState({
             signUpError: json.message,
             isLoading: false,

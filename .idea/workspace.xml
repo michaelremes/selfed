@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="API fix, + starting API for tests">
+      <change afterPath="$PROJECT_DIR$/client/app/components/App/Notification.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/createTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/components/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/components/SignUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/app/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/api/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -47,6 +51,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -107,7 +112,10 @@
       <workItem from="1582464694926" duration="16055000" />
       <workItem from="1582793132848" duration="8882000" />
       <workItem from="1582908051287" duration="7417000" />
-      <workItem from="1583346987861" duration="1752000" />
+      <workItem from="1583346987861" duration="2417000" />
+      <workItem from="1584280894340" duration="593000" />
+      <workItem from="1584364042096" duration="643000" />
+      <workItem from="1584433793374" duration="5007000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -207,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583350137974</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="API fix, + starting API for tests">
+      <created>1583350309619</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1583350309619</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -228,7 +243,8 @@
     <MESSAGE value="API for creating new question" />
     <MESSAGE value="createQuestion - frontend connected to backend" />
     <MESSAGE value="APIs for listing questions and users" />
-    <option name="LAST_COMMIT_MESSAGE" value="APIs for listing questions and users" />
+    <MESSAGE value="API fix, + starting API for tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="API fix, + starting API for tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -239,10 +255,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1583350136019">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584454824034">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583350136019" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584454824034" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1583257660017">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -267,23 +283,27 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="672" y="235" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1577375021717" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1583350140351">
+    <state x="461" y="163" key="SettingsEditor" timestamp="1584454196510">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584454196510" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1583350310988">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583350140351" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582464732237">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583350310988" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584454827977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582464732237" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584454827977" />
     <state x="2589" y="0" width="769" height="1025" key="dock-window-1" timestamp="1582470436175">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="2589" y="0" width="769" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582470436175" />
-    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1582838333505">
+    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1584457291126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="118" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582838333505" />
+    <state x="656" y="118" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584457291126" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582751740006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
