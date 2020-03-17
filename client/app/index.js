@@ -15,9 +15,8 @@ import SignUp from './components/SignUp/SignUp';
 import Materials from './components/Materials/Materials';
 import Tests from './components/Tests/Tests';
 import Questions from './components/Questions/Questions';
-import CreateQuestion from './components/CreateQuestion/CreateQuestion';
+import CreateQuestion from './components/Questions/CreateQuestion';
 import Homework from './components/Homework/Homework';
-import logo from "../public/assets/img/EduLogo.png";
 import SideBar from './components/SideBar/SideBar';
 
 const sitesAfterLogin = [
@@ -26,6 +25,7 @@ const sitesAfterLogin = [
   '/materials',
   '/tests',
   '/add/question',
+  '/questions',
   '/homework'
 ];
 
@@ -33,7 +33,7 @@ const sitesAfterLogin = [
 render((
   <Router>
     <App>
-      {/*<Route path={sitesAfterLogin} component={SideBar} />*/}
+      <Route path={sitesAfterLogin} component={SideBar} />
       <Switch>
         <Route exact path="/" component={Login}/>
         <Route path="/dashboard" component={Dashboard}/>
@@ -41,6 +41,7 @@ render((
         <Route path="/materials" component={Materials}/>
         <Route path="/tests" component={Tests}/>
         <Route path="/add/question" component={CreateQuestion}/>
+        <Route path="questions" component={Questions}/>
         <Route path="/homework" component={Homework}/>
         <Route component={NotFound}/>
       </Switch>

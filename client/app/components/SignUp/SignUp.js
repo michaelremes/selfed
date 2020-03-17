@@ -1,7 +1,6 @@
 import React, {useState, Component} from "react";
 import {Button, FormGroup, FormControl} from "react-bootstrap";
 import "../../styles/SignUp/SignUp.css";
-import logo from './../../../public/assets/img/EduLogo.png';
 import {addNotification} from '../App/Notification';
 
 import {
@@ -131,9 +130,8 @@ class SignUp extends Component {
             signUpRole: ''
           });
         } else {
-          addNotification("Error", "Uživatel ji6 existuje.", "danger");
+          addNotification("Error", "Uživatel nemohl být přidán.", "danger");
           this.setState({
-            signUpError: json.message,
             isLoading: false,
           });
         }
@@ -165,7 +163,6 @@ class SignUp extends Component {
           }
           <div className="SignUp">
             <header className="Login-header">
-              <img src={logo} className="App-logo" alt="logo"/>
               Přidat nového uživatele
             </header>
             <form>
