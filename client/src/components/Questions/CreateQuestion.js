@@ -5,6 +5,8 @@ import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import {addNotification} from "../App/Notification";
+import AddIcon from '@material-ui/icons/Add';
+
 
 class CreateQuestion extends Component {
 
@@ -134,18 +136,15 @@ class CreateQuestion extends Component {
               value="a"
               name="radio-button-demo"
             /><br/>
-            <Radio
-              // checked={selectedValue === 'b'}
-              // onChange={handleChange}
-              value="b"
-              name="radio-button-demo"
 
-            /><br/>
-            <Radio
-              // onChange={handleChange}
-              value="a"
-              name="radio-button-demo"
-            />
+            <Button
+              variant="contained"
+              color="secondary"
+              startIcon={<AddIcon />}
+            >
+             Přidat odpověd
+            </Button>
+
           </div>
         );
     }
