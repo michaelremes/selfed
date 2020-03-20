@@ -1,6 +1,6 @@
 import React, {useState, Component} from "react";
 import {Button, FormGroup, FormControl} from "react-bootstrap";
-import "../../styles/Questions/Questions.css";
+import "../../styles/Questions/CreateQuestion.css";
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
@@ -11,7 +11,7 @@ import AddIcon from '@material-ui/icons/Add';
 class CreateQuestion extends Component {
 
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       createQuestionError: '',
       title: '',
@@ -68,7 +68,7 @@ class CreateQuestion extends Component {
     }).then(res => res.json())
       .then(json => {
         if (json.success) {
-          addNotification("Úspěch", "Uživatel přidán.", "success");
+        //  addNotification("Úspěch", "Uživatel přidán.", "success");
           this.setState({
             createQuestionError: json.message,
             title: '',
@@ -76,7 +76,7 @@ class CreateQuestion extends Component {
             type: '',
           });
         } else {
-          addNotification("Error", "Otázka nemohla být vytvořena.", "danger");
+       //   addNotification("Error", "Otázka nemohla být vytvořena.", "danger");
           this.setState({
             createQuestionError: json.message,
             isLoading: false
@@ -165,7 +165,7 @@ class CreateQuestion extends Component {
         <div className="CreateQuestion">
           <form>
             <h2>Název otázky</h2>
-            <FormGroup controlId="task" bsSize="large">
+            <FormGroup controlId="task" size="large">
               <FormControl
                 type="text"
                 value={title}

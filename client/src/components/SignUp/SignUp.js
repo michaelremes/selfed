@@ -166,7 +166,7 @@ class SignUp extends Component {
               Přidat nového uživatele
             </header>
             <form>
-              <FormGroup controlId="textInput" bsSize="large">
+              <FormGroup controlId="textInput" size="large">
                 <FormControl
                   type="username"
                   placeholder="Uživatelské jméno"

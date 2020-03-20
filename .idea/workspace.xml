@@ -3,9 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SignUp/SignUp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/Questions.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/Questions.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/CreateQuestion/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,21 +51,22 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\App" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\Login" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public\assets\img" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\App" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Exercise" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Materials" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\App" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\Login" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Questions.js">
@@ -119,7 +123,7 @@
       <workItem from="1584519193931" duration="305000" />
       <workItem from="1584618122630" duration="2293000" />
       <workItem from="1584643570559" duration="586000" />
-      <workItem from="1584693746573" duration="15297000" />
+      <workItem from="1584693746573" duration="18046000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -254,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584717846860</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="questions table css added">
+      <created>1584718514903</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1584718514903</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -280,7 +291,8 @@
     <MESSAGE value="notifications create question" />
     <MESSAGE value="compact api calls" />
     <MESSAGE value="react table prototype with questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="react table prototype with questions" />
+    <MESSAGE value="questions table css added" />
+    <option name="LAST_COMMIT_MESSAGE" value="questions table css added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -291,10 +303,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584717844932">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584718513185">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584717844932" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584718513185" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -371,11 +383,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584454196510" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1584717850918">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1584718516144">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584717850918" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584718516144" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584454827977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -392,9 +404,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582751740006" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1582467379046">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1584718936398">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467379046" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584718936398" />
   </component>
 </project>
