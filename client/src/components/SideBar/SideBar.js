@@ -11,6 +11,7 @@ const SideBar = () => (
     <a href="/questions">Všechny otázky</a>
     <a href="/homework">Úkoly</a>
     <a href="/signup">Přidat uživatele</a>
+    <a href="/users">Uživatelé</a>
   </div>
 
 );

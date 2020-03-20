@@ -1,0 +1,24 @@
+@media all and (min-width: 480px) {
+
+  .Users-header {
+    background-color: #5280d1;
+    min-height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: white;
+  }
+
+  .UsersList {
+    width: 70%;
+    display: flow;
+    margin: auto;
+
+  }
+  body {
+    background-color: #282c34;
+  }
+
+}

@@ -119,7 +119,7 @@ module.exports = (app) => {
     });
   });
 
-  app.get('/api/account/users', (req, res)  => {
+  app.get('/api/users', (req, res)  => {
     User.find(function(err, users) {
       if (err) {
         console.log(err);

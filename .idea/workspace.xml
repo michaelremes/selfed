@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/styles/Users/Users.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SignUp/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/Users.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/CreateQuestion/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/SignUp/SignUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Users/SignUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/app/styles" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/styles/Users" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,18 +57,18 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Users" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\App" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Exercise" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Materials" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\App" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\Login" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Questions.js">
@@ -123,7 +125,7 @@
       <workItem from="1584519193931" duration="305000" />
       <workItem from="1584618122630" duration="2293000" />
       <workItem from="1584643570559" duration="586000" />
-      <workItem from="1584693746573" duration="18046000" />
+      <workItem from="1584693746573" duration="20124000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -265,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584718514903</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="import css for createQuestion fix">
+      <created>1584721776753</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1584721776753</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -292,7 +301,8 @@
     <MESSAGE value="compact api calls" />
     <MESSAGE value="react table prototype with questions" />
     <MESSAGE value="questions table css added" />
-    <option name="LAST_COMMIT_MESSAGE" value="questions table css added" />
+    <MESSAGE value="import css for createQuestion fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="import css for createQuestion fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -303,10 +313,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584718513185">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584721774739">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584718513185" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584721774739" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

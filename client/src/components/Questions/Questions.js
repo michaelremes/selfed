@@ -1,4 +1,4 @@
-import React, {useState, Component} from "react";
+import React, {Component} from "react";
 
 import '../../styles/Questions/Questions.css';
 import MaterialTable from 'material-table';

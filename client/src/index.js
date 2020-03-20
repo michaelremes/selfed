@@ -11,7 +11,8 @@ import App from './components/App/App';
 import Login from './components/Login/Login';
 import NotFound from './components/App/NotFound';
 import Dashboard from './components/Dashboard/Dashboard';
-import SignUp from './components/SignUp/SignUp';
+import SignUp from './components/Users/SignUp';
+import Users from './components/Users/Users';
 import Materials from './components/Materials/Materials';
 import Tests from './components/Tests/Tests';
 import Questions from './components/Questions/Questions';
@@ -22,6 +23,7 @@ import SideBar from './components/SideBar/SideBar';
 const sitesAfterLogin = [
   '/dashboard',
   '/signup',
+  '/users',
   '/materials',
   '/tests',
   '/add/question',
@@ -38,6 +40,7 @@ render((
         <Route exact path="/" component={Login}/>
         <Route path="/dashboard" component={Dashboard}/>
         <Route path="/signup" component={SignUp}/>
+        <Route path="/users" component={Users}/>
         <Route path="/materials" component={Materials}/>
         <Route path="/tests" component={Tests}/>
         <Route path="/add/question" component={CreateQuestion}/>
