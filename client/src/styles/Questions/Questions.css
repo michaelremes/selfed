@@ -12,21 +12,13 @@
     color: white;
   }
 
-  .CreateQuestion {
-    alignment: center;
+  .QuestionList {
+    width: 70%;
+    display: flow;
+    margin: auto;
+
   }
-  .CreateQuestion form {
-    margin: 0 auto;
-    max-width: 320px;
-    background-color: lightgray;
-    padding: 70px;
-    text-align: center;
-  }
-  .CreateQuestion Button {
-    margin-top: 20px;
-    padding: 10px;
-    font-size: calc(8px + 2vmin);
-  }
+
   body {
     background-color: #282c34;
   }

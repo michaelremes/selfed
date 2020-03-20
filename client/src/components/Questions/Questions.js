@@ -73,6 +73,12 @@ class Questions extends Component {
     // } else {
 
     return (
+      <div>
+        <header className="Questions-header">
+          Vytvořené otázky
+        </header>
+      <div className="QuestionList" >
+
       <MaterialTable
         title="Editable Example"
         columns={columns}
@@ -115,6 +121,8 @@ class Questions extends Component {
             }),
         }}
       />
+      </div>
+      </div>
     );
 
 
