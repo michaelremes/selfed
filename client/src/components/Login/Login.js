@@ -1,5 +1,5 @@
-import React, {useState, Component} from "react";
-import {Button, FormGroup, FormControl} from "react-bootstrap";
+import React, {Component} from "react";
+import {FormGroup, FormControl} from "react-bootstrap";
 import "../../styles/Login/Login.css";
 import logo from './../../../public/assets/img/EduLogo.png';
 
@@ -7,9 +7,7 @@ import {
   getFromStorage,
   setInStorage
 } from '../../utils/storage'
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
-import Dashboard from "../Dashboard/Dashboard";
 
 class Login extends Component {
   constructor(props) {
@@ -160,9 +158,7 @@ class Login extends Component {
         </div>
       );
     }
-    //successful CreateQuestion
-
-      this.props.history.push('/dashboard');
+    this.props.history.push('/dashboard');
 
   }
 }

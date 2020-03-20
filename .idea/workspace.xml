@@ -2,33 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/api/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/App/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/App/NotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/App/NotFound.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/App/Notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/App/Notification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Homework/Homework.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Homework/Homework.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Materials/Materials.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/Materials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Questions/Questions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SignUp/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Tests/Tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/components/Users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/App/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/CreateQuestion/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/CreateQuestion/CreateQuestion.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/Dashboard/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/Login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/Materials/Materials.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Materials/Materials.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/Questions/Questions.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/Questions.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/styles/SignUp/SignUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/SignUp/SignUp.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/app/utils/storage.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/utils/storage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.common.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.common.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -90,12 +67,16 @@
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Materials" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.Questions.js">
     <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.js" working-dir="$PROJECT_DIR$/src">
+      <method v="2" />
+    </configuration>
+    <configuration name="Questions.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/client/src/components/Questions/Questions.js" working-dir="$PROJECT_DIR$/client/src/components/Questions">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Questions.js" />
         <item itemvalue="Node.js.App.js" />
       </list>
     </recent_temporary>
@@ -140,7 +121,7 @@
       <workItem from="1584519193931" duration="305000" />
       <workItem from="1584618122630" duration="2293000" />
       <workItem from="1584643570559" duration="586000" />
-      <workItem from="1584693746573" duration="6985000" />
+      <workItem from="1584693746573" duration="14617000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -261,7 +242,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584466117033</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="compact api calls">
+      <created>1584704019401</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1584704019401</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -285,7 +273,8 @@
     <MESSAGE value="API fix, + starting API for tests" />
     <MESSAGE value="notifications prototype" />
     <MESSAGE value="notifications create question" />
-    <option name="LAST_COMMIT_MESSAGE" value="notifications create question" />
+    <MESSAGE value="compact api calls" />
+    <option name="LAST_COMMIT_MESSAGE" value="compact api calls" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -296,30 +285,78 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584466115068">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584704016488">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584466115068" />
-    <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1583257660017">
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584704016488" />
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.bottom/0.23.1680.995@0.23.1680.995" timestamp="1582558024296" />
-    <state width="1899" height="168" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583257660017" />
-    <state width="1899" height="168" key="GridCell.Tab.0.center" timestamp="1583257660017">
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.center/0.23.1680.995@0.23.1680.995" timestamp="1582558024271" />
-    <state width="1899" height="168" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583257660017" />
-    <state width="1899" height="168" key="GridCell.Tab.0.left" timestamp="1583257660017">
+    <state width="1899" height="348" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.left/0.23.1680.995@0.23.1680.995" timestamp="1582558024270" />
-    <state width="1899" height="168" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583257660017" />
-    <state width="1899" height="168" key="GridCell.Tab.0.right" timestamp="1583257660017">
+    <state width="1899" height="348" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.right/0.23.1680.995@0.23.1680.995" timestamp="1582558024272" />
-    <state width="1899" height="168" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1583257660017" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.1.center" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.1.left" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.1.right" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.1.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.2.bottom" timestamp="1584712125688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.2.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
+    <state width="1899" height="348" key="GridCell.Tab.2.center" timestamp="1584712125688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.2.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
+    <state width="1899" height="348" key="GridCell.Tab.2.left" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.2.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
+    <state width="1899" height="348" key="GridCell.Tab.2.right" timestamp="1584712125688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.2.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
+    <state width="1899" height="348" key="GridCell.Tab.3.bottom" timestamp="1584712125688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.3.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
+    <state width="1899" height="348" key="GridCell.Tab.3.center" timestamp="1584712125688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.3.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
+    <state width="1899" height="348" key="GridCell.Tab.3.left" timestamp="1584712125688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.3.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
+    <state width="1899" height="348" key="GridCell.Tab.3.right" timestamp="1584712125688">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1899" height="348" key="GridCell.Tab.3.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
     <state x="672" y="235" key="MultipleFileMergeDialog" timestamp="1577375021717">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -328,11 +365,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584454196510" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1584466121673">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1584704022258">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584466121673" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584704022258" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584454827977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

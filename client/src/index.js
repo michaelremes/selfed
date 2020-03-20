@@ -33,7 +33,7 @@ const sitesAfterLogin = [
 render((
   <Router>
     <App>
-      <Route path={sitesAfterLogin} component={SideBar} />
+      {/*<Route path={sitesAfterLogin} component={SideBar} />*/}
       <Switch>
         <Route exact path="/" component={Login}/>
         <Route path="/dashboard" component={Dashboard}/>
@@ -41,7 +41,7 @@ render((
         <Route path="/materials" component={Materials}/>
         <Route path="/tests" component={Tests}/>
         <Route path="/add/question" component={CreateQuestion}/>
-        <Route path="questions" component={Questions}/>
+        <Route path="/questions" component={Questions}/>
         <Route path="/homework" component={Homework}/>
         <Route component={NotFound}/>
       </Switch>
