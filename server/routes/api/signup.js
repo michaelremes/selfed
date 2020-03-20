@@ -3,7 +3,7 @@ const UserSession = require('../../models/UserSession');
 
 module.exports = (app) => {
   //sign up
-  app.post('/api/account/signup', (req, res, next) => {
+  app.post('/api/account/signup', (req, res) => {
     const { body } = req;
     const {
       firstName,

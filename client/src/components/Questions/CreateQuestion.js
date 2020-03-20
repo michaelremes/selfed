@@ -4,8 +4,8 @@ import "../../styles/Questions/CreateQuestion.css";
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
-import {addNotification} from "../App/Notification";
 import AddIcon from '@material-ui/icons/Add';
+import {addNotification} from "../App/Notification";
 
 
 class CreateQuestion extends Component {
@@ -47,6 +47,7 @@ class CreateQuestion extends Component {
   }
 
   onCreateQuestion() {
+    addNotification("Úspěch", "Uživatel přidán.", "success");
     //grab state
     const {
       title,
@@ -54,6 +55,9 @@ class CreateQuestion extends Component {
       type,
     } = this.state;
 
+    this.setState({
+      isLoading: true,
+    });
     // Post request to backend
     fetch('/api/add/question', {
       method: 'POST',
@@ -68,7 +72,7 @@ class CreateQuestion extends Component {
     }).then(res => res.json())
       .then(json => {
         if (json.success) {
-        //  addNotification("Úspěch", "Uživatel přidán.", "success");
+          addNotification("Úspěch", "Uživatel přidán.", "success");
           this.setState({
             createQuestionError: json.message,
             title: '',
@@ -76,7 +80,7 @@ class CreateQuestion extends Component {
             type: '',
           });
         } else {
-       //   addNotification("Error", "Otázka nemohla být vytvořena.", "danger");
+          addNotification("Error", "Otázka nemohla být vytvořena.", "danger");
           this.setState({
             createQuestionError: json.message,
             isLoading: false

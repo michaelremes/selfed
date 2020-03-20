@@ -1,5 +1,5 @@
 import React, {useState, Component} from "react";
-import {Button, FormGroup, FormControl} from "react-bootstrap";
+import {FormGroup, FormControl} from "react-bootstrap";
 import "../../styles/Users/SignUp.css";
 import {addNotification} from '../App/Notification';
 

@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/styles/Users/Users.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SignUp/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/SignUp/SignUp.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Users/SignUp.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Users/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/SignUp.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/question.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/api/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +121,7 @@
       <workItem from="1584519193931" duration="305000" />
       <workItem from="1584618122630" duration="2293000" />
       <workItem from="1584643570559" duration="586000" />
-      <workItem from="1584693746573" duration="20124000" />
+      <workItem from="1584693746573" duration="23015000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -274,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584721776753</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Tabel with all users">
+      <created>1584726143459</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1584726143459</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -302,7 +305,8 @@
     <MESSAGE value="react table prototype with questions" />
     <MESSAGE value="questions table css added" />
     <MESSAGE value="import css for createQuestion fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="import css for createQuestion fix" />
+    <MESSAGE value="Tabel with all users" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tabel with all users" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -313,10 +317,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584721774739">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584726141581">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584721774739" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584726141581" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -393,11 +397,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584454196510" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1584718516144">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1584726145380">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584718516144" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584726145380" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584454827977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
