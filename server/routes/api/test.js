@@ -2,6 +2,34 @@
 const Test = require('../../models/Test');
 
 module.exports = (app) => {
+  app.post('/api/add/test', (req, res)  => {
+    const {body} = req;
+    const {
+      title,
+      questions,
+    } = body;
+
+    const newTest = new Test();
+
+    newTest.title = title;
+    newTest.questions = questions;
+
+    newTest.save((err, question) => {
+      if (err) {
+        return res.send({
+          success: false,
+          message: 'Error: Server error.'
+        });
+      }
+      return res.send({
+        success: true,
+      });
+    })
+
+  });
+
+
+
 
   app.get('/api/tests', (req, res)  => {
     Test.find(function(err, tests) {
@@ -13,6 +41,6 @@ module.exports = (app) => {
     });
   });
 
-}
+};
 
 
