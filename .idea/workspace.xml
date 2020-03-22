@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/styles/Tests/CreateTest.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/styles/Tests/Tests.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +43,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/Tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/styles" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -52,19 +54,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Users" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\App" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\Login" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Users" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\App" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Questions.js">
@@ -124,7 +126,8 @@
       <workItem from="1584693746573" duration="23621000" />
       <workItem from="1584778430048" duration="1237000" />
       <workItem from="1584802563455" duration="1496000" />
-      <workItem from="1584880637010" duration="1951000" />
+      <workItem from="1584880637010" duration="1981000" />
+      <workItem from="1584897552646" duration="2110000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -287,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584732561360</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="API for creating tests">
+      <created>1584893340766</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1584893340766</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +327,8 @@
     <MESSAGE value="import css for createQuestion fix" />
     <MESSAGE value="Tabel with all users" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="API for creating tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="API for creating tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -328,10 +339,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584732559635">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1584893338327">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584732559635" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584893338327" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -408,11 +419,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584454196510" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1584732562851">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1584893344466">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584732562851" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584893344466" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584454827977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

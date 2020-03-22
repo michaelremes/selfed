@@ -1,15 +1,4 @@
-import React, {useState, Component} from "react";
-import {Button, FormGroup, FormControl} from "react-bootstrap";
-import logo from './../../../public/assets/img/EduLogo.png';
-
-import {
-  getFromStorage,
-  setInStorage
-} from '../../utils/storage'
-import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
-
-import Dashboard from "../Dashboard/Dashboard";
-import MaterialTable from "material-table";
+import React, {Component} from "react";
 
 
 class Tests extends Component {
@@ -24,7 +13,7 @@ class Tests extends Component {
   }
 
   componentDidMount() {
-    fetch('/api/tests')
+    fetch('/api/add/test')
       .then(res => res.json())
       .then(
         (test) => {
@@ -49,48 +38,13 @@ class Tests extends Component {
       error
     } = this.state;
 
-    const columns = [
-      {title: 'Název testu', field: 'title'},
-      {title: 'Datum vytvořeni', field: 'date'},
-    ];
     return (
       <div>
         <header className="Test-header">
-          Testy
+          Vytvořit test
         </header>
-        <div className="TestList">
-          <MaterialTable
-            title="Seznam vytvořených otázek"
-            columns={columns}
-            data={questions}
-            editable={{
-              onRowUpdate: (newData, oldData) =>
-                new Promise(resolve => {
-                  setTimeout(() => {
-                    resolve();
-                    if (oldData) {
-                      this.setState(prevState => {
-                        const data = [...prevState.data];
-                        data[data.indexOf(oldData)] = newData;
-                        return {...prevState, data};
-                      });
-                    }
-                  }, 600);
-                }),
-              onRowDelete: oldData =>
-                new Promise(resolve => {
-                  setTimeout(() => {
-                    resolve();
-                    this.setState(prevState => {
-                      const data = [...prevState.data];
-                      data.splice(data.indexOf(oldData), 1);
-                      return {...prevState, data};
-                    });
-                  }, 600);
-                }),
-            }}
-          />
-        </div>
+
+
       </div>
     );
   }

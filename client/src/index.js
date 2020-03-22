@@ -15,6 +15,7 @@ import SignUp from './components/Users/SignUp';
 import Users from './components/Users/Users';
 import Materials from './components/Materials/Materials';
 import Tests from './components/Tests/Tests';
+import CreateTest from './components/Tests/CreateTest';
 import Questions from './components/Questions/Questions';
 import CreateQuestion from './components/Questions/CreateQuestion';
 import Homework from './components/Homework/Homework';
@@ -26,6 +27,7 @@ const sitesAfterLogin = [
   '/users',
   '/materials',
   '/tests',
+  '/add/test',
   '/add/question',
   '/questions',
   '/homework'
@@ -43,6 +45,7 @@ render((
         <Route path="/users" component={Users}/>
         <Route path="/materials" component={Materials}/>
         <Route path="/tests" component={Tests}/>
+        <Route path="/add/test" component={CreateTest}/>
         <Route path="/add/question" component={CreateQuestion}/>
         <Route path="/questions" component={Questions}/>
         <Route path="/homework" component={Homework}/>
