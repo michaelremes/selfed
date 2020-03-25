@@ -42,12 +42,10 @@ render((
     <App>
       <Route path={sitesAfterLogin} component={SideBar} />
       <Switch>
-        <Route exact path='/' component={Login}/>
-
         {/*<Route*/}
-        {/*  path="/"*/}
+        {/*  exact path="/"*/}
         {/*  render={props =>*/}
-        {/*    Login.isLoggedIn ? (*/}
+        {/*    Login.loggedIn ? (*/}
         {/*      <Redirect to="/dashboard" />*/}
         {/*    ) : (*/}
         {/*      <Login {...props} />*/}
@@ -63,6 +61,7 @@ render((
         <PrivateRoute path="/add/question" component={CreateQuestion}/>
         <PrivateRoute path="/questions" component={Questions}/>
         <PrivateRoute path="/homework" component={Homework}/>
+        <Route exact path='/' component={Login}/>
         <Route component={NotFound}/>
       </Switch>
     </App>

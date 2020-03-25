@@ -32,22 +32,18 @@ module.exports = (app) => {
             if (err) {
                 return res.send({
                     success: false,
-                    message: 'Error: server error.'
                 });
             }
             if (users.length !== 1) {
                 return res.send({
                     success: false,
-                    message: 'Error: Invalid.'
                 });
             }
 
             const user = users[0];
             if (!user.validPassword(password)) {
-
                 return res.send({
                     success: false,
-                    message: 'Error: Invalid password.'
                 });
             }
             //correct user

@@ -8,6 +8,7 @@ import {
   getFromStorage,
   setInStorage
 } from '../../utils/storage'
+import {addNotification} from "../App/Notification";
 
 
 
@@ -16,7 +17,7 @@ class Login extends Component {
     super(props);
     this.state = {
       isLoading: true,
-      isLoggedIn: false,
+      loggedIn: false,
       token: '',
       signInError: '',
       signInUsername: '',
@@ -30,7 +31,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    const obj = getFromStorage('user_session');
+    const obj = getFromStorage('main_app');
     if (obj && obj.token) {
       const {token} = obj;
       // Verify token
@@ -76,7 +77,7 @@ class Login extends Component {
     } = this.state;
     this.setState({
       isLoading: true,
-      isLoggedIn: false
+      loggedIn: false
     });
     // Post request to backend
     fetch('/api/account/login', {
@@ -92,6 +93,7 @@ class Login extends Component {
       .then(json => {
         if (json.success) {
           setInStorage('user_session', {token: json.token});
+          addNotification("Úspěch", "Úspěšné přihlášení", "success");
 
           this.setState({
             signInError: json.message,
@@ -99,11 +101,15 @@ class Login extends Component {
             signInPassword: '',
             signInUsername: '',
             token: json.token,
+            loggedIn: true,
           });
-        } else {
+        }
+        else {
+          addNotification("Error", "Přihlášení se nepodařilo.", "danger");
           this.setState({
             signInError: json.message,
             isLoading: false,
+            loggedIn: false,
           });
         }
       });
@@ -163,7 +169,7 @@ class Login extends Component {
         </div>
       );
     }
-    this.props.history("/dashboard");
+  //  return <Redirect to={{ pathname: '/dashboard', state: { from: props.location } }} push={true} />
   }
 }
 

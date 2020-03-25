@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {getFromStorage} from '../../utils/storage';
 import "../../styles/Dashboard/Dashboard.css";
 import logo from "../../../public/assets/img/EduLogo.png";
+import {addNotification} from "../App/Notification";
 
 
 class Dashboard extends Component {
@@ -17,32 +18,9 @@ class Dashboard extends Component {
 
 
   logout() {
-    this.setState({
-      isLoading: true
-    });
-    const obj = getFromStorage('the_main_app');
-    if (obj && obj.token) {
-      const {token} = obj;
-      // Verify token
-      fetch('/api/account/logout?token=' + token)
-        .then(res => res.json())
-        .then(json => {
-          if (json.success) {
-            this.setState({
-              token: '',
-              isLoading: false
-            });
-          } else {
-            this.setState({
-              isLoading: false,
-            });
-          }
-        });
-    } else {
-      this.setState({
-        isLoading: false,
-      });
-    }
+    localStorage.clear();
+    addNotification("Úspěch", "Uživatel odhlášen.", "success");
+    this.props.history.push("/");
   }
 
   render() {
