@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/App/Notification.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/App/Notification.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/PrivateRoute/PrivateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PrivateRoute/PrivateRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signin.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +124,7 @@
       <workItem from="1584880637010" duration="1981000" />
       <workItem from="1584897552646" duration="2156000" />
       <workItem from="1584953991773" duration="1190000" />
-      <workItem from="1585124605417" duration="11961000" />
+      <workItem from="1585124605417" duration="12252000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -313,14 +308,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585131247979</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="logout added">
+      <created>1585162377914</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1585162377914</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="uvodniStranka" />
     <MESSAGE value="logo" />
     <MESSAGE value="loginForm initializaiton" />
     <MESSAGE value="firebase integretation" />
@@ -345,7 +346,8 @@
     <MESSAGE value="API for creating tests" />
     <MESSAGE value="Table for created tests" />
     <MESSAGE value="Private Routes for components added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Private Routes for components added" />
+    <MESSAGE value="logout added" />
+    <option name="LAST_COMMIT_MESSAGE" value="logout added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -356,10 +358,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1585131246210">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1585162376551">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585131246210" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585162376551" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

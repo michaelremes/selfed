@@ -94,7 +94,6 @@ class Login extends Component {
         if (json.success) {
           setInStorage('user_session', {token: json.token});
           addNotification("Úspěch", "Úspěšné přihlášení", "success");
-
           this.setState({
             signInError: json.message,
             isLoading: false,
@@ -103,6 +102,7 @@ class Login extends Component {
             token: json.token,
             loggedIn: true,
           });
+
         }
         else {
           addNotification("Error", "Přihlášení se nepodařilo.", "danger");
@@ -169,7 +169,7 @@ class Login extends Component {
         </div>
       );
     }
-  //  return <Redirect to={{ pathname: '/dashboard', state: { from: props.location } }} push={true} />
+    return <Redirect to="/dashboard" />
   }
 }
 
