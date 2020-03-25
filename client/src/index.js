@@ -4,7 +4,8 @@ import {render} from 'react-dom';
 import {
   BrowserRouter as Router,
   Route,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom'
 
 import App from './components/App/App';
@@ -20,6 +21,8 @@ import Questions from './components/Questions/Questions';
 import CreateQuestion from './components/Questions/CreateQuestion';
 import Homework from './components/Homework/Homework';
 import SideBar from './components/SideBar/SideBar';
+import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
+
 
 const sitesAfterLogin = [
   '/dashboard',
@@ -39,16 +42,27 @@ render((
     <App>
       <Route path={sitesAfterLogin} component={SideBar} />
       <Switch>
-        <Route exact path="/" component={Login}/>
-        <Route path="/dashboard" component={Dashboard}/>
-        <Route path="/signup" component={SignUp}/>
-        <Route path="/users" component={Users}/>
-        <Route path="/materials" component={Materials}/>
-        <Route path="/tests" component={Tests}/>
-        <Route path="/add/test" component={CreateTest}/>
-        <Route path="/add/question" component={CreateQuestion}/>
-        <Route path="/questions" component={Questions}/>
-        <Route path="/homework" component={Homework}/>
+        <Route exact path='/' component={Login}/>
+
+        {/*<Route*/}
+        {/*  path="/"*/}
+        {/*  render={props =>*/}
+        {/*    Login.isLoggedIn ? (*/}
+        {/*      <Redirect to="/dashboard" />*/}
+        {/*    ) : (*/}
+        {/*      <Login {...props} />*/}
+        {/*    )*/}
+        {/*  }*/}
+        {/*/>*/}
+        <PrivateRoute path='/dashboard' component={Dashboard}/>
+        <PrivateRoute path="/signup" component={SignUp}/>
+        <PrivateRoute path="/users" component={Users}/>
+        <PrivateRoute path="/materials" component={Materials}/>
+        <PrivateRoute path="/tests" component={Tests}/>
+        <PrivateRoute path="/add/test" component={CreateTest}/>
+        <PrivateRoute path="/add/question" component={CreateQuestion}/>
+        <PrivateRoute path="/questions" component={Questions}/>
+        <PrivateRoute path="/homework" component={Homework}/>
         <Route component={NotFound}/>
       </Switch>
     </App>

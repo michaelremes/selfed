@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Redirect} from "react-router-dom";
 import {FormGroup, FormControl} from "react-bootstrap";
 import "../../styles/Login/Login.css";
 import logo from './../../../public/assets/img/EduLogo.png';
@@ -9,11 +10,13 @@ import {
 } from '../../utils/storage'
 
 
+
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isLoading: true,
+      isLoggedIn: false,
       token: '',
       signInError: '',
       signInUsername: '',
@@ -27,7 +30,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    const obj = getFromStorage('the_main_app');
+    const obj = getFromStorage('user_session');
     if (obj && obj.token) {
       const {token} = obj;
       // Verify token
@@ -69,9 +72,11 @@ class Login extends Component {
     const {
       signInUsername,
       signInPassword,
+
     } = this.state;
     this.setState({
       isLoading: true,
+      isLoggedIn: false
     });
     // Post request to backend
     fetch('/api/account/login', {
@@ -85,9 +90,9 @@ class Login extends Component {
       }),
     }).then(res => res.json())
       .then(json => {
-        console.log('json', json);
         if (json.success) {
-          setInStorage('the_main_app', {token: json.token});
+          setInStorage('user_session', {token: json.token});
+
           this.setState({
             signInError: json.message,
             isLoading: false,
@@ -158,8 +163,7 @@ class Login extends Component {
         </div>
       );
     }
-    this.props.history.push('/dashboard');
-
+    this.props.history("/dashboard");
   }
 }
 
