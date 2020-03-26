@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {getFromStorage} from '../../utils/storage';
+
 import "../../styles/Dashboard/Dashboard.css";
 import logo from "../../../public/assets/img/EduLogo.png";
 import {addNotification} from "../App/Notification";
+
 
 
 class Dashboard extends Component {
@@ -19,7 +20,9 @@ class Dashboard extends Component {
 
   logout() {
     localStorage.clear();
+    // usersession should be also deleted
     addNotification("Úspěch", "Uživatel odhlášen.", "success");
+
     this.props.history.push("/");
   }
 

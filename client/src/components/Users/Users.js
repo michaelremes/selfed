@@ -3,6 +3,7 @@ import React, {Component} from "react";
 
 import '../../styles/Users/Users.css';
 import MaterialTable from 'material-table';
+import {getFromStorage} from "../../utils/storage";
 
 
 //lists existing users
@@ -13,11 +14,13 @@ class Users extends Component {
       users: [],
       columns: [],
       isLoading: false,
+      loggedUserRole: ''
     };
 
-
+  //this.getLoggedUser = this.getLoggedUser.bind(this);
   }
   componentDidMount() {
+//    const obj = getFromStorage('user_session');
     fetch('/api/users')
       .then(res => res.json())
       .then(
@@ -35,6 +38,10 @@ class Users extends Component {
         }
       )
   };
+
+
+
+
 
   render() {
 
@@ -101,6 +108,7 @@ class Users extends Component {
 
     }
   }
+
 }
 
 export default Users;

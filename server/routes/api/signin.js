@@ -58,8 +58,9 @@ module.exports = (app) => {
                 }
                 return res.send({
                     success: true,
-                    message: 'Valid CreateQuestion',
-                    token: doc._id
+                    message: 'Valid login',
+                    token: doc._id,
+                    user_role: user.role
                 });
 
             });
@@ -67,7 +68,7 @@ module.exports = (app) => {
     });
 
 
-    app.get('/api/account/logout', (req, res, next) => {
+    app.get('/api/account/logout', (req, res) => {
         // Get the token
         const { query } = req;
         const { token } = query;

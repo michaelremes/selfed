@@ -119,6 +119,17 @@ module.exports = (app) => {
     });
   });
 
+
+  app.get('/api/user/:id', function (req, res) {
+    User.findById(req.params.id)
+      .then(userFound => {
+        if(!userFound) { return res.status(404).end(); }
+        return res.status(200).json(userFound);
+      })
+    .catch(err => next(err));
+  });
+
+
   app.get('/api/users', (req, res)  => {
     User.find(function(err, users) {
       if (err) {

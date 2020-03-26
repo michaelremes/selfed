@@ -24,6 +24,7 @@ import SideBar from './components/SideBar/SideBar';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 
 
+
 const sitesAfterLogin = [
   '/dashboard',
   '/signup',
@@ -37,21 +38,13 @@ const sitesAfterLogin = [
 ];
 
 
+
 render((
   <Router>
     <App>
-      <Route path={sitesAfterLogin} component={SideBar} />
+      <Route path={sitesAfterLogin} component={SideBar} />;
       <Switch>
-        {/*<Route*/}
-        {/*  exact path="/"*/}
-        {/*  render={props =>*/}
-        {/*    Login.loggedIn ? (*/}
-        {/*      <Redirect to="/dashboard" />*/}
-        {/*    ) : (*/}
-        {/*      <Login {...props} />*/}
-        {/*    )*/}
-        {/*  }*/}
-        {/*/>*/}
+        <Route exact path='/' component={Login}/>
         <PrivateRoute path='/dashboard' component={Dashboard}/>
         <PrivateRoute path="/signup" component={SignUp}/>
         <PrivateRoute path="/users" component={Users}/>
@@ -61,7 +54,6 @@ render((
         <PrivateRoute path="/add/question" component={CreateQuestion}/>
         <PrivateRoute path="/questions" component={Questions}/>
         <PrivateRoute path="/homework" component={Homework}/>
-        <Route exact path='/' component={Login}/>
         <Route component={NotFound}/>
       </Switch>
     </App>

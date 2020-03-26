@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/PrivateRoute/PrivateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PrivateRoute/PrivateRoute.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/Users.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signup.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +131,8 @@
       <workItem from="1584880637010" duration="1981000" />
       <workItem from="1584897552646" duration="2156000" />
       <workItem from="1584953991773" duration="1190000" />
-      <workItem from="1585124605417" duration="12252000" />
+      <workItem from="1585124605417" duration="13550000" />
+      <workItem from="1585213979160" duration="19927000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -315,14 +323,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585162377914</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="login fixed">
+      <created>1585162618530</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1585162618530</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logo" />
     <MESSAGE value="loginForm initializaiton" />
     <MESSAGE value="firebase integretation" />
     <MESSAGE value="mern update" />
@@ -347,7 +361,8 @@
     <MESSAGE value="Table for created tests" />
     <MESSAGE value="Private Routes for components added" />
     <MESSAGE value="logout added" />
-    <option name="LAST_COMMIT_MESSAGE" value="logout added" />
+    <MESSAGE value="login fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="login fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -358,10 +373,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1585162376551">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1585162617664">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585162376551" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585162617664" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -438,11 +453,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584454196510" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1585131249659">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1585162620096">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585131249659" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585162620096" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1584454827977">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -451,10 +466,10 @@
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="2589" y="0" width="769" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582470436175" />
-    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1584699386368">
+    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1585246296861">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="118" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584699386368" />
+    <state x="656" y="118" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585246296861" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582751740006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

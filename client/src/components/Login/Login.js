@@ -12,12 +12,12 @@ import {addNotification} from "../App/Notification";
 
 
 
+
 class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       isLoading: true,
-      loggedIn: false,
       token: '',
       signInError: '',
       signInUsername: '',
@@ -28,11 +28,14 @@ class Login extends Component {
     this.onTextBoxChangeSignInPassword = this.onTextBoxChangeSignInPassword.bind(this);
 
     this.onSignIn = this.onSignIn.bind(this);
+
   }
 
   componentDidMount() {
-    const obj = getFromStorage('main_app');
+    const obj = getFromStorage('user_session');
+   // // error obj is null
     if (obj && obj.token) {
+
       const {token} = obj;
       // Verify token
       fetch('/api/account/verify?token=' + token)
@@ -68,6 +71,9 @@ class Login extends Component {
     });
   }
 
+
+
+
   onSignIn() {
     // Grab state
     const {
@@ -77,7 +83,6 @@ class Login extends Component {
     } = this.state;
     this.setState({
       isLoading: true,
-      loggedIn: false
     });
     // Post request to backend
     fetch('/api/account/login', {
@@ -93,14 +98,16 @@ class Login extends Component {
       .then(json => {
         if (json.success) {
           setInStorage('user_session', {token: json.token});
+          localStorage.setItem('user_role', json.user_role);
+
           addNotification("Úspěch", "Úspěšné přihlášení", "success");
+
           this.setState({
             signInError: json.message,
             isLoading: false,
             signInPassword: '',
             signInUsername: '',
             token: json.token,
-            loggedIn: true,
           });
 
         }
@@ -109,11 +116,12 @@ class Login extends Component {
           this.setState({
             signInError: json.message,
             isLoading: false,
-            loggedIn: false,
           });
         }
       });
   }
+
+
 
   render() {
     const {
@@ -142,7 +150,7 @@ class Login extends Component {
           </header>
           <form>
 
-            <FormGroup controlId="username" bsSize="large">
+            <FormGroup controlId="username" size="large">
 
               <FormControl
                 type="username"
@@ -151,7 +159,7 @@ class Login extends Component {
                 onChange={this.onTextBoxChangeSignInUsername}
               />
             </FormGroup>
-            <FormGroup controlId="password" bsSize="large">
+            <FormGroup controlId="password" size="large">
 
               <FormControl
               type="password"
