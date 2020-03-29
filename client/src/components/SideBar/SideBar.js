@@ -25,6 +25,8 @@ class SideBar extends Component {
       user_role,
     } = this.state;
 
+    //print different sidebar for a teacher and for a student
+
     if(user_role === 'teacher'){
       return (
         <div className="sidenav">

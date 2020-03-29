@@ -3,8 +3,9 @@ import React, {Component} from "react";
 import '../../styles/Tests/Tests.css';
 import MaterialTable from 'material-table';
 
-
-
+//------------------------------------
+// add option to view it as pdf
+//------------------------------------
 class Tests extends Component {
   constructor(props) {
     super(props);
