@@ -6,6 +6,9 @@ import {
   KeyboardDatePicker,
 } from '@material-ui/pickers';
 import TextField from "@material-ui/core/TextField";
+import MenuItem from "@material-ui/core/MenuItem";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
 
 
 class CreateTest extends Component {
@@ -13,8 +16,21 @@ class CreateTest extends Component {
     super(props);
     this.state = {
       title: '',
+      age: 0,
+      setAge: false,
+      open: false,
+      setOpen: false,
 
     };
+
+
+
+    // const handleChange = (event) => {
+    //   setAge(event.target.value);
+    // };
+    this.handleChange = this.handleChange.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.handleOpen = this.handleOpen.bind(this);
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
     this.onCreateTest = this.onCreateTest.bind(this);
@@ -53,6 +69,17 @@ class CreateTest extends Component {
   onCreateTest(){
 
   }
+  handleChange(event){
+  //  this.state.setAge(event.target.value);
+  };
+
+   handleClose(){
+  //  this.state.setOpen(false);
+  };
+
+   handleOpen() {
+ //    this.state.setOpen(true);
+  };
 
   render() {
     const {
@@ -76,14 +103,29 @@ class CreateTest extends Component {
                 required
                 id="filled-required"
                 label="Nutno vyplnit"
-                label="Nutno vyplnit"
                 defaultValue="Hello World"
                 variant="filled"
                 value={title}
                 onChange={this.onTextBoxChangeTitle}
               />
               <h2>Přidat otázky</h2>
-
+              <InputLabel id="demo-controlled-open-select-label">Otázka</InputLabel>
+              <Select
+                labelId="demo-controlled-open-select-label"
+                id="demo-controlled-open-select"
+                // open={open}
+                onClose={true}
+                onOpen={false}
+                // value={age}
+                // onChange={handleChange}
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>Otazka1</MenuItem>
+                <MenuItem value={20}>Otazka2</MenuItem>
+                <MenuItem value={30}>Otazka3</MenuItem>
+              </Select>
 
             </FormGroup>
             <button onClick={this.onCreateTest}>

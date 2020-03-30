@@ -6,6 +6,10 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
 import AddIcon from '@material-ui/icons/Add';
 import {addNotification} from "../App/Notification";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
+import {TextField} from "@material-ui/core";
+import RadioGroup from "@material-ui/core/RadioGroup";
 
 
 class CreateQuestion extends Component {
@@ -17,6 +21,8 @@ class CreateQuestion extends Component {
       title: '',
       task: '',
       type: 'text',
+      radioAnswers: [],
+      checkBoxAnswers: [],
 
     };
 
@@ -90,6 +96,7 @@ class CreateQuestion extends Component {
   }
 
   renderCorrectAnswer(param) {
+
     switch (param) {
       case 'text':
         return <FormControl
@@ -98,55 +105,70 @@ class CreateQuestion extends Component {
       case 'checkbox':
         return (
           <FormGroup>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  // checked={state.checkedB}
-                  // onChange={handleChange('checkedB')}
-                  value="checkedB"
-                  color="primary"
-                />
-              }
-              label="First"
-            /><br/>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  value="checkedB"
-                  color="primary"
-                />
-              }
-              label="Second"
-            /><br/>
-            <FormControlLabel
-              control={
-                <Checkbox
-                  value="checkedB"
-                  color="primary"
-                />
-              }
-              label="Third"
-            />
-          </FormGroup>
+            {this.state.checkBoxAnswers.map((value, index) => {
+              return (
+                <div>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        // checked={state.checkedB}
+                        // onChange={handleChange('checkedB')}
+                        value="checkedB"
+                        color="primary"
+                      />
+                    }
+                    label="First"
+                  /><br/>
+                </div>
+              )
+            })}
 
+
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() => {
+                this.setState(previousState => ({
+                  checkBoxAnswers: [...previousState.checkBoxAnswers, 'new value']
+                }));
+              }}
+            >
+              Přidat odpověd
+            </Button>
+          </FormGroup>
         );
 
       case 'radio':
         return (
           <div>
-            <Radio
-              // checked={selectedValue === 'a'}
-              // onChange={handleChange}
-              value="a"
-              name="radio-button-demo"
-            /><br/>
+            <RadioGroup aria-label="radio" name="radio">
+              {this.state.radioAnswers.map((value, index) => {
+                return (
+                  <div>
+                    <FormControlLabel
+                      control={<Radio color="primary"/>}
+                      // checked={selectedValue === 'a'}
+                      // onChange={handleChange}
+                      value={value}
+                      label="odpoved"
+                      name="radio-button-demo"
+                    />
+                  </div>
+                )
+              })}
+            </RadioGroup>
+
 
             <Button
               variant="contained"
               color="secondary"
-              startIcon={<AddIcon />}
+              onClick={() => {
+                this.setState(previousState => ({
+                  radioAnswers: [...previousState.radioAnswers, 'new value']
+                }));
+              }}
             >
-             Přidat odpověd
+              Přidat odpověd
             </Button>
 
           </div>
@@ -170,24 +192,30 @@ class CreateQuestion extends Component {
           <form>
             <h2>Název otázky</h2>
             <FormGroup controlId="task" size="large">
-              <FormControl
+              <TextField
+                required
+                id="filled-required"
                 type="text"
+                variant="outlined"
                 value={title}
                 onChange={this.onTextBoxChangeTitle}
               />
-            <h2>Zadání</h2>
-              <FormControl
+              <h2>Zadání</h2>
+              <TextField
+                required
+                id="task-input"
                 type="text"
+                variant="outlined"
                 value={task}
                 onChange={this.onTextBoxChangeTask}
               />
             </FormGroup>
             <h2>Typ odpovědi</h2>
-            <select id="selectAnswer" value={type} onChange={this.onSelectQuestionType}>
-              <option value="text">Otevřená odpověd</option>
-              <option value="checkbox">Více odpovědí</option>
-              <option value="radio">Jedná správná odpověď</option>
-            </select>
+            <Select id="selectAnswer" value={type} onChange={this.onSelectQuestionType}>
+              <MenuItem value="text">Otevřená odpověd</MenuItem>
+              <MenuItem value="checkbox">Více odpovědí</MenuItem>
+              <MenuItem value="radio">Jedná správná odpověď</MenuItem>
+            </Select>
 
             <h2>Správná odpověď</h2>
 

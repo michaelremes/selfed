@@ -27,6 +27,21 @@
     padding: 10px;
     font-size: calc(8px + 2vmin);
   }
+
+  .CreateQuestion input {
+    background-color: white;
+  }
+
+  #selectAnswer{
+    background-color: white;
+    width: 250px;
+    font-size: calc(4px + 2vmin);
+  }
+  #task-input {
+
+
+  }
+
   body {
     background-color: #282c34;
   }
