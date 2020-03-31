@@ -1,11 +1,6 @@
 @media all and (min-width: 480px) {
 
-  .App-logo {
-    height: 20vmin;
-    pointer-events: none;
-    position: absolute;
-    left: 10px; top: 10px;
-  }
+
   .logout {
     padding: 10px;
     font-size: calc(6px + 2vmin);

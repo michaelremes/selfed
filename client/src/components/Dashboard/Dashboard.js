@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import "../../styles/Dashboard/Dashboard.css";
-import logo from "../../../public/assets/img/EduLogo.png";
+
 import {addNotification} from "../App/Notification";
 
 
@@ -11,7 +11,6 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       isLoading: true,
-      token: '',
     };
 
     this.logout = this.logout.bind(this);
@@ -30,7 +29,6 @@ class Dashboard extends Component {
     return (
       <div>
       <header className="Dashboard-header">
-        <img src={logo} className="App-logo" alt="logo"/>
         Hlavní stránka
         <button className="button logout" onClick={this.logout}>Odhlásit se</button>
       </header>

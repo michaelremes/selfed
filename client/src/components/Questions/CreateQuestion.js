@@ -10,7 +10,8 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import {TextField} from "@material-ui/core";
 import RadioGroup from "@material-ui/core/RadioGroup";
-
+import IconButton from "@material-ui/core/IconButton";
+import DeleteIcon from '@material-ui/icons/Delete';
 
 class CreateQuestion extends Component {
 
@@ -20,7 +21,8 @@ class CreateQuestion extends Component {
       createQuestionError: '',
       title: '',
       task: '',
-      type: 'text',
+      type: 'checkbox',
+      answer: '',
       radioAnswers: [],
       checkBoxAnswers: [],
 
@@ -28,9 +30,12 @@ class CreateQuestion extends Component {
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
     this.onTextBoxChangeTask = this.onTextBoxChangeTask.bind(this);
+    this.onTextBoxChangeAnswer = this.onTextBoxChangeAnswer.bind(this);
 
     this.onSelectQuestionType = this.onSelectQuestionType.bind(this);
     this.onCreateQuestion = this.onCreateQuestion.bind(this);
+
+    this.addItem = this.addItem.bind(this);
   }
 
   onTextBoxChangeTitle(event) {
@@ -45,12 +50,29 @@ class CreateQuestion extends Component {
     });
   }
 
-
   onSelectQuestionType(event) {
     this.setState({
       type: event.target.value,
     });
   }
+
+  onTextBoxChangeAnswer(event) {
+    this.setState({
+      answer: event.target.value,
+    });
+  }
+
+  addItem(){
+    this.setState(previousState => ({
+      checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer]
+    }));
+  }
+
+
+  removeItem(){
+
+  }
+
 
   onCreateQuestion() {
     addNotification("Úspěch", "Uživatel přidán.", "success");
@@ -96,7 +118,10 @@ class CreateQuestion extends Component {
   }
 
   renderCorrectAnswer(param) {
+    const {
+      answer,
 
+    } = this.state;
     switch (param) {
       case 'text':
         return <FormControl
@@ -105,7 +130,8 @@ class CreateQuestion extends Component {
       case 'checkbox':
         return (
           <FormGroup>
-            {this.state.checkBoxAnswers.map((value, index) => {
+            {this.state.checkBoxAnswers.map((answerLabel) => {
+
               return (
                 <div>
                   <FormControlLabel
@@ -117,21 +143,41 @@ class CreateQuestion extends Component {
                         color="primary"
                       />
                     }
-                    label="First"
-                  /><br/>
+                    label={answerLabel}
+
+                  />
+                  <IconButton aria-label="delete" className="delete-answer"
+
+                              >
+                    <DeleteIcon /> smazat
+                  </IconButton>
+
+                  {/*<Button*/}
+                  {/*  variant="contained"*/}
+                  {/*  color="secondary"*/}
+
+                  {/*  className="delete-answer"*/}
+                  {/*  startIcon={<DeleteIcon />}*/}
+                  {/*>*/}
+                  {/*  Smazat*/}
+                  {/*</Button>*/}
+                  <br/>
                 </div>
               )
             })}
 
-
+            <TextField
+              required
+              id="task-input"
+              type="text"
+              variant="outlined"
+              value={answer}
+              onChange={this.onTextBoxChangeAnswer}
+            />
             <Button
               variant="contained"
               color="secondary"
-              onClick={() => {
-                this.setState(previousState => ({
-                  checkBoxAnswers: [...previousState.checkBoxAnswers, 'new value']
-                }));
-              }}
+              onClick={this.addItem}
             >
               Přidat odpověd
             </Button>
@@ -161,12 +207,8 @@ class CreateQuestion extends Component {
 
             <Button
               variant="contained"
-              color="secondary"
-              onClick={() => {
-                this.setState(previousState => ({
-                  radioAnswers: [...previousState.radioAnswers, 'new value']
-                }));
-              }}
+              // color="secondary"
+              // onClick={}
             >
               Přidat odpověd
             </Button>
