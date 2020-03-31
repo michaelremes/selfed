@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/reducer/allReducers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Login/Login.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Login/Login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +132,7 @@
       <workItem from="1585213979160" duration="20124000" />
       <workItem from="1585472942708" duration="2632000" />
       <workItem from="1585564141825" duration="10115000" />
-      <workItem from="1585641584741" duration="7436000" />
+      <workItem from="1585641584741" duration="13691000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -351,14 +351,20 @@
       <option name="project" value="LOCAL" />
       <updated>1585591870868</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="checkbox answer add answer">
+      <created>1585652718893</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1585652718894</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mern login form" />
     <MESSAGE value="login and dashboard prototype" />
     <MESSAGE value="sidebar prototype added" />
     <MESSAGE value="sign up form prototype" />
@@ -383,7 +389,8 @@
     <MESSAGE value="Different render of the sidebar for a teacher and for a student" />
     <MESSAGE value="starting with CreateTest component" />
     <MESSAGE value="CreateQuestion multiple answers component" />
-    <option name="LAST_COMMIT_MESSAGE" value="CreateQuestion multiple answers component" />
+    <MESSAGE value="checkbox answer add answer" />
+    <option name="LAST_COMMIT_MESSAGE" value="checkbox answer add answer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -394,10 +401,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582467947053" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1585591864548">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1585652716568">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585591864548" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585652716568" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

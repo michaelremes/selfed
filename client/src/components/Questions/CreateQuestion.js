@@ -24,7 +24,10 @@ class CreateQuestion extends Component {
       type: 'checkbox',
       answer: '',
       radioAnswers: [],
+      id: '',
+      value: '',
       checkBoxAnswers: [],
+      index: -1,
 
     };
 
@@ -35,7 +38,9 @@ class CreateQuestion extends Component {
     this.onSelectQuestionType = this.onSelectQuestionType.bind(this);
     this.onCreateQuestion = this.onCreateQuestion.bind(this);
 
-    this.addItem = this.addItem.bind(this);
+    this.addItemCheckBox = this.addItemCheckBox.bind(this);
+    this.removeItemCheckBox = this.removeItemCheckBox.bind(this);
+    // this.addItemCheckBox = this.addItemCheckBox.bind(this);
   }
 
   onTextBoxChangeTitle(event) {
@@ -62,15 +67,22 @@ class CreateQuestion extends Component {
     });
   }
 
-  addItem(){
+  addItemCheckBox() {
     this.setState(previousState => ({
-      checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer]
+      index: this.state.index + 1,
+      checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
     }));
+    console.log("index " + this.state.index);
   }
 
 
-  removeItem(){
-
+  removeItemCheckBox() {
+    let array = [...this.state.checkBoxAnswers]; // make a separate copy of the array
+    let index = 0;
+    if (index !== -1) {
+      array.splice(index, 1);
+      this.setState({checkBoxAnswers: array});
+    }
   }
 
 
@@ -130,7 +142,7 @@ class CreateQuestion extends Component {
       case 'checkbox':
         return (
           <FormGroup>
-            {this.state.checkBoxAnswers.map((answerLabel) => {
+            {this.state.checkBoxAnswers.map((answerLabel, index) => {
 
               return (
                 <div>
@@ -147,9 +159,9 @@ class CreateQuestion extends Component {
 
                   />
                   <IconButton aria-label="delete" className="delete-answer"
-
-                              >
-                    <DeleteIcon /> smazat
+                              // onClick={this.removeItemCheckBox(index)}
+                  >
+                    <DeleteIcon/> smazat
                   </IconButton>
 
                   {/*<Button*/}
@@ -177,7 +189,7 @@ class CreateQuestion extends Component {
             <Button
               variant="contained"
               color="secondary"
-              onClick={this.addItem}
+              onClick={this.addItemCheckBox}
             >
               Přidat odpověd
             </Button>

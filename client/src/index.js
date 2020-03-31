@@ -24,6 +24,14 @@ import SideBar from './components/SideBar/SideBar';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 
 
+import Provider from "react-redux/lib/components/Provider";
+import {createStore} from 'redux';
+import allReducers from "./reducer/allReducers";
+
+const store = createStore(
+  allReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 const sitesAfterLogin = [
   '/dashboard',
@@ -40,6 +48,7 @@ const sitesAfterLogin = [
 
 
 render((
+  <Provider store={store}>
   <Router>
     <App>
       <Route path={sitesAfterLogin} component={SideBar} />;
@@ -58,4 +67,5 @@ render((
       </Switch>
     </App>
   </Router>
+  </Provider>
 ), document.getElementById('root'));
