@@ -72,13 +72,12 @@ class CreateQuestion extends Component {
       index: this.state.index + 1,
       checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
     }));
-    console.log("index " + this.state.index);
   }
 
 
-  removeItemCheckBox() {
+  removeItemCheckBox(index) {
     let array = [...this.state.checkBoxAnswers]; // make a separate copy of the array
-    let index = 0;
+
     if (index !== -1) {
       array.splice(index, 1);
       this.setState({checkBoxAnswers: array});
@@ -142,6 +141,7 @@ class CreateQuestion extends Component {
       case 'checkbox':
         return (
           <FormGroup>
+
             {this.state.checkBoxAnswers.map((answerLabel, index) => {
 
               return (
@@ -151,30 +151,23 @@ class CreateQuestion extends Component {
                       <Checkbox
                         // checked={state.checkedB}
                         // onChange={handleChange('checkedB')}
-                        value="checkedB"
+                        value="checked"
                         color="primary"
                       />
                     }
                     label={answerLabel}
 
                   />
+
                   <IconButton aria-label="delete" className="delete-answer"
-                              // onClick={this.removeItemCheckBox(index)}
+                               onClick={this.removeItemCheckBox.bind(this, index)}
                   >
                     <DeleteIcon/> smazat
                   </IconButton>
 
-                  {/*<Button*/}
-                  {/*  variant="contained"*/}
-                  {/*  color="secondary"*/}
 
-                  {/*  className="delete-answer"*/}
-                  {/*  startIcon={<DeleteIcon />}*/}
-                  {/*>*/}
-                  {/*  Smazat*/}
-                  {/*</Button>*/}
-                  <br/>
                 </div>
+
               )
             })}
 
@@ -193,6 +186,7 @@ class CreateQuestion extends Component {
             >
               Přidat odpověd
             </Button>
+
           </FormGroup>
         );
 
@@ -219,7 +213,6 @@ class CreateQuestion extends Component {
 
             <Button
               variant="contained"
-              // color="secondary"
               // onClick={}
             >
               Přidat odpověd
