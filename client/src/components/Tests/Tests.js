@@ -63,32 +63,23 @@ class Tests extends Component {
               title="Seznam vytvořených testů"
               columns={columns}
               data={tests}
-              editable={{
-                onRowUpdate: (newData, oldData) =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      if (oldData) {
-                        this.setState(prevState => {
-                          const data = [...prevState.data];
-                          data[data.indexOf(oldData)] = newData;
-                          return {...prevState, data};
-                        });
-                      }
-                    }, 600);
-                  }),
-                onRowDelete: oldData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      this.setState(prevState => {
-                        const data = [...prevState.data];
-                        data.splice(data.indexOf(oldData), 1);
-                        return {...prevState, data};
-                      });
-                    }, 600);
-                  }),
-              }}
+              actions={[
+                {
+                  icon: 'edit',
+                  tooltip: 'Upravit test',
+                  onClick: (event, rowData) => alert("You saved " + rowData.name)
+                },
+                {
+                  icon: 'delete',
+                  tooltip: 'Smazat test',
+                  onClick: (event, rowData) => confirm("You want to delete " + rowData.name)
+                },
+                {
+                  icon: 'visibility',
+                  tooltip: 'Zobrazit test',
+
+                }
+              ]}
             />
           </div>
         </div>

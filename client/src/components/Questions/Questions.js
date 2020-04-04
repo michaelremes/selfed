@@ -36,6 +36,47 @@ class Questions extends Component {
       )
   };
 
+  renderQuestionList(){
+    return (
+      <div className="QuestionList">
+
+        <MaterialTable
+          title="Seznam vytvořených otázek"
+          columns={columns}
+          data={questions}
+          editable={{
+            onRowUpdate: (newData, oldData) =>
+              new Promise(resolve => {
+                setTimeout(() => {
+                  resolve();
+                  if (oldData) {
+                    this.setState(prevState => {
+                      const data = [...prevState.data];
+                      data[data.indexOf(oldData)] = newData;
+                      return {...prevState, data};
+                    });
+                  }
+                }, 600);
+              }),
+            onRowDelete: oldData =>
+              new Promise(resolve => {
+                setTimeout(() => {
+                  resolve();
+                  this.setState(prevState => {
+                    const data = [...prevState.data];
+                    data.splice(data.indexOf(oldData), 1);
+                    return {...prevState, data};
+                  });
+                }, 600);
+              }),
+          }}
+        />
+      </div>
+    )
+
+  }
+
+
   render() {
 
     const {
@@ -67,32 +108,23 @@ class Questions extends Component {
               title="Seznam vytvořených otázek"
               columns={columns}
               data={questions}
-              editable={{
-                onRowUpdate: (newData, oldData) =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      if (oldData) {
-                        this.setState(prevState => {
-                          const data = [...prevState.data];
-                          data[data.indexOf(oldData)] = newData;
-                          return {...prevState, data};
-                        });
-                      }
-                    }, 600);
-                  }),
-                onRowDelete: oldData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      this.setState(prevState => {
-                        const data = [...prevState.data];
-                        data.splice(data.indexOf(oldData), 1);
-                        return {...prevState, data};
-                      });
-                    }, 600);
-                  }),
-              }}
+              actions={[
+              {
+                icon: 'edit',
+                tooltip: 'Upravit Otázku',
+                onClick: (event, rowData) => alert("You saved " + rowData.name)
+              },
+              {
+                icon: 'delete',
+                tooltip: 'Smazat otázku',
+                onClick: (event, rowData) => confirm("You want to delete " + rowData.name)
+              },
+              {
+                icon: 'visibility',
+                tooltip: 'Zobrazit otázku',
+
+              }
+              ]}
             />
           </div>
         </div>

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import '../../styles/Tests/CreateTest.css';
-import {FormControl, FormGroup} from "react-bootstrap";
+import {Button, FormControl, FormGroup} from "react-bootstrap";
 import {
   KeyboardTimePicker,
   KeyboardDatePicker,
@@ -9,34 +9,35 @@ import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import InputLabel from "@material-ui/core/InputLabel";
+import Questions from "../Questions/Questions";
 
+import MaterialTable from "material-table";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
+import IconButton from "@material-ui/core/IconButton";
+import DeleteIcon from '@material-ui/icons/Delete';
 
 class CreateTest extends Component {
   constructor(props) {
     super(props);
     this.state = {
       title: '',
-      age: 0,
-      setAge: false,
       open: false,
       setOpen: false,
+      questions: [],
+      testQuestions: [],
+      question: '',
 
     };
 
-
-
-    // const handleChange = (event) => {
-    //   setAge(event.target.value);
-    // };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleClose = this.handleClose.bind(this);
-    this.handleOpen = this.handleOpen.bind(this);
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
     this.onCreateTest = this.onCreateTest.bind(this);
 
 
-    this.handleDateChange = this.handleDateChange.bind(this);
+    this.addQuestion = this.addQuestion.bind(this);
+
+
   }
 
   onTextBoxChangeTitle(event) {
@@ -44,27 +45,32 @@ class CreateTest extends Component {
       title: event.target.value,
     });
   }
-  handleDateChange(event) {
-    this.setState({
-      title: event.target.value,
-    });
+
+  addQuestion() {
+      this.setState(previousState => ({
+        testQuestions: [...previousState.testQuestions, this.state.question],
+      }));
   }
+
   componentDidMount() {
-    // fetch('/api/add/test')
-    //   .then(res => res.json())
-    //   .then(
-    //     (test) => {
-    //       this.setState({
-    //
-    //       });
-    //     },
-    //     (error) => {
-    //       this.setState({
-    //
-    //       });
-    //     }
-    //   )
+    fetch('/api/questions')
+      .then(res => res.json())
+      .then(
+        (question) => {
+          this.setState({
+            isLoading: true,
+            questions: question
+          });
+        },
+        (error) => {
+          this.setState({
+            isLoading: true,
+            error
+          });
+        }
+      )
   };
+
 
   onCreateTest(){
 
@@ -84,11 +90,19 @@ class CreateTest extends Component {
   render() {
     const {
       title,
+      questions,
+      question,
       selectedDate,
       tests,
       isLoading,
       error
     } = this.state;
+
+    const columns = [
+      {title: 'Název', field: 'title'},
+      {title: 'Zadání', field: 'task'},
+      {title: 'Typ', field: 'type'},
+    ];
 
     return (
       <div>
@@ -103,29 +117,45 @@ class CreateTest extends Component {
                 required
                 id="filled-required"
                 label="Nutno vyplnit"
-                defaultValue="Hello World"
                 variant="filled"
                 value={title}
                 onChange={this.onTextBoxChangeTitle}
               />
               <h2>Přidat otázky</h2>
-              <InputLabel id="demo-controlled-open-select-label">Otázka</InputLabel>
-              <Select
-                labelId="demo-controlled-open-select-label"
-                id="demo-controlled-open-select"
-                // open={open}
-                onClose={true}
-                onOpen={false}
-                // value={age}
-                // onChange={handleChange}
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Otazka1</MenuItem>
-                <MenuItem value={20}>Otazka2</MenuItem>
-                <MenuItem value={30}>Otazka3</MenuItem>
-              </Select>
+
+            </FormGroup>
+
+            <div className="QuestionList">
+
+              <MaterialTable
+                title="Seznam vytvořených otázek"
+                columns={columns}
+                data={questions}
+                actions={[
+                  {
+                    icon: 'add',
+                    tooltip: 'Přidat otázku do testu',
+                    onClick: this.addQuestion,
+                  }
+                ]}
+              />
+            </div>
+
+            <FormGroup>
+
+              {this.state.testQuestions.map((question, index) => {
+
+                return (
+                  <div>
+                    <IconButton aria-label="delete" className="delete-answer"
+                                // onClick={this.removeItemCheckBox.bind(this, index)}
+                    >
+                      <DeleteIcon/> Smazat
+                    </IconButton>
+                  </div>
+
+                )
+              })}
 
             </FormGroup>
             <button onClick={this.onCreateTest}>
