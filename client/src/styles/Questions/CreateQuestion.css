@@ -41,6 +41,12 @@
 
 
   }
+  .radio-answer {
+    align-items: center;
+
+    alignment: center;
+  }
+
 
   body {
     background-color: #282c34;

@@ -21,13 +21,10 @@ class CreateQuestion extends Component {
       createQuestionError: '',
       title: '',
       task: '',
-      type: 'checkbox',
+      type: 'radio',
       answer: '',
-      radioAnswers: [],
-      id: '',
-      value: '',
       checkBoxAnswers: [],
-      index: -1,
+      radioBoxAnswers: [],
 
     };
 
@@ -40,7 +37,10 @@ class CreateQuestion extends Component {
 
     this.addItemCheckBox = this.addItemCheckBox.bind(this);
     this.removeItemCheckBox = this.removeItemCheckBox.bind(this);
-    // this.addItemCheckBox = this.addItemCheckBox.bind(this);
+
+    this.addItemRadioBox = this.addItemRadioBox.bind(this);
+    this.removeItemRadioBox = this.removeItemRadioBox.bind(this);
+
   }
 
   onTextBoxChangeTitle(event) {
@@ -69,8 +69,8 @@ class CreateQuestion extends Component {
 
   addItemCheckBox() {
     this.setState(previousState => ({
-      index: this.state.index + 1,
       checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
+      answer: ''
     }));
   }
 
@@ -81,6 +81,22 @@ class CreateQuestion extends Component {
     if (index !== -1) {
       array.splice(index, 1);
       this.setState({checkBoxAnswers: array});
+    }
+  }
+
+  addItemRadioBox() {
+    this.setState(previousState => ({
+      radioBoxAnswers: [...previousState.radioBoxAnswers, this.state.answer],
+      answer: ''
+    }));
+  }
+
+  removeItemRadioBox(index) {
+    let array = [...this.state.radioBoxAnswers]; // make a separate copy of the array
+
+    if (index !== -1) {
+      array.splice(index, 1);
+      this.setState({radioBoxAnswers: array});
     }
   }
 
@@ -111,7 +127,7 @@ class CreateQuestion extends Component {
     }).then(res => res.json())
       .then(json => {
         if (json.success) {
-          addNotification("Úspěch", "Uživatel přidán.", "success");
+          // addNotification("Úspěch", "Uživatel přidán.", "success");
           this.setState({
             createQuestionError: json.message,
             title: '',
@@ -160,7 +176,7 @@ class CreateQuestion extends Component {
                   />
 
                   <IconButton aria-label="delete" className="delete-answer"
-                               onClick={this.removeItemCheckBox.bind(this, index)}
+                              onClick={this.removeItemCheckBox.bind(this, index)}
                   >
                     <DeleteIcon/> smazat
                   </IconButton>
@@ -194,28 +210,47 @@ class CreateQuestion extends Component {
         return (
           <div>
             <RadioGroup aria-label="radio" name="radio">
-              {this.state.radioAnswers.map((value, index) => {
+              {this.state.radioBoxAnswers.map((answerLabel, index) => {
                 return (
-                  <div>
+                  <div className="radio-answer">
                     <FormControlLabel
-                      control={<Radio color="primary"/>}
-                      // checked={selectedValue === 'a'}
+                      control={
+                        <Radio
+
+                          color="primary"
+                        />
+                        }
+
                       // onChange={handleChange}
-                      value={value}
-                      label="odpoved"
-                      name="radio-button-demo"
+
+                      label={answerLabel}
+
                     />
+
+                    <IconButton aria-label="delete" className="delete-answer"
+                                onClick={this.removeItemRadioBox.bind(this, index)}
+                    >
+                      <DeleteIcon/> smazat
+                    </IconButton>
                   </div>
                 )
               })}
             </RadioGroup>
 
-
+            <TextField
+              required
+              id="task-input"
+              type="text"
+              variant="outlined"
+              value={answer}
+              onChange={this.onTextBoxChangeAnswer}
+            />
             <Button
               variant="contained"
-              // onClick={}
+              color="secondary"
+              onClick={this.addItemRadioBox}
             >
-              Přidat odpověd
+              Přidat odpověď
             </Button>
 
           </div>
