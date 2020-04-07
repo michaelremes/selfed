@@ -3,18 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/SignUp.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/SignUp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/signup.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signup.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +133,7 @@
       <workItem from="1585986764274" duration="13210000" />
       <workItem from="1586014582092" duration="2474000" />
       <workItem from="1586077819352" duration="521000" />
-      <workItem from="1586244603367" duration="4432000" />
+      <workItem from="1586244603367" duration="5968000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -397,14 +387,20 @@
       <option name="project" value="LOCAL" />
       <updated>1586012629947</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Latex in question task prototype">
+      <created>1586260973706</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1586260973706</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="createQuestion - frontend connected to backend" />
     <MESSAGE value="APIs for listing questions and users" />
     <MESSAGE value="API fix, + starting API for tests" />
     <MESSAGE value="notifications prototype" />
@@ -429,7 +425,8 @@
     <MESSAGE value="added delete button to checkbox answers" />
     <MESSAGE value="added delete button to radioBox answers" />
     <MESSAGE value="table of questions in create test" />
-    <option name="LAST_COMMIT_MESSAGE" value="table of questions in create test" />
+    <MESSAGE value="Latex in question task prototype" />
+    <option name="LAST_COMMIT_MESSAGE" value="Latex in question task prototype" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -440,10 +437,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1586012628371">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1586260966280">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586012628371" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586260966280" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -516,11 +513,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586012631730">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586260977080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586012631730" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586260977080" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585991084726">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

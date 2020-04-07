@@ -285,8 +285,8 @@ class CreateQuestion extends Component {
                 value={title}
                 onChange={this.onTextBoxChangeTitle}
               />
-              <h2>Zadání</h2>
-              V latexu
+              <h2>Zadání v LaTexu</h2>
+
               <TextField
                 required
                 id="task-input"
@@ -296,7 +296,10 @@ class CreateQuestion extends Component {
                 onChange={this.onTextBoxChangeTask}
               /><br />
 
+              <h2>Zobrazení zadání</h2>
+              <div className="LatexPreview">
               <Latex>{this.state.task}</Latex>
+              </div>
 
             </FormGroup>
             <h2>Typ odpovědi</h2>
