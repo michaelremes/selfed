@@ -50,8 +50,8 @@
 
   #selectAnswer{
     background-color: white;
-    width: 250px;
-    font-size: calc(4px + 2vmin);
+    width: 100%;
+    font-size: calc(2px + 2vmin);
   }
   .radio-answer {
     align-items: center;

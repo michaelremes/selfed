@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,7 +136,7 @@
       <workItem from="1585986764274" duration="13210000" />
       <workItem from="1586014582092" duration="2474000" />
       <workItem from="1586077819352" duration="521000" />
-      <workItem from="1586244603367" duration="7472000" />
+      <workItem from="1586244603367" duration="12871000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -401,7 +404,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586263138467</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Latex Preview css">
+      <created>1586265670019</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1586265670019</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -444,10 +454,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1586263136156">
+    <state x="585" y="113" key="CommitChangelistDialog2" timestamp="1586265668690">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586263136156" />
+    <state x="585" y="113" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586265668690" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

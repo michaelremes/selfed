@@ -46,9 +46,9 @@ class CreateTest extends Component {
     });
   }
 
-  addQuestion() {
+  addQuestion(question) {
       this.setState(previousState => ({
-        testQuestions: [...previousState.testQuestions, this.state.question],
+        testQuestions: [...previousState.testQuestions, question],
       }));
   }
 
@@ -75,17 +75,7 @@ class CreateTest extends Component {
   onCreateTest(){
 
   }
-  handleChange(event){
-  //  this.state.setAge(event.target.value);
-  };
 
-   handleClose(){
-  //  this.state.setOpen(false);
-  };
-
-   handleOpen() {
- //    this.state.setOpen(true);
-  };
 
   render() {
     const {
@@ -135,6 +125,10 @@ class CreateTest extends Component {
                   {
                     icon: 'add',
                     tooltip: 'Přidat otázku do testu',
+                    onClick: (event, question) => {
+                      this.addQuestion(question);
+
+                    },
                   }
                 ]}
 
@@ -147,6 +141,8 @@ class CreateTest extends Component {
 
                 return (
                   <div>
+                    {console.log(this.state.testQuestions.length)}
+                    {question.title}
                     <IconButton aria-label="delete" className="delete-answer"
                                 // onClick={this.removeItemCheckBox.bind(this, index)}
                     >
