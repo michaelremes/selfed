@@ -41,6 +41,18 @@ module.exports = (app) => {
     });
   });
 
+  app.delete('/api/test/:id', (req, res)  => {
+    const testId = Number(req.params.id);
+
+      Test.remove(testId, function (err) {
+        if(err){
+          res.status(500).send('Test not found.');
+        }
+        res.send('Success');
+      })
+
+  });
+
 };
 
 

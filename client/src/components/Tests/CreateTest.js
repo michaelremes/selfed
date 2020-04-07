@@ -135,9 +135,9 @@ class CreateTest extends Component {
                   {
                     icon: 'add',
                     tooltip: 'Přidat otázku do testu',
-                    onClick: this.addQuestion,
                   }
                 ]}
+
               />
             </div>
 

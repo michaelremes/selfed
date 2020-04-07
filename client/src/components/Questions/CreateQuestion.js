@@ -13,6 +13,8 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from '@material-ui/icons/Delete';
 
+const Latex = require('react-latex');
+
 class CreateQuestion extends Component {
 
   constructor(props) {
@@ -40,6 +42,7 @@ class CreateQuestion extends Component {
 
     this.addItemRadioBox = this.addItemRadioBox.bind(this);
     this.removeItemRadioBox = this.removeItemRadioBox.bind(this);
+
 
   }
 
@@ -283,6 +286,7 @@ class CreateQuestion extends Component {
                 onChange={this.onTextBoxChangeTitle}
               />
               <h2>Zadání</h2>
+              V latexu
               <TextField
                 required
                 id="task-input"
@@ -290,7 +294,10 @@ class CreateQuestion extends Component {
                 variant="outlined"
                 value={task}
                 onChange={this.onTextBoxChangeTask}
-              />
+              /><br />
+
+              <Latex>{this.state.task}</Latex>
+
             </FormGroup>
             <h2>Typ odpovědi</h2>
             <Select id="selectAnswer" value={type} onChange={this.onSelectQuestionType}>

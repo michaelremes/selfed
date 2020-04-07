@@ -44,12 +44,14 @@
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^4.0.0",
+    "react-latex": "^1.6.0",
     "react-notifications-component": "^2.4.0",
     "react-redux": "^7.2.0",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.3.1",
     "react-sidebar": "^3.0.2",
     "react-table": "^7.0.0",
+    "redux": "latest",
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "styled-components": "^5.0.1",
@@ -57,8 +59,7 @@
     "webpack-dev-middleware": "^3.0.1",
     "webpack-hot-middleware": "^2.21.2",
     "webpack-merge": "^4.1.2",
-    "whatwg-fetch": "^2.0.3",
-    "redux": "latest"
+    "whatwg-fetch": "^2.0.3"
   },
   "devDependencies": {
     "@material-ui/icons": "^4.9.1",

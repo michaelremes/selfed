@@ -36,45 +36,6 @@ class Questions extends Component {
       )
   };
 
-  renderQuestionList(){
-    return (
-      <div className="QuestionList">
-
-        <MaterialTable
-          title="Seznam vytvořených otázek"
-          columns={columns}
-          data={questions}
-          editable={{
-            onRowUpdate: (newData, oldData) =>
-              new Promise(resolve => {
-                setTimeout(() => {
-                  resolve();
-                  if (oldData) {
-                    this.setState(prevState => {
-                      const data = [...prevState.data];
-                      data[data.indexOf(oldData)] = newData;
-                      return {...prevState, data};
-                    });
-                  }
-                }, 600);
-              }),
-            onRowDelete: oldData =>
-              new Promise(resolve => {
-                setTimeout(() => {
-                  resolve();
-                  this.setState(prevState => {
-                    const data = [...prevState.data];
-                    data.splice(data.indexOf(oldData), 1);
-                    return {...prevState, data};
-                  });
-                }, 600);
-              }),
-          }}
-        />
-      </div>
-    )
-
-  }
 
 
   render() {
@@ -115,16 +76,26 @@ class Questions extends Component {
                 onClick: (event, rowData) => alert("You saved " + rowData.name)
               },
               {
-                icon: 'delete',
-                tooltip: 'Smazat otázku',
-                onClick: (event, rowData) => confirm("You want to delete " + rowData.name)
-              },
-              {
                 icon: 'visibility',
                 tooltip: 'Zobrazit otázku',
 
               }
               ]}
+              editable={{
+              onRowDelete: oldData =>
+              new Promise((resolve, reject) => {
+              setTimeout(() => {
+                {
+                  let data = this.state.questions;
+                  const index = data.indexOf(oldData);
+                  data.splice(index, 1);
+                  this.setState({ questions: data }, () => resolve());
+
+                }
+                resolve()
+              }, 1000)
+              }),
+              }}
             />
           </div>
         </div>

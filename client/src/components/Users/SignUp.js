@@ -104,7 +104,7 @@ class SignUp extends Component {
     });
 
     // Post request to backend
-    fetch('/api/account/signup', {
+    fetch('/api/account/add/user', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

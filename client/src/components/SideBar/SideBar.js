@@ -39,7 +39,7 @@ class SideBar extends Component {
           <a href="/homework">Úkoly</a>
           <a href="/tests">Testy</a>
           <a href="/add/test">Vytvořit test</a>
-          <a href="/signup">Přidat uživatele</a>
+          <a href="/add/user">Přidat uživatele</a>
           <a href="/users">Uživatelé</a>
         </div>
       );

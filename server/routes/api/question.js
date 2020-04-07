@@ -84,6 +84,18 @@ module.exports = (app) => {
     });
   });
 
-}
+
+  app.delete('/api/questions/:id', (req, res)  => {
+    let questionId = {_id:req.params.id};
+
+    Question.deleteOne(questionId, function (err) {
+      if(err){
+        res.status(500).send('Test not found.');
+      }
+      res.send('Success');
+    })
+
+  });
+};
 
 

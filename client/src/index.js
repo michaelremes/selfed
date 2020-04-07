@@ -35,7 +35,7 @@ const store = createStore(
 
 const sitesAfterLogin = [
   '/dashboard',
-  '/signup',
+  '/add/user',
   '/users',
   '/materials',
   '/tests',
@@ -55,7 +55,7 @@ render((
       <Switch>
         <Route exact path='/' component={Login}/>
         <PrivateRoute path='/dashboard' component={Dashboard}/>
-        <PrivateRoute path="/signup" component={SignUp}/>
+        <PrivateRoute path="/add/user" component={SignUp}/>
         <PrivateRoute path="/users" component={Users}/>
         <PrivateRoute path="/materials" component={Materials}/>
         <PrivateRoute path="/tests" component={Tests}/>
