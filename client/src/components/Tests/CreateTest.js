@@ -51,7 +51,14 @@ class CreateTest extends Component {
         testQuestions: [...previousState.testQuestions, question],
       }));
   }
+  removeQuestion(index) {
+    let array = [...this.state.testQuestions]; // make a separate copy of the array
 
+    if (index !== -1) {
+      array.splice(index, 1);
+      this.setState({testQuestions: array});
+    }
+  }
   componentDidMount() {
     fetch('/api/questions')
       .then(res => res.json())
@@ -141,13 +148,21 @@ class CreateTest extends Component {
 
                 return (
                   <div>
+
                     {console.log(this.state.testQuestions.length)}
                     {question.title}
                     <IconButton aria-label="delete" className="delete-answer"
-                                // onClick={this.removeItemCheckBox.bind(this, index)}
+                                 onClick={this.removeQuestion.bind(this, index)}
                     >
-                      <DeleteIcon/> Smazat
+                      <DeleteIcon/> Odstranit otázku
                     </IconButton>
+
+                    <TextField
+                      id="points-for-test"
+                      label="Počet bodů za otázku"
+                      type="number"
+                      variant="outlined"
+                    />
                   </div>
 
                 )

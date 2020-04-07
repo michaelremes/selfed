@@ -162,7 +162,6 @@ class CreateQuestion extends Component {
           <FormGroup>
 
             {this.state.checkBoxAnswers.map((answerLabel, index) => {
-
               return (
                 <div>
                   <FormControlLabel
@@ -183,10 +182,7 @@ class CreateQuestion extends Component {
                   >
                     <DeleteIcon/> smazat
                   </IconButton>
-
-
                 </div>
-
               )
             })}
 
