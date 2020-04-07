@@ -32,29 +32,33 @@
     background-color: white;
   }
 
+
+  #task-input {
+    width:90%;
+    padding: 20px;
+    font-size: 18px;
+  }
+  .LatexPreview {
+    border:1px solid;
+    padding: 20px;
+    font-size: 18px;
+    margin-top:5px;
+    background-color: white;
+
+
+  }
+
   #selectAnswer{
     background-color: white;
     width: 250px;
     font-size: calc(4px + 2vmin);
   }
-  #task-input {
-
-
-  }
   .radio-answer {
     align-items: center;
-
     alignment: center;
   }
 
-  .LatexPreview {
-    border:1px solid;
-    padding: 20px;
-    width:80%;
-    margin-top:5px;
-    background-color: white;
 
-  }
 
   body {
     background-color: #282c34;

@@ -287,11 +287,10 @@ class CreateQuestion extends Component {
               />
               <h2>Zadání v LaTexu</h2>
 
-              <TextField
+              <textarea
                 required
                 id="task-input"
-                type="text"
-                variant="outlined"
+
                 value={task}
                 onChange={this.onTextBoxChangeTask}
               /><br />
