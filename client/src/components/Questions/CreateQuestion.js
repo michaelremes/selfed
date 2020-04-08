@@ -154,8 +154,12 @@ class CreateQuestion extends Component {
     } = this.state;
     switch (param) {
       case 'text':
-        return <FormControl
-          type="text"
+        return  <textarea
+          required
+          id="task-input"
+
+          // value={task}
+          // onChange={this.onTextBoxChangeTextAnswer}
         />;
       case 'checkbox':
         return (

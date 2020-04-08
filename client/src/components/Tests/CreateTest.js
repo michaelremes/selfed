@@ -16,18 +16,18 @@ import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from '@material-ui/icons/Delete';
+import {addNotification} from "../App/Notification";
 
 class CreateTest extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      createTestError: '',
       title: '',
-      open: false,
-      setOpen: false,
       questions: [],
       testQuestions: [],
       question: '',
-
+      isLoading: true,
     };
 
 
@@ -80,6 +80,44 @@ class CreateTest extends Component {
 
 
   onCreateTest(){
+
+    //grab state
+    const {
+      title,
+      testQuestions
+    } = this.state;
+    this.setState({
+      isLoading: true,
+    });
+
+    // Post request to backend
+    fetch('/api/add/test', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: title,
+        questions: testQuestions
+      }),
+    }).then(res => res.json())
+      .then(json => {
+        if (json.success) {
+          addNotification("Úspěch", "Test byl vytvořen.", "success");
+          this.setState({
+            createTestError: json.message,
+            title: '',
+            testQuestions: [],
+            isLoading: false,
+          });
+        } else {
+          addNotification("Error", "Test nomhl být vytvořen.", "danger");
+          this.setState({
+            createTestError: json.message,
+            isLoading: false
+          });
+        }
+      });
 
   }
 
