@@ -1,15 +1,19 @@
 import React, {useState, Component} from "react";
 import {FormGroup, FormControl} from "react-bootstrap";
-import "../../styles/Users/SignUp.css";
+import "../../styles/Users/AddUser.css";
 import {addNotification} from '../App/Notification';
 
 import {
   getFromStorage,
   setInStorage
 } from '../../utils/storage'
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormLabel from "@material-ui/core/FormLabel";
+import Radio from "@material-ui/core/Radio";
 
 
-class SignUp extends Component {
+class AddUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -199,17 +203,13 @@ class SignUp extends Component {
               </FormGroup>
 
               <h2>Role:</h2>
-              <div className="form-check">
-                <input type="radio" name="role" value={"teacher"} onChange={this.onTextBoxChangeSignUpRole}/>
-                <label className="form-check-label" htmlFor="gridRadios1">
-                  Učitel
-                </label>
-                <br/>
-                <input type="radio" name="role" value={"student"} onChange={this.onTextBoxChangeSignUpRole}/>
-                <label className="form-check-label" htmlFor="gridRadios1">
-                  Student
-                </label>
+              <div className="role-select">
+                <RadioGroup  value={signUpRole} onChange={this.onTextBoxChangeSignUpRole}>
+                  <FormControlLabel value={"teacher"} control={<Radio color="primary" />} label="Učitel" />
+                  <FormControlLabel value={"student"} control={<Radio color="primary" />} label="Student" />
+                </RadioGroup>
               </div>
+
               <button onClick={this.onSignUp}>
                 Přidat nového uživatele
               </button>
@@ -224,4 +224,4 @@ class SignUp extends Component {
   }
 }
 
-export default SignUp;
+export default AddUser;

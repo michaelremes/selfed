@@ -27,7 +27,7 @@ class CreateQuestion extends Component {
       answer: '',
       checkBoxAnswers: [],
       radioBoxAnswers: [],
-
+      correctRadioAnswer: '',
     };
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
@@ -150,11 +150,12 @@ class CreateQuestion extends Component {
   renderCorrectAnswer(param) {
     const {
       answer,
+      correctRadioAnswer
 
     } = this.state;
     switch (param) {
       case 'text':
-        return  <textarea
+        return <textarea
           required
           id="task-input"
 
@@ -212,17 +213,18 @@ class CreateQuestion extends Component {
       case 'radio':
         return (
           <div>
-            <RadioGroup aria-label="radio" name="radio">
-              {this.state.radioBoxAnswers.map((answerLabel, index) => {
-                return (
-                  <div className="radio-answer">
+
+            {this.state.radioBoxAnswers.map((answerLabel, index) => {
+              return (
+                <div className="radio-answer">
+                  <RadioGroup value={correctRadioAnswer}>
                     <FormControlLabel
                       control={
                         <Radio
-
+                          value={answer}
                           color="primary"
                         />
-                        }
+                      }
 
                       // onChange={handleChange}
 
@@ -235,10 +237,12 @@ class CreateQuestion extends Component {
                     >
                       <DeleteIcon/> smazat
                     </IconButton>
-                  </div>
-                )
-              })}
-            </RadioGroup>
+                  </RadioGroup>
+                </div>
+
+              )
+            })}
+
 
             <TextField
               required
@@ -279,9 +283,9 @@ class CreateQuestion extends Component {
             <FormGroup controlId="task" size="large">
               <TextField
                 required
-                id="filled-required"
-                type="text"
-                variant="outlined"
+                id="title-required"
+                label="Nutno vyplnit"
+                variant="filled"
                 value={title}
                 onChange={this.onTextBoxChangeTitle}
               />
@@ -293,11 +297,11 @@ class CreateQuestion extends Component {
 
                 value={task}
                 onChange={this.onTextBoxChangeTask}
-              /><br />
+              /><br/>
 
               <h2>Zobrazení zadání</h2>
               <div className="LatexPreview">
-              <Latex>{this.state.task}</Latex>
+                <Latex>{this.state.task}</Latex>
               </div>
 
             </FormGroup>

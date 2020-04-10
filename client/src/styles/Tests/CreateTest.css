@@ -27,6 +27,9 @@
     padding: 10px;
     font-size: calc(8px + 2vmin);
   }
+  .CreateTest input {
+    background-color: white;
+  }
   .QuestionList {
     padding: 10px;
   }

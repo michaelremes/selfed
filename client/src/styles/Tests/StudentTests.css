@@ -1,7 +1,7 @@
 @media all and (min-width: 480px) {
 
 
-  .Tests-header {
+  .StudentTests-header {
     background-color: #5280d1;
     min-height: 21vh;
     display: flex;
@@ -13,10 +13,10 @@
   }
 
   .TestList {
-    width: 60%;
+    width: 70%;
     position: relative;
     margin: auto;
-    left: 5%;
+
   }
 
   body {

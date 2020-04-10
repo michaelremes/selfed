@@ -64,6 +64,7 @@ class Tests extends Component {
               columns={columns}
               data={tests}
               actions={[
+
                 {
                   icon: 'edit',
                   tooltip: 'Upravit test',
@@ -77,9 +78,19 @@ class Tests extends Component {
                 {
                   icon: 'visibility',
                   tooltip: 'Zobrazit test',
-
                 }
               ]}
+              localization={{
+                header: {
+                  actions: 'Možnosti'
+                },
+                toolbar: {
+                  searchPlaceholder: 'Vyhledat'
+                },
+                pagination: {
+                  labelRowsSelect: 'Řádek',
+                }
+              }}
             />
           </div>
         </div>

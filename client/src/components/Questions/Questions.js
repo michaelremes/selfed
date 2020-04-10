@@ -81,20 +81,17 @@ class Questions extends Component {
 
               }
               ]}
-              editable={{
-              onRowDelete: oldData =>
-              new Promise((resolve, reject) => {
-              setTimeout(() => {
-                {
-                  let data = this.state.questions;
-                  const index = data.indexOf(oldData);
-                  data.splice(index, 1);
-                  this.setState({ questions: data }, () => resolve());
 
+              localization={{
+                header: {
+                  actions: 'Možnosti'
+                },
+                toolbar: {
+                  searchPlaceholder: 'Vyhledat'
+                },
+                pagination: {
+                  labelRowsSelect: 'Řádek',
                 }
-                resolve()
-              }, 1000)
-              }),
               }}
             />
           </div>

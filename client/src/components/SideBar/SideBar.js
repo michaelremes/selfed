@@ -70,6 +70,7 @@ class SideBar extends Component {
           <img src={logo} className="App-logo" alt="logo"/>
 
           <a href='/dashboard'>Domů</a>
+          <a href='/student/tests'>Testy</a>
           <a href="/materials">Materiály</a>
           <a href="/homework">Úkoly</a>
         </div>

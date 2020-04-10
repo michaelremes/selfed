@@ -12,7 +12,7 @@ import App from './components/App/App';
 import Login from './components/Login/Login';
 import NotFound from './components/App/NotFound';
 import Dashboard from './components/Dashboard/Dashboard';
-import SignUp from './components/Users/SignUp';
+import AddUser from './components/Users/AddUser';
 import Users from './components/Users/Users';
 import Materials from './components/Materials/Materials';
 import Tests from './components/Tests/Tests';
@@ -20,6 +20,7 @@ import CreateTest from './components/Tests/CreateTest';
 import Questions from './components/Questions/Questions';
 import CreateQuestion from './components/Questions/CreateQuestion';
 import Homework from './components/Homework/Homework';
+import StudentTests from "./components/Tests/StudentTests";
 import SideBar from './components/SideBar/SideBar';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 
@@ -27,6 +28,7 @@ import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
 import Provider from "react-redux/lib/components/Provider";
 import {createStore} from 'redux';
 import allReducers from "./reducer/allReducers";
+
 
 const store = createStore(
   allReducers,
@@ -42,7 +44,8 @@ const sitesAfterLogin = [
   '/add/test',
   '/add/question',
   '/questions',
-  '/homework'
+  '/homework',
+  '/student/tests'
 ];
 
 
@@ -55,7 +58,7 @@ render((
       <Switch>
         <Route exact path='/' component={Login}/>
         <PrivateRoute path='/dashboard' component={Dashboard}/>
-        <PrivateRoute path="/add/user" component={SignUp}/>
+        <PrivateRoute path="/add/user" component={AddUser}/>
         <PrivateRoute path="/users" component={Users}/>
         <PrivateRoute path="/materials" component={Materials}/>
         <PrivateRoute path="/tests" component={Tests}/>
@@ -63,6 +66,9 @@ render((
         <PrivateRoute path="/add/question" component={CreateQuestion}/>
         <PrivateRoute path="/questions" component={Questions}/>
         <PrivateRoute path="/homework" component={Homework}/>
+
+        <PrivateRoute path="/student/tests" component={StudentTests}/>
+
         <Route component={NotFound}/>
       </Switch>
     </App>

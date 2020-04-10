@@ -101,6 +101,17 @@ class Users extends Component {
                     }, 600);
                   }),
               }}
+              localization={{
+                header: {
+                  actions: 'Možnosti'
+                },
+                toolbar: {
+                  searchPlaceholder: 'Vyhledat'
+                },
+                pagination: {
+                  labelRowsSelect: 'Řádek',
+                }
+              }}
             />
           </div>
         </div>
