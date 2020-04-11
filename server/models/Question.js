@@ -12,11 +12,14 @@ const QuestionSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
-  // answer: {
-  //   type: String,
-  //   default: ''
-  // },
-
+  answer: {
+    type: String,
+    default: ''
+  },
+  points: {
+    type: Number,
+    default: 0
+  }
 
 });
 

@@ -10,6 +10,14 @@ const TestSchema = new mongoose.Schema({
     type: Array,
     default: []
   },
+  deadline: {
+    type: Date,
+    default: ''
+  },
+  active: {
+    type: Boolean,
+    default: true
+  },
 
 });
 
