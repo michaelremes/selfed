@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/server/models/UserTestResults.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +136,7 @@
       <workItem from="1586333802391" duration="4418000" />
       <workItem from="1586416404009" duration="3366000" />
       <workItem from="1586500722270" duration="9030000" />
-      <workItem from="1586586031321" duration="5095000" />
+      <workItem from="1586586031321" duration="8889000" />
     </task>
     <task id="LOCAL-00001" summary="test comm">
       <created>1577375475612</created>
@@ -435,14 +432,20 @@
       <option name="project" value="LOCAL" />
       <updated>1586370882873</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="student tests prototype">
+      <created>1586596091210</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1586596091210</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="compact api calls" />
     <MESSAGE value="react table prototype with questions" />
     <MESSAGE value="questions table css added" />
     <MESSAGE value="import css for createQuestion fix" />
@@ -467,7 +470,8 @@
     <MESSAGE value="print list of added questions to test" />
     <MESSAGE value="input for points for question" />
     <MESSAGE value="Create test button functionality added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create test button functionality added" />
+    <MESSAGE value="student tests prototype" />
+    <option name="LAST_COMMIT_MESSAGE" value="student tests prototype" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -478,10 +482,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586538430383">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586596089907">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586538430383" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586596089907" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

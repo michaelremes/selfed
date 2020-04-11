@@ -2,6 +2,7 @@ import React, {Component} from "react";
 
 import '../../styles/Tests/StudentTests.css';
 import MaterialTable from "material-table";
+import Redirect from "react-router/Redirect";
 
 
 
@@ -12,6 +13,7 @@ class StudentTests extends Component {
       allTests: []
 
     };
+
   }
 
   componentDidMount() {
@@ -58,9 +60,11 @@ class StudentTests extends Component {
               data={activeTests}
               actions={[
                 {
-                  icon: 'view',
-                  tooltip: 'Upravit test',
-                  onClick: (event, rowData) => alert("You saved " + rowData.name)
+                  icon: 'send',
+                  tooltip: 'Spustit test',
+
+                  onClick: (event, test) =>  {this.props.history.push('/dashboard')}
+
                 }
               ]}
               localization={{
