@@ -105,12 +105,13 @@ class CreateQuestion extends Component {
 
 
   onCreateQuestion() {
-    addNotification("Úspěch", "Uživatel přidán.", "success");
-    //grab state
+
     const {
       title,
       task,
       type,
+      checkBoxAnswers,
+      radioBoxAnswers
     } = this.state;
 
     this.setState({
@@ -126,16 +127,18 @@ class CreateQuestion extends Component {
         title: title,
         task: task,
         type: type,
+        answers: checkBoxAnswers,
       }),
     }).then(res => res.json())
       .then(json => {
         if (json.success) {
-          // addNotification("Úspěch", "Uživatel přidán.", "success");
+          addNotification("Úspěch", "Otázka úspěšně vytvořena.", "success");
           this.setState({
             createQuestionError: json.message,
             title: '',
             task: '',
             type: '',
+            answers: [],
           });
         } else {
           addNotification("Error", "Otázka nemohla být vytvořena.", "danger");
@@ -192,7 +195,6 @@ class CreateQuestion extends Component {
             })}
 
             <TextField
-              required
               id="task-input"
               type="text"
               variant="outlined"

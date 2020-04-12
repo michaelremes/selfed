@@ -9,7 +9,7 @@ module.exports = (app) => {
       title,
       task,
       type,
-      answer
+      answers
     } = body;
 
     if (!title) {
@@ -30,7 +30,7 @@ module.exports = (app) => {
         message: 'Error: Type cannot be blank.'
       });
     }
-    if (!answer) {
+    if (!answers) {
       return res.send({
         success: false,
         message: 'Error: Role cannot be blank.'
@@ -57,7 +57,7 @@ module.exports = (app) => {
       newQuestion.title = title;
       newQuestion.task = task;
       newQuestion.type = type;
-      // newQuestion.answer = answer;
+      newQuestion.answers = answers;
 
       newQuestion.save((err, question) => {
         if (err) {

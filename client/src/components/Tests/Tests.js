@@ -15,6 +15,7 @@ class Tests extends Component {
       isLoading: false,
 
     };
+
   }
 
   componentDidMount() {
@@ -35,6 +36,8 @@ class Tests extends Component {
         }
       )
   };
+
+
 
   render() {
     const {
@@ -64,7 +67,6 @@ class Tests extends Component {
               columns={columns}
               data={tests}
               actions={[
-
                 {
                   icon: 'edit',
                   tooltip: 'Upravit test',
