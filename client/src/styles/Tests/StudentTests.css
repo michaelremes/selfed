@@ -18,11 +18,35 @@
     margin: auto;
 
   }
+
   .StudentTest form {
     margin: 0 auto;
     max-width: 600px;
+    /*background-color: lightgray;*/
     background-color: lightgray;
+
     padding: 70px;
+    text-align: center;
+
+
+  }
+
+
+  #submitTestButton {
+    margin: 30px;
+    padding: 10px;
+    font-size: calc(8px + 2vmin);
+
+  }
+
+  .StudentTest {
+    padding: 10px;
+
+
+  }
+
+
+  #mainTestForm {
     text-align: center;
   }
 

@@ -21,8 +21,9 @@ import Questions from './components/Questions/Questions';
 import CreateQuestion from './components/Questions/CreateQuestion';
 import Homework from './components/Homework/Homework';
 import StudentTests from "./components/Tests/StudentTests";
+import StudentDashboard from "./components/Dashboard/StudentDashboard";
 import SideBar from './components/SideBar/SideBar';
-import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
+import {TeacherPrivateRoute, StudentPrivateRoute} from './components/PrivateRoute/PrivateRoute';
 
 
 import Provider from "react-redux/lib/components/Provider";
@@ -45,7 +46,8 @@ const sitesAfterLogin = [
   '/add/question',
   '/questions',
   '/homework',
-  '/student/tests'
+  '/student/tests',
+  '/student/dashboard'
 ];
 
 
@@ -54,20 +56,22 @@ render((
   <Provider store={store}>
   <Router>
     <App>
-      <Route path={sitesAfterLogin} component={SideBar} />;
+      <Route path={sitesAfterLogin} component={SideBar} />
       <Switch>
         <Route exact path='/' component={Login}/>
-        <PrivateRoute path='/dashboard' component={Dashboard}/>
-        <PrivateRoute path="/add/user" component={AddUser}/>
-        <PrivateRoute path="/users" component={Users}/>
-        <PrivateRoute path="/materials" component={Materials}/>
-        <PrivateRoute path="/tests" component={Tests}/>
-        <PrivateRoute path="/add/test" component={CreateTest}/>
-        <PrivateRoute path="/add/question" component={CreateQuestion}/>
-        <PrivateRoute path="/questions" component={Questions}/>
-        <PrivateRoute path="/homework" component={Homework}/>
+        <TeacherPrivateRoute path='/dashboard' component={Dashboard}/>
 
-        <PrivateRoute path="/student/tests" component={StudentTests}/>
+        <TeacherPrivateRoute path="/add/user" component={AddUser}/>
+        <TeacherPrivateRoute path="/users" component={Users}/>
+
+        <TeacherPrivateRoute path="/tests" component={Tests}/>
+        <TeacherPrivateRoute path="/add/test" component={CreateTest}/>
+        <TeacherPrivateRoute path="/add/question" component={CreateQuestion}/>
+        <TeacherPrivateRoute path="/questions" component={Questions}/>
+        <TeacherPrivateRoute path="/homework" component={Homework}/>
+
+        <StudentPrivateRoute path="/student/tests" component={StudentTests}/>
+        <StudentPrivateRoute path='/student/dashboard' component={StudentDashboard}/>
 
         <Route component={NotFound}/>
       </Switch>

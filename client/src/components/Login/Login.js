@@ -177,7 +177,14 @@ class Login extends Component {
         </div>
       );
     }
-    return <Redirect to="/dashboard" />
+    if(localStorage.getItem('user_role') === 'teacher'){
+      return <Redirect to="/dashboard" />
+    }
+    else{
+      return <Redirect to="/student/dashboard" />
+    }
+
+
   }
 }
 

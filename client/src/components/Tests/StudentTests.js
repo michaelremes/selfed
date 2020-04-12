@@ -20,14 +20,19 @@ class StudentTests extends Component {
     this.state = {
       allTests: [],
       currentTest: '',
-      testOpen: false
+      testOpen: false,
+      answerBorder: '',
 
     };
     this.renderTest = this.renderTest.bind(this);
     this.renderListOfTests = this.renderListOfTests.bind(this);
 
     this.forwardBack = this.forwardBack.bind(this);
+    this.submitTest = this.submitTest.bind(this);
+
+
   }
+
 
 
   componentDidMount() {
@@ -64,13 +69,15 @@ class StudentTests extends Component {
     } = this.state;
     switch (question.type) {
       case 'text':
-        return <textarea
-          required
+        return (
+        <div>
+          <h2>Vaše odpověd</h2>
+        <textarea
           id="task-input"
-
-          // value={task}
           // onChange={this.onTextBoxChangeTextAnswer}
-        />;
+        />
+        </div>
+        );
       case 'checkbox':
         return (
           <FormGroup>
@@ -133,10 +140,14 @@ class StudentTests extends Component {
         );
     }
   }
-
+  submitTest(){
+      this.setState({
+        answerBorder: '10px solid green'
+      })
+  }
   renderTest() {
     return (
-      <div>
+      <div id="mainTestForm">
         <header className="StudentTests-header">
           {this.state.currentTest.title}
           <button className="button logout" onClick={this.forwardBack}>Zpět</button>
@@ -144,13 +155,14 @@ class StudentTests extends Component {
 
         {this.state.currentTest.questions.map((question, index) => {
           return (
-            <div className="StudentTest">
+            <div className="StudentTest"
+               >
               <form>
-                <h2>Název otázky</h2>
-                {question.title}
+                <h2>{question.title}</h2>
+
                 <FormGroup controlId="task" size="large">
 
-                  <h2>Zadání v LaTexu</h2>
+                  <h2>Zadání</h2>
 
                   <div className="LatexPreview">
                     <Latex>{question.task}</Latex>
@@ -164,10 +176,16 @@ class StudentTests extends Component {
 
 
               </form>
+
             </div>
           )
         })}
+        <div>
 
+          <button id="submitTestButton" onClick={this.submitTest}>
+            Odevzdat test
+          </button>
+        </div>
 
       </div>
     )

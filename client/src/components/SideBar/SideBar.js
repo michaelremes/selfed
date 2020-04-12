@@ -41,7 +41,7 @@ class SideBar extends Component {
             defaultExpandIcon={<ChevronRightIcon />}
           >
           <a href='/dashboard'>Domů</a>
-          <a href="/materials">Materiály</a>
+          {/*<a href="/materials">Materiály</a>*/}
             {/*<TreeItem nodeId="1" label="Otázky" >*/}
             {/*  <TreeItem nodeId="2" label="Vytvořit otázku" onClick={() => {*/}
             {/*    history.push('/dashboard');*/}
@@ -50,7 +50,7 @@ class SideBar extends Component {
             {/*</TreeItem>*/}
           <a href="/add/question">Vytvořit otázku</a>
           <a href="/questions">Všechny otázky</a>
-          <a href="/homework">Úkoly</a>
+          {/*<a href="/homework">Úkoly</a>*/}
           <a href="/tests">Testy</a>
           <a href="/add/test">Vytvořit test</a>
           <a href="/add/user">Přidat uživatele</a>
@@ -69,10 +69,9 @@ class SideBar extends Component {
         <div className="sidenav">
           <img src={logo} className="App-logo" alt="logo"/>
 
-          <a href='/dashboard'>Domů</a>
+          <a href='/student/dashboard'>Domů</a>
           <a href='/student/tests'>Testy</a>
-          <a href="/materials">Materiály</a>
-          <a href="/homework">Úkoly</a>
+          {/*<a href='/student/homework'>Úkoly</a>*/}
         </div>
       );
     }
