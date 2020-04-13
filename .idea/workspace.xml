@@ -4,6 +4,7 @@
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.prod.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -461,7 +462,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586810828473</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="prod testing">
+      <created>1586811101149</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1586811101149</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,10 +512,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="156" y="59" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586810826865">
+    <state x="156" y="59" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586811100839">
       <screen x="0" y="23" width="1680" height="995" />
     </state>
-    <state x="156" y="59" key="CommitChangelistDialog2/0.23.1680.995@0.23.1680.995" timestamp="1586810826865" />
+    <state x="156" y="59" key="CommitChangelistDialog2/0.23.1680.995@0.23.1680.995" timestamp="1586811100839" />
     <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586695549116" />
     <state width="1659" height="269" key="GridCell.Tab.0.bottom" timestamp="1586810484365">
       <screen x="0" y="23" width="1680" height="995" />
