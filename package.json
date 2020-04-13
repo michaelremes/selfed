@@ -60,13 +60,15 @@
     "webpack-dev-middleware": "^3.0.1",
     "webpack-hot-middleware": "^2.21.2",
     "webpack-merge": "^4.1.2",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "compression-webpack-plugin": "^3.1.0",
+    "webpack": "^4.41.6"
   },
   "devDependencies": {
     "@material-ui/icons": "^4.9.1",
-    "compression-webpack-plugin": "^3.1.0",
+
     "image-webpack-loader": "^6.0.0",
-    "webpack": "^4.41.6",
+
     "webpack-cli": "^3.3.11"
   }
 }
