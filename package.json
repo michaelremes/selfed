@@ -1,17 +1,17 @@
 {
-  "name": "MERN-boilerplate",
+  "name": "selfed",
   "version": "1.0.0",
-  "description": "MERN stack project boilerplate",
-  "author": "Eugene Cheung",
+  "description": "MERN stack bachelor project",
+  "author": "Michael Remes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arkon/MERN-boilerplate.git"
+    "url": "https://github.com/michaelremes/selfed.git"
   },
-  "license": "MIT",
   "private": true,
   "scripts": {
     "start": "webpack -p --progress --profile --colors && node server",
-    "start:dev": "node server"
+    "start:dev": "node server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "engines": {
     "node": ">=6"
