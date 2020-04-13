@@ -9,7 +9,7 @@
   },
   "private": true,
   "scripts": {
-    "start": "webpack -p --progress --profile --colors && node server",
+    "start": "node server",
     "start:dev": "node server",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false webpack -p"
   },
