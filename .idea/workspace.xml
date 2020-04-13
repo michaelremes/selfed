@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/webpack.prod.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/webpack.prod.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -469,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586811101149</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="prod testing">
+      <created>1586811406687</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1586811406687</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -512,10 +518,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="156" y="59" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586811100839">
+    <state x="156" y="59" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586811406349">
       <screen x="0" y="23" width="1680" height="995" />
     </state>
-    <state x="156" y="59" key="CommitChangelistDialog2/0.23.1680.995@0.23.1680.995" timestamp="1586811100839" />
+    <state x="156" y="59" key="CommitChangelistDialog2/0.23.1680.995@0.23.1680.995" timestamp="1586811406349" />
     <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586695549116" />
     <state width="1659" height="269" key="GridCell.Tab.0.bottom" timestamp="1586810484365">
       <screen x="0" y="23" width="1680" height="995" />
@@ -593,10 +599,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="483" y="264" key="Vcs.Push.Dialog.v2" timestamp="1586809697325">
+    <state x="483" y="264" key="Vcs.Push.Dialog.v2" timestamp="1586811716271">
       <screen x="0" y="23" width="1680" height="995" />
     </state>
-    <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1586809697325" />
+    <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1586811716271" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586630832028" />
     <state x="673" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586807752254">
       <screen x="0" y="23" width="1680" height="995" />
