@@ -22,6 +22,7 @@ class StudentTests extends Component {
       currentTest: '',
       testOpen: false,
       answerBorder: '',
+      studentAnswers: [],
 
     };
     this.renderTest = this.renderTest.bind(this);
@@ -30,7 +31,8 @@ class StudentTests extends Component {
     this.forwardBack = this.forwardBack.bind(this);
     this.submitTest = this.submitTest.bind(this);
 
-
+    this.onCheckBoxChange = this.onCheckBoxChange.bind(this);
+    this.onTextBoxChange = this.onTextBoxChange.bind(this);
   }
 
 
@@ -74,7 +76,7 @@ class StudentTests extends Component {
           <h2>Vaše odpověd</h2>
         <textarea
           id="task-input"
-          // onChange={this.onTextBoxChangeTextAnswer}
+          onChange={this.onTextBoxChange}
         />
         </div>
         );

@@ -23,11 +23,10 @@ class CreateQuestion extends Component {
       createQuestionError: '',
       title: '',
       task: '',
-      type: 'radio',
+      type: 'checkbox',
       answer: '',
-      checkBoxAnswers: [],
-      radioBoxAnswers: [],
-      correctRadioAnswer: '',
+      answers: [],
+      correctAnswers: []
     };
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
@@ -37,11 +36,11 @@ class CreateQuestion extends Component {
     this.onSelectQuestionType = this.onSelectQuestionType.bind(this);
     this.onCreateQuestion = this.onCreateQuestion.bind(this);
 
-    this.addItemCheckBox = this.addItemCheckBox.bind(this);
-    this.removeItemCheckBox = this.removeItemCheckBox.bind(this);
+    this.addAnswer = this.addAnswer.bind(this);
+    this.removeAnswer = this.removeAnswer.bind(this);
 
-    this.addItemRadioBox = this.addItemRadioBox.bind(this);
-    this.removeItemRadioBox = this.removeItemRadioBox.bind(this);
+    this.addCorrectAnswer = this.addCorrectAnswer.bind(this);
+
 
 
   }
@@ -70,38 +69,33 @@ class CreateQuestion extends Component {
     });
   }
 
-  addItemCheckBox() {
+  addAnswer() {
     this.setState(previousState => ({
-      checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
+      answers: [...previousState.answers, this.state.answer],
       answer: ''
     }));
   }
 
-
-  removeItemCheckBox(index) {
-    let array = [...this.state.checkBoxAnswers]; // make a separate copy of the array
-
-    if (index !== -1) {
-      array.splice(index, 1);
-      this.setState({checkBoxAnswers: array});
-    }
-  }
-
-  addItemRadioBox() {
+  addCorrectAnswer(value) {
+    console.log(value);
     this.setState(previousState => ({
-      radioBoxAnswers: [...previousState.radioBoxAnswers, this.state.answer],
-      answer: ''
+      correctAnswers: [...previousState.correctAnswers, value],
+
     }));
+
   }
 
-  removeItemRadioBox(index) {
-    let array = [...this.state.radioBoxAnswers]; // make a separate copy of the array
+
+  removeAnswer(index) {
+    let array = [...this.state.answers]; // make a separate copy of the array
 
     if (index !== -1) {
       array.splice(index, 1);
-      this.setState({radioBoxAnswers: array});
+      this.setState({answers: array});
     }
   }
+
+
 
 
   onCreateQuestion() {
@@ -110,8 +104,8 @@ class CreateQuestion extends Component {
       title,
       task,
       type,
-      checkBoxAnswers,
-      radioBoxAnswers
+      answers,
+      correctAnswers
     } = this.state;
 
     this.setState({
@@ -127,7 +121,8 @@ class CreateQuestion extends Component {
         title: title,
         task: task,
         type: type,
-        answers: checkBoxAnswers,
+        answers: answers,
+        correctAnswers: correctAnswers,
       }),
     }).then(res => res.json())
       .then(json => {
@@ -139,6 +134,7 @@ class CreateQuestion extends Component {
             task: '',
             type: '',
             answers: [],
+            correctAnswers: [],
           });
         } else {
           addNotification("Error", "Otázka nemohla být vytvořena.", "danger");
@@ -153,7 +149,7 @@ class CreateQuestion extends Component {
   renderCorrectAnswer(param) {
     const {
       answer,
-      correctRadioAnswer
+      answers
 
     } = this.state;
     switch (param) {
@@ -169,15 +165,14 @@ class CreateQuestion extends Component {
         return (
           <FormGroup>
 
-            {this.state.checkBoxAnswers.map((answerLabel, index) => {
+            {this.state.answers.map((answerLabel, index) => {
               return (
                 <div>
                   <FormControlLabel
                     control={
                       <Checkbox
-                        // checked={state.checkedB}
-                        // onChange={handleChange('checkedB')}
-                        value="checked"
+                        onClick={this.addCorrectAnswer.bind(this, index)}
+
                         color="primary"
                       />
                     }
@@ -186,7 +181,7 @@ class CreateQuestion extends Component {
                   />
 
                   <IconButton aria-label="delete" className="delete-answer"
-                              onClick={this.removeItemCheckBox.bind(this, index)}
+                              onClick={this.removeAnswer.bind(this, index)}
                   >
                     <DeleteIcon/> smazat
                   </IconButton>
@@ -204,7 +199,7 @@ class CreateQuestion extends Component {
             <Button
               variant="contained"
               color="secondary"
-              onClick={this.addItemCheckBox}
+              onClick={this.addAnswer}
             >
               Přidat odpověd
             </Button>
@@ -216,10 +211,10 @@ class CreateQuestion extends Component {
         return (
           <div>
 
-            {this.state.radioBoxAnswers.map((answerLabel, index) => {
+            {this.state.answers.map((answerLabel, index) => {
               return (
                 <div className="radio-answer">
-                  <RadioGroup value={correctRadioAnswer}>
+                  <RadioGroup value=" ">
                     <FormControlLabel
                       control={
                         <Radio
@@ -235,7 +230,7 @@ class CreateQuestion extends Component {
                     />
 
                     <IconButton aria-label="delete" className="delete-answer"
-                                onClick={this.removeItemRadioBox.bind(this, index)}
+                                onClick={this.removeAnswer.bind(this, index)}
                     >
                       <DeleteIcon/> smazat
                     </IconButton>
@@ -257,7 +252,7 @@ class CreateQuestion extends Component {
             <Button
               variant="contained"
               color="secondary"
-              onClick={this.addItemRadioBox}
+              onClick={this.addAnswer}
             >
               Přidat odpověď
             </Button>
