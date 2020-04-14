@@ -53,18 +53,16 @@ if (isDev) {
   app.use(express.static(path.resolve(__dirname, '../dist')));
 } else {
   app.use(express.static(path.resolve(__dirname, '../dist')));
-  app.get('/*', function (req, res) {
+  app.get('*', function (req, res) {
     res.sendFile(path.resolve(__dirname, '../dist/index.html'));
-    res.end();
   });
 }
 
-app.listen(port, '0.0.0.0', (err) => {
+app.listen(port, (err) => {
   if (err) {
     console.log(err);
   }
-
-  console.info('>>> 🌎 Open http://0.0.0.0:%s/ in your browser.', port);
+  console.info('Server started');
 });
 
 module.exports = app;

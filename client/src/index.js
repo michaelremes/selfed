@@ -22,7 +22,7 @@ import StudentTests from "./components/Tests/StudentTests";
 import StudentDashboard from "./components/Dashboard/StudentDashboard";
 import SideBar from './components/SideBar/SideBar';
 import {TeacherPrivateRoute, StudentPrivateRoute} from './components/PrivateRoute/PrivateRoute';
-import BrowserRouter from "react-router-dom/BrowserRouter";
+
 
 
 
@@ -43,7 +43,7 @@ const sitesAfterLogin = [
 
 
 render((
-  <Router >
+  <Router>
     <App>
 
       <Route path={sitesAfterLogin} component={SideBar} />
