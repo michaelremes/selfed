@@ -10,6 +10,7 @@
   "private": true,
   "scripts": {
     "start": "node server",
+    "build": "webpack --mode production",
     "start:dev": "node server",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false webpack -p",
     "heroku-prebuild": "npm install --production=false"
@@ -65,6 +66,7 @@
   },
   "devDependencies": {
     "@material-ui/icons": "^4.9.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "image-webpack-loader": "^6.0.0",
     "webpack-cli": "^3.3.11"
   }
