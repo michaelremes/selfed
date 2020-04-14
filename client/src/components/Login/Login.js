@@ -178,6 +178,7 @@ class Login extends Component {
       );
     }
     if(localStorage.getItem('user_role') === 'teacher'){
+      console.log( "Uzivatel prihlasen: " + localStorage.getItem('user_role'));
       return <Redirect to="/dashboard" />
     }
     else{
