@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" afterDir="false" />
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="prod init">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/PrivateRoute/PrivateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PrivateRoute/PrivateRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +23,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="prod" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,19 +51,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Dashboard" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Tests" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\App" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Dashboard" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Tests" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Questions.js">
@@ -80,6 +75,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.Questions.js" />
+        <item itemvalue="Node.js.App.js" />
         <item itemvalue="Node.js.Questions.js" />
         <item itemvalue="Node.js.App.js" />
       </list>
@@ -144,112 +141,9 @@
       <workItem from="1586416404009" duration="3366000" />
       <workItem from="1586500722270" duration="9030000" />
       <workItem from="1586586031321" duration="8889000" />
-      <workItem from="1586673352698" duration="20322000" />
-    </task>
-    <task id="LOCAL-00001" summary="test comm">
-      <created>1577375475612</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1577375475613</updated>
-    </task>
-    <task id="LOCAL-00002" summary="uvodniStranka">
-      <created>1577377680750</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1577377680750</updated>
-    </task>
-    <task id="LOCAL-00003" summary="logo">
-      <created>1577377711738</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1577377711738</updated>
-    </task>
-    <task id="LOCAL-00004" summary="loginForm initializaiton">
-      <created>1577397250312</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1577397250312</updated>
-    </task>
-    <task id="LOCAL-00005" summary="firebase integretation">
-      <created>1581611487940</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1581611487940</updated>
-    </task>
-    <task id="LOCAL-00006" summary="mern update">
-      <created>1582464847112</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1582464847112</updated>
-    </task>
-    <task id="LOCAL-00007" summary="mern login form">
-      <created>1582480296642</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1582480296642</updated>
-    </task>
-    <task id="LOCAL-00008" summary="login and dashboard prototype">
-      <created>1582484845062</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1582484845062</updated>
-    </task>
-    <task id="LOCAL-00009" summary="sidebar prototype added">
-      <created>1582729888622</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1582729888623</updated>
-    </task>
-    <task id="LOCAL-00010" summary="sign up form prototype">
-      <created>1582756160161</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1582756160161</updated>
-    </task>
-    <task id="LOCAL-00011" summary="sign up form bug fixed">
-      <created>1582795208396</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1582795208396</updated>
-    </task>
-    <task id="LOCAL-00012" summary="API for creating new question">
-      <created>1582838411584</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1582838411584</updated>
-    </task>
-    <task id="LOCAL-00013" summary="createQuestion - frontend connected to backend">
-      <created>1583268968152</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1583268968152</updated>
-    </task>
-    <task id="LOCAL-00014" summary="APIs for listing questions and users">
-      <created>1583350137974</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1583350137974</updated>
-    </task>
-    <task id="LOCAL-00015" summary="API fix, + starting API for tests">
-      <created>1583350309619</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1583350309619</updated>
+      <workItem from="1586673352698" duration="20496000" />
+      <workItem from="1586760083575" duration="8473000" />
+      <workItem from="1586851071579" duration="14868000" />
     </task>
     <task id="LOCAL-00016" summary="notifications prototype">
       <created>1584457559673</created>
@@ -454,15 +348,153 @@
       <option name="project" value="LOCAL" />
       <updated>1586695556680</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="different private route for teachers and for students">
+      <created>1586715469894</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1586715469894</updated>
+    </task>
+    <task id="LOCAL-00046" summary="prod init">
+      <created>1586794010176</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1586794010176</updated>
+    </task>
+    <task id="LOCAL-00047" summary="prod init">
+      <created>1586794860259</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1586794860259</updated>
+    </task>
+    <task id="LOCAL-00048" summary="prod init">
+      <created>1586851877837</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1586851877837</updated>
+    </task>
+    <task id="LOCAL-00049" summary="prod init">
+      <created>1586852145537</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1586852145537</updated>
+    </task>
+    <task id="LOCAL-00050" summary="prod init">
+      <created>1586852455229</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1586852455230</updated>
+    </task>
+    <task id="LOCAL-00051" summary="prod init">
+      <created>1586852707125</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1586852707125</updated>
+    </task>
+    <task id="LOCAL-00052" summary="prod init">
+      <created>1586853657742</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1586853657742</updated>
+    </task>
+    <task id="LOCAL-00053" summary="prod init">
+      <created>1586855031092</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1586855031092</updated>
+    </task>
+    <task id="LOCAL-00054" summary="prod init">
+      <created>1586855722705</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1586855722705</updated>
+    </task>
+    <task id="LOCAL-00055" summary="prod init">
+      <created>1586858547225</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1586858547225</updated>
+    </task>
+    <task id="LOCAL-00056" summary="prod init">
+      <created>1586858700453</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1586858700453</updated>
+    </task>
+    <task id="LOCAL-00057" summary="prod init">
+      <created>1586859082751</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1586859082752</updated>
+    </task>
+    <task id="LOCAL-00058" summary="prod init">
+      <created>1586859586981</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1586859586981</updated>
+    </task>
+    <task id="LOCAL-00059" summary="prod init">
+      <created>1586859838936</created>
+      <option name="number" value="00059" />
+      <option name="presentableId" value="LOCAL-00059" />
+      <option name="project" value="LOCAL" />
+      <updated>1586859838936</updated>
+    </task>
+    <task id="LOCAL-00060" summary="prod init">
+      <created>1586861464511</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1586861464511</updated>
+    </task>
+    <task id="LOCAL-00061" summary="prod init">
+      <created>1586862408389</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1586862408389</updated>
+    </task>
+    <task id="LOCAL-00062" summary="prod init">
+      <created>1586863399477</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1586863399478</updated>
+    </task>
+    <task id="LOCAL-00063" summary="prod init">
+      <created>1586865357726</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1586865357726</updated>
+    </task>
+    <task id="LOCAL-00064" summary="prod init">
+      <created>1586868204715</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1586868204715</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="questions table css added" />
-    <MESSAGE value="import css for createQuestion fix" />
     <MESSAGE value="Tabel with all users" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="API for creating tests" />
@@ -486,7 +518,9 @@
     <MESSAGE value="Create test button functionality added" />
     <MESSAGE value="student tests prototype" />
     <MESSAGE value="student tests view" />
-    <option name="LAST_COMMIT_MESSAGE" value="student tests view" />
+    <MESSAGE value="different private route for teachers and for students" />
+    <MESSAGE value="prod init" />
+    <option name="LAST_COMMIT_MESSAGE" value="prod init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -497,10 +531,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586695549116">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586868224299">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586695549116" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586868224299" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -569,27 +603,35 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.3.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
+    <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1586869287497">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="672" y="237" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586869287497" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1586259070006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586630832028">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586868206241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586630832028" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585991084726">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586868206241" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586851163246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585991084726" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586851163246" />
     <state x="2589" y="0" width="769" height="1025" key="dock-window-1" timestamp="1582470436175">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="2589" y="0" width="769" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582470436175" />
-    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1586077999733">
+    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1586857386845">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="118" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586077999733" />
+    <state x="656" y="118" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586857386845" />
+    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586869281689">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586869281689" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582751740006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
