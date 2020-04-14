@@ -4,6 +4,7 @@
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,22 +47,22 @@
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Dashboard" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Tests" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\App" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Dashboard" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Tests" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Questions.js">
@@ -137,7 +138,86 @@
       <workItem from="1586416404009" duration="3366000" />
       <workItem from="1586500722270" duration="9030000" />
       <workItem from="1586586031321" duration="8889000" />
-      <workItem from="1586673352698" duration="20322000" />
+      <workItem from="1586673352698" duration="20496000" />
+      <workItem from="1586760083575" duration="8473000" />
+      <workItem from="1586851071579" duration="741000" />
+    </task>
+    <task id="LOCAL-00001" summary="test comm">
+      <created>1577375475612</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577375475613</updated>
+    </task>
+    <task id="LOCAL-00002" summary="uvodniStranka">
+      <created>1577377680750</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1577377680750</updated>
+    </task>
+    <task id="LOCAL-00003" summary="logo">
+      <created>1577377711738</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1577377711738</updated>
+    </task>
+    <task id="LOCAL-00004" summary="loginForm initializaiton">
+      <created>1577397250312</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1577397250312</updated>
+    </task>
+    <task id="LOCAL-00005" summary="firebase integretation">
+      <created>1581611487940</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1581611487940</updated>
+    </task>
+    <task id="LOCAL-00006" summary="mern update">
+      <created>1582464847112</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1582464847112</updated>
+    </task>
+    <task id="LOCAL-00007" summary="mern login form">
+      <created>1582480296642</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1582480296642</updated>
+    </task>
+    <task id="LOCAL-00008" summary="login and dashboard prototype">
+      <created>1582484845062</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582484845062</updated>
+    </task>
+    <task id="LOCAL-00009" summary="sidebar prototype added">
+      <created>1582729888622</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582729888623</updated>
+    </task>
+    <task id="LOCAL-00010" summary="sign up form prototype">
+      <created>1582756160161</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1582756160161</updated>
+    </task>
+    <task id="LOCAL-00011" summary="sign up form bug fixed">
+      <created>1582795208396</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1582795208396</updated>
     </task>
     <task id="LOCAL-00012" summary="API for creating new question">
       <created>1582838411584</created>
@@ -370,126 +450,34 @@
       <option name="project" value="LOCAL" />
       <updated>1586695556680</updated>
     </task>
-    <task id="LOCAL-00045" summary="prod testing">
-      <created>1586809693454</created>
+    <task id="LOCAL-00045" summary="different private route for teachers and for students">
+      <created>1586715469894</created>
       <option name="number" value="00045" />
       <option name="presentableId" value="LOCAL-00045" />
       <option name="project" value="LOCAL" />
-      <updated>1586809693454</updated>
+      <updated>1586715469894</updated>
     </task>
-    <task id="LOCAL-00046" summary="prod testing">
-      <created>1586810828473</created>
+    <task id="LOCAL-00046" summary="prod init">
+      <created>1586794010176</created>
       <option name="number" value="00046" />
       <option name="presentableId" value="LOCAL-00046" />
       <option name="project" value="LOCAL" />
-      <updated>1586810828473</updated>
+      <updated>1586794010176</updated>
     </task>
-    <task id="LOCAL-00047" summary="prod testing">
-      <created>1586811101149</created>
+    <task id="LOCAL-00047" summary="prod init">
+      <created>1586794860259</created>
       <option name="number" value="00047" />
       <option name="presentableId" value="LOCAL-00047" />
       <option name="project" value="LOCAL" />
-      <updated>1586811101149</updated>
+      <updated>1586794860259</updated>
     </task>
-    <task id="LOCAL-00048" summary="prod testing">
-      <created>1586811406687</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1586811406687</updated>
-    </task>
-    <task id="LOCAL-00049" summary="prod testing">
-      <created>1586812250885</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1586812250885</updated>
-    </task>
-    <task id="LOCAL-00050" summary="prod testing">
-      <created>1586812394954</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1586812394957</updated>
-    </task>
-    <task id="LOCAL-00051" summary="prod testing">
-      <created>1586813879141</created>
-      <option name="number" value="00051" />
-      <option name="presentableId" value="LOCAL-00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1586813879141</updated>
-    </task>
-    <task id="LOCAL-00052" summary="prod testing">
-      <created>1586813992253</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1586813992254</updated>
-    </task>
-    <task id="LOCAL-00053" summary="prod testing">
-      <created>1586814129710</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1586814129710</updated>
-    </task>
-    <task id="LOCAL-00054" summary="prod testing">
-      <created>1586814399974</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1586814399975</updated>
-    </task>
-    <task id="LOCAL-00055" summary="prod testing">
-      <created>1586815379910</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1586815379910</updated>
-    </task>
-    <task id="LOCAL-00056" summary="prod testing">
-      <created>1586816131250</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1586816131250</updated>
-    </task>
-    <task id="LOCAL-00057" summary="prod testing">
-      <created>1586816335833</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1586816335834</updated>
-    </task>
-    <task id="LOCAL-00058" summary="prod testing">
-      <created>1586816605471</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1586816605471</updated>
-    </task>
-    <task id="LOCAL-00059" summary="prod testing">
-      <created>1586817157222</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1586817157222</updated>
-    </task>
-    <task id="LOCAL-00060" summary="prod testing">
-      <created>1586817288963</created>
-      <option name="number" value="00060" />
-      <option name="presentableId" value="LOCAL-00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1586817288963</updated>
-    </task>
-    <option name="localTasksCounter" value="61" />
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="import css for createQuestion fix" />
     <MESSAGE value="Tabel with all users" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="API for creating tests" />
@@ -513,8 +501,9 @@
     <MESSAGE value="Create test button functionality added" />
     <MESSAGE value="student tests prototype" />
     <MESSAGE value="student tests view" />
-    <MESSAGE value="prod testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="prod testing" />
+    <MESSAGE value="different private route for teachers and for students" />
+    <MESSAGE value="prod init" />
+    <option name="LAST_COMMIT_MESSAGE" value="prod init" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -525,30 +514,29 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="156" y="59" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586847131482">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1586794859143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="156" y="59" key="CommitChangelistDialog2/0.23.1680.995@0.23.1680.995" timestamp="1586847131482" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586695549116" />
-    <state width="1659" height="269" key="GridCell.Tab.0.bottom" timestamp="1586810484365">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586794859143" />
+    <state width="1899" height="348" key="GridCell.Tab.0.bottom" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1659" height="269" key="GridCell.Tab.0.bottom/0.23.1680.995@0.23.1680.995" timestamp="1586810484365" />
+    <state width="1659" height="269" key="GridCell.Tab.0.bottom/0.23.1680.995@0.23.1680.995" timestamp="1582558024296" />
     <state width="1899" height="348" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
-    <state width="1659" height="269" key="GridCell.Tab.0.center" timestamp="1586810484360">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1899" height="348" key="GridCell.Tab.0.center" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1659" height="269" key="GridCell.Tab.0.center/0.23.1680.995@0.23.1680.995" timestamp="1586810484360" />
+    <state width="1659" height="269" key="GridCell.Tab.0.center/0.23.1680.995@0.23.1680.995" timestamp="1582558024271" />
     <state width="1899" height="348" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
-    <state width="1659" height="269" key="GridCell.Tab.0.left" timestamp="1586810484359">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1899" height="348" key="GridCell.Tab.0.left" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1659" height="269" key="GridCell.Tab.0.left/0.23.1680.995@0.23.1680.995" timestamp="1586810484359" />
+    <state width="1659" height="269" key="GridCell.Tab.0.left/0.23.1680.995@0.23.1680.995" timestamp="1582558024270" />
     <state width="1899" height="348" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
-    <state width="1659" height="269" key="GridCell.Tab.0.right" timestamp="1586810484363">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state width="1899" height="348" key="GridCell.Tab.0.right" timestamp="1584712125687">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1659" height="269" key="GridCell.Tab.0.right/0.23.1680.995@0.23.1680.995" timestamp="1586810484363" />
+    <state width="1659" height="269" key="GridCell.Tab.0.right/0.23.1680.995@0.23.1680.995" timestamp="1582558024272" />
     <state width="1899" height="348" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125687" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -598,37 +586,31 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.3.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
-    <state x="551" y="243" key="MultipleFileMergeDialog" timestamp="1586807761182">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1586851367071">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="551" y="243" key="MultipleFileMergeDialog/0.23.1680.995@0.23.1680.995" timestamp="1586807761182" />
+    <state x="672" y="237" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586851367071" />
     <state x="461" y="163" key="SettingsEditor" timestamp="1586259070006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="483" y="264" key="Vcs.Push.Dialog.v2" timestamp="1586817291353">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1586794863111">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1586817291353" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586630832028" />
-    <state x="673" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586807752254">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586794863111" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586851163246">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="673" y="440" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1680.995@0.23.1680.995" timestamp="1586807752254" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1585991084726" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586851163246" />
     <state x="2589" y="0" width="769" height="1025" key="dock-window-1" timestamp="1582470436175">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="2589" y="0" width="769" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582470436175" />
-    <state x="574" y="136" width="683" height="770" key="find.popup" timestamp="1586847005511">
-      <screen x="0" y="23" width="1680" height="995" />
+    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1586077999733">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="574" y="136" width="683" height="770" key="find.popup/0.23.1680.995@0.23.1680.995" timestamp="1586847005511" />
     <state x="656" y="118" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586077999733" />
-    <state x="586" y="240" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586807737475">
-      <screen x="0" y="23" width="1680" height="995" />
-    </state>
-    <state x="586" y="240" key="git4idea.branch.GitSmartOperationDialog/0.23.1680.995@0.23.1680.995" timestamp="1586807737475" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582751740006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
