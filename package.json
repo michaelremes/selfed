@@ -12,8 +12,7 @@
     "start": "node server",
     "build": "webpack --mode production",
     "start:dev": "node server",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false webpack -p",
-    "heroku-prebuild": "npm install --production=false"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false webpack -p"
   },
   "engines": {
     "node": ">=6"

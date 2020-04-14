@@ -49,26 +49,17 @@ render((
       <Route path={sitesAfterLogin} component={SideBar} />
       <Switch>
         <Route exact path='/' component={Login}/>
-        <Route path='/dashboard' component={Dashboard}/>
 
-        <Route path="/add/user" component={AddUser}/>
-        <Route path="/users" component={Users}/>
+        <TeacherPrivateRoute path='/dashboard' component={Dashboard}/>
 
-        <Route path="/tests" component={Tests}/>
-        <Route path="/add/test" component={CreateTest}/>
-        <Route path="/add/question" component={CreateQuestion}/>
-        <Route path="/questions" component={Questions}/>
+        <TeacherPrivateRoute path="/add/user" component={AddUser}/>
+        <TeacherPrivateRoute path="/users" component={Users}/>
 
-        {/*<TeacherPrivateRoute path='/dashboard' component={Dashboard}/>*/}
-
-        {/*<TeacherPrivateRoute path="/add/user" component={AddUser}/>*/}
-        {/*<TeacherPrivateRoute path="/users" component={Users}/>*/}
-
-        {/*<TeacherPrivateRoute path="/tests" component={Tests}/>*/}
-        {/*<TeacherPrivateRoute path="/add/test" component={CreateTest}/>*/}
-        {/*<TeacherPrivateRoute path="/add/question" component={CreateQuestion}/>*/}
-        {/*<TeacherPrivateRoute path="/questions" component={Questions}/>*/}
-        {/*<TeacherPrivateRoute path="/homework" component={Homework}/>*/}
+        <TeacherPrivateRoute path="/tests" component={Tests}/>
+        <TeacherPrivateRoute path="/add/test" component={CreateTest}/>
+        <TeacherPrivateRoute path="/add/question" component={CreateQuestion}/>
+        <TeacherPrivateRoute path="/questions" component={Questions}/>
+        <TeacherPrivateRoute path="/homework" component={Homework}/>
 
         <StudentPrivateRoute path="/student/tests" component={StudentTests}/>
         <StudentPrivateRoute path='/student/dashboard' component={StudentDashboard}/>
