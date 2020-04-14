@@ -24,6 +24,7 @@ import SideBar from './components/SideBar/SideBar';
 import {TeacherPrivateRoute, StudentPrivateRoute} from './components/PrivateRoute/PrivateRoute';
 
 
+
 const sitesAfterLogin = [
   '/dashboard',
   '/add/user',
@@ -41,7 +42,7 @@ const sitesAfterLogin = [
 
 
 render((
-  <Router>
+  <Router basename={`${process.env.PUBLIC_URL}/`}>
     <App>
       <Route path={sitesAfterLogin} component={SideBar} />
       <Switch>
@@ -62,6 +63,7 @@ render((
 
         <Route component={NotFound}/>
       </Switch>
+
     </App>
   </Router>
 ), document.getElementById('root'));
