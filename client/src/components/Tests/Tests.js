@@ -2,6 +2,7 @@ import React, {Component} from "react";
 
 import '../../styles/Tests/Tests.css';
 import MaterialTable from 'material-table';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 
 //------------------------------------
 // add option to view it as pdf
@@ -68,19 +69,15 @@ class Tests extends Component {
               data={tests}
               actions={[
                 {
-                  icon: 'edit',
-                  tooltip: 'Upravit test',
-                  onClick: (event, rowData) => alert("You saved " + rowData.name)
+                  icon: PictureAsPdfIcon,
+                  tooltip: 'Zobrazit test',
                 },
                 {
                   icon: 'delete',
                   tooltip: 'Smazat test',
                   onClick: (event, rowData) => confirm("You want to delete " + rowData.name)
-                },
-                {
-                  icon: 'visibility',
-                  tooltip: 'Zobrazit test',
                 }
+
               ]}
               localization={{
                 header: {

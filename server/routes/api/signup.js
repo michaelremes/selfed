@@ -140,4 +140,17 @@ module.exports = (app) => {
     });
   });
 
+
+  app.delete('/api/user/:id', (req, res)  => {
+    let userId = {_id:req.params.id};
+
+    User.deleteOne(userId, function (err) {
+      if(err){
+        res.status(500).send('User not found.');
+      }
+      res.send('Success');
+    })
+
+  });
+
 };

@@ -17,10 +17,10 @@ class Users extends Component {
       loggedUserRole: ''
     };
 
-  //this.getLoggedUser = this.getLoggedUser.bind(this);
+  this.deleteUser = this.deleteUser.bind(this);
   }
   componentDidMount() {
-//    const obj = getFromStorage('user_session');
+
     fetch('/api/users')
       .then(res => res.json())
       .then(
@@ -40,8 +40,15 @@ class Users extends Component {
   };
 
 
+  deleteUser(user){
+    console.log(user._id)
+    fetch('/api/user/' + user._id, {
+      method: 'DELETE',
+    })
+      .then(res => res.text()) // or res.json()
+      .then(res => console.log(res))
 
-
+  }
 
   render() {
 
@@ -75,31 +82,30 @@ class Users extends Component {
               title="Seznam vytvořených otázek"
               columns={columns}
               data={users}
+              // actions={[
+              // {
+              //   icon: 'delete',
+              //   tooltip: 'Odstranit uživatele',
+              //   onClick: (event, user) => this.deleteUser(user)
+              //
+              // }]
+              // }
               editable={{
-                onRowUpdate: (newData, oldData) =>
-                  new Promise(resolve => {
+                onRowDelete: user =>
+                  new Promise((resolve, reject) => {
                     setTimeout(() => {
-                      resolve();
-                      if (oldData) {
-                        this.setState(prevState => {
-                          const data = [...prevState.data];
-                          data[data.indexOf(oldData)] = newData;
-                          return {...prevState, data};
-                        });
+                      {
+                        /*delete user in database */
+                        this.deleteUser(user);
+                        /*delete user in array so the page doesnt need refresh */
+                        let users = this.state.users;
+                        const index = users.indexOf(user);
+                        users.splice(index, 1);
+                        this.setState({ users }, () => resolve());
                       }
-                    }, 600);
-                  }),
-                onRowDelete: oldData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
                       resolve();
-                      this.setState(prevState => {
-                        const data = [...prevState.data];
-                        data.splice(data.indexOf(oldData), 1);
-                        return {...prevState, data};
-                      });
-                    }, 600);
-                  }),
+                    }, 1000);
+                  })
               }}
               localization={{
                 header: {
@@ -110,7 +116,13 @@ class Users extends Component {
                 },
                 pagination: {
                   labelRowsSelect: 'Řádek',
+                },
+                body: {
+                  editRow: {
+                    deleteText: "Odstranit uživatele?"
+                  }
                 }
+
               }}
             />
           </div>
