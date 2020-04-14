@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
-import Tests from "../Tests/Tests";
-import StudentTests from "../Tests/StudentTests";
+
 
 
 
@@ -15,6 +14,7 @@ export const TeacherPrivateRoute = ({ component: Component, ...rest }) => (
   )}
   />
 );
+//private route for students
 export const StudentPrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (
     localStorage.getItem('user_session')
