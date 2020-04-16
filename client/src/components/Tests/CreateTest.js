@@ -160,7 +160,7 @@ class CreateTest extends Component {
 
             </FormGroup>
 
-            <div className="QuestionList">
+
 
               <MaterialTable
                 title="Seznam vytvořených otázek"
@@ -176,18 +176,26 @@ class CreateTest extends Component {
                     },
                   }
                 ]}
+                localization={{
+                  header: {
+                    actions: 'Možnosti'
+                  },
+                  toolbar: {
+                    searchPlaceholder: 'Vyhledat'
+                  },
+                  pagination: {
+                    labelRowsSelect: 'Řádek',
+                  },
+                }}
 
               />
-            </div>
-
             <FormGroup>
 
               {this.state.testQuestions.map((question, index) => {
 
                 return (
-                  <div>
+                  <div className="QuestionList">
 
-                    {console.log(this.state.testQuestions.length)}
                     {question.title}
                     <IconButton aria-label="delete" className="delete-answer"
                                  onClick={this.removeQuestion.bind(this, index)}
