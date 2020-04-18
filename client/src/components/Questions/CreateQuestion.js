@@ -23,11 +23,16 @@ class CreateQuestion extends Component {
       createQuestionError: '',
       title: '',
       task: '',
-      type: 'radio',
-      answer: '',
+      type: 'checkbox',
+      answer: {
+        label: '',
+        correct: false,
+      },
+
       checkBoxAnswers: [],
       radioBoxAnswers: [],
       correctRadioAnswer: '',
+      correctAnswer: false
     };
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
@@ -43,6 +48,7 @@ class CreateQuestion extends Component {
     this.addItemRadioBox = this.addItemRadioBox.bind(this);
     this.removeItemRadioBox = this.removeItemRadioBox.bind(this);
 
+    this.onChangeCorrectAnswer = this.onChangeCorrectAnswer.bind(this);
 
   }
 
@@ -66,14 +72,27 @@ class CreateQuestion extends Component {
 
   onTextBoxChangeAnswer(event) {
     this.setState({
-      answer: event.target.value,
+      answer: {label: event.target.value},
     });
+  }
+  onChangeCorrectAnswer(event) {
+
+    let index = event.target.value;
+    let array = [...this.state.checkBoxAnswers]; // make a separate copy of the array
+
+    if(index !== -1) {
+      let answer = {...array[index]};
+      answer.correct = event.target.checked;
+      array[index] = answer;
+    }
+    this.setState({checkBoxAnswers: array});
+
   }
 
   addItemCheckBox() {
     this.setState(previousState => ({
-      checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
-      answer: ''
+       checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
+      answer: {label: '', correct: false},
     }));
   }
 
@@ -153,7 +172,8 @@ class CreateQuestion extends Component {
   renderCorrectAnswer(param) {
     const {
       answer,
-      correctRadioAnswer
+      correctRadioAnswer,
+      correctAnswer
 
     } = this.state;
     switch (param) {
@@ -169,26 +189,27 @@ class CreateQuestion extends Component {
         return (
           <FormGroup>
 
-            {this.state.checkBoxAnswers.map((answerLabel, index) => {
+            {this.state.checkBoxAnswers.map((answer, index,test) => {
               return (
                 <div>
+
                   <FormControlLabel
                     control={
                       <Checkbox
-                        // checked={state.checkedB}
-                        // onChange={handleChange('checkedB')}
-                        value="checked"
+                    //    checked={correctAnswer}
+                        onChange={this.onChangeCorrectAnswer}
+                        value={index}
                         color="primary"
                       />
                     }
-                    label={answerLabel}
+                    label={answer.label}
 
                   />
 
                   <IconButton aria-label="delete" className="delete-answer"
                               onClick={this.removeItemCheckBox.bind(this, index)}
                   >
-                    <DeleteIcon/> smazat
+                    <DeleteIcon/> Smazat{answer.correct}
                   </IconButton>
                 </div>
               )
@@ -198,7 +219,7 @@ class CreateQuestion extends Component {
               id="task-input"
               type="text"
               variant="outlined"
-              value={answer}
+              value={answer.label}
               onChange={this.onTextBoxChangeAnswer}
             />
             <Button

@@ -28,10 +28,12 @@ class CreateTest extends Component {
       testQuestions: [],
       question: '',
       isLoading: true,
+      questionPoints: 0,
     };
 
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
+    this.onNumberBoxChangePoints = this.onNumberBoxChangePoints.bind(this);
     this.onCreateTest = this.onCreateTest.bind(this);
 
 
@@ -45,8 +47,18 @@ class CreateTest extends Component {
       title: event.target.value,
     });
   }
+  onNumberBoxChangePoints(event, question) {
+    this.setState({
+      questionPoints: event.target.value,
+    });
+    // let array = [...this.state.testQuestions];
+    // array[question].questionPoints = 50;
+    // this.setState({testQuestions: array});
+  }
+
 
   addQuestion(question) {
+
       this.setState(previousState => ({
         testQuestions: [...previousState.testQuestions, question],
       }));
@@ -130,7 +142,8 @@ class CreateTest extends Component {
       selectedDate,
       tests,
       isLoading,
-      error
+      error,
+      questionPoints
     } = this.state;
 
     const columns = [
@@ -140,6 +153,7 @@ class CreateTest extends Component {
     ];
 
     return (
+
       <div>
         <header className="CreateTest-header">
           Vytvořit test
@@ -208,6 +222,8 @@ class CreateTest extends Component {
                       label="Počet bodů za otázku"
                       type="number"
                       variant="outlined"
+                      value={questionPoints}
+                      onChange={this.onNumberBoxChangePoints}
                     />
                   </div>
 

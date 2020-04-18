@@ -9,7 +9,8 @@ module.exports = (app) => {
       title,
       task,
       type,
-      answers
+      answers,
+      points
     } = body;
 
     if (!title) {
@@ -58,6 +59,7 @@ module.exports = (app) => {
       newQuestion.task = task;
       newQuestion.type = type;
       newQuestion.answers = answers;
+      newQuestion.points = points;
 
       newQuestion.save((err, question) => {
         if (err) {
@@ -90,12 +92,27 @@ module.exports = (app) => {
 
     Question.deleteOne(questionId, function (err) {
       if(err){
-        res.status(500).send('Test not found.');
+        res.status(500).send('Question not found.');
       }
       res.send('Success');
     })
 
   });
+
+
+
+app.put('/api/questions/:id',  (req, res) => {
+  let question = req.id;
+
+  question = _.extend(question, req.body);
+
+  question.save(function (err) {
+    if (err) {
+      res.status(500).send('Question not found.');
+    } else {
+      res.jsonp(question);
+    }});
+});
+
+
 };
-
-
