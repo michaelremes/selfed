@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="css correction">
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Users/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/AddUser.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/CreateTest.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/CreateTest.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Users/AddUser.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Users/AddUser.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/UserTestResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/UserResults.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/api/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -153,14 +157,7 @@
       <workItem from="1587023338885" duration="4076000" />
       <workItem from="1587117254056" duration="5785000" />
       <workItem from="1587195620113" duration="17269000" />
-      <workItem from="1587364580054" duration="12440000" />
-    </task>
-    <task id="LOCAL-00021" summary="import css for createQuestion fix">
-      <created>1584721776753</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1584721776753</updated>
+      <workItem from="1587364580054" duration="26765000" />
     </task>
     <task id="LOCAL-00022" summary="Tabel with all users">
       <created>1584726143459</created>
@@ -498,14 +495,20 @@
       <option name="project" value="LOCAL" />
       <updated>1587376392174</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="updated translation">
+      <created>1587381129310</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1587381129310</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logout added" />
     <MESSAGE value="login fixed" />
     <MESSAGE value="Different render of the sidebar for a teacher and for a student" />
     <MESSAGE value="starting with CreateTest component" />
@@ -530,7 +533,8 @@
     <MESSAGE value="css update to creating test" />
     <MESSAGE value="correct and false answers" />
     <MESSAGE value="css correction" />
-    <option name="LAST_COMMIT_MESSAGE" value="css correction" />
+    <MESSAGE value="updated translation" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated translation" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -541,10 +545,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587381104684">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587381127630">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587381104684" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587381127630" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -630,14 +634,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586851163246" />
-    <state x="2589" y="0" width="769" height="1025" key="dock-window-1" timestamp="1582470436175">
+    <state x="2093" y="65" width="1071" height="1086" key="dock-window-1" timestamp="1587405463958">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
-    <state x="2589" y="0" width="769" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582470436175" />
-    <state x="656" y="118" width="607" height="804" key="find.popup" timestamp="1587371146930">
+    <state x="2093" y="65" width="1071" height="1086" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587405463958" />
+    <state x="800" y="103" width="607" height="804" key="find.popup" timestamp="1587409068048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="118" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587371146930" />
+    <state x="800" y="103" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587409068048" />
     <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586869281689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

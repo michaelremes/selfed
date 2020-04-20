@@ -28,9 +28,11 @@ class CreateQuestion extends Component {
       answer: {
         label: '',
         correct: false,
+        points: '',
+        selected: false
       },
 
-      checkBoxAnswers: [],
+      answers: [],
       radioBoxAnswers: [],
       correctRadioAnswer: '',
       correctAnswer: false
@@ -80,31 +82,32 @@ class CreateQuestion extends Component {
   onChangeCorrectAnswer(event) {
 
     let index = event.target.value;
-    let array = [...this.state.checkBoxAnswers]; // make a separate copy of the array
+    let array = [...this.state.answers]; // make a separate copy of the array
 
     if (index !== -1) {
       let answer = {...array[index]};
+
       answer.correct = event.target.checked;
       array[index] = answer;
     }
-    this.setState({checkBoxAnswers: array});
+    this.setState({answers: array});
 
   }
 
   addItemCheckBox() {
     this.setState(previousState => ({
-      checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
+      answers: [...previousState.answers, this.state.answer],
       answer: {label: '', correct: false},
     }));
   }
 
 
   removeItemCheckBox(index) {
-    let array = [...this.state.checkBoxAnswers]; // make a separate copy of the array
+    let array = [...this.state.answers]; // make a separate copy of the array
 
     if (index !== -1) {
       array.splice(index, 1);
-      this.setState({checkBoxAnswers: array});
+      this.setState({answers: array});
     }
   }
 
@@ -131,7 +134,7 @@ class CreateQuestion extends Component {
       title,
       task,
       type,
-      checkBoxAnswers,
+      answers,
       radioBoxAnswers
     } = this.state;
 
@@ -148,7 +151,7 @@ class CreateQuestion extends Component {
         title: title,
         task: task,
         type: type,
-        answers: checkBoxAnswers,
+        answers: answers,
       }),
     }).then(res => res.json())
       .then(json => {
@@ -192,13 +195,13 @@ class CreateQuestion extends Component {
 
           <FormGroup>
             <h3>(Zaškrtněte správné odpovědi)</h3>
-            {this.state.checkBoxAnswers.map((answer, index, test) => {
+            {this.state.answers.map((answer, index) => {
+
               return (
                 <div className="added-answers">
                   <FormControlLabel
                     control={
                       <Checkbox
-                        //    checked={correctAnswer}
                         onChange={this.onChangeCorrectAnswer}
                         value={index}
                         color="primary"
@@ -211,7 +214,7 @@ class CreateQuestion extends Component {
                   <IconButton aria-label="delete" className="delete-answer"
                               onClick={this.removeItemCheckBox.bind(this, index)}
                   >
-                    <DeleteIcon/> Smazat{answer.correct}
+                    <DeleteIcon/> Smazat
                   </IconButton>
                 </div>
               )

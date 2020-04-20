@@ -1,5 +1,6 @@
 
 const Test = require('../../models/Test');
+const UserResult = require('../../models/UserResults');
 
 module.exports = (app) => {
   app.post('/api/add/test', (req, res)  => {
@@ -50,6 +51,35 @@ module.exports = (app) => {
         }
         res.send('Success');
       })
+
+  });
+
+  //add user result
+  app.post('/api/add/student/test', (req, res)  => {
+    const {body} = req;
+    const {
+      userId,
+      finishedTests,
+      totalPoints
+    } = body;
+
+    const newUserResult = new UserResult();
+
+    newUserResult.userId = userId;
+    newUserResult.finishedTests = finishedTests;
+    newUserResult.totalPoints = totalPoints;
+
+    newUserResult.save((err) => {
+      if (err) {
+        return res.send({
+          success: false,
+          message: 'Error: Server error.'
+        });
+      }
+      return res.send({
+        success: true,
+      });
+    })
 
   });
 

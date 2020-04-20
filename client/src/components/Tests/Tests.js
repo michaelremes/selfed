@@ -75,12 +75,12 @@ class Tests extends Component {
               title="Seznam vytvořených testů"
               columns={columns}
               data={tests}
-              actions={[
-                {
-                  icon: PictureAsPdfIcon,
-                  tooltip: 'Zobrazit test jako pdf',
-                }
-              ]}
+              // actions={[
+              //   {
+              //     icon: PictureAsPdfIcon,
+              //     tooltip: 'Zobrazit test jako pdf',
+              //   }
+              // ]}
               editable={{
                 onRowDelete: test =>
                   new Promise((resolve, reject) => {

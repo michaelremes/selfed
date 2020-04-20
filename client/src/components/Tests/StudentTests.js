@@ -20,9 +20,10 @@ class StudentTests extends Component {
     this.state = {
       allTests: [],
       currentTest: '',
+      finishedTest: '',
       testOpen: false,
-      answerBorder: '',
 
+      userResultError:''
     };
     this.renderTest = this.renderTest.bind(this);
     this.renderListOfTests = this.renderListOfTests.bind(this);
@@ -30,12 +31,30 @@ class StudentTests extends Component {
     this.forwardBack = this.forwardBack.bind(this);
     this.submitTest = this.submitTest.bind(this);
 
+    this.onChangeAnswer = this.onChangeAnswer.bind(this);
+  }
+
+  onChangeAnswer(event) {
+    let index = event.target.value;
+    let array = this.state.finishedTest; // make a separate copy of the array
+
+    if (index !== -1) {
+      let answer = {...array[index]};
+
+      answer.selected = true;
+      array[index] = answer;
+
+      console.log("Answer selected: " + answer.selected);
+    }
+    this.setState({finishedTest: array});
 
   }
 
-
-
   componentDidMount() {
+
+    this.setState({
+        userId: localStorage.getItem('userId')
+    });
     fetch('/api/tests')
       .then(res => res.json())
       .then(
@@ -70,31 +89,31 @@ class StudentTests extends Component {
     switch (question.type) {
       case 'text':
         return (
-        <div>
-          <h2>Vaše odpověd</h2>
-        <textarea
-          id="task-input"
-          // onChange={this.onTextBoxChangeTextAnswer}
-        />
-        </div>
+          <div>
+            <h2>Vaše odpověd</h2>
+            <textarea
+              id="task-input"
+              // onChange={this.onTextBoxChangeTextAnswer}
+            />
+          </div>
         );
       case 'checkbox':
         return (
-          <FormGroup>
+          <FormGroup id="checkbox-answers">
 
-            {question.answers.map((answerLabel, index) => {
+            {question.answers.map((answer, index) => {
               return (
                 <div>
                   <FormControlLabel
                     control={
                       <Checkbox
                         // checked={state.checkedB}
-                        // onChange={handleChange('checkedB')}
-                        value="checked"
+                        onChange={this.onChangeAnswer}
+                        value={index}
                         color="primary"
                       />
                     }
-                    label={answerLabel}
+                    label={<Latex>{answer.label}</Latex>}
 
                   />
 
@@ -106,45 +125,84 @@ class StudentTests extends Component {
           </FormGroup>
         );
 
-      case 'radio':
-        return (
-          <div>
-
-            {question.answers.map((answerLabel, index) => {
-              return (
-                <div className="radio-answer">
-                  <RadioGroup value={correctRadioAnswer}>
-                    <FormControlLabel
-                      control={
-                        <Radio
-                          value={answer}
-                          color="primary"
-                        />
-                      }
-
-                      // onChange={handleChange}
-
-                      label={answerLabel}
-
-                    />
-
-
-                  </RadioGroup>
-                </div>
-
-              )
-            })}
-
-
-          </div>
-        );
+      // case 'radio':
+      //   return (
+      //     <div>
+      //
+      //       {question.answers.map((answerLabel, index) => {
+      //         return (
+      //           <div className="radio-answer">
+      //             <RadioGroup value={correctRadioAnswer}>
+      //               <FormControlLabel
+      //                 control={
+      //                   <Radio
+      //                     value={answer}
+      //                     color="primary"
+      //                   />
+      //                 }
+      //
+      //                 // onChange={handleChange}
+      //
+      //                 label={answerLabel}
+      //
+      //               />
+      //
+      //
+      //             </RadioGroup>
+      //           </div>
+      //
+      //         )
+      //       })}
+      //
+      //
+      //     </div>
+      //   );
     }
   }
-  submitTest(){
-      this.setState({
-        answerBorder: '10px solid green'
-      })
+
+  submitTest() {
+
+    //grab state
+    const {
+        userId,
+        finishedTests,
+        totalPoints
+    } = this.state;
+
+    // Post request to backend
+    fetch('/api/add/student/test', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        userId: userId,
+        finishedTests: finishedTests,
+        totalPoints: totalPoints
+      }),
+    }).then(res => res.json())
+      .then(json => {
+        if (json.success) {
+          addNotification("Úspěch", "Test byl odevzdán.", "success");
+          this.setState({
+            userId: '',
+            finishedTests: [],
+            totalPoints: '',
+            isLoading: false,
+          });
+        } else {
+          addNotification("Error", "Test nomhl být vytvořen.", "danger");
+          this.setState({
+            userResultError: json.message,
+            isLoading: false
+          });
+        }
+      });
+
+
   }
+
+
   renderTest() {
     return (
       <div id="mainTestForm">
@@ -156,9 +214,9 @@ class StudentTests extends Component {
         {this.state.currentTest.questions.map((question, index) => {
           return (
             <div className="StudentTest"
-               >
+            >
               <form>
-                <h2>{question.title}</h2>
+                <h1>{question.title}</h1>
 
                 <FormGroup controlId="task" size="large">
 
@@ -170,9 +228,6 @@ class StudentTests extends Component {
                 </FormGroup>
 
                 {this.renderCorrectAnswer(question)}
-
-
-
 
 
               </form>
@@ -222,7 +277,8 @@ class StudentTests extends Component {
                   this.setState(
                     {
                       testOpen: true,
-                      currentTest: test
+                      currentTest: test,
+                      finishedTest: test
                     }
                   );
                 }
@@ -233,10 +289,18 @@ class StudentTests extends Component {
                 actions: 'Akce'
               },
               toolbar: {
-                searchPlaceholder: 'Vyhledat'
+                searchPlaceholder: 'Vyhledat',
+                searchTooltip: 'Vyhledat'
               },
               pagination: {
                 labelRowsSelect: 'Řádek',
+                firstTooltip: "První stránka",
+                previousTooltip: "Předchozí stránka",
+                nextTooltip: "Další stránka",
+                lastTooltip: "Poslední stránka"
+              },
+              body: {
+                emptyDataSourceMessage: "Žádná data k zobrazení",
               }
             }}
           />

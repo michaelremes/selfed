@@ -36,13 +36,18 @@
     margin: 30px;
     padding: 10px;
     font-size: calc(8px + 2vmin);
+    border: solid orange;
 
   }
 
   .StudentTest {
     padding: 10px;
 
+  }
 
+  #checkbox-answers{
+    padding: 20px;
+    text-align: left;
   }
 
 

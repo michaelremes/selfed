@@ -28,7 +28,6 @@ class CreateTest extends Component {
       testQuestions: [],
       question: '',
       isLoading: true,
-      questionPoints: 0,
     };
 
 
@@ -47,22 +46,26 @@ class CreateTest extends Component {
       title: event.target.value,
     });
   }
-  onNumberBoxChangePoints(event, question) {
-    this.setState({
-      questionPoints: event.target.value,
-    });
-    // let array = [...this.state.testQuestions];
-    // array[question].questionPoints = 50;
-    // this.setState({testQuestions: array});
+  onNumberBoxChangePoints(event, index) {
+
+    let array = [...this.state.testQuestions]; // make a separate copy of the array
+
+    if (index !== -1) {
+      let question = {...array[index]};
+      question.points = event.target.value;
+      array[index] = question;
+    }
+    this.setState({testQuestions: array});
+
   }
 
 
   addQuestion(question) {
-
       this.setState(previousState => ({
         testQuestions: [...previousState.testQuestions, question],
       }));
   }
+
   removeQuestion(index) {
     let array = [...this.state.testQuestions]; // make a separate copy of the array
 
@@ -71,6 +74,7 @@ class CreateTest extends Component {
       this.setState({testQuestions: array});
     }
   }
+
   componentDidMount() {
     fetch('/api/questions')
       .then(res => res.json())
@@ -174,8 +178,6 @@ class CreateTest extends Component {
 
             </FormGroup>
 
-
-
               <MaterialTable
                 title="Seznam vytvořených otázek"
                 columns={columns}
@@ -225,8 +227,8 @@ class CreateTest extends Component {
                       label="Počet bodů za otázku"
                       type="number"
                       variant="outlined"
-                      value={questionPoints}
-                      onChange={this.onNumberBoxChangePoints}
+                      value={question.points || ''}
+                      onChange={(event) => {this.onNumberBoxChangePoints(event, index)}}
                     />
                   </div>
 
@@ -234,7 +236,7 @@ class CreateTest extends Component {
               })}
 
             </FormGroup>
-            <button onClick={this.onCreateTest}>
+            <button id="createTestButton" onClick={this.onCreateTest}>
               Vytvořit test
             </button>
 
