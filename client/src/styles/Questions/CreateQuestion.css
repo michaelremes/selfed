@@ -59,6 +59,18 @@
     background-color: #5280d1;
 
   }
+
+  .added-answers {
+    border: solid #5280d1;
+    margin: 5px;
+    background-color: white;
+  }
+  .added-answers Button{
+    font-size: 20px;
+    margin-left: 0;
+  }
+
+
   #task-input-answer {
     height: 100%;
     padding: 20px;
@@ -73,7 +85,7 @@
     width: 100%;
     font-size: calc(5px + 2vmin);
     padding: 20px;
-    margin-bottom: 20px;
+
   }
   .radio-answer {
     align-items: center;

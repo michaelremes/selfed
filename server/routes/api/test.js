@@ -42,9 +42,9 @@ module.exports = (app) => {
   });
 
   app.delete('/api/test/:id', (req, res)  => {
-    const testId = Number(req.params.id);
+    const testId =  {_id:req.params.id};
 
-      Test.remove(testId, function (err) {
+      Test.deleteOne(testId, function (err) {
         if(err){
           res.status(500).send('Test not found.');
         }

@@ -200,6 +200,9 @@ class CreateTest extends Component {
                   pagination: {
                     labelRowsSelect: 'Řádek',
                   },
+                  body: {
+                    emptyDataSourceMessage: "Žádná data k zobrazení"
+                  }
                 }}
 
               />

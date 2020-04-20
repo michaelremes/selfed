@@ -189,12 +189,12 @@ class CreateQuestion extends Component {
         />;
       case 'checkbox':
         return (
-          <FormGroup>
 
+          <FormGroup>
+            <h3>(Zaškrtněte správné odpovědi)</h3>
             {this.state.checkBoxAnswers.map((answer, index, test) => {
               return (
-                <div>
-
+                <div className="added-answers">
                   <FormControlLabel
                     control={
                       <Checkbox
@@ -224,7 +224,6 @@ class CreateQuestion extends Component {
                   value={answer.label}
                   onChange={this.onTextBoxChangeAnswer}
                 />
-
               <div className="LatexPreviewAnswer">
                 <Latex>{answer.label}</Latex>
               </div>
@@ -243,7 +242,7 @@ class CreateQuestion extends Component {
       case 'radio':
         return (
           <div>
-
+            (Zaškrtněte správnou odpověď)
             {this.state.radioBoxAnswers.map((answerLabel, index) => {
               return (
                 <div className="radio-answer">
@@ -332,7 +331,6 @@ class CreateQuestion extends Component {
               <h2>Zobrazení zadání</h2>
               <div className="LatexPreview">
                 <Latex>{this.state.task}</Latex>
-
               </div>
 
             </FormGroup>

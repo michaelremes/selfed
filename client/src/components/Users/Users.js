@@ -41,13 +41,11 @@ class Users extends Component {
 
 
   deleteUser(user){
-    console.log(user._id)
     fetch('/api/user/' + user._id, {
       method: 'DELETE',
     })
       .then(res => res.text()) // or res.json()
       .then(res => console.log(res))
-
   }
 
   render() {
@@ -103,17 +101,24 @@ class Users extends Component {
                   actions: 'Možnosti'
                 },
                 toolbar: {
-                  searchPlaceholder: 'Vyhledat'
+                  searchPlaceholder: 'Vyhledat',
+                  searchTooltip: 'Vyhledat'
                 },
                 pagination: {
                   labelRowsSelect: 'Řádek',
+                  firstTooltip: "První stránka",
+                  previousTooltip: "Předchozí stránka",
+                  nextTooltip: "Další stránka",
+                  lastTooltip: "Poslední stránka"
                 },
                 body: {
                   editRow: {
                     deleteText: "Odstranit uživatele?",
                     cancelTooltip: "Zrušit",
                     saveTooltip: "Potvrdit"
-                  }
+                  },
+                  emptyDataSourceMessage: "Žádná data k zobrazení",
+                  deleteTooltip: "Odstranit"
                 }
 
               }}

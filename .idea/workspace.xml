@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="css correction">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Users/Users.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/Users.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/App/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/Questions.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/Questions.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/Tests.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/Tests.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Users/Users.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Users/Users.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,14 +153,7 @@
       <workItem from="1587023338885" duration="4076000" />
       <workItem from="1587117254056" duration="5785000" />
       <workItem from="1587195620113" duration="17269000" />
-      <workItem from="1587364580054" duration="8356000" />
-    </task>
-    <task id="LOCAL-00020" summary="questions table css added">
-      <created>1584718514903</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1584718514903</updated>
+      <workItem from="1587364580054" duration="12440000" />
     </task>
     <task id="LOCAL-00021" summary="import css for createQuestion fix">
       <created>1584721776753</created>
@@ -502,14 +491,20 @@
       <option name="project" value="LOCAL" />
       <updated>1587241843455</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="css correction">
+      <created>1587376392174</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1587376392174</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Private Routes for components added" />
     <MESSAGE value="logout added" />
     <MESSAGE value="login fixed" />
     <MESSAGE value="Different render of the sidebar for a teacher and for a student" />
@@ -534,7 +529,8 @@
     <MESSAGE value="added delete function in material table for users" />
     <MESSAGE value="css update to creating test" />
     <MESSAGE value="correct and false answers" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct and false answers" />
+    <MESSAGE value="css correction" />
+    <option name="LAST_COMMIT_MESSAGE" value="css correction" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -545,10 +541,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587241838130">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587381104684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587241838130" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587381104684" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

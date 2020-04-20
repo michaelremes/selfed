@@ -39,7 +39,6 @@ class Questions extends Component {
   };
 
   deleteQuestion(question){
-    console.log(question._id)
     fetch('/api/question/' + question._id, {
       method: 'DELETE',
     })
@@ -101,17 +100,25 @@ class Questions extends Component {
                   actions: 'Možnosti'
                 },
                 toolbar: {
-                  searchPlaceholder: 'Vyhledat'
+                  searchPlaceholder: 'Vyhledat',
+                  searchTooltip: 'Vyhledat'
                 },
                 pagination: {
                   labelRowsSelect: 'Řádek',
+                  firstTooltip: "První stránka",
+                  previousTooltip: "Předchozí stránka",
+                  nextTooltip: "Další stránka",
+                  lastTooltip: "Poslední stránka"
                 },
                 body: {
                   editRow: {
                     deleteText: "Odstranit otázku?",
                     cancelTooltip: "Zrušit",
-                    saveTooltip: "Potvrdit"
-                  }
+                    saveTooltip: "Potvrdit",
+
+                  },
+                  emptyDataSourceMessage: "Žádná data k zobrazení",
+                  deleteTooltip: "Odstranit"
                 }
               }}
             />
