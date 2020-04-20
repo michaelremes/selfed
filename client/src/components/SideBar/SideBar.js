@@ -1,11 +1,11 @@
 import logo from "../../../public/assets/img/EduLogo.png";
 import React, {Component} from "react";
 import TreeView from "@material-ui/lab/TreeView";
-import TreeItem from "@material-ui/lab/TreeItem";
+
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
-import {Redirect} from "react-router-dom";
+
 
 class SideBar extends Component {
   constructor(props) {

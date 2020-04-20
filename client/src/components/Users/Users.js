@@ -77,19 +77,10 @@ class Users extends Component {
             Seznam uživatelů
           </header>
           <div className="UsersList">
-
             <MaterialTable
               title="Seznam vytvořených otázek"
               columns={columns}
               data={users}
-              // actions={[
-              // {
-              //   icon: 'delete',
-              //   tooltip: 'Odstranit uživatele',
-              //   onClick: (event, user) => this.deleteUser(user)
-              //
-              // }]
-              // }
               editable={{
                 onRowDelete: user =>
                   new Promise((resolve, reject) => {
@@ -119,7 +110,9 @@ class Users extends Component {
                 },
                 body: {
                   editRow: {
-                    deleteText: "Odstranit uživatele?"
+                    deleteText: "Odstranit uživatele?",
+                    cancelTooltip: "Zrušit",
+                    saveTooltip: "Potvrdit"
                   }
                 }
 

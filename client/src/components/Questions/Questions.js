@@ -15,6 +15,8 @@ class Questions extends Component {
       isLoading: false,
 
     };
+
+    this.deleteQuestion = this.deleteQuestion.bind(this);
   }
 
   componentDidMount() {
@@ -36,7 +38,15 @@ class Questions extends Component {
       )
   };
 
+  deleteQuestion(question){
+    console.log(question._id)
+    fetch('/api/question/' + question._id, {
+      method: 'DELETE',
+    })
+      .then(res => res.text()) // or res.json()
+      .then(res => console.log(res))
 
+  }
 
   render() {
 
@@ -63,24 +73,28 @@ class Questions extends Component {
           <header className="Questions-header">
             Vytvořené otázky
           </header>
-          <div className="QuestionList">
-
+          <div className="QuestionsList">
             <MaterialTable
               title="Seznam vytvořených otázek"
               columns={columns}
               data={questions}
-              actions={[
-              {
-                icon: 'edit',
-                tooltip: 'Upravit Otázku',
-                onClick: (event, rowData) => alert("You saved " + rowData.name)
-              },
-              {
-                icon: 'visibility',
-                tooltip: 'Zobrazit otázku',
-
-              }
-              ]}
+              editable={{
+                onRowDelete: question =>
+                  new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                      {
+                        /*delete user in database */
+                        this.deleteQuestion(question);
+                        /*delete user in array so the page doesnt need refresh */
+                        let questions = this.state.questions;
+                        const index = questions.indexOf(question);
+                        questions.splice(index, 1);
+                        this.setState({ questions }, () => resolve());
+                      }
+                      resolve();
+                    }, 1000);
+                  })
+              }}
 
               localization={{
                 header: {
@@ -91,6 +105,13 @@ class Questions extends Component {
                 },
                 pagination: {
                   labelRowsSelect: 'Řádek',
+                },
+                body: {
+                  editRow: {
+                    deleteText: "Odstranit otázku?",
+                    cancelTooltip: "Zrušit",
+                    saveTooltip: "Potvrdit"
+                  }
                 }
               }}
             />

@@ -87,7 +87,7 @@ module.exports = (app) => {
   });
 
 
-  app.delete('/api/questions/:id', (req, res)  => {
+  app.delete('/api/question/:id', (req, res)  => {
     let questionId = {_id:req.params.id};
 
     Question.deleteOne(questionId, function (err) {

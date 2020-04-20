@@ -12,11 +12,11 @@
     color: white;
   }
 
-  .QuestionList {
-    width: 70%;
+  .QuestionsList {
+    width: 80%;
     display: flow;
-    margin: auto;
-
+    float: right;
+    padding: 50px;
   }
 
   body {

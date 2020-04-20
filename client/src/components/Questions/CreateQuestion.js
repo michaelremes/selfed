@@ -12,6 +12,7 @@ import {TextField} from "@material-ui/core";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from '@material-ui/icons/Delete';
+import Input from "@material-ui/core/Input";
 
 const Latex = require('react-latex');
 
@@ -75,12 +76,13 @@ class CreateQuestion extends Component {
       answer: {label: event.target.value},
     });
   }
+
   onChangeCorrectAnswer(event) {
 
     let index = event.target.value;
     let array = [...this.state.checkBoxAnswers]; // make a separate copy of the array
 
-    if(index !== -1) {
+    if (index !== -1) {
       let answer = {...array[index]};
       answer.correct = event.target.checked;
       array[index] = answer;
@@ -91,7 +93,7 @@ class CreateQuestion extends Component {
 
   addItemCheckBox() {
     this.setState(previousState => ({
-       checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
+      checkBoxAnswers: [...previousState.checkBoxAnswers, this.state.answer],
       answer: {label: '', correct: false},
     }));
   }
@@ -189,20 +191,20 @@ class CreateQuestion extends Component {
         return (
           <FormGroup>
 
-            {this.state.checkBoxAnswers.map((answer, index,test) => {
+            {this.state.checkBoxAnswers.map((answer, index, test) => {
               return (
                 <div>
 
                   <FormControlLabel
                     control={
                       <Checkbox
-                    //    checked={correctAnswer}
+                        //    checked={correctAnswer}
                         onChange={this.onChangeCorrectAnswer}
                         value={index}
                         color="primary"
                       />
                     }
-                    label={answer.label}
+                    label={<Latex>{answer.label}</Latex>}
 
                   />
 
@@ -214,21 +216,26 @@ class CreateQuestion extends Component {
                 </div>
               )
             })}
+            <div className="add-answer">
+              <h2>Přidat odpověď</h2><br />
+                <textarea
+                  required
+                  id="task-input-answer"
+                  value={answer.label}
+                  onChange={this.onTextBoxChangeAnswer}
+                />
 
-            <TextField
-              id="task-input"
-              type="text"
-              variant="outlined"
-              value={answer.label}
-              onChange={this.onTextBoxChangeAnswer}
-            />
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={this.addItemCheckBox}
-            >
-              Přidat odpověd
-            </Button>
+              <div className="LatexPreviewAnswer">
+                <Latex>{answer.label}</Latex>
+              </div>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={this.addItemCheckBox}
+              >
+                Přidat odpověd
+              </Button>
+            </div>
 
           </FormGroup>
         );
@@ -325,23 +332,22 @@ class CreateQuestion extends Component {
               <h2>Zobrazení zadání</h2>
               <div className="LatexPreview">
                 <Latex>{this.state.task}</Latex>
+
               </div>
 
             </FormGroup>
             <h2>Typ odpovědi</h2>
             <Select id="selectAnswer" value={type} onChange={this.onSelectQuestionType}>
-              <MenuItem value="text">Otevřená odpověd</MenuItem>
+              <MenuItem value="text">Otevřená odpověď</MenuItem>
               <MenuItem value="checkbox">Více odpovědí</MenuItem>
               <MenuItem value="radio">Jedná správná odpověď</MenuItem>
             </Select>
-
-            <h2>Správná odpověď</h2>
 
             <div>
               {this.renderCorrectAnswer(this.state.type)}
             </div>
 
-            <button onClick={this.onCreateQuestion}>
+            <button id="createQuestionButton" onClick={this.onCreateQuestion}>
               Vytvořit otázku
             </button>
 

@@ -50,6 +50,7 @@ class Tests extends Component {
     const columns = [
       {title: 'Název testu', field: 'title'},
       {title: 'Datum vytvořeni', field: 'date'},
+      {title: 'Aktivni'},
     ];
 
     if (error) {

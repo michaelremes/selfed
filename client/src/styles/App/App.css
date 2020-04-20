@@ -1,7 +1,7 @@
 
 .sidenav {
   height: 100%;
-  width: 300px;
+  width: 15%;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -13,13 +13,13 @@
 .sidenav img {
   height: 15vmin;
   pointer-events: none;
-  position: absolute;
+
   left: 60px; top: 10px;
 }
 .sidenav a {
   padding: 6px 8px 30px 26px;
   text-decoration: none;
-  font-size: 40px;
+  font-size: calc(16px + 2vmin);
   color: #818181;
   display: block;
 }

@@ -24,7 +24,7 @@
   }
   .CreateQuestion Button {
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
     font-size: calc(8px + 2vmin);
   }
 
@@ -34,7 +34,7 @@
 
 
   #task-input {
-    width:90%;
+    width:80%;
     padding: 20px;
     font-size: 18px;
   }
@@ -44,21 +44,47 @@
     font-size: 18px;
     margin-top:5px;
     background-color: white;
-
+  }
+  .LatexPreviewAnswer {
+    border:1px solid;
+    padding-bottom: 15px;
+    font-size: 18px;
+    width: 40%;
+    background-color: white;
+    float: right;
+  }
+  .add-answer {
+    border:1px solid;
+    padding: 12px;
+    background-color: #5280d1;
 
   }
+  #task-input-answer {
+    height: 100%;
+    padding: 20px;
+    font-size: 18px;
+    resize: vertical;
+
+  }
+
 
   #selectAnswer{
     background-color: white;
     width: 100%;
-    font-size: calc(2px + 2vmin);
+    font-size: calc(5px + 2vmin);
+    padding: 20px;
+    margin-bottom: 20px;
   }
   .radio-answer {
     align-items: center;
     alignment: center;
   }
 
-
+  #createQuestionButton {
+    margin-top: 40px;
+    padding: 20px;
+    border-color: orange;
+  }
 
   body {
     background-color: #282c34;
