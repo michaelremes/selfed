@@ -3,16 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Users/AddUser.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Users/AddUser.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/CreateTest.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/CreateTest.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Users/AddUser.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Users/AddUser.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/UserTestResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/UserResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/UserResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/UserResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/api/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -157,14 +151,8 @@
       <workItem from="1587023338885" duration="4076000" />
       <workItem from="1587117254056" duration="5785000" />
       <workItem from="1587195620113" duration="17269000" />
-      <workItem from="1587364580054" duration="26765000" />
-    </task>
-    <task id="LOCAL-00022" summary="Tabel with all users">
-      <created>1584726143459</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1584726143459</updated>
+      <workItem from="1587364580054" duration="26867000" />
+      <workItem from="1587453310374" duration="11500000" />
     </task>
     <task id="LOCAL-00023" summary="minor changes">
       <created>1584732561360</created>
@@ -502,14 +490,20 @@
       <option name="project" value="LOCAL" />
       <updated>1587381129310</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="user results submission prototype">
+      <created>1587409152167</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1587409152168</updated>
+    </task>
+    <option name="localTasksCounter" value="72" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="login fixed" />
     <MESSAGE value="Different render of the sidebar for a teacher and for a student" />
     <MESSAGE value="starting with CreateTest component" />
     <MESSAGE value="CreateQuestion multiple answers component" />
@@ -534,7 +528,8 @@
     <MESSAGE value="correct and false answers" />
     <MESSAGE value="css correction" />
     <MESSAGE value="updated translation" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated translation" />
+    <MESSAGE value="user results submission prototype" />
+    <option name="LAST_COMMIT_MESSAGE" value="user results submission prototype" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -545,10 +540,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587381127630">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587409149843">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587381127630" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587409149843" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -625,19 +620,19 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587241847096">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587409154784">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587241847096" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587409154784" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586851163246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586851163246" />
-    <state x="2093" y="65" width="1071" height="1086" key="dock-window-1" timestamp="1587405463958">
+    <state x="2226" y="76" width="1071" height="1086" key="dock-window-1" timestamp="1587466307964">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
-    <state x="2093" y="65" width="1071" height="1086" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587405463958" />
+    <state x="2226" y="76" width="1071" height="1086" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587466307964" />
     <state x="800" y="103" width="607" height="804" key="find.popup" timestamp="1587409068048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

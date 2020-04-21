@@ -8,9 +8,9 @@ const UserResultsSchema = new mongoose.Schema({
     default: ''
   },
 
-  finishedTests: {
-    type: Array,
-    default: []
+  finishedTest: {
+    type: Object,
+    default: null
   },
 
   totalPoints: {

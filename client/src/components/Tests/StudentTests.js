@@ -20,11 +20,12 @@ class StudentTests extends Component {
     this.state = {
       allTests: [],
       currentTest: '',
-      finishedTest: '',
       testOpen: false,
 
-      userResultError:''
+      userResultError:'',
+      userId: '',
     };
+
     this.renderTest = this.renderTest.bind(this);
     this.renderListOfTests = this.renderListOfTests.bind(this);
 
@@ -34,26 +35,23 @@ class StudentTests extends Component {
     this.onChangeAnswer = this.onChangeAnswer.bind(this);
   }
 
-  onChangeAnswer(event) {
+  onChangeAnswer(event, question) {
     let index = event.target.value;
-    let array = this.state.finishedTest; // make a separate copy of the array
+    let array = question.answers;
 
     if (index !== -1) {
       let answer = {...array[index]};
-
       answer.selected = true;
       array[index] = answer;
-
-      console.log("Answer selected: " + answer.selected);
+      question.answers = array;
     }
-    this.setState({finishedTest: array});
 
   }
 
   componentDidMount() {
 
     this.setState({
-        userId: localStorage.getItem('userId')
+        userId: localStorage.getItem('user_id')
     });
     fetch('/api/tests')
       .then(res => res.json())
@@ -100,15 +98,13 @@ class StudentTests extends Component {
       case 'checkbox':
         return (
           <FormGroup id="checkbox-answers">
-
             {question.answers.map((answer, index) => {
               return (
                 <div>
                   <FormControlLabel
                     control={
                       <Checkbox
-                        // checked={state.checkedB}
-                        onChange={this.onChangeAnswer}
+                        onChange={(event) => this.onChangeAnswer(event, question)}
                         value={index}
                         color="primary"
                       />
@@ -162,10 +158,9 @@ class StudentTests extends Component {
 
   submitTest() {
 
-    //grab state
     const {
         userId,
-        finishedTests,
+        currentTest,
         totalPoints
     } = this.state;
 
@@ -177,7 +172,7 @@ class StudentTests extends Component {
       },
       body: JSON.stringify({
         userId: userId,
-        finishedTests: finishedTests,
+        finishedTest: currentTest,
         totalPoints: totalPoints
       }),
     }).then(res => res.json())
@@ -186,7 +181,7 @@ class StudentTests extends Component {
           addNotification("Úspěch", "Test byl odevzdán.", "success");
           this.setState({
             userId: '',
-            finishedTests: [],
+            currentTest: '',
             totalPoints: '',
             isLoading: false,
           });
@@ -198,7 +193,7 @@ class StudentTests extends Component {
           });
         }
       });
-
+    this.forwardBack();
 
   }
 
@@ -235,14 +230,12 @@ class StudentTests extends Component {
             </div>
           )
         })}
-        <div>
 
           <button id="submitTestButton" onClick={this.submitTest}>
             Odevzdat test
           </button>
         </div>
 
-      </div>
     )
   }
 
@@ -277,8 +270,7 @@ class StudentTests extends Component {
                   this.setState(
                     {
                       testOpen: true,
-                      currentTest: test,
-                      finishedTest: test
+                      currentTest: test
                     }
                   );
                 }

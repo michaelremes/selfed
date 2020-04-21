@@ -59,14 +59,14 @@ module.exports = (app) => {
     const {body} = req;
     const {
       userId,
-      finishedTests,
+      finishedTest,
       totalPoints
     } = body;
 
     const newUserResult = new UserResult();
 
     newUserResult.userId = userId;
-    newUserResult.finishedTests = finishedTests;
+    newUserResult.finishedTest = finishedTest;
     newUserResult.totalPoints = totalPoints;
 
     newUserResult.save((err) => {
