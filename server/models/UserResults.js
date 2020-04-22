@@ -8,6 +8,11 @@ const UserResultsSchema = new mongoose.Schema({
     default: ''
   },
 
+  username: {
+    type: String,
+    default: ''
+  },
+
   finishedTest: {
     type: Object,
     default: null

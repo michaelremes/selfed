@@ -21,9 +21,10 @@ class StudentTests extends Component {
       allTests: [],
       currentTest: '',
       testOpen: false,
-
-      userResultError:'',
+      userResultError: '',
       userId: '',
+      username: '',
+      totalPoints: 0,
     };
 
     this.renderTest = this.renderTest.bind(this);
@@ -31,8 +32,9 @@ class StudentTests extends Component {
 
     this.forwardBack = this.forwardBack.bind(this);
     this.submitTest = this.submitTest.bind(this);
-
+    this.evaluateTotalPoints = this.evaluateTotalPoints.bind(this);
     this.onChangeAnswer = this.onChangeAnswer.bind(this);
+
   }
 
   onChangeAnswer(event, question) {
@@ -51,7 +53,8 @@ class StudentTests extends Component {
   componentDidMount() {
 
     this.setState({
-        userId: localStorage.getItem('user_id')
+      userId: localStorage.getItem('user_id'),
+      username: localStorage.getItem('username')
     });
     fetch('/api/tests')
       .then(res => res.json())
@@ -70,6 +73,27 @@ class StudentTests extends Component {
       )
   };
 
+
+
+
+  evaluateTotalPoints () {
+
+    let pointsSummary = 0;
+
+    this.setState({totalPoints: pointsSummary});
+    this.state.currentTest.questions.map((question, index) => {
+      question.answers.map((answer, index) => {
+            if(answer.selected && answer.correct){
+              pointsSummary += question.points;
+            }
+      })
+      }
+    );
+
+
+    this.setState({totalPoints: pointsSummary}, () => {this.submitTest()});
+
+  }
 
   forwardBack() {
     this.setState({
@@ -159,9 +183,10 @@ class StudentTests extends Component {
   submitTest() {
 
     const {
-        userId,
-        currentTest,
-        totalPoints
+      userId,
+      username,
+      currentTest,
+      totalPoints,
     } = this.state;
 
     // Post request to backend
@@ -172,6 +197,7 @@ class StudentTests extends Component {
       },
       body: JSON.stringify({
         userId: userId,
+        username: username,
         finishedTest: currentTest,
         totalPoints: totalPoints
       }),
@@ -181,8 +207,9 @@ class StudentTests extends Component {
           addNotification("Úspěch", "Test byl odevzdán.", "success");
           this.setState({
             userId: '',
+            username: '',
             currentTest: '',
-            totalPoints: '',
+            totalPoints: 0,
             isLoading: false,
           });
         } else {
@@ -231,10 +258,10 @@ class StudentTests extends Component {
           )
         })}
 
-          <button id="submitTestButton" onClick={this.submitTest}>
-            Odevzdat test
-          </button>
-        </div>
+        <button id="submitTestButton" onClick={this.evaluateTotalPoints}>
+          Odevzdat test
+        </button>
+      </div>
 
     )
   }

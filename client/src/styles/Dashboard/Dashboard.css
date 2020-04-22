@@ -16,6 +16,14 @@
     font-size: calc(30px + 2vmin);
     color: white;
   }
+
+  .StudentResults {
+    width: 80%;
+    display: flow;
+    float: right;
+    padding: 50px;
+
+  }
   body {
     background-color: #282c34;
   }

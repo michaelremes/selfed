@@ -3,10 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/models/UserResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/UserResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/signin.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/signin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/api/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,14 +154,8 @@
       <workItem from="1587117254056" duration="5785000" />
       <workItem from="1587195620113" duration="17269000" />
       <workItem from="1587364580054" duration="26867000" />
-      <workItem from="1587453310374" duration="11500000" />
-    </task>
-    <task id="LOCAL-00023" summary="minor changes">
-      <created>1584732561360</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1584732561360</updated>
+      <workItem from="1587453310374" duration="12118000" />
+      <workItem from="1587541199159" duration="12166000" />
     </task>
     <task id="LOCAL-00024" summary="API for creating tests">
       <created>1584893340766</created>
@@ -497,14 +493,20 @@
       <option name="project" value="LOCAL" />
       <updated>1587409152168</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="user results backend">
+      <created>1587493448563</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1587493448564</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Different render of the sidebar for a teacher and for a student" />
     <MESSAGE value="starting with CreateTest component" />
     <MESSAGE value="CreateQuestion multiple answers component" />
     <MESSAGE value="checkbox answer add answer" />
@@ -529,7 +531,8 @@
     <MESSAGE value="css correction" />
     <MESSAGE value="updated translation" />
     <MESSAGE value="user results submission prototype" />
-    <option name="LAST_COMMIT_MESSAGE" value="user results submission prototype" />
+    <MESSAGE value="user results backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="user results backend" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -540,10 +543,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587409149843">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587493445240">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587409149843" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587493445240" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

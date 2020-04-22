@@ -59,6 +59,7 @@ module.exports = (app) => {
     const {body} = req;
     const {
       userId,
+      username,
       finishedTest,
       totalPoints
     } = body;
@@ -66,6 +67,7 @@ module.exports = (app) => {
     const newUserResult = new UserResult();
 
     newUserResult.userId = userId;
+    newUserResult.username = username;
     newUserResult.finishedTest = finishedTest;
     newUserResult.totalPoints = totalPoints;
 
@@ -81,6 +83,16 @@ module.exports = (app) => {
       });
     })
 
+  });
+
+  app.get('/api/student/tests', (req, res)  => {
+    UserResult.find(function(err, results) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json(results);
+      }
+    });
   });
 
 };
