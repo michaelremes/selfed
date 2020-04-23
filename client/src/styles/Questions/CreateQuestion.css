@@ -16,8 +16,9 @@
     alignment: center;
   }
   .CreateQuestion form {
-    margin: 0 auto;
-    max-width: 500px;
+    /*margin: 0 auto;*/
+    margin-left: 250px;
+    max-width: 30%;
     background-color: lightgray;
     padding: 70px;
     text-align: center;
@@ -70,7 +71,21 @@
     margin-left: 0;
   }
 
+  .radio-answer {
+    align-items: center;
+    alignment: center;
+  }
 
+  .web-view Iframe{
+    float: right;
+    border: solid;
+    margin-top: 0;
+    margin-left: 0;
+    background-color: #f1f1f1;
+    width: 40%;
+    height: 1100px;
+    /*position: absolute;*/
+  }
   #task-input-answer {
     height: 100%;
     padding: 20px;
@@ -87,10 +102,7 @@
     padding: 20px;
 
   }
-  .radio-answer {
-    align-items: center;
-    alignment: center;
-  }
+
 
   #createQuestionButton {
     margin-top: 40px;

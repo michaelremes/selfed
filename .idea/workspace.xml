@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/public/LaTex.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/UserResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/UserResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,7 @@
       <list>
         <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -34,13 +34,17 @@
     <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1VWeiMonPHYRZfZ6xJo0qsTDF22" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -55,19 +59,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\styles\App" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Dashboard" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Tests" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Questions.js">
@@ -155,14 +159,8 @@
       <workItem from="1587195620113" duration="17269000" />
       <workItem from="1587364580054" duration="26867000" />
       <workItem from="1587453310374" duration="12118000" />
-      <workItem from="1587541199159" duration="12166000" />
-    </task>
-    <task id="LOCAL-00024" summary="API for creating tests">
-      <created>1584893340766</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1584893340766</updated>
+      <workItem from="1587541199159" duration="12845000" />
+      <workItem from="1587630153686" duration="12290000" />
     </task>
     <task id="LOCAL-00025" summary="Table for created tests">
       <created>1584904886888</created>
@@ -500,14 +498,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587493448564</updated>
     </task>
-    <option name="localTasksCounter" value="73" />
+    <task id="LOCAL-00073" summary="user results shown in dashboard for teacher and for student">
+      <created>1587566844675</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1587566844676</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="starting with CreateTest component" />
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="CreateQuestion multiple answers component" />
     <MESSAGE value="checkbox answer add answer" />
     <MESSAGE value="redux impl fo better debugging" />
@@ -532,7 +537,8 @@
     <MESSAGE value="updated translation" />
     <MESSAGE value="user results submission prototype" />
     <MESSAGE value="user results backend" />
-    <option name="LAST_COMMIT_MESSAGE" value="user results backend" />
+    <MESSAGE value="user results shown in dashboard for teacher and for student" />
+    <option name="LAST_COMMIT_MESSAGE" value="user results shown in dashboard for teacher and for student" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -543,10 +549,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587493445240">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587566840666">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587493445240" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587566840666" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -623,11 +629,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587409154784">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587567084291">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587409154784" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587567084291" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586851163246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -12,7 +12,8 @@ import {TextField} from "@material-ui/core";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from '@material-ui/icons/Delete';
-import Input from "@material-ui/core/Input";
+
+import Iframe from 'react-iframe'
 
 const Latex = require('react-latex');
 
@@ -309,6 +310,12 @@ class CreateQuestion extends Component {
         <header className="Questions-header">
           Vytvořit otázku
         </header>
+        <div className="web-view">
+          <Iframe src="../LaTex.html">
+            Zobrazení návodu se nepodařilo
+          </Iframe>
+
+        </div>
         <div className="CreateQuestion">
           <form>
             <h2>Název otázky</h2>
@@ -322,6 +329,7 @@ class CreateQuestion extends Component {
                 onChange={this.onTextBoxChangeTitle}
               />
               <h2>Zadání v LaTexu</h2>
+              <h3>(LaTex výraz je potřeba napsat mezi dva znaky dolaru '$' ) </h3>
 
               <textarea
                 required
@@ -353,8 +361,12 @@ class CreateQuestion extends Component {
             </button>
 
           </form>
+
+
         </div>
+
       </div>
+
     );
   }
 }
