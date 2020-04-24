@@ -14,17 +14,16 @@ import Radio from "@material-ui/core/Radio";
 
 const Latex = require('react-latex');
 
-class StudentTests extends Component {
+class UserResults extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      allTests: [],
-      currentTest: '',
-      testOpen: false,
+      studentResults: [],
+      currentResult: '',
+      resultOpen: false,
       userResultError: '',
       userId: '',
       username: '',
-      textAnswer: '',
       totalPoints: 0,
     };
 
@@ -32,29 +31,10 @@ class StudentTests extends Component {
     this.renderListOfTests = this.renderListOfTests.bind(this);
 
     this.forwardBack = this.forwardBack.bind(this);
-    this.submitTest = this.submitTest.bind(this);
-    this.evaluateTotalPoints = this.evaluateTotalPoints.bind(this);
-    this.onChangeAnswer = this.onChangeAnswer.bind(this);
-    this.addTextAnswer = this.addTextAnswer.bind(this);
-  }
 
-  onChangeAnswer(event, question) {
-    let index = event.target.value;
-
-    if (question.type === 'radio') {
-      question.answers.map((answer) => {
-        answer.selected = false;
-      });
-    }
-
-    if (index !== -1) {
-      let answer = {...question.answers[index]};
-      answer.selected = event.target.checked;
-      question.answers[index] = answer;
-
-    }
 
   }
+
 
   componentDidMount() {
 
@@ -62,14 +42,22 @@ class StudentTests extends Component {
       userId: localStorage.getItem('user_id'),
       username: localStorage.getItem('username')
     });
-    fetch('/api/tests')
+    fetch('/api/student/tests')
       .then(res => res.json())
       .then(
-        (test) => {
+        (results) => {
+          if (localStorage.getItem('user_role') === 'teacher') {
+            this.setState({
+              studentResults: results
+            });
+          } else {
+            const studentResults =
+              results.filter(arr => arr.userId === localStorage.getItem('user_id'));
 
-          this.setState({
-            allTests: test
-          });
+            this.setState({
+              studentResults: studentResults
+            });
+          }
 
 
         },
@@ -80,42 +68,20 @@ class StudentTests extends Component {
   };
 
 
-  addTextAnswer(event, question) {
-
-    question.answers[0] = event.target.value;
-
-
-  }
-
-  evaluateTotalPoints() {
-
-    let pointsSummary = 0;
-
-    this.setState({totalPoints: pointsSummary});
-    this.state.currentTest.questions.map((question, index) => {
-        question.answers.map((answer, index) => {
-          if (answer.selected && answer.correct) {
-            pointsSummary += question.points;
-          }
-        })
-      }
-    );
-
-
-    this.setState({totalPoints: pointsSummary}, () => {
-      this.submitTest()
-    });
-
-  }
-
   forwardBack() {
     this.setState({
-      testOpen: false
+      resultOpen: false
     });
-    this.props.history.push("/student/tests");
+    if (localStorage.getItem('user_role') === 'teacher') {
+      this.props.history.push("/results");
+    } else {
+      this.props.history.push("/student/results");
+    }
+
   }
 
   renderCorrectAnswer(question) {
+
     switch (question.type) {
       case 'text':
         return (
@@ -123,7 +89,12 @@ class StudentTests extends Component {
             <h2>Vaše odpověd</h2>
             <textarea
               id="task-input"
-              onChange={(event) => this.addTextAnswer(event, question)}
+              value={question.answers[0]}
+            />
+            <h2>Spárvná odpověď</h2>
+            <textarea
+              id="task-input"
+              value={question.textAnswer}
             />
           </div>
         );
@@ -136,17 +107,22 @@ class StudentTests extends Component {
                   <FormControlLabel
                     control={
                       <Checkbox
-                        onChange={(event) => this.onChangeAnswer(event, question)}
-                        value={index}
+                        checked={answer.selected}
                         color="primary"
                       />
                     }
                     label={<Latex>{answer.label}</Latex>}
+
                   />
 
+                  <br/>
+                  <Latex>
+                    {answer.correct ? 'Správná odpověď: ' + answer.label : ''}
+                  </Latex>
                 </div>
               )
             })}
+
 
           </FormGroup>
         );
@@ -158,19 +134,24 @@ class StudentTests extends Component {
               {question.answers.map((answer, index) => {
                 return (
                   <div>
+
                     <FormControlLabel
                       control={
                         <Radio
-                          onChange={(event) => this.onChangeAnswer(event, question)}
                           color="primary"
-                          value={index.toString()}
+                          checked={answer.selected}
                         />
                       }
+
+
                       label={<Latex>{answer.label}</Latex>}
+
                     />
-
+                    <br/>
+                    <Latex>
+                      {answer.correct ? 'Správná odpověď byla: ' + answer.label : ''}
+                    </Latex>
                   </div>
-
                 )
               })}
 
@@ -180,59 +161,16 @@ class StudentTests extends Component {
     }
   }
 
-  submitTest() {
-
-    const {
-      userId,
-      username,
-      currentTest,
-      totalPoints,
-    } = this.state;
-
-    // Post request to backend
-    fetch('/api/add/student/test', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        userId: userId,
-        username: username,
-        finishedTest: currentTest,
-        totalPoints: totalPoints
-      }),
-    }).then(res => res.json())
-      .then(json => {
-        if (json.success) {
-          addNotification("Úspěch", "Test byl odevzdán.", "success");
-          this.setState({
-            username: '',
-            currentTest: '',
-            totalPoints: 0,
-            isLoading: false,
-          });
-        } else {
-          addNotification("Error", "Test nomhl být vytvořen.", "danger");
-          this.setState({
-            userResultError: json.message,
-            isLoading: false
-          });
-        }
-      });
-    this.forwardBack();
-
-  }
-
 
   renderTest() {
     return (
       <div id="mainTestForm">
         <header className="StudentTests-header">
-          {this.state.currentTest.title}
+          {this.state.currentResult.finishedTest.title}
           <button className="button logout" onClick={this.forwardBack}>Zpět</button>
         </header>
 
-        {this.state.currentTest.questions.map((question, index) => {
+        {this.state.currentResult.finishedTest.questions.map((question, index) => {
           return (
             <div className="StudentTest"
             >
@@ -251,15 +189,14 @@ class StudentTests extends Component {
                 {this.renderCorrectAnswer(question)}
 
                 <h2> Počet bodů: {question.points}</h2>
+
+
               </form>
 
             </div>
           )
         })}
 
-        <button id="submitTestButton" onClick={this.evaluateTotalPoints}>
-          Odevzdat test
-        </button>
       </div>
 
     )
@@ -267,36 +204,34 @@ class StudentTests extends Component {
 
   renderListOfTests() {
     const {
-      allTests
+      studentResults
     } = this.state;
     const columns = [
-      {title: 'Název testu', field: 'title'},
-      {title: 'Deadline odevzdání', field: 'date'},
+      {title: 'Uživatelské jméno', field: 'username'},
+      {title: 'Test', field: 'finishedTest.title'},
+      {title: 'Počet bodů', field: 'totalPoints'},
     ];
-
-    /* filter all tests to get only active tests to show to student */
-    const activeTests = allTests.filter(arr => arr.active);
 
     return (
       <div>
         <header className="StudentTests-header">
-          Seznam testů
+          Výsledky
         </header>
         <div className="TestList">
           <MaterialTable
             title="Seznam aktivních testů"
             columns={columns}
-            data={activeTests}
+            data={studentResults}
             actions={[
               {
-                icon: 'send',
-                tooltip: 'Spustit test',
+                icon: 'visibility',
+                tooltip: 'Zobrazit test',
 
-                onClick: (event, test) => {
+                onClick: (event, result) => {
                   this.setState(
                     {
-                      testOpen: true,
-                      currentTest: test
+                      resultOpen: true,
+                      currentResult: result
                     }
                   );
                 }
@@ -304,7 +239,7 @@ class StudentTests extends Component {
             ]}
             localization={{
               header: {
-                actions: 'Akce'
+                actions: 'Zobrazit'
               },
               toolbar: {
                 searchPlaceholder: 'Vyhledat',
@@ -333,7 +268,7 @@ class StudentTests extends Component {
     return (
       <div>
         {
-          this.state.testOpen ? this.renderTest() : this.renderListOfTests()
+          this.state.resultOpen ? this.renderTest() : this.renderListOfTests()
         }
       </div>
     );
@@ -342,4 +277,4 @@ class StudentTests extends Component {
 
 }
 
-export default StudentTests;
+export default UserResults;

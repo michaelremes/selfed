@@ -31,30 +31,31 @@ class SideBar extends Component {
 
     //print different sidebar for a teacher and for a student
 
-    if(user_role === 'teacher'){
+    if (user_role === 'teacher') {
       return (
         <div className="sidenav">
           <img src={logo} className="App-logo" alt="logo"/>
           <TreeView
             className="TreeViewSideBar"
-            defaultCollapseIcon={<ExpandMoreIcon />}
-            defaultExpandIcon={<ChevronRightIcon />}
+            defaultCollapseIcon={<ExpandMoreIcon/>}
+            defaultExpandIcon={<ChevronRightIcon/>}
           >
-          <a href='/dashboard'>Domů</a>
-          {/*<a href="/materials">Materiály</a>*/}
+            <a href='/dashboard'>Domů</a>
+            {/*<a href="/materials">Materiály</a>*/}
             {/*<TreeItem nodeId="1" label="Otázky" >*/}
             {/*  <TreeItem nodeId="2" label="Vytvořit otázku" onClick={() => {*/}
             {/*    history.push('/dashboard');*/}
             {/*  }}/>*/}
             {/*  <TreeItem nodeId="3" label="Seznam otázek" onClick={<Redirect to="/questions" />}/>*/}
             {/*</TreeItem>*/}
-          <a href="/add/question">Vytvořit otázku</a>
-          <a href="/questions">Všechny otázky</a>
-          {/*<a href="/homework">Úkoly</a>*/}
-          <a href="/tests">Testy</a>
-          <a href="/add/test">Vytvořit test</a>
-          <a href="/add/user">Přidat uživatele</a>
-          <a href="/users">Uživatelé</a>
+            <a href="/add/question">Vytvořit otázku</a>
+            <a href="/questions">Všechny otázky</a>
+            {/*<a href="/homework">Úkoly</a>*/}
+            <a href="/tests">Testy</a>
+            <a href="/add/test">Vytvořit test</a>
+            <a href="/results">Výsledky</a>
+            <a href="/add/user">Přidat uživatele</a>
+            <a href="/users">Uživatelé</a>
 
 
           </TreeView>
@@ -62,15 +63,14 @@ class SideBar extends Component {
 
         </div>
       );
-    }
-
-    else{
+    } else {
       return (
         <div className="sidenav">
           <img src={logo} className="App-logo" alt="logo"/>
 
           <a href='/student/dashboard'>Domů</a>
           <a href='/student/tests'>Testy</a>
+          <a href='/student/results'>Výsledky</a>
           {/*<a href='/student/homework'>Úkoly</a>*/}
         </div>
       );

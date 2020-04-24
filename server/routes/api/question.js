@@ -10,7 +10,7 @@ module.exports = (app) => {
       task,
       type,
       answers,
-      points
+      textAnswer,
     } = body;
 
     if (!title) {
@@ -59,7 +59,7 @@ module.exports = (app) => {
       newQuestion.task = task;
       newQuestion.type = type;
       newQuestion.answers = answers;
-      newQuestion.points = points;
+      newQuestion.textAnswer = textAnswer;
 
       newQuestion.save((err, question) => {
         if (err) {

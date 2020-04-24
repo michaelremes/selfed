@@ -16,6 +16,10 @@ const QuestionSchema = new mongoose.Schema({
   answers: {
     type: Array,
     default: []
+  },
+  textAnswer: {
+    type: String,
+    default: ''
   }
 
 });

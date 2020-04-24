@@ -50,6 +50,11 @@
     text-align: left;
   }
 
+  #radio-answers{
+    padding: 30px;
+    text-align: left;
+  }
+
 
   #mainTestForm {
     text-align: center;

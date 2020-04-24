@@ -33,6 +33,7 @@ class CreateQuestion extends Component {
       },
 
       answers: [],
+      textAnswer: '',
     };
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
@@ -45,7 +46,7 @@ class CreateQuestion extends Component {
     this.addItemAnswers = this.addItemAnswers.bind(this);
     this.removeItemAnswers = this.removeItemAnswers.bind(this);
 
-
+    this.addTextAnswer = this.addTextAnswer.bind(this);
     this.onChangeCorrectAnswer = this.onChangeCorrectAnswer.bind(this);
 
   }
@@ -74,6 +75,12 @@ class CreateQuestion extends Component {
     });
   }
 
+  addTextAnswer(event) {
+    this.setState({
+     textAnswer: event.target.value
+    });
+  }
+
   onChangeCorrectAnswer(event) {
 
     let index = event.target.value;
@@ -84,8 +91,6 @@ class CreateQuestion extends Component {
         answer.correct = false;
       });
     }
-
-
 
     if (index !== -1) {
       let answer = {...array[index]};
@@ -124,7 +129,10 @@ class CreateQuestion extends Component {
       task,
       type,
       answers,
+      textAnswer
     } = this.state;
+
+
 
     this.setState({
       isLoading: true,
@@ -140,6 +148,7 @@ class CreateQuestion extends Component {
         task: task,
         type: type,
         answers: answers,
+        textAnswer: textAnswer,
       }),
     }).then(res => res.json())
       .then(json => {
@@ -151,6 +160,7 @@ class CreateQuestion extends Component {
             task: '',
             type: '',
             answers: [],
+            textAnswer: '',
           });
         } else {
           addNotification("Error", "Otázka nemohla být vytvořena.", "danger");
@@ -169,11 +179,8 @@ class CreateQuestion extends Component {
     switch (param) {
       case 'text':
         return <textarea
-          required
           id="task-input"
-
-          // value={task}
-          // onChange={this.onTextBoxChangeTextAnswer}
+          onChange={this.addTextAnswer}
         />;
       case 'checkbox':
         return (
