@@ -17,11 +17,12 @@
   }
   .CreateQuestion form {
     /*margin: 0 auto;*/
-    margin-left: 250px;
+    margin-left: 300px;
     max-width: 30%;
     background-color: lightgray;
     padding: 70px;
     text-align: center;
+
   }
   .CreateQuestion Button {
     margin-top: 20px;
@@ -49,7 +50,8 @@
   .LatexPreviewAnswer {
     border:1px solid;
     padding-bottom: 15px;
-    font-size: 18px;
+    padding-top: 15px;
+    font-size: 15px;
     width: 40%;
     background-color: white;
     float: right;
