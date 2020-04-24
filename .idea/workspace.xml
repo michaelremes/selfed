@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/components/Tests/UserResults.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/styles/SideBar/SideBar.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/CreateQuestion.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/Question.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/Question.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api/question.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/question.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/App/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/App/App.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +45,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components/Tests" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/styles" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,11 +57,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Dashboard" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Tests" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public" />
@@ -164,14 +157,7 @@
       <workItem from="1587364580054" duration="26867000" />
       <workItem from="1587453310374" duration="12118000" />
       <workItem from="1587541199159" duration="12845000" />
-      <workItem from="1587630153686" duration="37595000" />
-    </task>
-    <task id="LOCAL-00027" summary="logout added">
-      <created>1585162377914</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1585162377914</updated>
+      <workItem from="1587630153686" duration="41867000" />
     </task>
     <task id="LOCAL-00028" summary="login fixed">
       <created>1585162618530</created>
@@ -509,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587722468252</updated>
     </task>
-    <option name="localTasksCounter" value="76" />
+    <task id="LOCAL-00076" summary="view submitted test">
+      <created>1587748555528</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1587748555528</updated>
+    </task>
+    <option name="localTasksCounter" value="77" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -517,7 +510,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="redux impl fo better debugging" />
     <MESSAGE value="added delete button to checbox answers" />
     <MESSAGE value="added delete button to checkbox answers" />
     <MESSAGE value="added delete button to radioBox answers" />
@@ -542,7 +534,8 @@
     <MESSAGE value="user results shown in dashboard for teacher and for student" />
     <MESSAGE value="Latex návod na zadání" />
     <MESSAGE value="radio box fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="radio box fix" />
+    <MESSAGE value="view submitted test" />
+    <option name="LAST_COMMIT_MESSAGE" value="view submitted test" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -553,10 +546,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587722466204">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587748551365">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587722466204" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587748551365" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -633,11 +626,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587669357289">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587748558337">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587669357289" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587748558337" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586851163246">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -646,10 +639,10 @@
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="1966" y="57" width="1555" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587739929195" />
-    <state x="800" y="103" width="607" height="804" key="find.popup" timestamp="1587409068048">
+    <state x="800" y="103" width="607" height="804" key="find.popup" timestamp="1587750866753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="800" y="103" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587409068048" />
+    <state x="800" y="103" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587750866753" />
     <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586869281689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

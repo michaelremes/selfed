@@ -1,10 +1,12 @@
 import logo from "../../../public/assets/img/EduLogo.png";
 import React, {Component} from "react";
 import TreeView from "@material-ui/lab/TreeView";
-
+import "../../styles/SideBar/SideBar.css";
 
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight'
+import TreeItem from "@material-ui/lab/TreeItem";
+
 
 
 class SideBar extends Component {
@@ -24,6 +26,7 @@ class SideBar extends Component {
   }
 
 
+
   render() {
     const {
       user_role,
@@ -39,23 +42,26 @@ class SideBar extends Component {
             className="TreeViewSideBar"
             defaultCollapseIcon={<ExpandMoreIcon/>}
             defaultExpandIcon={<ChevronRightIcon/>}
+
           >
+
             <a href='/dashboard'>Domů</a>
-            {/*<a href="/materials">Materiály</a>*/}
-            {/*<TreeItem nodeId="1" label="Otázky" >*/}
-            {/*  <TreeItem nodeId="2" label="Vytvořit otázku" onClick={() => {*/}
-            {/*    history.push('/dashboard');*/}
-            {/*  }}/>*/}
-            {/*  <TreeItem nodeId="3" label="Seznam otázek" onClick={<Redirect to="/questions" />}/>*/}
-            {/*</TreeItem>*/}
-            <a href="/add/question">Vytvořit otázku</a>
-            <a href="/questions">Všechny otázky</a>
-            {/*<a href="/homework">Úkoly</a>*/}
-            <a href="/tests">Testy</a>
-            <a href="/add/test">Vytvořit test</a>
-            <a href="/results">Výsledky</a>
-            <a href="/add/user">Přidat uživatele</a>
-            <a href="/users">Uživatelé</a>
+
+            <TreeItem nodeId='1' id="treeItem" label="Otázky">
+              <a href="/add/question">Vytvořit otázku</a>
+              <a href="/questions">Otázky</a>
+            </TreeItem>
+
+            <TreeItem nodeId='2' id="treeItem" label="Testy" >
+              <a href="/add/test">Vytvořit test</a>
+              <a href="/tests">Testy</a>
+            </TreeItem>
+
+            <TreeItem nodeId='3' id="treeItem" label="Uživatelé">
+              <a href="/results">Výsledky</a>
+              <a href="/add/user">Přidat uživatele</a>
+              <a href="/users">Uživatelé</a>
+            </TreeItem>
 
 
           </TreeView>
