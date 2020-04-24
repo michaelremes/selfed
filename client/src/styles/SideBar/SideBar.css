@@ -1,0 +1,56 @@
+@media all and (min-width: 480px) {
+
+
+  .TreeViewSideBar {
+    height: 350px;
+    font-size: 200%;
+  }
+
+  #treeItem .MuiTreeItem-label{
+    color: #dddddd;
+    font-size: calc(8px + 2vmin);
+    padding: 15px;
+
+  }
+
+  #treeItem .MuiTreeItem-label:hover {
+    color: #5280d1;
+
+  }
+  #treeItem .MuiTreeItem-iconContainer {
+    color: #f1f1f1;
+  }
+
+  .sidenav {
+    height: 100%;
+    width: 15%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 200px;
+
+  }
+
+  .sidenav img {
+    height: 15vmin;
+    pointer-events: none;
+
+    left: 60px;
+    top: 10px;
+  }
+
+  .sidenav a {
+    padding: 6px 8px 30px 26px;
+    text-decoration: none;
+    font-size: calc(10px + 2vmin);
+    color: #f1f1f1;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: #5280d1;
+  }
+
+}

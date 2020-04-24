@@ -210,7 +210,7 @@ class AddUser extends Component {
                 </RadioGroup>
               </div>
 
-              <button onClick={this.onSignUp}>
+              <button id="addUserButton" onClick={this.onSignUp}>
                 Přidat nového uživatele
               </button>
 

@@ -1,5 +1,6 @@
 
 const Test = require('../../models/Test');
+const UserResult = require('../../models/UserResults');
 
 module.exports = (app) => {
   app.post('/api/add/test', (req, res)  => {
@@ -42,15 +43,56 @@ module.exports = (app) => {
   });
 
   app.delete('/api/test/:id', (req, res)  => {
-    const testId = Number(req.params.id);
+    const testId =  {_id:req.params.id};
 
-      Test.remove(testId, function (err) {
+      Test.deleteOne(testId, function (err) {
         if(err){
           res.status(500).send('Test not found.');
         }
         res.send('Success');
       })
 
+  });
+
+  //add user result
+  app.post('/api/add/student/test', (req, res)  => {
+    const {body} = req;
+    const {
+      userId,
+      username,
+      finishedTest,
+      totalPoints
+    } = body;
+
+    const newUserResult = new UserResult();
+
+    newUserResult.userId = userId;
+    newUserResult.username = username;
+    newUserResult.finishedTest = finishedTest;
+    newUserResult.totalPoints = totalPoints;
+
+    newUserResult.save((err) => {
+      if (err) {
+        return res.send({
+          success: false,
+          message: 'Error: Server error.'
+        });
+      }
+      return res.send({
+        success: true,
+      });
+    })
+
+  });
+
+  app.get('/api/student/tests', (req, res)  => {
+    UserResult.find(function(err, results) {
+      if (err) {
+        console.log(err);
+      } else {
+        res.json(results);
+      }
+    });
   });
 
 };

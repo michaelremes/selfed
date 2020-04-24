@@ -32,6 +32,7 @@ class CreateTest extends Component {
 
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
+    this.onNumberBoxChangePoints = this.onNumberBoxChangePoints.bind(this);
     this.onCreateTest = this.onCreateTest.bind(this);
 
 
@@ -45,12 +46,26 @@ class CreateTest extends Component {
       title: event.target.value,
     });
   }
+  onNumberBoxChangePoints(event, index) {
+
+    let array = [...this.state.testQuestions]; // make a separate copy of the array
+
+    if (index !== -1) {
+      let question = {...array[index]};
+      question.points = event.target.value;
+      array[index] = question;
+    }
+    this.setState({testQuestions: array});
+
+  }
+
 
   addQuestion(question) {
       this.setState(previousState => ({
         testQuestions: [...previousState.testQuestions, question],
       }));
   }
+
   removeQuestion(index) {
     let array = [...this.state.testQuestions]; // make a separate copy of the array
 
@@ -59,6 +74,7 @@ class CreateTest extends Component {
       this.setState({testQuestions: array});
     }
   }
+
   componentDidMount() {
     fetch('/api/questions')
       .then(res => res.json())
@@ -130,7 +146,8 @@ class CreateTest extends Component {
       selectedDate,
       tests,
       isLoading,
-      error
+      error,
+      questionPoints
     } = this.state;
 
     const columns = [
@@ -140,6 +157,7 @@ class CreateTest extends Component {
     ];
 
     return (
+
       <div>
         <header className="CreateTest-header">
           Vytvořit test
@@ -160,8 +178,6 @@ class CreateTest extends Component {
 
             </FormGroup>
 
-            <div className="QuestionList">
-
               <MaterialTable
                 title="Seznam vytvořených otázek"
                 columns={columns}
@@ -176,18 +192,29 @@ class CreateTest extends Component {
                     },
                   }
                 ]}
+                localization={{
+                  header: {
+                    actions: 'Možnosti'
+                  },
+                  toolbar: {
+                    searchPlaceholder: 'Vyhledat'
+                  },
+                  pagination: {
+                    labelRowsSelect: 'Řádek',
+                  },
+                  body: {
+                    emptyDataSourceMessage: "Žádná data k zobrazení"
+                  }
+                }}
 
               />
-            </div>
-
             <FormGroup>
 
               {this.state.testQuestions.map((question, index) => {
 
                 return (
-                  <div>
+                  <div className="QuestionList">
 
-                    {console.log(this.state.testQuestions.length)}
                     {question.title}
                     <IconButton aria-label="delete" className="delete-answer"
                                  onClick={this.removeQuestion.bind(this, index)}
@@ -200,6 +227,8 @@ class CreateTest extends Component {
                       label="Počet bodů za otázku"
                       type="number"
                       variant="outlined"
+                      value={question.points || ''}
+                      onChange={(event) => {this.onNumberBoxChangePoints(event, index)}}
                     />
                   </div>
 
@@ -207,7 +236,7 @@ class CreateTest extends Component {
               })}
 
             </FormGroup>
-            <button onClick={this.onCreateTest}>
+            <button id="createTestButton" onClick={this.onCreateTest}>
               Vytvořit test
             </button>
 

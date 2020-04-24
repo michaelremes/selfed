@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+
 const QuestionSchema = new mongoose.Schema({
   title: {
     type: String,
@@ -16,10 +17,11 @@ const QuestionSchema = new mongoose.Schema({
     type: Array,
     default: []
   },
-  correctAnswers: {
-    type: Array,
-    default: []
-  },
+  textAnswer: {
+    type: String,
+    default: ''
+  }
+
 });
 
 

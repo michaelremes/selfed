@@ -2,6 +2,7 @@ import React, {Component} from "react";
 
 import '../../styles/Tests/Tests.css';
 import MaterialTable from 'material-table';
+import PictureAsPdfIcon from '@material-ui/icons/PictureAsPdf';
 
 //------------------------------------
 // add option to view it as pdf
@@ -16,6 +17,7 @@ class Tests extends Component {
 
     };
 
+    this.deleteTest = this.deleteTest.bind(this);
   }
 
   componentDidMount() {
@@ -37,7 +39,13 @@ class Tests extends Component {
       )
   };
 
-
+  deleteTest(test){
+    fetch('/api/test/' + test._id, {
+      method: 'DELETE',
+    })
+      .then(res => res.text()) // or res.json()
+      .then(res => console.log(res))
+  }
 
   render() {
     const {
@@ -49,6 +57,7 @@ class Tests extends Component {
     const columns = [
       {title: 'Název testu', field: 'title'},
       {title: 'Datum vytvořeni', field: 'date'},
+      {title: 'Aktivni'},
     ];
 
     if (error) {
@@ -66,31 +75,52 @@ class Tests extends Component {
               title="Seznam vytvořených testů"
               columns={columns}
               data={tests}
-              actions={[
-                {
-                  icon: 'edit',
-                  tooltip: 'Upravit test',
-                  onClick: (event, rowData) => alert("You saved " + rowData.name)
-                },
-                {
-                  icon: 'delete',
-                  tooltip: 'Smazat test',
-                  onClick: (event, rowData) => confirm("You want to delete " + rowData.name)
-                },
-                {
-                  icon: 'visibility',
-                  tooltip: 'Zobrazit test',
-                }
-              ]}
+              // actions={[
+              //   {
+              //     icon: PictureAsPdfIcon,
+              //     tooltip: 'Zobrazit test jako pdf',
+              //   }
+              // ]}
+              editable={{
+                onRowDelete: test =>
+                  new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                      {
+                        /*delete test in database */
+                        this.deleteTest(test);
+                        /*delete test in array so the page doesnt need refresh */
+                        let tests = this.state.tests;
+                        const index = tests.indexOf(test);
+                        tests.splice(index, 1);
+                        this.setState({ tests }, () => resolve());
+                      }
+                      resolve();
+                    }, 1000);
+                  })
+              }}
               localization={{
                 header: {
                   actions: 'Možnosti'
                 },
                 toolbar: {
-                  searchPlaceholder: 'Vyhledat'
+                  searchPlaceholder: 'Vyhledat',
+                  searchTooltip: 'Vyhledat'
                 },
                 pagination: {
                   labelRowsSelect: 'Řádek',
+                  firstTooltip: "První stránka",
+                  previousTooltip: "Předchozí stránka",
+                  nextTooltip: "Další stránka",
+                  lastTooltip: "Poslední stránka"
+                },
+                body: {
+                  editRow: {
+                    deleteText: "Odstranit test?",
+                    cancelTooltip: "Zrušit",
+                    saveTooltip: "Potvrdit"
+                  },
+                  emptyDataSourceMessage: "Žádná data k zobrazení",
+                  deleteTooltip: "Odstranit"
                 }
               }}
             />

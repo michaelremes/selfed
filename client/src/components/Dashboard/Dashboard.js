@@ -3,6 +3,7 @@ import React, {Component} from 'react';
 import "../../styles/Dashboard/Dashboard.css";
 
 import {addNotification} from "../App/Notification";
+import MaterialTable from "material-table";
 
 
 
@@ -11,10 +12,15 @@ class Dashboard extends Component {
     super(props);
     this.state = {
       isLoading: true,
+
     };
 
     this.logout = this.logout.bind(this);
   };
+
+
+
+
 
 
   logout() {
@@ -25,14 +31,19 @@ class Dashboard extends Component {
     this.props.history.push("/");
   }
 
+
+
   render() {
+
     return (
       <div>
       <header className="Dashboard-header">
         Hlavní stránka
         <button className="button logout" onClick={this.logout}>Odhlásit se</button>
       </header>
+
       </div>
+
 
 
   );

@@ -4,7 +4,6 @@ import "../../styles/Questions/CreateQuestion.css";
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Radio from "@material-ui/core/Radio";
-import AddIcon from '@material-ui/icons/Add';
 import {addNotification} from "../App/Notification";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -12,6 +11,8 @@ import {TextField} from "@material-ui/core";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from '@material-ui/icons/Delete';
+
+import Iframe from 'react-iframe'
 
 const Latex = require('react-latex');
 
@@ -23,10 +24,16 @@ class CreateQuestion extends Component {
       createQuestionError: '',
       title: '',
       task: '',
-      type: 'checkbox',
-      answer: '',
+      type: 'radio',
+      answer: {
+        label: '',
+        correct: false,
+        points: '',
+        selected: false
+      },
+
       answers: [],
-      correctAnswers: []
+      textAnswer: '',
     };
 
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
@@ -36,12 +43,11 @@ class CreateQuestion extends Component {
     this.onSelectQuestionType = this.onSelectQuestionType.bind(this);
     this.onCreateQuestion = this.onCreateQuestion.bind(this);
 
-    this.addAnswer = this.addAnswer.bind(this);
-    this.removeAnswer = this.removeAnswer.bind(this);
+    this.addItemAnswers = this.addItemAnswers.bind(this);
+    this.removeItemAnswers = this.removeItemAnswers.bind(this);
 
-    this.addCorrectAnswer = this.addCorrectAnswer.bind(this);
-
-
+    this.addTextAnswer = this.addTextAnswer.bind(this);
+    this.onChangeCorrectAnswer = this.onChangeCorrectAnswer.bind(this);
 
   }
 
@@ -65,28 +71,48 @@ class CreateQuestion extends Component {
 
   onTextBoxChangeAnswer(event) {
     this.setState({
-      answer: event.target.value,
+      answer: {label: event.target.value},
     });
   }
 
-  addAnswer() {
+  addTextAnswer(event) {
+    this.setState({
+     textAnswer: event.target.value
+    });
+  }
+
+  onChangeCorrectAnswer(event) {
+
+    let index = event.target.value;
+    let array = [...this.state.answers]; // make a separate copy of the array
+
+    if(this.state.type === 'radio') {
+      array.map((answer) => {
+        answer.correct = false;
+      });
+    }
+
+    if (index !== -1) {
+      let answer = {...array[index]};
+
+      answer.correct = event.target.checked;
+      array[index] = answer;
+    }
+    this.setState({
+      answers: array,
+     });
+
+  }
+
+  addItemAnswers() {
     this.setState(previousState => ({
       answers: [...previousState.answers, this.state.answer],
-      answer: ''
+      answer: {label: '', correct: false},
     }));
   }
 
-  addCorrectAnswer(value) {
-    console.log(value);
-    this.setState(previousState => ({
-      correctAnswers: [...previousState.correctAnswers, value],
 
-    }));
-
-  }
-
-
-  removeAnswer(index) {
+  removeItemAnswers(index) {
     let array = [...this.state.answers]; // make a separate copy of the array
 
     if (index !== -1) {
@@ -96,8 +122,6 @@ class CreateQuestion extends Component {
   }
 
 
-
-
   onCreateQuestion() {
 
     const {
@@ -105,8 +129,10 @@ class CreateQuestion extends Component {
       task,
       type,
       answers,
-      correctAnswers
+      textAnswer
     } = this.state;
+
+
 
     this.setState({
       isLoading: true,
@@ -122,7 +148,7 @@ class CreateQuestion extends Component {
         task: task,
         type: type,
         answers: answers,
-        correctAnswers: correctAnswers,
+        textAnswer: textAnswer,
       }),
     }).then(res => res.json())
       .then(json => {
@@ -134,7 +160,7 @@ class CreateQuestion extends Component {
             task: '',
             type: '',
             answers: [],
-            correctAnswers: [],
+            textAnswer: '',
           });
         } else {
           addNotification("Error", "Otázka nemohla být vytvořena.", "danger");
@@ -149,115 +175,121 @@ class CreateQuestion extends Component {
   renderCorrectAnswer(param) {
     const {
       answer,
-      answers
-
     } = this.state;
     switch (param) {
       case 'text':
         return <textarea
-          required
           id="task-input"
-
-          // value={task}
-          // onChange={this.onTextBoxChangeTextAnswer}
+          onChange={this.addTextAnswer}
         />;
       case 'checkbox':
         return (
           <FormGroup>
+            <h3>(Zaškrtněte správné odpovědi)</h3>
+            {this.state.answers.map((answer, index) => {
 
-            {this.state.answers.map((answerLabel, index) => {
               return (
-                <div>
+                <div className="added-answers">
                   <FormControlLabel
                     control={
                       <Checkbox
-                        onClick={this.addCorrectAnswer.bind(this, index)}
-
+                        onChange={this.onChangeCorrectAnswer}
+                        value={index}
                         color="primary"
                       />
                     }
-                    label={answerLabel}
+                    label={<Latex>{answer.label}</Latex>}
 
                   />
 
                   <IconButton aria-label="delete" className="delete-answer"
-                              onClick={this.removeAnswer.bind(this, index)}
+                              onClick={this.removeItemAnswers.bind(this, index)}
                   >
-                    <DeleteIcon/> smazat
+                    <DeleteIcon/> Smazat
                   </IconButton>
                 </div>
               )
             })}
-
-            <TextField
-              id="task-input"
-              type="text"
-              variant="outlined"
-              value={answer}
-              onChange={this.onTextBoxChangeAnswer}
-            />
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={this.addAnswer}
-            >
-              Přidat odpověd
-            </Button>
+            <div className="add-answer">
+              <h2>Přidat odpověď</h2><br />
+                <textarea
+                  required
+                  id="task-input-answer"
+                  value={answer.label}
+                  onChange={this.onTextBoxChangeAnswer}
+                />
+              <div className="LatexPreviewAnswer">
+                <Latex>{answer.label}</Latex>
+              </div>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={this.addItemAnswers}
+              >
+                Přidat odpověd
+              </Button>
+            </div>
 
           </FormGroup>
         );
 
       case 'radio':
         return (
-          <div>
-
-            {this.state.answers.map((answerLabel, index) => {
+          <FormGroup>
+            <h3>(Zaškrtněte správné odpovědi)</h3>
+            <RadioGroup onChange={this.onChangeCorrectAnswer} >
+            {this.state.answers.map((answer, index) => {
               return (
-                <div className="radio-answer">
-                  <RadioGroup value=" ">
+                <div className="added-answers">
+
                     <FormControlLabel
                       control={
                         <Radio
-                          value={answer}
+
+
                           color="primary"
                         />
                       }
-
-                      // onChange={handleChange}
-
-                      label={answerLabel}
+                      value={index.toString()}
+                   //   value={"test"}
+                      label={<Latex>{answer.label}</Latex>}
 
                     />
 
                     <IconButton aria-label="delete" className="delete-answer"
-                                onClick={this.removeAnswer.bind(this, index)}
+                                onClick={this.removeItemAnswers.bind(this, index)}
                     >
                       <DeleteIcon/> smazat
                     </IconButton>
-                  </RadioGroup>
+
                 </div>
 
               )
             })}
+            </RadioGroup>
 
+            <div className="add-answer">
+              <h2>Přidat odpověď</h2><br />
 
-            <TextField
-              required
-              id="task-input"
-              type="text"
-              variant="outlined"
-              value={answer}
-              onChange={this.onTextBoxChangeAnswer}
-            />
+              <textarea
+                required
+                id="task-input-answer"
+                value={answer.label}
+                onChange={this.onTextBoxChangeAnswer}
+              />
+            <div className="LatexPreviewAnswer">
+              <Latex>{answer.label}</Latex>
+            </div>
             <Button
               variant="contained"
               color="secondary"
-              onClick={this.addAnswer}
+              onClick={this.addItemAnswers}
             >
               Přidat odpověď
             </Button>
 
           </div>
+          </FormGroup>
         );
     }
   }
@@ -274,6 +306,12 @@ class CreateQuestion extends Component {
         <header className="Questions-header">
           Vytvořit otázku
         </header>
+        <div className="web-view">
+          <Iframe src="../LaTex.html">
+            Zobrazení návodu se nepodařilo
+          </Iframe>
+
+        </div>
         <div className="CreateQuestion">
           <form>
             <h2>Název otázky</h2>
@@ -287,6 +325,7 @@ class CreateQuestion extends Component {
                 onChange={this.onTextBoxChangeTitle}
               />
               <h2>Zadání v LaTexu</h2>
+              <h3>(LaTex výraz je potřeba napsat mezi dva znaky dolaru '$' ) </h3>
 
               <textarea
                 required
@@ -304,24 +343,26 @@ class CreateQuestion extends Component {
             </FormGroup>
             <h2>Typ odpovědi</h2>
             <Select id="selectAnswer" value={type} onChange={this.onSelectQuestionType}>
-              <MenuItem value="text">Otevřená odpověd</MenuItem>
+              <MenuItem value="text">Otevřená odpověď</MenuItem>
               <MenuItem value="checkbox">Více odpovědí</MenuItem>
               <MenuItem value="radio">Jedná správná odpověď</MenuItem>
             </Select>
-
-            <h2>Správná odpověď</h2>
 
             <div>
               {this.renderCorrectAnswer(this.state.type)}
             </div>
 
-            <button onClick={this.onCreateQuestion}>
+            <button id="createQuestionButton" onClick={this.onCreateQuestion}>
               Vytvořit otázku
             </button>
 
           </form>
+
+
         </div>
+
       </div>
+
     );
   }
 }

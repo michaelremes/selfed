@@ -13,10 +13,11 @@
   }
 
   .TestList {
-    width: 60%;
-    position: relative;
-    margin: auto;
-    left: 5%;
+    width: 100%;
+    display: flow;
+    float: right;
+    padding-right: 150px;
+    padding-top: 50px;
   }
 
   body {

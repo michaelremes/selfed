@@ -16,15 +16,17 @@
     alignment: center;
   }
   .CreateQuestion form {
-    margin: 0 auto;
-    max-width: 500px;
+    /*margin: 0 auto;*/
+    margin-left: 300px;
+    max-width: 30%;
     background-color: lightgray;
     padding: 70px;
     text-align: center;
+
   }
   .CreateQuestion Button {
     margin-top: 20px;
-    padding: 10px;
+    padding: 15px;
     font-size: calc(8px + 2vmin);
   }
 
@@ -34,7 +36,7 @@
 
 
   #task-input {
-    width:90%;
+    width:80%;
     padding: 20px;
     font-size: 18px;
   }
@@ -44,21 +46,71 @@
     font-size: 18px;
     margin-top:5px;
     background-color: white;
-
-
   }
-
-  #selectAnswer{
+  .LatexPreviewAnswer {
+    border:1px solid;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 15px;
+    width: 40%;
     background-color: white;
-    width: 100%;
-    font-size: calc(2px + 2vmin);
+    float: right;
   }
+  .add-answer {
+    border:1px solid;
+    padding: 12px;
+    background-color: #5280d1;
+
+  }
+
+  .added-answers {
+    border: solid #5280d1;
+    margin: 5px;
+    background-color: white;
+  }
+  .added-answers Button{
+    font-size: 20px;
+    margin-left: 0;
+  }
+
   .radio-answer {
     align-items: center;
     alignment: center;
   }
 
+  .web-view Iframe{
+    float: right;
+    border: solid;
+    margin-top: 0;
+    margin-left: 0;
+    background-color: #f1f1f1;
+    width: 40%;
+    height: 1100px;
+    /*position: absolute;*/
+  }
+  #task-input-answer {
+    height: 100%;
+    padding: 20px;
+    font-size: 18px;
+    resize: vertical;
 
+  }
+
+
+  #selectAnswer{
+    background-color: white;
+    width: 100%;
+    font-size: calc(5px + 2vmin);
+    padding: 20px;
+
+  }
+
+
+  #createQuestionButton {
+    margin-top: 40px;
+    padding: 20px;
+    border-color: orange;
+  }
 
   body {
     background-color: #282c34;

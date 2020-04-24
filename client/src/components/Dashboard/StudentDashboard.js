@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import "../../styles/Dashboard/Dashboard.css";
 
 import {addNotification} from "../App/Notification";
-
+import MaterialTable from "material-table";
 
 
 class StudentDashboard extends Component {
@@ -26,18 +26,21 @@ class StudentDashboard extends Component {
   }
 
   render() {
+
     return (
+
       <div>
-      <header className="Dashboard-header">
-        Hlavní stránka
-        <button className="button logout" onClick={this.logout}>Odhlásit se</button>
-      </header>
+        <header className="Dashboard-header">
+          Hlavní stránka
+          <button className="button logout" onClick={this.logout}>Odhlásit se</button>
+        </header>
+
       </div>
 
 
-  );
+    );
 
-}
+  }
 }
 
 export default StudentDashboard;

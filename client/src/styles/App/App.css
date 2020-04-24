@@ -1,32 +1,5 @@
 
-.sidenav {
-  height: 100%;
-  width: 300px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #111;
-  overflow-x: hidden;
-  padding-top: 200px;
-}
-.sidenav img {
-  height: 15vmin;
-  pointer-events: none;
-  position: absolute;
-  left: 60px; top: 10px;
-}
-.sidenav a {
-  padding: 6px 8px 30px 26px;
-  text-decoration: none;
-  font-size: 40px;
-  color: #818181;
-  display: block;
-}
 
-.sidenav a:hover {
-  color: #f1f1f1;
-}
 
 .main {
   margin-left: 160px; /* Same as the width of the sidenav */

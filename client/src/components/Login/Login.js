@@ -98,7 +98,10 @@ class Login extends Component {
       .then(json => {
         if (json.success) {
           setInStorage('user_session', {token: json.token});
+          localStorage.setItem('user_id', json.user_id);
+          localStorage.setItem('username', signInUsername);
           localStorage.setItem('user_role', json.user_role);
+
 
           addNotification("Úspěch", "Úspěšné přihlášení", "success");
 
