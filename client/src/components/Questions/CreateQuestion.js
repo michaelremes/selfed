@@ -213,7 +213,6 @@ class CreateQuestion extends Component {
             <div className="add-answer">
               <h2>Přidat odpověď</h2><br />
                 <textarea
-                  required
                   id="task-input-answer"
                   value={answer.label}
                   onChange={this.onTextBoxChangeAnswer}
@@ -272,7 +271,6 @@ class CreateQuestion extends Component {
               <h2>Přidat odpověď</h2><br />
 
               <textarea
-                required
                 id="task-input-answer"
                 value={answer.label}
                 onChange={this.onTextBoxChangeAnswer}
@@ -299,7 +297,6 @@ class CreateQuestion extends Component {
       title,
       task,
       type,
-      createQuestionError
     } = this.state;
     return (
       <div>

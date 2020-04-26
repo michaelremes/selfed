@@ -108,8 +108,8 @@ class StudentTests extends Component {
 
         });
         /* save earned points for question */
-        question.earnedPoints = points;
-        pointsSummary += points;
+        question.earnedPoints = points.toFixed(2);
+        pointsSummary += points.toFixed(2);
         points = 0;
       }
     );
