@@ -127,7 +127,7 @@ class CreateTest extends Component {
             isLoading: false,
           });
         } else {
-          addNotification("Error", "Test nomhl být vytvořen.", "danger");
+          addNotification("Error", "Test nemohl být vytvořen.", "danger");
           this.setState({
             createTestError: json.message,
             isLoading: false

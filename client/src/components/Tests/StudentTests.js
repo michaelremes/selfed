@@ -225,7 +225,7 @@ class StudentTests extends Component {
             isLoading: false,
           });
         } else {
-          addNotification("Error", "Test nomhl být vytvořen.", "danger");
+          addNotification("Error", "Test se nepodařilo odevzdat.", "danger");
           this.setState({
             userResultError: json.message,
             isLoading: false
