@@ -1,14 +1,10 @@
 import React, {Component} from "react";
 
-import '../../styles/Tests/StudentTests.css';
+import '../../styles/Tests/UserResults.css';
 import MaterialTable from "material-table";
-import Redirect from "react-router/Redirect";
-import {addNotification} from "../App/Notification";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import IconButton from "@material-ui/core/IconButton";
-import {Button, FormGroup} from "react-bootstrap";
-import {TextField} from "@material-ui/core";
+import {FormGroup} from "react-bootstrap";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 
@@ -172,7 +168,7 @@ class UserResults extends Component {
 
         {this.state.currentResult.finishedTest.questions.map((question, index) => {
           return (
-            <div className="StudentTest"
+            <div className="UserResult"
             >
               <form>
                 <h1>{question.title}</h1>
