@@ -52,7 +52,7 @@ class CreateTest extends Component {
 
     if (index !== -1) {
       let question = {...array[index]};
-      question.points = event.target.value;
+      question.points = parseInt(event.target.value);
       array[index] = question;
     }
     this.setState({testQuestions: array});
@@ -142,12 +142,7 @@ class CreateTest extends Component {
     const {
       title,
       questions,
-      question,
-      selectedDate,
-      tests,
-      isLoading,
-      error,
-      questionPoints
+
     } = this.state;
 
     const columns = [

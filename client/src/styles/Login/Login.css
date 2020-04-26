@@ -26,7 +26,7 @@
     height: 20vmin;
     pointer-events: none;
     position: absolute;
-    left: 10px; top: 30px;
+    left: 30px;
   }
   .Login-header {
     background-color: #5280d1;

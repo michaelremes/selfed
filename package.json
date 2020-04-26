@@ -5,13 +5,14 @@
   "author": "Michael Remes",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michaelremes/selfed.git"
+    "url": "https://github.com/michaelremes/selfed.git"
   },
-  "license": "MIT",
   "private": true,
   "scripts": {
-    "start": "webpack -p --progress --profile --colors && node server",
-    "start:dev": "node server"
+    "start": "node server",
+    "build": "webpack --mode production",
+    "start:dev": "node server",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false webpack -p"
   },
   "engines": {
     "node": ">=6"
@@ -56,16 +57,17 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.20.3",
     "styled-components": "^5.0.1",
-    "webpack-cli": "^3.3.11",
     "webpack-dev-middleware": "^3.0.1",
     "webpack-hot-middleware": "^2.21.2",
     "webpack-merge": "^4.1.2",
-    "whatwg-fetch": "^2.0.3"
+    "whatwg-fetch": "^2.0.3",
+    "webpack": "^4.41.6",
+    "react-iframe": "^1.8.0"
   },
   "devDependencies": {
     "@material-ui/icons": "^4.9.1",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "image-webpack-loader": "^6.0.0",
-    "react-iframe": "^1.8.0",
-    "webpack": "^4.41.6"
+    "webpack-cli": "^3.3.11"
   }
 }

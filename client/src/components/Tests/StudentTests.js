@@ -2,13 +2,10 @@ import React, {Component} from "react";
 
 import '../../styles/Tests/StudentTests.css';
 import MaterialTable from "material-table";
-import Redirect from "react-router/Redirect";
 import {addNotification} from "../App/Notification";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import IconButton from "@material-ui/core/IconButton";
-import {Button, FormGroup} from "react-bootstrap";
-import {TextField} from "@material-ui/core";
+import {FormGroup} from "react-bootstrap";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 
@@ -53,7 +50,6 @@ class StudentTests extends Component {
       question.answers[index] = answer;
 
     }
-
   }
 
   componentDidMount() {
@@ -88,16 +84,33 @@ class StudentTests extends Component {
   }
 
   evaluateTotalPoints() {
-
+    let points = 0;
     let pointsSummary = 0;
 
-    this.setState({totalPoints: pointsSummary});
     this.state.currentTest.questions.map((question, index) => {
         question.answers.map((answer, index) => {
-          if (answer.selected && answer.correct) {
-            pointsSummary += question.points;
+
+          switch(question.type){
+            case 'checkbox':
+              if((answer.selected && answer.correct) || (!answer.selected && !answer.correct) ){
+                points += (question.points/question.answers.length);
+              }
+
+              break;
+            case 'radio':
+                if(answer.selected && answer.correct){
+                  points += question.points;
+                }
+              break;
           }
-        })
+
+
+
+        });
+        /* save earned points for question */
+        question.earnedPoints = points;
+        pointsSummary += points;
+        points = 0;
       }
     );
 
@@ -127,6 +140,7 @@ class StudentTests extends Component {
             />
           </div>
         );
+
       case 'checkbox':
         return (
           <FormGroup id="checkbox-answers">
@@ -206,7 +220,6 @@ class StudentTests extends Component {
         if (json.success) {
           addNotification("Úspěch", "Test byl odevzdán.", "success");
           this.setState({
-            username: '',
             currentTest: '',
             totalPoints: 0,
             isLoading: false,

@@ -1,14 +1,10 @@
 import React, {Component} from "react";
 
-import '../../styles/Tests/StudentTests.css';
+import '../../styles/Tests/UserResults.css';
 import MaterialTable from "material-table";
-import Redirect from "react-router/Redirect";
-import {addNotification} from "../App/Notification";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Checkbox from "@material-ui/core/Checkbox";
-import IconButton from "@material-ui/core/IconButton";
-import {Button, FormGroup} from "react-bootstrap";
-import {TextField} from "@material-ui/core";
+import {FormGroup} from "react-bootstrap";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
 
@@ -172,7 +168,7 @@ class UserResults extends Component {
 
         {this.state.currentResult.finishedTest.questions.map((question, index) => {
           return (
-            <div className="StudentTest"
+            <div className="UserResult"
             >
               <form>
                 <h1>{question.title}</h1>
@@ -180,7 +176,7 @@ class UserResults extends Component {
                 <FormGroup controlId="task" size="large">
 
                   <h2>Zadání</h2>
-
+                  <h3> Otázka za {question.points}b</h3>
                   <div className="LatexPreview">
                     <Latex>{question.task}</Latex>
                   </div>
@@ -188,15 +184,19 @@ class UserResults extends Component {
 
                 {this.renderCorrectAnswer(question)}
 
-                <h2> Počet bodů: {question.points}</h2>
 
+
+                <h2>Získáno {question.earnedPoints}b</h2>
 
               </form>
+
 
             </div>
           )
         })}
-
+        <div className="summary">
+        <h2>Celkem {this.state.currentResult.totalPoints}b</h2>
+        </div>
       </div>
 
     )
@@ -209,7 +209,7 @@ class UserResults extends Component {
     const columns = [
       {title: 'Uživatelské jméno', field: 'username'},
       {title: 'Test', field: 'finishedTest.title'},
-      {title: 'Počet bodů', field: 'totalPoints'},
+      {title: 'Počet získaných bodů', field: 'totalPoints'},
     ];
 
     return (
