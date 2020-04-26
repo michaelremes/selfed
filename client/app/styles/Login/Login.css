@@ -1,13 +1,11 @@
 @media all and (min-width: 480px) {
-    .Login {
-        padding: 60px 0;
-    }
 
     .Login form {
         margin: 0 auto;
         max-width: 320px;
         background-color: lightgray;
         padding: 70px;
+        text-align: center;
     }
    #username {
        padding: 10px;
@@ -20,9 +18,28 @@
         font-size: calc(6px + 2vmin);
     }
     .Login Button {
-        margin-top: 20px;
+        margin-top: 30px;
         padding: 20px;
         font-size: calc(10px + 2vmin);
     }
+  .App-logo {
+    height: 20vmin;
+    pointer-events: none;
+    position: absolute;
+    left: 10px; top: 10px;
+  }
+  .Login-header {
+    background-color: #5280d1;
+    min-height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: white;
+  }
+  body {
+    background-color: #282c34;
+  }
 
 }
