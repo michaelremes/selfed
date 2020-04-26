@@ -628,10 +628,10 @@
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587752729316" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1586851163246">
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587912111681">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586851163246" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587912111681" />
     <state x="1966" y="57" width="1555" height="1025" key="dock-window-1" timestamp="1587739929195">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
@@ -644,6 +644,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586869281689" />
+    <state x="682" y="312" key="git4idea.merge.GitPullDialog" timestamp="1587912169728">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="682" y="312" key="git4idea.merge.GitPullDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587912169728" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1582751740006">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
