@@ -84,7 +84,7 @@ class StudentTests extends Component {
   }
 
   evaluateTotalPoints() {
-
+    let points = 0;
     let pointsSummary = 0;
 
     this.state.currentTest.questions.map((question, index) => {
@@ -92,19 +92,25 @@ class StudentTests extends Component {
 
           switch(question.type){
             case 'checkbox':
-
+              if((answer.selected && answer.correct) || (!answer.selected && !answer.correct) ){
+                points += (question.points/question.answers.length);
+              }
 
               break;
             case 'radio':
                 if(answer.selected && answer.correct){
-                  pointsSummary += question.points;
+                  points += question.points;
                 }
               break;
           }
 
 
 
-        })
+        });
+        /* save earned points for question */
+        question.earnedPoints = points;
+        pointsSummary += points;
+        points = 0;
       }
     );
 
