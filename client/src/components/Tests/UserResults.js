@@ -168,9 +168,18 @@ class UserResults extends Component {
 
         {this.state.currentResult.finishedTest.questions.map((question, index) => {
           return (
-            <div className="UserResult"
-            >
-              <form>
+            <div className="UserResult">
+
+              <form style={{border: 'solid 16px ' + (() => {
+                  switch (question.earnedPoints) {
+                    case 0:
+                      return "red";
+                    case  question.points:
+                      return "lawngreen";
+                    default:
+                      return "gold";
+                  }
+                })()}}>
                 <h1>{question.title}</h1>
 
                 <FormGroup controlId="task" size="large">
@@ -185,7 +194,6 @@ class UserResults extends Component {
                 {this.renderCorrectAnswer(question)}
 
 
-
                 <h2>Získáno {question.earnedPoints}b</h2>
 
               </form>
@@ -195,7 +203,7 @@ class UserResults extends Component {
           )
         })}
         <div className="summary">
-        <h2>Celkem {this.state.currentResult.totalPoints}b</h2>
+          <h2>Celkem {this.state.currentResult.totalPoints}b</h2>
         </div>
       </div>
 
