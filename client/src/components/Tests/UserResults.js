@@ -18,7 +18,6 @@ class UserResults extends Component {
       currentResult: '',
       resultOpen: false,
       userResultError: '',
-      userId: '',
       username: '',
       totalPoints: 0,
     };
@@ -35,7 +34,6 @@ class UserResults extends Component {
   componentDidMount() {
 
     this.setState({
-      userId: localStorage.getItem('user_id'),
       username: localStorage.getItem('username')
     });
     fetch('/api/student/tests')
@@ -48,7 +46,7 @@ class UserResults extends Component {
             });
           } else {
             const studentResults =
-              results.filter(arr => arr.userId === localStorage.getItem('user_id'));
+              results.filter(arr => arr.username === localStorage.getItem('username'));
 
             this.setState({
               studentResults: studentResults
@@ -171,10 +169,10 @@ class UserResults extends Component {
             <div className="UserResult">
 
               <form style={{border: 'solid 16px ' + (() => {
-                  switch (question.earnedPoints) {
-                    case 0:
+                  switch (true) {
+                    case (question.earnedPoints < 0.5):
                       return "red";
-                    case  question.points:
+                    case  (question.earnedPoints > question.points-0.5):
                       return "lawngreen";
                     default:
                       return "gold";

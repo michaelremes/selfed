@@ -58,7 +58,6 @@ module.exports = (app) => {
   app.post('/api/add/student/test', (req, res)  => {
     const {body} = req;
     const {
-      userId,
       username,
       finishedTest,
       totalPoints
@@ -66,7 +65,6 @@ module.exports = (app) => {
 
     const newUserResult = new UserResult();
 
-    newUserResult.userId = userId;
     newUserResult.username = username;
     newUserResult.finishedTest = finishedTest;
     newUserResult.totalPoints = totalPoints;

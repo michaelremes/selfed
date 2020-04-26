@@ -98,7 +98,6 @@ class Login extends Component {
       .then(json => {
         if (json.success) {
           setInStorage('user_session', {token: json.token});
-          localStorage.setItem('user_id', json.user_id);
           localStorage.setItem('username', signInUsername);
           localStorage.setItem('user_role', json.user_role);
 
@@ -181,7 +180,6 @@ class Login extends Component {
       );
     }
     if(localStorage.getItem('user_role') === 'teacher'){
-      console.log( "Uzivatel prihlasen: " + localStorage.getItem('user_role'));
       return <Redirect to="/dashboard" />
     }
     else{

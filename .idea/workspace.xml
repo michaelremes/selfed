@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="fixed digits">
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/UserResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/UserResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/UserResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/UserResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api/test.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api/test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,14 +163,7 @@
       <workItem from="1587630153686" duration="41950000" />
       <workItem from="1587912822916" duration="2134000" />
       <workItem from="1587918529396" duration="125000" />
-      <workItem from="1587925041647" duration="102000" />
-    </task>
-    <task id="LOCAL-00030" summary="starting with CreateTest component">
-      <created>1585475686080</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1585475686080</updated>
+      <workItem from="1587925041647" duration="3461000" />
     </task>
     <task id="LOCAL-00031" summary="CreateQuestion multiple answers component">
       <created>1585591870867</created>
@@ -505,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1587917646112</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="minor fix">
+      <created>1587925218683</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1587925218684</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -513,7 +516,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added delete button to radioBox answers" />
     <MESSAGE value="table of questions in create test" />
     <MESSAGE value="Latex in question task prototype" />
     <MESSAGE value="Latex Preview css" />
@@ -538,7 +540,8 @@
     <MESSAGE value="view submitted test" />
     <MESSAGE value="compact sidebar implemented" />
     <MESSAGE value="fixed digits" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed digits" />
+    <MESSAGE value="minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -549,10 +552,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587918506402">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1587925217047">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587918506402" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587925217047" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -633,11 +636,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587918542620">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1587925221489">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587918542620" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587925221489" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1587912225832">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -646,10 +649,10 @@
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="1966" y="57" width="1555" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587739929195" />
-    <state x="800" y="103" width="607" height="804" key="find.popup" timestamp="1587925141166">
+    <state x="800" y="103" width="607" height="804" key="find.popup" timestamp="1587926876249">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="800" y="103" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587925141166" />
+    <state x="800" y="103" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587926876249" />
     <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586869281689">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

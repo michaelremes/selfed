@@ -19,7 +19,6 @@ class StudentTests extends Component {
       currentTest: '',
       testOpen: false,
       userResultError: '',
-      userId: '',
       username: '',
       textAnswer: '',
       totalPoints: 0,
@@ -55,7 +54,6 @@ class StudentTests extends Component {
   componentDidMount() {
 
     this.setState({
-      userId: localStorage.getItem('user_id'),
       username: localStorage.getItem('username')
     });
     fetch('/api/tests')
@@ -107,15 +105,17 @@ class StudentTests extends Component {
 
 
         });
+      // question.earnedPoints = points;
+      // pointsSummary += points;
         /* save earned points for question */
         question.earnedPoints = points.toFixed(2);
-        pointsSummary += points.toFixed(2);
+        pointsSummary += points;
         points = 0;
       }
     );
 
 
-    this.setState({totalPoints: pointsSummary}, () => {
+    this.setState({totalPoints: pointsSummary.toFixed(2)}, () => {
       this.submitTest()
     });
 
@@ -197,7 +197,6 @@ class StudentTests extends Component {
   submitTest() {
 
     const {
-      userId,
       username,
       currentTest,
       totalPoints,
@@ -210,7 +209,6 @@ class StudentTests extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        userId: userId,
         username: username,
         finishedTest: currentTest,
         totalPoints: totalPoints
