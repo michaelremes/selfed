@@ -21,6 +21,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  totalPoints: {
+    type: Number,
+    default: 0
+  },
   isDeleted: {
     type: Boolean,
     default: false

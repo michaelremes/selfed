@@ -99,6 +99,7 @@ class Login extends Component {
         if (json.success) {
           setInStorage('user_session', {token: json.token});
           localStorage.setItem('username', signInUsername);
+          localStorage.setItem('userId', json.user_id);
           localStorage.setItem('user_role', json.user_role);
 
 

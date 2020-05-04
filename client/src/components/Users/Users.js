@@ -61,6 +61,7 @@ class Users extends Component {
       {title: 'Křestní jméno', field: 'firstName'},
       {title: 'Příjmení', field: 'lastName'},
       {title: 'Role', field: 'role'},
+      {title: 'Celkový počet bodů', field: 'totalPoints'},
     ];
 
     if (error) {

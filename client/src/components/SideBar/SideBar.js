@@ -47,13 +47,15 @@ class SideBar extends Component {
 
             <a href='/dashboard'>Domů</a>
 
-            <TreeItem nodeId='1' id="treeItem" label="Otázky">
+            <TreeItem nodeId='1' id="treeItem" label="Vytvořit">
               <a href="/add/question">Vytvořit otázku</a>
-              <a href="/questions">Otázky</a>
+              <a href="/add/test">Vytvořit test</a>
+              <a href="/add/material">Materiály</a>
+
             </TreeItem>
 
-            <TreeItem nodeId='2' id="treeItem" label="Testy" >
-              <a href="/add/test">Vytvořit test</a>
+            <TreeItem nodeId='2' id="treeItem" label="Zobrazit" >
+              <a href="/questions">Otázky</a>
               <a href="/tests">Testy</a>
             </TreeItem>
 

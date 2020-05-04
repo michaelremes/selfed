@@ -169,8 +169,15 @@ class CreateTest extends Component {
                 value={title}
                 onChange={this.onTextBoxChangeTitle}
               />
-              <h2>Přidat otázky</h2>
 
+              <h2>Typ testu</h2>
+              {/*value={type} onChange={this.onSelectQuestionType}*/}
+              <Select id="selectAnswer" >
+                <MenuItem value="text">Bodovaný test</MenuItem>
+                <MenuItem value="checkbox">Procvičovací test</MenuItem>
+                <MenuItem value="radio">Domácí úkol</MenuItem>
+              </Select>
+              <h2>Přidat otázky</h2>
             </FormGroup>
 
               <MaterialTable

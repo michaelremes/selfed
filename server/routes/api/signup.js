@@ -153,4 +153,24 @@ module.exports = (app) => {
 
   });
 
+  app.put('/api/user/update/:id', (req, res)  => {
+    let userId = {_id: req.params.id};
+    let user = {
+      totalPoints: req.body.totalPoints,
+    };
+
+    User.findByIdAndUpdate(userId, user, {new: true}, function(
+      err,
+      user
+    ) {
+      if (err) {
+        console.log("err", err);
+        res.status(500).send(err);
+      } else {
+        console.log("success");
+        res.send(user);
+      }
+      });
+  });
+
 };

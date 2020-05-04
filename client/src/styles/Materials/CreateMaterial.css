@@ -11,6 +11,14 @@
     font-size: calc(6px + 2vmin);
   }
 
+  .Lectures form {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: lightgray;
+    padding: 70px;
+    text-align: center;
+  }
+
   .block:hover {
     background-color: #ddd;
     color: black;

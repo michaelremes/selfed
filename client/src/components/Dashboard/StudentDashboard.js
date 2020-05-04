@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import "../../styles/Dashboard/Dashboard.css";
 
 import {addNotification} from "../App/Notification";
-import MaterialTable from "material-table";
+
 
 
 class StudentDashboard extends Component {
@@ -11,21 +11,43 @@ class StudentDashboard extends Component {
     super(props);
     this.state = {
       isLoading: true,
+      user: '',
     };
 
     this.logout = this.logout.bind(this);
   };
 
+  componentDidMount() {
+
+    fetch('/api/user/' + localStorage.getItem('userId'), {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(
+      (user) => {
+        this.setState({
+          user: user
+        });
+      })
+      .then(res => console.log(res))
+
+
+  };
+
+
 
   logout() {
     localStorage.clear();
-    // usersession should be also deleted
     addNotification("Úspěch", "Uživatel odhlášen.", "success");
 
     this.props.history.push("/");
   }
 
   render() {
+    const {
+      user
+    } = this.state;
+
 
     return (
 
@@ -35,6 +57,7 @@ class StudentDashboard extends Component {
           <button className="button logout" onClick={this.logout}>Odhlásit se</button>
         </header>
 
+        <h1>Totalne bodu ziskanych: {user.totalPoints} </h1>
       </div>
 
 

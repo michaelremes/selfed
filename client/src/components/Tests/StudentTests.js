@@ -22,6 +22,8 @@ class StudentTests extends Component {
       username: '',
       textAnswer: '',
       totalPoints: 0,
+      sumPoints: 0,
+      user: '',
     };
 
     this.renderTest = this.renderTest.bind(this);
@@ -70,7 +72,19 @@ class StudentTests extends Component {
         (error) => {
           this.setState({});
         }
-      )
+      );
+    fetch('/api/user/' + localStorage.getItem('userId'), {
+      method: 'GET',
+    })
+      .then(res => res.json())
+      .then(
+        (user) => {
+          this.setState({
+            user: user
+          });
+        })
+      .then(res => console.log(res))
+
   };
 
 
@@ -88,34 +102,33 @@ class StudentTests extends Component {
     this.state.currentTest.questions.map((question, index) => {
         question.answers.map((answer, index) => {
 
-          switch(question.type){
+          switch (question.type) {
             case 'checkbox':
-              if((answer.selected && answer.correct) || (!answer.selected && !answer.correct) ){
-                points += (question.points/question.answers.length);
+              if ((answer.selected && answer.correct) || (!answer.selected && !answer.correct)) {
+                points += (question.points / question.answers.length);
               }
 
               break;
             case 'radio':
-                if(answer.selected && answer.correct){
-                  points += question.points;
-                }
+              if (answer.selected && answer.correct) {
+                points += question.points;
+              }
               break;
           }
 
 
-
         });
-      // question.earnedPoints = points;
-      // pointsSummary += points;
         /* save earned points for question */
         question.earnedPoints = points.toFixed(2);
         pointsSummary += points;
+
         points = 0;
       }
     );
 
-
-    this.setState({totalPoints: pointsSummary.toFixed(2)}, () => {
+    this.setState({
+      totalPoints: pointsSummary.toFixed(2)
+    }, () => {
       this.submitTest()
     });
 
@@ -200,7 +213,20 @@ class StudentTests extends Component {
       username,
       currentTest,
       totalPoints,
+      user,
     } = this.state;
+
+
+    fetch('/api/user/update/' + user._id, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        totalPoints: parseFloat(totalPoints) + user.totalPoints
+      }),
+    }).then(res => res.json());
+
 
     // Post request to backend
     fetch('/api/add/student/test', {
@@ -230,6 +256,8 @@ class StudentTests extends Component {
           });
         }
       });
+
+
     this.forwardBack();
 
   }
