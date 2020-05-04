@@ -1,19 +1,12 @@
 import React, {Component} from "react";
 import '../../styles/Tests/CreateTest.css';
-import {Button, FormControl, FormGroup} from "react-bootstrap";
-import {
-  KeyboardTimePicker,
-  KeyboardDatePicker,
-} from '@material-ui/pickers';
+import { FormGroup} from "react-bootstrap";
+
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
-import InputLabel from "@material-ui/core/InputLabel";
-import Questions from "../Questions/Questions";
-
 import MaterialTable from "material-table";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import Checkbox from "@material-ui/core/Checkbox";
+
 import IconButton from "@material-ui/core/IconButton";
 import DeleteIcon from '@material-ui/icons/Delete';
 import {addNotification} from "../App/Notification";
@@ -27,6 +20,7 @@ class CreateTest extends Component {
       questions: [],
       testQuestions: [],
       question: '',
+      type: 'test',
       isLoading: true,
     };
 
@@ -34,6 +28,7 @@ class CreateTest extends Component {
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
     this.onNumberBoxChangePoints = this.onNumberBoxChangePoints.bind(this);
     this.onCreateTest = this.onCreateTest.bind(this);
+    this.onSelectTestType = this.onSelectTestType.bind(this);
 
 
     this.addQuestion = this.addQuestion.bind(this);
@@ -44,6 +39,12 @@ class CreateTest extends Component {
   onTextBoxChangeTitle(event) {
     this.setState({
       title: event.target.value,
+    });
+  }
+
+  onSelectTestType(event) {
+    this.setState({
+      type: event.target.value,
     });
   }
   onNumberBoxChangePoints(event, index) {
@@ -142,7 +143,7 @@ class CreateTest extends Component {
     const {
       title,
       questions,
-
+      type,
     } = this.state;
 
     const columns = [
@@ -171,11 +172,10 @@ class CreateTest extends Component {
               />
 
               <h2>Typ testu</h2>
-              {/*value={type} onChange={this.onSelectQuestionType}*/}
-              <Select id="selectAnswer" >
-                <MenuItem value="text">Bodovaný test</MenuItem>
-                <MenuItem value="checkbox">Procvičovací test</MenuItem>
-                <MenuItem value="radio">Domácí úkol</MenuItem>
+              <Select id="selectAnswer" value={type} onChange={this.onSelectTestType}>
+                <MenuItem value="test">Bodovaný test</MenuItem>
+                <MenuItem value="exercise">Procvičovací test</MenuItem>
+                <MenuItem value="homework">Domácí úkol</MenuItem>
               </Select>
               <h2>Přidat otázky</h2>
             </FormGroup>
@@ -217,12 +217,7 @@ class CreateTest extends Component {
                 return (
                   <div className="QuestionList">
 
-                    {question.title}
-                    <IconButton aria-label="delete" className="delete-answer"
-                                 onClick={this.removeQuestion.bind(this, index)}
-                    >
-                      <DeleteIcon/> Odstranit otázku
-                    </IconButton>
+                    {question.title} <br />
 
                     <TextField
                       id="points-for-test"
@@ -230,8 +225,18 @@ class CreateTest extends Component {
                       type="number"
                       variant="outlined"
                       value={question.points || ''}
-                      onChange={(event) => {this.onNumberBoxChangePoints(event, index)}}
+                      onChange={(event) =>
+                      {this.onNumberBoxChangePoints(event, index)}}
                     />
+                    <br />
+
+                    <IconButton aria-label="delete" className="delete-answer"
+                                 onClick={this.removeQuestion.bind(this, index)}
+                    >
+                      <DeleteIcon/> Odstranit otázku
+                    </IconButton>
+
+
                   </div>
 
                 )

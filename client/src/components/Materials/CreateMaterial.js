@@ -7,10 +7,88 @@ import TextField from "@material-ui/core/TextField";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 
+import MarkdownIt from 'markdown-it'
+import MdEditor from 'react-markdown-editor-lite'
+import 'react-markdown-editor-lite/lib/index.css';
+
+const ReactMarkdown = require('react-markdown')
+const mdParser = new MarkdownIt(/* Markdown-it options */);
+
 
 class CreateMaterial extends Component {
 
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      type: 'text',
+
+
+    };
+
+    this.onSelectMaterialType = this.onSelectMaterialType.bind(this);
+    this.onCreateMaterial = this.onCreateMaterial.bind(this);
+    this.renderMaterialType = this.renderMaterialType.bind(this);
+    this.handleEditorChange = this.handleEditorChange.bind(this);
+
+
+  }
+
+  onSelectMaterialType(event) {
+    this.setState({
+      type: event.target.value,
+    });
+  }
+
+  onChangeFile(){
+    //https://programmingwithmosh.com/javascript/react-file-upload-proper-server-side-nodejs-easy/
+    //https://malcoded.com/posts/react-file-upload/
+  }
+
+  onCreateMaterial(){
+
+  }
+
+
+  handleEditorChange({html, text}) {
+    console.log('handleEditorChange', html, text)
+  }
+
+  renderMaterialType(type) {
+    const input = '# This is a header\n\nAnd this is a paragraph'
+    switch (type) {
+      case 'text':
+        return (<
+            div style={{ height: '70vh' }}>
+
+
+            <MdEditor
+              value=""
+              style={{ height: "500px" }}
+              renderHTML={(text) => mdParser.render(text)}
+              onChange={this.handleEditorChange}
+            />
+          </div>
+
+
+          );
+
+      case 'file':
+        return (
+          <div>
+            <input type="file" name="file" onChange={this.onChangeFile}/>
+          </div>
+        );
+
+    }
+
+  }
+
   render() {
+
+    const {
+      type,
+    } = this.state;
     return (
       <div className="Materials">
         <header className="Dashboard-header">
@@ -29,8 +107,8 @@ class CreateMaterial extends Component {
                 // onChange={this.onTextBoxChangeTitle}
               />
               <h2>Typ materiálu</h2>
-              {/*value={type} onChange={this.onSelectQuestionType}*/}
-              <Select id="selectAnswer">
+
+              <Select id="selectAnswer"  value={type} onChange={this.onSelectMaterialType}>
                 <MenuItem value="text">Text</MenuItem>
                 <MenuItem value="file">Soubor</MenuItem>
               </Select>
@@ -38,8 +116,12 @@ class CreateMaterial extends Component {
 
             </FormGroup>
 
+            <div>
+              {this.renderMaterialType(type)}
+            </div>
 
-            <button id="createTestButton" onClick={this.onCreateTest}>
+
+            <button id="createMaterialButton" onClick={this.onCreateMaterial}>
               Přidat výukový materiál
             </button>
 

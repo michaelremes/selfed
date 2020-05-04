@@ -1,4 +1,4 @@
-import React, {useState, Component} from "react";
+import React, {Component} from "react";
 import {Button, FormGroup, FormControl} from "react-bootstrap";
 import "../../styles/Questions/CreateQuestion.css";
 import Checkbox from '@material-ui/core/Checkbox';

@@ -31,8 +31,11 @@
     background-color: white;
   }
   .QuestionList {
-    padding: 50px;
-    margin: 0 auto;
+    border:1px solid;
+    padding: 12px;
+    font-size: calc(8px + 2vmin);
+
+    background-color: #5280d1;
   }
   #createTestButton {
     margin-top: 40px;
