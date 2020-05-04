@@ -4,6 +4,7 @@ import "../../styles/Dashboard/StudentDashboard.css";
 
 import {addNotification} from "../App/Notification";
 import {FormGroup} from "react-bootstrap";
+import LinearProgress from "@material-ui/core/LinearProgress";
 
 
 
@@ -60,8 +61,13 @@ class StudentDashboard extends Component {
 
         <form>
         <div className='points'>
-        Celkem získanych bodů: {user.totalPoints}
-      </div>
+          Celkem získanych bodů: {user.totalPoints}
+          <LinearProgress
+            variant="determinate"
+            color="secondary"
+            value={user.totalPoints}
+          />
+        </div>
         </form>
       </div>
 

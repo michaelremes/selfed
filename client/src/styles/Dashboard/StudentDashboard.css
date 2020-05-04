@@ -27,7 +27,7 @@
 
   .points {
     display: block;
-    width: 200px;
+    width: 400px;
     height: 100px;
     background-color: orange;
     padding: 20px 28px;
@@ -35,7 +35,9 @@
     cursor: pointer;
     text-align: center;
     font-size: calc(6px + 2vmin);
+    border: solid 5px black;
   }
+
 
   .points form {
     margin: 0 auto;
