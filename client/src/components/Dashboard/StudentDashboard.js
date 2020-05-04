@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 
-import "../../styles/Dashboard/Dashboard.css";
+import "../../styles/Dashboard/StudentDashboard.css";
 
 import {addNotification} from "../App/Notification";
+import {FormGroup} from "react-bootstrap";
 
 
 
@@ -57,7 +58,11 @@ class StudentDashboard extends Component {
           <button className="button logout" onClick={this.logout}>Odhlásit se</button>
         </header>
 
-        <h1>Totalne bodu ziskanych: {user.totalPoints} </h1>
+        <form>
+        <div className='points'>
+        Celkem získanych bodů: {user.totalPoints}
+      </div>
+        </form>
       </div>
 
 
