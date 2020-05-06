@@ -158,7 +158,7 @@ class CreateQuestion extends Component {
             createQuestionError: json.message,
             title: '',
             task: '',
-            type: '',
+            type: 'checkbox',
             answers: [],
             textAnswer: '',
           });

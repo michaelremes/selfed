@@ -6,6 +6,10 @@ const TestSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  type: {
+    type: String,
+    default: ''
+  },
   questions: {
     type: Array,
     default: []

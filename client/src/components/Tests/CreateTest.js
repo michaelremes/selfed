@@ -101,6 +101,7 @@ class CreateTest extends Component {
     //grab state
     const {
       title,
+      type,
       testQuestions
     } = this.state;
     this.setState({
@@ -115,6 +116,7 @@ class CreateTest extends Component {
       },
       body: JSON.stringify({
         title: title,
+        type: type,
         questions: testQuestions
       }),
     }).then(res => res.json())
@@ -124,6 +126,7 @@ class CreateTest extends Component {
           this.setState({
             createTestError: json.message,
             title: '',
+            type: 'test',
             testQuestions: [],
             isLoading: false,
           });

@@ -7,12 +7,14 @@ module.exports = (app) => {
     const {body} = req;
     const {
       title,
+      type,
       questions,
     } = body;
 
     const newTest = new Test();
 
     newTest.title = title;
+    newTest.type = type;
     newTest.questions = questions;
 
     newTest.save((err, question) => {

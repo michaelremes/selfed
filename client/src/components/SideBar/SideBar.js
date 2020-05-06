@@ -51,7 +51,6 @@ class SideBar extends Component {
               <a href="/add/question">Otázku</a>
               <a href="/add/test">Test</a>
               <a href="/add/material">Materiály</a>
-
             </TreeItem>
 
             <TreeItem nodeId='2' id="treeItem" label="Zobrazit" >
@@ -75,11 +74,23 @@ class SideBar extends Component {
       return (
         <div className="sidenav">
           <img src={logo} className="App-logo" alt="logo"/>
+          <TreeView
+            className="TreeViewSideBar"
+            defaultCollapseIcon={<ExpandMoreIcon/>}
+            defaultExpandIcon={<ChevronRightIcon/>}
 
+          >
           <a href='/student/dashboard'>Domů</a>
-          <a href='/student/tests'>Testy</a>
+          <TreeItem nodeId='1' id="treeItemStudent" label="Testy">
+            <a href="/student/tests">Bodované testy</a>
+            <a href="/student/exercise">Procvičovací testy</a>
+            <a href="/student/homework">Domácí úkoly</a>
+          </TreeItem>
+          <a href='/student/materials'>Materiály</a>
           <a href='/student/results'>Výsledky</a>
-          {/*<a href='/student/homework'>Úkoly</a>*/}
+
+
+          </TreeView>
         </div>
       );
     }

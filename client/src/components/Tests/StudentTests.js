@@ -61,10 +61,12 @@ class StudentTests extends Component {
     fetch('/api/tests')
       .then(res => res.json())
       .then(
-        (test) => {
+        (tests) => {
+          const examTests =
+            tests.filter(arr => arr.type === 'test');
 
           this.setState({
-            allTests: test
+            allTests: examTests
           });
 
 

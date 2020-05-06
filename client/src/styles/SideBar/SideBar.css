@@ -15,7 +15,6 @@
 
   #treeItem .MuiTreeItem-label:hover {
     color: #5280d1;
-
   }
   #treeItem .MuiTreeItem-iconContainer {
     color: #f1f1f1;
@@ -39,6 +38,15 @@
 
     left: 60px;
     top: 10px;
+  }
+
+  #treeItemStudent .MuiTreeItem-iconContainer{
+    color: #f1f1f1;
+  }
+
+  #treeItemStudent .MuiTreeItem-label{
+    color: #dddddd;
+    font-size: calc(8px + 2vmin);
   }
 
   .sidenav a {
