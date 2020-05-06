@@ -50,7 +50,7 @@ class SideBar extends Component {
             <TreeItem nodeId='1' id="treeItem" label="Vytvořit">
               <a href="/add/question">Otázku</a>
               <a href="/add/test">Test</a>
-              <a href="/add/material">Materiály</a>
+              {/*<a href="/add/material">Materiály</a>*/}
             </TreeItem>
 
             <TreeItem nodeId='2' id="treeItem" label="Zobrazit" >
@@ -83,10 +83,10 @@ class SideBar extends Component {
           <a href='/student/dashboard'>Domů</a>
           <TreeItem nodeId='1' id="treeItemStudent" label="Testy">
             <a href="/student/tests">Bodované testy</a>
-            <a href="/student/exercise">Procvičovací testy</a>
-            <a href="/student/homework">Domácí úkoly</a>
+            {/*<a href="/student/exercise">Procvičovací testy</a>*/}
+            {/*<a href="/student/homework">Domácí úkoly</a>*/}
           </TreeItem>
-          <a href='/student/materials'>Materiály</a>
+          {/*<a href='/student/materials'>Materiály</a>*/}
           <a href='/student/results'>Výsledky</a>
 
 
