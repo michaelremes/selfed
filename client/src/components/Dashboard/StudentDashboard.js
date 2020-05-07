@@ -56,6 +56,12 @@ class StudentDashboard extends Component {
       <div>
         <header className="Dashboard-header">
           Hlavní stránka
+
+          <div className="logged-user">
+            Uživatel: {user.username}<br/>
+            {user.firstName} {user.lastName}<br/>
+            {user.role}<br/>
+          </div>
           <button className="button logout" onClick={this.logout}>Odhlásit se</button>
         </header>
 

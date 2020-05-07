@@ -4,7 +4,9 @@
   .logout {
     padding: 10px;
     font-size: calc(6px + 2vmin);
-    position: absolute; right: 30px;
+    position: absolute;
+    right: 30px;
+    top: 100px;
   }
   .Dashboard-header {
     background-color: #5280d1;
@@ -45,6 +47,14 @@
     background-color: lightgray;
     padding: 70px;
     text-align: center;
+  }
+
+  .logged-user{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    text-align: right;
+    font-size: calc(6px + 2vmin);;
   }
 
   body {

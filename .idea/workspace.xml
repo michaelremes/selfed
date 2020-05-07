@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="prod version update">
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/Tests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Dashboard/StudentDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Dashboard/StudentDashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

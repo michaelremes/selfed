@@ -24,6 +24,14 @@
     padding: 50px;
 
   }
+
+  .logged-user{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    text-align: right;
+    font-size: calc(8px + 2vmin);;
+  }
   body {
     background-color: #282c34;
   }

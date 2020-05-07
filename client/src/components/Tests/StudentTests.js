@@ -272,6 +272,9 @@ class StudentTests extends Component {
           {this.state.currentTest.title}
           <button className="button logout" onClick={this.forwardBack}>Zpět</button>
         </header>
+        <div className="disclaimer">
+           U otázek, kde je možné vybrat více možných odpovědí, se neudělují záporné body za špatně zvolené odpovědi.
+        </div>
 
         {this.state.currentTest.questions.map((question, index) => {
           return (

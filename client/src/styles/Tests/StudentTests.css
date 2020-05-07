@@ -57,6 +57,13 @@
   #mainTestForm {
     text-align: center;
   }
+  .disclaimer{
+    background-color: #dddddd;
+    width: 500px;
+    border: 3px solid black;
+    margin: auto;
+    font-size:  calc(4px + 2vmin);
+  }
 
   body {
     background-color: #282c34;
