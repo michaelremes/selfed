@@ -94,7 +94,7 @@ class Questions extends Component {
               actions={[
                 {
                   icon: 'visibility',
-                  tooltip: 'Zobrazit test',
+                  tooltip: 'Zobrazit otázku',
 
                   onClick: (event, question) => {
                     this.setState(

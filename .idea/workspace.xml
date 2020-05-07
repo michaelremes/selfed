@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="prod version update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Dashboard/Dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Dashboard/StudentDashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Dashboard/StudentDashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
+        <entry key="$PROJECT_DIR$" value="prod" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -171,13 +166,7 @@
       <workItem from="1588663081421" duration="2971000" />
       <workItem from="1588778574692" duration="1898000" />
       <workItem from="1588837334067" duration="4349000" />
-    </task>
-    <task id="LOCAL-00037" summary="Latex in question task prototype">
-      <created>1586260973706</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1586260973706</updated>
+      <workItem from="1588862545505" duration="65000" />
     </task>
     <task id="LOCAL-00038" summary="Latex Preview css">
       <created>1586263138467</created>
@@ -515,7 +504,14 @@
       <option name="project" value="LOCAL" />
       <updated>1588785323341</updated>
     </task>
-    <option name="localTasksCounter" value="86" />
+    <task id="LOCAL-00086" summary="prod version update">
+      <created>1588861653701</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1588861653701</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,10 +555,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1588785461893">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1588862314462">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588785461893" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588862314462" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -631,10 +627,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.3.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
-    <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1588841269752">
+    <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1588861956221">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="672" y="237" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588841269752" />
+    <state x="672" y="237" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588861956221" />
     <state x="790" y="212" key="RollbackChangesDialog" timestamp="1587912871491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -643,15 +639,15 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1588785329243">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1588861979616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588785329243" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588784463907">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588861979616" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588861948775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588784463907" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588861948775" />
     <state x="1966" y="57" width="1555" height="1025" key="dock-window-1" timestamp="1587739929195">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
@@ -660,10 +656,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="498" y="60" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588586626745" />
-    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588841265879">
+    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588861863440">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588841265879" />
+    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588861863440" />
     <state x="682" y="312" key="git4idea.merge.GitPullDialog" timestamp="1588784589033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
