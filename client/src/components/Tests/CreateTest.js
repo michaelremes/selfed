@@ -177,8 +177,8 @@ class CreateTest extends Component {
               <h2>Typ testu</h2>
               <Select id="selectAnswer" value={type} onChange={this.onSelectTestType}>
                 <MenuItem value="test">Bodovaný test</MenuItem>
-                <MenuItem value="exercise">Procvičovací test</MenuItem>
-                <MenuItem value="homework">Domácí úkol</MenuItem>
+                {/*<MenuItem value="exercise">Procvičovací test</MenuItem>*/}
+                {/*<MenuItem value="homework">Domácí úkol</MenuItem>*/}
               </Select>
               <h2>Přidat otázky</h2>
             </FormGroup>

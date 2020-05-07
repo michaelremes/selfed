@@ -2,8 +2,13 @@ import React, {Component} from "react";
 
 import '../../styles/Questions/Questions.css';
 import MaterialTable from 'material-table';
+import {FormGroup} from "react-bootstrap";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Checkbox from "@material-ui/core/Checkbox";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import Radio from "@material-ui/core/Radio";
 
-
+const Latex = require('react-latex');
 // lists existing questions
 class Questions extends Component {
 
@@ -13,10 +18,15 @@ class Questions extends Component {
       questions: [],
       columns: [],
       isLoading: false,
+      questionOpen: false,
+      currentQuestion: '',
 
     };
 
     this.deleteQuestion = this.deleteQuestion.bind(this);
+    this.renderQuestionList = this.renderQuestionList.bind(this);
+    this.renderQuestion = this.renderQuestion.bind(this);
+    this.forwardBack = this.forwardBack.bind(this);
   }
 
   componentDidMount() {
@@ -37,8 +47,13 @@ class Questions extends Component {
         }
       )
   };
-
-  deleteQuestion(question){
+  forwardBack() {
+    this.setState({
+      questionOpen: false
+    });
+    this.props.history.push("/questions");
+  }
+  deleteQuestion(question) {
     fetch('/api/question/' + question._id, {
       method: 'DELETE',
     })
@@ -47,8 +62,7 @@ class Questions extends Component {
 
   }
 
-  render() {
-
+  renderQuestionList() {
     const {
       questions,
       isLoading,
@@ -77,6 +91,21 @@ class Questions extends Component {
               title="Seznam vytvořených otázek"
               columns={columns}
               data={questions}
+              actions={[
+                {
+                  icon: 'visibility',
+                  tooltip: 'Zobrazit test',
+
+                  onClick: (event, question) => {
+                    this.setState(
+                      {
+                        questionOpen: true,
+                        currentQuestion: question
+                      }
+                    );
+                  }
+                }
+              ]}
               editable={{
                 onRowDelete: question =>
                   new Promise((resolve, reject) => {
@@ -88,7 +117,7 @@ class Questions extends Component {
                         let questions = this.state.questions;
                         const index = questions.indexOf(question);
                         questions.splice(index, 1);
-                        this.setState({ questions }, () => resolve());
+                        this.setState({questions}, () => resolve());
                       }
                       resolve();
                     }, 1000);
@@ -125,9 +154,124 @@ class Questions extends Component {
           </div>
         </div>
       );
-
     }
   }
+
+  renderQuestion(){
+    const {
+      currentQuestion
+
+    } = this.state;
+    return (
+      <div id="mainTestForm">
+        <header className="StudentTests-header">
+          {currentQuestion.title}
+          <button className="button logout" onClick={this.forwardBack}>Zpět</button>
+        </header>
+        <div className="StudentTest"
+        >
+          <form>
+            <h1>{currentQuestion.title}</h1>
+
+            <FormGroup controlId="task" size="large">
+
+              <h2>Zadání</h2>
+
+              <div className="LatexPreview">
+                <Latex>{currentQuestion.task}</Latex>
+              </div>
+            </FormGroup>
+
+            {this.renderCorrectAnswer(currentQuestion)}
+          </form>
+
+        </div>
+
+
+
+      </div>
+
+    );
+  }
+  renderCorrectAnswer(question) {
+    switch (question.type) {
+      case 'text':
+        return (
+          <div>
+            <h2>Vaše odpověd</h2>
+            <textarea
+              id="task-input"
+              // value={question.te}
+            />
+          </div>
+        );
+
+      case 'checkbox':
+        return (
+          <FormGroup id="checkbox-answers">
+            {question.answers.map((answer, index) => {
+              return (
+                <div>
+                  <FormControlLabel
+                    control={
+                      <Checkbox
+                        checked={answer.correct}
+                        color="primary"
+                      />
+                    }
+                    label={<Latex>{answer.label}</Latex>}
+                  />
+
+                </div>
+              )
+            })}
+
+          </FormGroup>
+        );
+
+      case 'radio':
+        return (
+          <FormGroup id="radio-answers">
+            <RadioGroup>
+              {question.answers.map((answer, index) => {
+                return (
+                  <div>
+                    <FormControlLabel
+                      control={
+                        <Radio
+                          color="primary"
+                          checked={answer.correct}
+                        />
+                      }
+                      label={<Latex>{answer.label}</Latex>}
+                    />
+
+                  </div>
+
+                )
+              })}
+
+            </RadioGroup>
+          </FormGroup>
+        );
+    }
+  }
+
+  render() {
+    const {
+      questionOpen
+    } = this.state;
+      return(
+        <div>
+          {
+            questionOpen ? this.renderQuestion() : this.renderQuestionList()
+          }
+
+        </div>
+      )
+
+  }
+
 }
 
 export default Questions;
