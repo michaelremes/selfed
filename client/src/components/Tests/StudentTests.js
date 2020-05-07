@@ -218,6 +218,7 @@ class StudentTests extends Component {
       user,
     } = this.state;
 
+   let allPoints = parseFloat(totalPoints) + user.totalPoints;
 
     fetch('/api/user/update/' + user._id, {
       method: 'PUT',
@@ -225,7 +226,7 @@ class StudentTests extends Component {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        totalPoints: parseFloat(totalPoints) + user.totalPoints
+        totalPoints: allPoints.toFixed(2)
       }),
     }).then(res => res.json());
 

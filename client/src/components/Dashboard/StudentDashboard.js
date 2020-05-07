@@ -71,7 +71,7 @@ class StudentDashboard extends Component {
           <LinearProgress
             variant="determinate"
             color="secondary"
-            value={user.totalPoints.toFixed(2)}
+            value={user.totalPoints}
           />
         </div>
         </form>
