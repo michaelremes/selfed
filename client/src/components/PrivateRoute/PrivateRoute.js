@@ -1,9 +1,6 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 
-
-
-
 //create private route for teachers
 export const TeacherPrivateRoute = ({ component: Component, ...rest }) => (
   <Route {...rest} render={props => (

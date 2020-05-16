@@ -10,6 +10,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MarkdownIt from 'markdown-it'
 import MdEditor from 'react-markdown-editor-lite'
 import 'react-markdown-editor-lite/lib/index.css';
+import {addNotification} from "../App/Notification";
 
 const ReactMarkdown = require('react-markdown')
 const mdParser = new MarkdownIt(/* Markdown-it options */);
@@ -21,7 +22,9 @@ class CreateMaterial extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      titel: '',
       type: 'text',
+      text: '',
 
 
     };
@@ -40,13 +43,47 @@ class CreateMaterial extends Component {
     });
   }
 
-  onChangeFile(){
+  onChangeFile() {
     //https://programmingwithmosh.com/javascript/react-file-upload-proper-server-side-nodejs-easy/
     //https://malcoded.com/posts/react-file-upload/
   }
 
-  onCreateMaterial(){
+  onCreateMaterial() {
+    const {
+      title,
+      type,
+      text,
+    } = this.state;
 
+
+    // Post request to backend
+    fetch('/api/add/material', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: title,
+        type: type,
+        text: text
+
+      }),
+    }).then(res => res.json())
+      .then(json => {
+        if (json.success) {
+          addNotification("Úspěch", "Úspěšně vytvořeno.", "success");
+          this.setState({
+            title: '',
+            type: '',
+            text: ''
+          });
+        } else {
+          addNotification("Error", "Materiál nemohl být vytvoeřn.", "danger");
+          this.setState({
+            createQuestionError: json.message,
+          });
+        }
+      });
   }
 
 
@@ -59,19 +96,19 @@ class CreateMaterial extends Component {
     switch (type) {
       case 'text':
         return (<
-            div style={{ height: '70vh' }}>
+            div style={{height: '70vh'}}>
 
 
             <MdEditor
               value=""
-              style={{ height: "500px" }}
+              style={{height: "500px"}}
               renderHTML={(text) => mdParser.render(text)}
               onChange={this.handleEditorChange}
             />
           </div>
 
 
-          );
+        );
 
       case 'file':
         return (
@@ -108,7 +145,7 @@ class CreateMaterial extends Component {
               />
               <h2>Typ materiálu</h2>
 
-              <Select id="selectAnswer"  value={type} onChange={this.onSelectMaterialType}>
+              <Select id="selectAnswer" value={type} onChange={this.onSelectMaterialType}>
                 <MenuItem value="text">Text</MenuItem>
                 <MenuItem value="file">Soubor</MenuItem>
               </Select>
@@ -116,7 +153,7 @@ class CreateMaterial extends Component {
 
             </FormGroup>
 
-            <div>
+            <div className='material'>
               {this.renderMaterialType(type)}
             </div>
 

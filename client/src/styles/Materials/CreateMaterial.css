@@ -12,16 +12,19 @@
   }
 
   .Materials Button {
-    margin-top: 20px;
+    margin-top: 0px;
     padding: 15px;
     font-size: calc(8px + 2vmin);
   }
   .Lectures form {
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 700px;
     background-color: lightgray;
     padding: 70px;
     text-align: center;
+  }
+  .material{
+    height: 45vh;
   }
 
   .block:hover {
@@ -30,9 +33,6 @@
   }
   body {
     background-color: #282c34;
-  }
-  .Lectures {
-    padding-left: 400px;
   }
 
 }

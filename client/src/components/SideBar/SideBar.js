@@ -78,7 +78,6 @@ class SideBar extends Component {
             className="TreeViewSideBar"
             defaultCollapseIcon={<ExpandMoreIcon/>}
             defaultExpandIcon={<ChevronRightIcon/>}
-
           >
           <a href='/student/dashboard'>Domů</a>
           <TreeItem nodeId='1' id="treeItemStudent" label="Testy">
@@ -88,8 +87,6 @@ class SideBar extends Component {
           </TreeItem>
           <a href='/student/materials'>Materiály</a>
           <a href='/student/results'>Výsledky</a>
-
-
           </TreeView>
         </div>
       );
