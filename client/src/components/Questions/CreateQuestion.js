@@ -77,7 +77,7 @@ class CreateQuestion extends Component {
 
   addTextAnswer(event) {
     this.setState({
-     textAnswer: event.target.value
+      textAnswer: event.target.value
     });
   }
 
@@ -86,7 +86,7 @@ class CreateQuestion extends Component {
     let index = event.target.value;
     let array = [...this.state.answers]; // make a separate copy of the array
 
-    if(this.state.type === 'radio') {
+    if (this.state.type === 'radio') {
       array.map((answer) => {
         answer.correct = false;
       });
@@ -100,14 +100,18 @@ class CreateQuestion extends Component {
     }
     this.setState({
       answers: array,
-     });
+    });
 
   }
 
   addItemAnswers() {
+    const answer = {
+      label: this.state.answer.label,
+      correct: false,
+    };
     this.setState(previousState => ({
-      answers: [...previousState.answers, this.state.answer],
       answer: {label: '', correct: false},
+      answers: [...previousState.answers, answer]
     }));
   }
 
@@ -131,7 +135,6 @@ class CreateQuestion extends Component {
       answers,
       textAnswer
     } = this.state;
-
 
 
     this.setState({
@@ -211,12 +214,12 @@ class CreateQuestion extends Component {
               )
             })}
             <div className="add-answer">
-              <h2>Přidat odpověď</h2><br />
-                <textarea
-                  id="task-input-answer"
-                  value={answer.label}
-                  onChange={this.onTextBoxChangeAnswer}
-                />
+              <h2>Přidat odpověď</h2><br/>
+              <textarea
+                id="task-input-answer"
+                value={answer.label}
+                onChange={this.onTextBoxChangeAnswer}
+              />
               <div className="LatexPreviewAnswer">
                 <Latex>{answer.label}</Latex>
               </div>
@@ -236,10 +239,10 @@ class CreateQuestion extends Component {
         return (
           <FormGroup>
             <h3>(Zaškrtněte správné odpovědi)</h3>
-            <RadioGroup onChange={this.onChangeCorrectAnswer} >
-            {this.state.answers.map((answer, index) => {
-              return (
-                <div className="added-answers">
+            <RadioGroup onChange={this.onChangeCorrectAnswer}>
+              {this.state.answers.map((answer, index) => {
+                return (
+                  <div className="added-answers">
 
                     <FormControlLabel
                       control={
@@ -250,7 +253,7 @@ class CreateQuestion extends Component {
                         />
                       }
                       value={index.toString()}
-                   //   value={"test"}
+                      //   value={"test"}
                       label={<Latex>{answer.label}</Latex>}
 
                     />
@@ -261,32 +264,32 @@ class CreateQuestion extends Component {
                       <DeleteIcon/> smazat
                     </IconButton>
 
-                </div>
+                  </div>
 
-              )
-            })}
+                )
+              })}
             </RadioGroup>
 
             <div className="add-answer">
-              <h2>Přidat odpověď</h2><br />
+              <h2>Přidat odpověď</h2><br/>
 
               <textarea
                 id="task-input-answer"
                 value={answer.label}
                 onChange={this.onTextBoxChangeAnswer}
               />
-            <div className="LatexPreviewAnswer">
-              <Latex>{answer.label}</Latex>
-            </div>
-            <Button
-              variant="contained"
-              color="secondary"
-              onClick={this.addItemAnswers}
-            >
-              Přidat odpověď
-            </Button>
+              <div className="LatexPreviewAnswer">
+                <Latex>{answer.label}</Latex>
+              </div>
+              <Button
+                variant="contained"
+                color="secondary"
+                onClick={this.addItemAnswers}
+              >
+                Přidat odpověď
+              </Button>
 
-          </div>
+            </div>
           </FormGroup>
         );
     }
