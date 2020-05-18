@@ -24,6 +24,7 @@ import SideBar from './components/SideBar/SideBar';
 import UserResults from './components/Tests/UserResults'
 import {TeacherPrivateRoute, StudentPrivateRoute} from './components/PrivateRoute/PrivateRoute';
 import CreateMaterial from "./components/Materials/CreateMaterial";
+import Materials from "./components/Materials/Materials";
 
 
 
@@ -42,7 +43,8 @@ const sitesAfterLogin = [
   '/homework',
   '/student/tests',
   '/student/dashboard',
-  '/student/results'
+  '/student/results',
+  '/student/materials'
 ];
 
 
@@ -71,6 +73,7 @@ render((
         <StudentPrivateRoute path="/student/tests" component={StudentTests}/>
         <StudentPrivateRoute path='/student/dashboard' component={StudentDashboard}/>
         <StudentPrivateRoute path='/student/results' component={UserResults}/>
+        <StudentPrivateRoute path='/student/materials' component={Materials}/>
 
         <Route component={NotFound}/>
       </Switch>

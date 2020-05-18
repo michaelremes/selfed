@@ -22,13 +22,13 @@ class CreateMaterial extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      titel: '',
+      title: '',
       type: 'text',
       text: '',
 
 
     };
-
+    this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
     this.onSelectMaterialType = this.onSelectMaterialType.bind(this);
     this.onCreateMaterial = this.onCreateMaterial.bind(this);
     this.renderMaterialType = this.renderMaterialType.bind(this);
@@ -43,6 +43,12 @@ class CreateMaterial extends Component {
     });
   }
 
+  onTextBoxChangeTitle(event) {
+    this.setState({
+      title: event.target.value,
+    });
+  }
+
   onChangeFile() {
     //https://programmingwithmosh.com/javascript/react-file-upload-proper-server-side-nodejs-easy/
     //https://malcoded.com/posts/react-file-upload/
@@ -54,7 +60,6 @@ class CreateMaterial extends Component {
       type,
       text,
     } = this.state;
-
 
     // Post request to backend
     fetch('/api/add/material', {
@@ -88,17 +93,16 @@ class CreateMaterial extends Component {
 
 
   handleEditorChange({html, text}) {
-    console.log('handleEditorChange', html, text)
+    this.setState({
+      text: text,
+    });
   }
 
   renderMaterialType(type) {
-    const input = '# This is a header\n\nAnd this is a paragraph'
     switch (type) {
       case 'text':
         return (<
             div style={{height: '70vh'}}>
-
-
             <MdEditor
               value=""
               style={{height: "500px"}}
@@ -124,6 +128,7 @@ class CreateMaterial extends Component {
   render() {
 
     const {
+      title,
       type,
     } = this.state;
     return (
@@ -140,8 +145,8 @@ class CreateMaterial extends Component {
                 id="title-required"
                 label="Nutno vyplnit"
                 variant="filled"
-                // value={title}
-                // onChange={this.onTextBoxChangeTitle}
+                value={title}
+                onChange={this.onTextBoxChangeTitle}
               />
               <h2>Typ materiálu</h2>
 

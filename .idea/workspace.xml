@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="show text material">
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/client/src/components/Materials/Materials.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/styles/Materials/Materials.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/models/Material.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/api/material.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Materials/CreateMaterial.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/CreateMaterial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/PrivateRoute/PrivateRoute.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/PrivateRoute/PrivateRoute.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/Materials/CreateMaterial.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Materials/CreateMaterial.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/styles/SideBar/SideBar.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/SideBar/SideBar.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Questions/Questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="prod" />
+        <entry key="$PROJECT_DIR$" value="prod-v.1.0" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -47,7 +49,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/styles/Dashboard" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/styles/Materials" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,19 +60,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Dashboard" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Dashboard" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Materials" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Materials" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\server\routes\api" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Dashboard" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Questions.js">
@@ -172,12 +174,8 @@
       <workItem from="1588837334067" duration="4349000" />
       <workItem from="1588862545505" duration="113000" />
       <workItem from="1588863184565" duration="725000" />
-      <workItem from="1588950134122" duration="1360000" />
-      <workItem from="1589114647939" duration="3310000" />
-      <workItem from="1589358461315" duration="85000" />
-      <workItem from="1589447051387" duration="3556000" />
-      <workItem from="1589568136287" duration="1283000" />
-      <workItem from="1589632858100" duration="2601000" />
+      <workItem from="1589702227711" duration="2424000" />
+      <workItem from="1589786176423" duration="3434000" />
     </task>
     <task id="LOCAL-00041" summary="input for points for question">
       <created>1586285464011</created>
@@ -515,12 +513,12 @@
       <option name="project" value="LOCAL" />
       <updated>1588863463447</updated>
     </task>
-    <task id="LOCAL-00089" summary="dev update">
-      <created>1588865732682</created>
+    <task id="LOCAL-00089" summary="fix in showing correct answers for radio questions">
+      <created>1589703989049</created>
       <option name="number" value="00089" />
       <option name="presentableId" value="LOCAL-00089" />
       <option name="project" value="LOCAL" />
-      <updated>1588865732682</updated>
+      <updated>1589703989050</updated>
     </task>
     <option name="localTasksCounter" value="90" />
     <servers />
@@ -554,8 +552,8 @@
     <MESSAGE value="test  update" />
     <MESSAGE value="prod version update" />
     <MESSAGE value="minor fix" />
-    <MESSAGE value="dev update" />
-    <option name="LAST_COMMIT_MESSAGE" value="dev update" />
+    <MESSAGE value="fix in showing correct answers for radio questions" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix in showing correct answers for radio questions" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -566,10 +564,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1589132315528">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1589703986001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589132315528" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589703986001" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -638,10 +636,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1899" height="348" key="GridCell.Tab.3.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1584712125688" />
-    <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1588861956221">
+    <state x="672" y="237" key="MultipleFileMergeDialog" timestamp="1589786475583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="672" y="237" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588861956221" />
+    <state x="672" y="237" key="MultipleFileMergeDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589786475583" />
     <state x="790" y="212" key="RollbackChangesDialog" timestamp="1587912871491">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -650,11 +648,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1588865735812">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1589704004459">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588865735812" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589704004459" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588861948775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -663,14 +661,14 @@
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="1966" y="57" width="1555" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587739929195" />
-    <state x="498" y="60" width="607" height="804" key="find.popup" timestamp="1588586626746">
+    <state x="498" y="60" width="607" height="804" key="find.popup" timestamp="1589791153241">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="498" y="60" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588586626745" />
-    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1588861863440">
+    <state x="498" y="60" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589791153241" />
+    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589786462938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588861863440" />
+    <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589786462937" />
     <state x="682" y="312" key="git4idea.merge.GitPullDialog" timestamp="1588784589033">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

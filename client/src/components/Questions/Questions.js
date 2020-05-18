@@ -168,8 +168,7 @@ class Questions extends Component {
           {currentQuestion.title}
           <button className="button logout" onClick={this.forwardBack}>Zpět</button>
         </header>
-        <div className="StudentTest"
-        >
+        <div className="StudentTest">
           <form>
             <h1>{currentQuestion.title}</h1>
 
