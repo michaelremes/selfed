@@ -212,9 +212,11 @@ class UserResults extends Component {
     const {
       studentResults
     } = this.state;
+
     const columns = [
       {title: 'Uživatelské jméno', field: 'username'},
       {title: 'Test', field: 'finishedTest.title'},
+      {title: 'Datum', field: 'date'},
       {title: 'Počet získaných bodů', field: 'totalPoints'},
     ];
 

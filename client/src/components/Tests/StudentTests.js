@@ -222,6 +222,14 @@ class StudentTests extends Component {
       user,
     } = this.state;
 
+    let current_datetime = new Date();
+    let formatted_date = current_datetime.getDate()
+      + ". " + (current_datetime.getMonth() + 1)
+      + ". " + current_datetime.getFullYear() + " "
+      + current_datetime.getHours() + ":"
+      + current_datetime.getMinutes();
+
+
    let allPoints = parseFloat(totalPoints) + user.totalPoints;
 
     fetch('/api/user/update/' + user._id, {
@@ -244,7 +252,8 @@ class StudentTests extends Component {
       body: JSON.stringify({
         username: username,
         finishedTest: currentTest,
-        totalPoints: totalPoints
+        totalPoints: totalPoints,
+        date: formatted_date
       }),
     }).then(res => res.json())
       .then(json => {

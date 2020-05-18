@@ -18,6 +18,11 @@ const UserResultsSchema = new mongoose.Schema({
     default: 0
   },
 
+  date: {
+    type: String,
+    default: ''
+  },
+
 
 });
 module.exports = mongoose.model('UserResults', UserResultsSchema);

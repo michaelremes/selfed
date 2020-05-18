@@ -62,7 +62,8 @@ module.exports = (app) => {
     const {
       username,
       finishedTest,
-      totalPoints
+      totalPoints,
+      date
     } = body;
 
     const newUserResult = new UserResult();
@@ -70,6 +71,7 @@ module.exports = (app) => {
     newUserResult.username = username;
     newUserResult.finishedTest = finishedTest;
     newUserResult.totalPoints = totalPoints;
+    newUserResult.date = date;
 
     newUserResult.save((err) => {
       if (err) {
