@@ -8,6 +8,8 @@ import Checkbox from "@material-ui/core/Checkbox";
 import {FormGroup} from "react-bootstrap";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import Radio from "@material-ui/core/Radio";
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const Latex = require('react-latex');
 
@@ -24,6 +26,7 @@ class StudentTests extends Component {
       totalPoints: 0,
       sumPoints: 0,
       user: '',
+      type: 'test',
     };
 
     this.renderTest = this.renderTest.bind(this);
@@ -34,6 +37,7 @@ class StudentTests extends Component {
     this.evaluateTotalPoints = this.evaluateTotalPoints.bind(this);
     this.onChangeAnswer = this.onChangeAnswer.bind(this);
     this.addTextAnswer = this.addTextAnswer.bind(this);
+    this.onSelectType = this.onSelectType.bind(this);
   }
 
   onChangeAnswer(event, question) {
@@ -52,7 +56,11 @@ class StudentTests extends Component {
 
     }
   }
-
+  onSelectType(event) {
+    this.setState({
+      type: event.target.value,
+    });
+  }
   componentDidMount() {
 
     this.setState({
@@ -62,11 +70,10 @@ class StudentTests extends Component {
       .then(res => res.json())
       .then(
         (tests) => {
-          const examTests =
-            tests.filter(arr => arr.type === 'test');
+
 
           this.setState({
-            allTests: examTests
+            allTests: tests
           });
 
 
@@ -91,10 +98,7 @@ class StudentTests extends Component {
 
 
   addTextAnswer(event, question) {
-
     question.answers[0] = event.target.value;
-
-
   }
 
   evaluateTotalPoints() {
@@ -312,7 +316,8 @@ class StudentTests extends Component {
 
   renderListOfTests() {
     const {
-      allTests
+      allTests,
+      type
     } = this.state;
     const columns = [
       {title: 'Název testu', field: 'title'},
@@ -320,7 +325,11 @@ class StudentTests extends Component {
     ];
 
     /* filter all tests to get only active tests to show to student */
-    const activeTests = allTests.filter(arr => arr.active);
+    //const activeTests = allTests.filter(arr => arr.active);
+
+
+    //const activeTests = allTests.filter(arr => arr.type === 'test');
+    const activeTests = allTests.filter(arr => arr.type === type);
 
     return (
       <div>
@@ -328,6 +337,11 @@ class StudentTests extends Component {
           Seznam testů
         </header>
         <div className="TestList">
+          <Select id="selectAnswer" value={type} onChange={this.onSelectType}>
+            <MenuItem value="test">Bodované testy</MenuItem>
+            <MenuItem value="exercise">Procvičovací testy</MenuItem>
+            <MenuItem value="homework">Domácí úlohy</MenuItem>
+          </Select>
           <MaterialTable
             title="Seznam aktivních testů"
             columns={columns}

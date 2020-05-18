@@ -221,16 +221,19 @@ class CreateTest extends Component {
                   <div className="QuestionList">
 
                     {question.title} <br />
-
-                    <TextField
-                      id="points-for-test"
-                      label="Počet bodů za otázku"
-                      type="number"
-                      variant="outlined"
-                      value={question.points || ''}
-                      onChange={(event) =>
-                      {this.onNumberBoxChangePoints(event, index)}}
-                    />
+                    {
+                      type !== 'exercise' ?
+                        <TextField
+                          id="points-for-test"
+                          label="Počet bodů za otázku"
+                          type="number"
+                          variant="outlined"
+                          value={question.points || ''}
+                          onChange={(event) => {
+                            this.onNumberBoxChangePoints(event, index)
+                          }}
+                        />  : <div />
+                    }
                     <br />
 
                     <IconButton aria-label="delete" className="delete-answer"

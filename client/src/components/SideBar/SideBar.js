@@ -80,11 +80,7 @@ class SideBar extends Component {
             defaultExpandIcon={<ChevronRightIcon/>}
           >
           <a href='/student/dashboard'>Domů</a>
-          <TreeItem nodeId='1' id="treeItemStudent" label="Testy">
-            <a href="/student/tests">Bodované testy</a>
-            <a href="/student/exercise">Procvičovací testy</a>
-            <a href="/student/homework">Domácí úkoly</a>
-          </TreeItem>
+          <a href='/student/tests'>Aktivity</a>
           <a href='/student/materials'>Materiály</a>
           <a href='/student/results'>Výsledky</a>
           </TreeView>
