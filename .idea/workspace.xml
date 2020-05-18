@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/CreateTest.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Tests/StudentTests.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Questions/CreateQuestion.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Tests/StudentTests.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,14 +172,7 @@
       <workItem from="1588862545505" duration="113000" />
       <workItem from="1588863184565" duration="725000" />
       <workItem from="1589702227711" duration="2424000" />
-      <workItem from="1589786176423" duration="7227000" />
-    </task>
-    <task id="LOCAL-00042" summary="Create test button functionality added">
-      <created>1586370882872</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1586370882873</updated>
+      <workItem from="1589786176423" duration="9592000" />
     </task>
     <task id="LOCAL-00043" summary="student tests prototype">
       <created>1586596091210</created>
@@ -516,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1589792555682</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="exercise test without points">
+      <created>1589798132075</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1589798132075</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +525,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="different private route for teachers and for students" />
     <MESSAGE value="prod init" />
     <MESSAGE value="dev upgrade" />
     <MESSAGE value="added delete function in material table for users" />
@@ -549,7 +549,8 @@
     <MESSAGE value="minor fix" />
     <MESSAGE value="fix in showing correct answers for radio questions" />
     <MESSAGE value="material view" />
-    <option name="LAST_COMMIT_MESSAGE" value="material view" />
+    <MESSAGE value="exercise test without points" />
+    <option name="LAST_COMMIT_MESSAGE" value="exercise test without points" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -560,10 +561,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1589792552851">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1589798130893">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589792552851" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589798130893" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -657,10 +658,10 @@
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="1966" y="57" width="1555" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587739929195" />
-    <state x="498" y="60" width="607" height="804" key="find.popup" timestamp="1589791153241">
+    <state x="498" y="60" width="607" height="804" key="find.popup" timestamp="1589803390436">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="498" y="60" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589791153241" />
+    <state x="498" y="60" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589803390436" />
     <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589786462938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

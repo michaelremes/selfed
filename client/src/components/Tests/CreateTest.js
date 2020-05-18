@@ -250,7 +250,7 @@ class CreateTest extends Component {
 
             </FormGroup>
             <button id="createTestButton" onClick={this.onCreateTest}>
-              Vytvořit test
+              Vytvořit
             </button>
 
           </form>

@@ -334,14 +334,16 @@ class StudentTests extends Component {
     return (
       <div>
         <header className="StudentTests-header">
-          Seznam testů
+          Seznam dostupných aktivit
         </header>
         <div className="TestList">
-          <Select id="selectAnswer" value={type} onChange={this.onSelectType}>
+          <h1>Vyberte typ aktivity</h1>
+          <Select id="selectType" value={type} onChange={this.onSelectType}>
             <MenuItem value="test">Bodované testy</MenuItem>
             <MenuItem value="exercise">Procvičovací testy</MenuItem>
             <MenuItem value="homework">Domácí úlohy</MenuItem>
           </Select>
+          <br />
           <MaterialTable
             title="Seznam aktivních testů"
             columns={columns}
@@ -349,7 +351,7 @@ class StudentTests extends Component {
             actions={[
               {
                 icon: 'send',
-                tooltip: 'Spustit test',
+                tooltip: 'Spustit',
 
                 onClick: (event, test) => {
                   this.setState(
