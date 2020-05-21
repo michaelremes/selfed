@@ -64,7 +64,6 @@ class SideBar extends Component {
               <a href="/users">Uživatelé</a>
             </TreeItem>
 
-
           </TreeView>
 
 
@@ -75,13 +74,18 @@ class SideBar extends Component {
         <div className="sidenav">
           <img src={logo} className="App-logo" alt="logo"/>
           <TreeView
-            className="TreeViewSideBar"
+            className="TreeViewSideBar2"
             defaultCollapseIcon={<ExpandMoreIcon/>}
             defaultExpandIcon={<ChevronRightIcon/>}
           >
           <a href='/student/dashboard'>Domů</a>
           <a href='/student/tests'>Aktivity</a>
-          <a href='/student/materials'>Materiály</a>
+
+            <TreeItem nodeId='4' id="treeItem" label="Materiály">
+              <a href='/student/materials'>Textové materiály</a>
+              <a href="/student/files">Soubory</a>
+            </TreeItem>
+
           <a href='/student/results'>Výsledky</a>
           </TreeView>
         </div>

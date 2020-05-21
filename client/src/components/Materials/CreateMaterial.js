@@ -98,9 +98,6 @@ class CreateMaterial extends Component {
   }
 
   renderMaterialType(type) {
-    const {
-      uploadedFile
-    } = this.state;
     switch (type) {
       case 'text':
         return (

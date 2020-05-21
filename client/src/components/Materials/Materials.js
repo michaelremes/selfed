@@ -4,9 +4,8 @@ import '../../styles/Materials/Materials.css';
 import MaterialTable from "material-table";
 import ReactMarkdown from "react-markdown";
 
-const Latex = require('react-latex');
 
-class StudentTests extends Component {
+class Materials extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -130,7 +129,6 @@ class StudentTests extends Component {
   }
 
   render() {
-
     /*render list of tests, if one test is selected, rerender the page and show test */
     return (
       <div>
@@ -144,4 +142,4 @@ class StudentTests extends Component {
 
 }
 
-export default StudentTests;
+export default Materials;

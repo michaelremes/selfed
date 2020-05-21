@@ -2,6 +2,7 @@ import React, {useState } from 'react';
 
 import axios from 'axios';
 import "../../styles/Materials/CreateMaterial.css";
+import {addNotification} from "../App/Notification";
 
 const FileUpload = () => {
   const [file, setFile] = useState('');
@@ -11,6 +12,29 @@ const FileUpload = () => {
   const onChange = e => {
     setFile(e.target.files[0]);
     setFilename(e.target.files[0].name);
+  };
+
+  const createMaterial = () => {
+    fetch('/api/add/material', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        title: filename,
+        type: 'file'
+      }),
+    }).then(res => res.json())
+      .then(json => {
+        if (json.success) {
+          addNotification("Úspěch", "Úspěšně vytvořeno.", "success");
+        } else {
+          addNotification("Error", "Materiál nemohl být vytvoeřn.", "danger");
+          this.setState({
+            createQuestionError: json.message,
+          });
+        }
+      });
   };
 
   const onSubmit = async e => {
@@ -28,7 +52,7 @@ const FileUpload = () => {
       const { fileName, filePath } = res.data;
 
       setUploadedFile({ fileName, filePath });
-
+      createMaterial();
     } catch (err) {
       if (err.response.status === 500) {
        console.log('There was a problem with the server');
