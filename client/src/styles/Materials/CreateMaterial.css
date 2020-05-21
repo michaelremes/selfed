@@ -19,6 +19,7 @@
   .Materials form {
     margin: 0 auto;
     max-width: 700px;
+    height: 900px;
     background-color: lightgray;
     padding: 70px;
     text-align: center;
@@ -27,6 +28,9 @@
     height: 45vh;
   }
 
+  #title-required{
+    margin-bottom: 15px;
+  }
   #selectType{
     margin-bottom: 15px;
   }

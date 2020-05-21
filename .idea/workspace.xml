@@ -2,20 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Materials/Files.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/styles/Materials/Files.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/uploads/createTest.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/uploads/questions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/uploads/result.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/uploads/addUser.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/public/uploads/login.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Materials/CreateMaterial.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/CreateMaterial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Materials/FileUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/FileUpload.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Materials/Materials.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/Materials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Materials/CreateMaterial.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Materials/CreateMaterial.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/styles/Materials/Files.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Materials/Files.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,14 +179,7 @@
       <workItem from="1589786176423" duration="12067000" />
       <workItem from="1589872823789" duration="1645000" />
       <workItem from="1589962183238" duration="2416000" />
-      <workItem from="1590043334254" duration="27216000" />
-    </task>
-    <task id="LOCAL-00046" summary="prod init">
-      <created>1586794010176</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1586794010176</updated>
+      <workItem from="1590043334254" duration="27791000" />
     </task>
     <task id="LOCAL-00047" summary="prod init">
       <created>1586794860259</created>
@@ -530,7 +517,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590077902863</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="download files">
+      <created>1590094389790</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1590094389790</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -538,7 +532,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="css update to creating test" />
     <MESSAGE value="correct and false answers" />
     <MESSAGE value="css correction" />
     <MESSAGE value="updated translation" />
@@ -563,7 +556,8 @@
     <MESSAGE value="different activities" />
     <MESSAGE value="added date to user results" />
     <MESSAGE value="upload file feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="upload file feature" />
+    <MESSAGE value="download files" />
+    <option name="LAST_COMMIT_MESSAGE" value="download files" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -574,10 +568,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590072205854" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1590077900198">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1590094388039">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590077900198" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590094388039" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -658,11 +652,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1589827978287">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1590094392530">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589827978287" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590094392530" />
     <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588861948775">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

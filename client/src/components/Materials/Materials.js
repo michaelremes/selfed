@@ -3,6 +3,7 @@ import React, {Component} from "react";
 import '../../styles/Materials/Materials.css';
 import MaterialTable from "material-table";
 import ReactMarkdown from "react-markdown";
+import {text} from "react-table/src/filterTypes";
 
 
 class Materials extends Component {
@@ -27,8 +28,9 @@ class Materials extends Component {
       .then(res => res.json())
       .then(
         (materials) => {
+          const textMaterial = materials.filter(arr => arr.type === 'text');
           this.setState({
-            materials: materials
+            materials: textMaterial
           });
         },
         (error) => {

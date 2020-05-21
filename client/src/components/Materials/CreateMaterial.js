@@ -13,7 +13,6 @@ import {addNotification} from "../App/Notification";
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
-import axios from 'axios';
 import FileUpload from "./FileUpload";
 
 
@@ -25,7 +24,7 @@ class CreateMaterial extends Component {
     super(props);
     this.state = {
       title: '',
-      type: 'file',
+      type: 'text',
       text: '',
     };
     this.onTextBoxChangeTitle = this.onTextBoxChangeTitle.bind(this);
@@ -98,10 +97,22 @@ class CreateMaterial extends Component {
   }
 
   renderMaterialType(type) {
+    const {
+      title
+    } = this.state;
     switch (type) {
       case 'text':
         return (
           <div style={{height: '70vh'}}>
+            <h2>Název materiálu</h2>
+            <TextField
+              required
+              id="title-required"
+              label="Nutno vyplnit"
+              variant="filled"
+              value={title}
+              onChange={this.onTextBoxChangeTitle}
+            />
             <MdEditor
               value=""
               style={{height: "500px"}}
@@ -119,6 +130,7 @@ class CreateMaterial extends Component {
       case 'file':
         return (
           <div>
+            <h2>Nahrajte soubor</h2>
             <FileUpload />
           </div>
         );
@@ -140,16 +152,9 @@ class CreateMaterial extends Component {
         </header>
         <div className="Materials">
           <form>
-            <h2>Název materiálu</h2>
+
             <FormGroup controlId="task" size="large">
-              <TextField
-                required
-                id="title-required"
-                label="Nutno vyplnit"
-                variant="filled"
-                value={title}
-                onChange={this.onTextBoxChangeTitle}
-              />
+
               <h2>Typ materiálu</h2>
 
               <Select id="selectType" value={type} onChange={this.onSelectMaterialType}>
