@@ -1,9 +1,8 @@
-
-const Test = require('../../models/Test');
+const Activity = require('../../models/Test');
 const UserResult = require('../../models/UserResults');
 
 module.exports = (app) => {
-  app.post('/api/add/test', (req, res)  => {
+  app.post('/api/add/test', (req, res) => {
     const {body} = req;
     const {
       title,
@@ -11,7 +10,7 @@ module.exports = (app) => {
       questions,
     } = body;
 
-    const newTest = new Test();
+    const newTest = new Activity();
 
     newTest.title = title;
     newTest.type = type;
@@ -32,10 +31,8 @@ module.exports = (app) => {
   });
 
 
-
-
-  app.get('/api/tests', (req, res)  => {
-    Test.find(function(err, tests) {
+  app.get('/api/tests', (req, res) => {
+    Activity.find(function (err, tests) {
       if (err) {
         console.log(err);
       } else {
@@ -44,20 +41,20 @@ module.exports = (app) => {
     });
   });
 
-  app.delete('/api/test/:id', (req, res)  => {
-    const testId =  {_id:req.params.id};
+  app.delete('/api/test/:id', (req, res) => {
+    const testId = {_id: req.params.id};
 
-      Test.deleteOne(testId, function (err) {
-        if(err){
-          res.status(500).send('Test not found.');
-        }
-        res.send('Success');
-      })
+    Activity.deleteOne(testId, function (err) {
+      if (err) {
+        res.status(500).send('Activity not found.');
+      }
+      res.send('Success');
+    })
 
   });
 
   //add user result
-  app.post('/api/add/student/test', (req, res)  => {
+  app.post('/api/add/student/test', (req, res) => {
     const {body} = req;
     const {
       username,
@@ -87,8 +84,8 @@ module.exports = (app) => {
 
   });
 
-  app.get('/api/student/tests', (req, res)  => {
-    UserResult.find(function(err, results) {
+  app.get('/api/student/tests', (req, res) => {
+    UserResult.find(function (err, results) {
       if (err) {
         console.log(err);
       } else {
@@ -96,7 +93,6 @@ module.exports = (app) => {
       }
     });
   });
-
 
 
 };

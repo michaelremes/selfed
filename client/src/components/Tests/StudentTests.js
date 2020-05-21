@@ -70,13 +70,9 @@ class StudentTests extends Component {
       .then(res => res.json())
       .then(
         (tests) => {
-
-
           this.setState({
             allTests: tests
           });
-
-
         },
         (error) => {
           this.setState({});

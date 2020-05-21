@@ -25,6 +25,7 @@ import UserResults from './components/Tests/UserResults'
 import {TeacherPrivateRoute, StudentPrivateRoute} from './components/PrivateRoute/PrivateRoute';
 import CreateMaterial from "./components/Materials/CreateMaterial";
 import Materials from "./components/Materials/Materials";
+import FileUpload from "./components/Materials/FileUpload";
 
 
 
@@ -66,6 +67,7 @@ render((
         <TeacherPrivateRoute path="/add/test" component={CreateTest}/>
         <TeacherPrivateRoute path="/add/question" component={CreateQuestion}/>
         <TeacherPrivateRoute path="/add/material" component={CreateMaterial}/>
+        <TeacherPrivateRoute path="/add/material" component={FileUpload}/>
         <TeacherPrivateRoute path="/questions" component={Questions}/>
         <TeacherPrivateRoute path="/homework" component={Homework}/>
         <TeacherPrivateRoute path="/results" component={UserResults}/>

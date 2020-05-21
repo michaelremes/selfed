@@ -12,7 +12,7 @@ const webpackConfig = require('../webpack.config');
 const isDev = process.env.NODE_ENV !== 'production';
 const port  = process.env.PORT || 8080;
 
-
+const fileUpload = require('express-fileupload');
 // Configuration
 // ================================================================================================
 
@@ -24,6 +24,8 @@ mongoose.Promise = global.Promise;
 const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+
+app.use(fileUpload());
 
 // API routes
 require('./routes')(app);
@@ -50,6 +52,10 @@ if (isDev) {
 
   app.use(webpackHotMiddleware(compiler));
   app.use(express.static(path.resolve(__dirname, '../dist')));
+
+
+
+
 } else {
   app.use(express.static(path.resolve(__dirname, '../dist')));
   app.get('*', function (req, res) {
