@@ -46,7 +46,6 @@ class Files extends Component {
           return (
             <div className="files">
               <div className='single-file'>
-
                 <a href={'/uploads/' + file.title} download>
                   Stáhnout {file.title}</a><br /><GetAppIcon id='icon' fontSize='large'/>
               </div>

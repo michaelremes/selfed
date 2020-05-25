@@ -17,7 +17,6 @@ import Tests from './components/Tests/Tests';
 import CreateTest from './components/Tests/CreateTest';
 import Questions from './components/Questions/Questions';
 import CreateQuestion from './components/Questions/CreateQuestion';
-import Homework from './components/Homework/Homework';
 import StudentTests from "./components/Tests/StudentTests";
 import StudentDashboard from "./components/Dashboard/StudentDashboard";
 import SideBar from './components/SideBar/SideBar';
@@ -41,7 +40,6 @@ const sitesAfterLogin = [
   '/add/question',
   '/add/material',
   '/questions',
-  '/homework',
   '/student/tests',
   '/student/dashboard',
   '/student/results',

@@ -1,15 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/client/public/uploads/createTest.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/uploads/questions.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/uploads/result.pdf" afterDir="false" />
+    <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="download files minor fix">
+      <change afterPath="$PROJECT_DIR$/client/public/uploads/Domácí úloha 28.5.2020.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/uploads/Gravitace-vzorce.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/uploads/Kinemtaika.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/uploads/Závěrečná práce - Podmínky.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/api/testCollection.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/uploads/createTest.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/uploads/questions.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/uploads/result.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Homework/Homework.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/components/Materials/CreateMaterial.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/CreateMaterial.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Materials/Materials.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/Materials.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Materials/FileUpload.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/FileUpload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Materials/Files.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/Files.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/styles/Materials/CreateMaterial.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Materials/CreateMaterial.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/styles/Materials/Files.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/styles/Materials/Files.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/App.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,19 +72,19 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Materials" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Materials" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\server\routes\api" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Dashboard" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
     </key>
   </component>
   <component name="RunManager" selected="Node.js.Questions.js">
@@ -179,14 +190,11 @@
       <workItem from="1589786176423" duration="12067000" />
       <workItem from="1589872823789" duration="1645000" />
       <workItem from="1589962183238" duration="2416000" />
-      <workItem from="1590043334254" duration="27791000" />
-    </task>
-    <task id="LOCAL-00047" summary="prod init">
-      <created>1586794860259</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1586794860259</updated>
+      <workItem from="1590043334254" duration="27812000" />
+      <workItem from="1590131327360" duration="3989000" />
+      <workItem from="1590220008919" duration="9438000" />
+      <workItem from="1590306632260" duration="504000" />
+      <workItem from="1590395756404" duration="1053000" />
     </task>
     <task id="LOCAL-00048" summary="prod init">
       <created>1586851877837</created>
@@ -524,7 +532,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590094389790</updated>
     </task>
-    <option name="localTasksCounter" value="96" />
+    <task id="LOCAL-00096" summary="download files minor fix">
+      <created>1590094955023</created>
+      <option name="number" value="00096" />
+      <option name="presentableId" value="LOCAL-00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1590094955023</updated>
+    </task>
+    <option name="localTasksCounter" value="97" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,7 +547,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="correct and false answers" />
     <MESSAGE value="css correction" />
     <MESSAGE value="updated translation" />
     <MESSAGE value="user results submission prototype" />
@@ -557,21 +571,22 @@
     <MESSAGE value="added date to user results" />
     <MESSAGE value="upload file feature" />
     <MESSAGE value="download files" />
-    <option name="LAST_COMMIT_MESSAGE" value="download files" />
+    <MESSAGE value="download files minor fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="download files minor fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1582838473554" />
-    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590072205854">
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590230620170">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590072205854" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1590094388039">
+    <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590230620170" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1590252315058">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590094388039" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590252315058" />
     <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -652,23 +667,23 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="163" key="SettingsEditor/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586259070006" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1590094392530">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1590094957101">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="483" y="264" key="Vcs.Push.Dialog.v2/0.23.1680.995@0.23.1680.995" timestamp="1582625477165" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590094392530" />
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588861948775">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590094957101" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1590396899862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1588861948775" />
+    <state x="769" y="436" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590396899862" />
     <state x="1966" y="57" width="1555" height="1025" key="dock-window-1" timestamp="1587739929195">
       <screen x="1920" y="0" width="2048" height="1112" />
     </state>
     <state x="1966" y="57" width="1555" height="1025" key="dock-window-1/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587739929195" />
-    <state x="498" y="60" width="607" height="804" key="find.popup" timestamp="1589873652070">
+    <state x="498" y="60" width="607" height="804" key="find.popup" timestamp="1590396477363">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="498" y="60" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1589873652070" />
+    <state x="498" y="60" width="607" height="804" key="find.popup/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590396477363" />
     <state x="741" y="234" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589786462938">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

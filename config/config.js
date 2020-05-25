@@ -3,7 +3,5 @@
 module.exports = {
   db: 'mongodb://admin:monherDB883@ds143242.mlab.com:43242/heroku_0zjc01nx',
   db_dev: 'mongodb://localhost:27017/selfed',
-
-
 };
 

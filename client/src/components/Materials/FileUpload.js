@@ -27,7 +27,7 @@ const FileUpload = () => {
     }).then(res => res.json())
       .then(json => {
         if (json.success) {
-          addNotification("Úspěch", "Úspěšně vytvořeno.", "success");
+          addNotification("Úspěch", "Materiál byl úspěšně nahrán.", "success");
         } else {
           addNotification("Error", "Materiál nemohl být vytvoeřn.", "danger");
           this.setState({
@@ -83,14 +83,6 @@ const FileUpload = () => {
         Nahrát soubor
       </button>
       </form>
-      {uploadedFile ? (
-        <div className='row mt-5'>
-          <div className='col-md-6 m-auto'>
-            <h3 className='text-center'>{uploadedFile.fileName}</h3>
-            <img style={{ width: '100%' }} src={uploadedFile.filePath} alt='' />
-          </div>
-        </div>
-      ) : null}
     </div>
   );
 };

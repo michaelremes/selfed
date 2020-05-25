@@ -151,7 +151,7 @@ class CreateMaterial extends Component {
           Výukové materiály
         </header>
         <div className="Materials">
-          <form>
+          <form className='text-form'>
 
             <FormGroup controlId="task" size="large">
 

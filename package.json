@@ -13,7 +13,8 @@
     "build": "webpack --mode production",
     "start:dev": "node server",
     "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false webpack -p",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "test-api": "newman run tests/api/testCollection.json"
   },
   "engines": {
     "node": ">=6"
