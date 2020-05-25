@@ -16,7 +16,7 @@ Spustí API testy vytvořené v aplikaci Postman. Příkaz na spuštění kolekc
 
 ## První přihlášení do aplikace
 Pro první přihlášení do aplikace je nutné vytvořit prvotního uživatele. Například admina.
-Ten lze do databáze přidat POST requestem například přes Postmana: 
+toho lze do databáze přidat POST requestem například přes Postmana: 
 ```
 http://localhost:8080/api/account/add/user
 ```
@@ -30,4 +30,6 @@ Jako *body* příkazu je zapotřebí vyplnit informace o uživateli. Aby měl u�
     "password": "admin"
 }
 ```
-
+### Databáze
+Databáze je dostupná na adrese: 
+`mongodb://localhost:27017/selfed`
