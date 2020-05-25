@@ -14,6 +14,20 @@ Otevřete na adrese [http://localhost:8080](http://localhost:8080) k zobrazení 
 Spustí API testy vytvořené v aplikaci Postman. Příkaz na spuštění kolekce testů je interně *Newman*. 
 
 
-
-Pro při
+## První přihlášení do aplikace
+Pro první přihlášení do aplikace je nutné vytvořit prvotního uživatele. Například admina.
+Ten lze do databáze přidat POST requestem například přes Postmana: 
+```
+http://localhost:8080/api/account/add/user
+```
+Jako *body* příkazu je zapotřebí vyplnit informace o uživateli. Aby měl uživatel administrativní práva v systému, musí mít roli učitele (*teacher*)
+```
+{
+    "firstName": "test",
+    "lastName": "test",
+    "username": "admin",
+    "role": "teacher",
+    "password": "admin"
+}
+```
 
