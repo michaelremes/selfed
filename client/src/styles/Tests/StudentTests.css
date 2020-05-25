@@ -1,0 +1,83 @@
+@media all and (min-width: 480px) {
+
+
+  .StudentTests-header {
+    background-color: #5280d1;
+    min-height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: white;
+  }
+
+  .TestList {
+    width: 70%;
+    position: relative;
+    margin: auto;
+
+  }
+  .TestList h1{
+    margin-top: 0;
+    color: white;
+  }
+
+
+  .StudentTest form {
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: lightgray;
+    padding: 60px;
+    text-align: center;
+
+  }
+
+  #selectType{
+    background-color: white;
+    width: 100%;
+    font-size: calc(5px + 2vmin);
+    padding: 20px;
+    margin-bottom: 5px;
+  }
+
+  #submitTestButton {
+    margin: 30px;
+    padding: 10px;
+    font-size: calc(8px + 2vmin);
+    border: solid orange;
+
+  }
+
+  .StudentTest {
+    padding: 10px;
+
+  }
+
+  #checkbox-answers{
+    padding: 20px;
+    text-align: left;
+  }
+
+  #radio-answers{
+    padding: 30px;
+    text-align: left;
+  }
+
+
+  #mainTestForm {
+    text-align: center;
+  }
+  .disclaimer{
+    background-color: #dddddd;
+    width: 500px;
+    border: 3px solid black;
+    margin: auto;
+    font-size:  calc(4px + 2vmin);
+  }
+
+  body {
+    background-color: #282c34;
+  }
+
+}

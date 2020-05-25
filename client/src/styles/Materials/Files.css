@@ -1,0 +1,36 @@
+@media all and (min-width: 480px) {
+
+
+  .Tests-header {
+    background-color: #5280d1;
+    min-height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: white;
+  }
+
+  .files {
+    width: 50%;
+    margin: auto;
+    background-color: white;
+  }
+  .files a {
+
+    font-size: calc(10px + 2vmin);
+  }
+
+  .single-file{
+    border: solid 2px;
+    padding: 5px;
+    background-color: orange;
+  }
+
+
+  body {
+    background-color: #282c34;
+  }
+
+}

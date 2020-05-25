@@ -1,0 +1,68 @@
+@media all and (min-width: 480px) {
+
+
+  .StudentTests-header {
+    background-color: #5280d1;
+    min-height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: white;
+  }
+
+  .TestList {
+    width: 70%;
+    position: relative;
+    margin: auto;
+
+  }
+
+  .UserResult form {
+    margin: 0 auto;
+    max-width: 600px;
+    background-color: lightgray;
+
+    /*border: solid 10px red;*/
+
+    padding: 50px;
+    text-align: center;
+
+
+  }
+
+
+  #submitTestButton {
+    margin: 30px;
+    padding: 10px;
+    font-size: calc(8px + 2vmin);
+    border: solid orange;
+
+  }
+
+  .StudentTest {
+    padding: 10px;
+
+  }
+
+  #checkbox-answers{
+    padding: 20px;
+    text-align: left;
+  }
+
+  #radio-answers{
+    padding: 30px;
+    text-align: left;
+  }
+
+
+  #mainTestForm {
+    text-align: center;
+  }
+
+  body {
+    background-color: #282c34;
+  }
+
+}

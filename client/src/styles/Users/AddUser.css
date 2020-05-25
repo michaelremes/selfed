@@ -1,0 +1,43 @@
+@media all and (min-width: 480px) {
+
+  .SignUp form {
+    margin: 0 auto;
+    max-width: 320px;
+    background-color: lightgray;
+    padding: 70px;
+    text-align: center;
+  }
+
+  #textInput {
+    padding: 10px;
+    font-size: calc(6px + 2vmin);
+  }
+
+
+  .SignUp Button {
+    margin-top: 30px;
+    padding: 20px;
+    font-size: calc(6px + 2vmin);
+  }
+
+  h2 {
+    text-align: left;
+
+  }
+  .role-select {
+    text-align: left;
+    padding: 6px;
+    margin-left: 100px;
+  }
+
+  #addUserButton {
+    margin-top: 40px;
+    padding: 20px;
+    border-color: orange;
+  }
+
+  body {
+    background-color: #282c34;
+  }
+
+}

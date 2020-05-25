@@ -1,0 +1,27 @@
+@media all and (min-width: 480px) {
+
+
+  .Tests-header {
+    background-color: #5280d1;
+    min-height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: white;
+  }
+
+  .TestList {
+    width: 100%;
+    display: flow;
+    float: right;
+    padding-right: 150px;
+    padding-top: 50px;
+  }
+
+  body {
+    background-color: #282c34;
+  }
+
+}

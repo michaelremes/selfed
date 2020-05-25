@@ -1,8 +1,7 @@
 // Copy this file as config.js in the same folder, with the proper database connection URI.
 
 module.exports = {
-  db: 'mongodb://username:password@url:port/db',
-  db_dev: 'mongodb://127.0.0.1:27017/selfed',
-
+  db: 'mongodb://admin:monherDB883@ds143242.mlab.com:43242/heroku_0zjc01nx',
+  db_dev: 'mongodb://localhost:27017/selfed',
 };
 

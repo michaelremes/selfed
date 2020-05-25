@@ -13,9 +13,17 @@ const UserSchema = new mongoose.Schema({
     type: String,
     default: ''
   },
+  role: {
+    type: String,
+    default: ''
+  },
   password: {
     type: String,
     default: ''
+  },
+  totalPoints: {
+    type: Number,
+    default: 0
   },
   isDeleted: {
     type: Boolean,
@@ -26,6 +34,7 @@ const UserSchema = new mongoose.Schema({
     default: Date.now()
   }
 });
+
 UserSchema.methods.generateHash = function(password) {
   return bcrypt.hashSync(password, bcrypt.genSaltSync(8), null);
 };

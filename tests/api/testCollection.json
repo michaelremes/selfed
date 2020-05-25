@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "a83173f4-be78-4f89-933f-bab4ae252c06",
+		"name": "SelfEd",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+
+		{
+			"name": "get user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "53a45a42-fdc9-4205-b703-001e2a0f868a",
+						"exec": [
+							"pm.test(\"Status test\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"//test \r",
+							"pm.test(\"Your test name\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.username).to.eql(\"student\");\r",
+							"    pm.expect(jsonData.firstName).to.eql(\"test\");\r",
+							"    pm.expect(jsonData.lastName).to.eql(\"test\");\r",
+							"    pm.expect(jsonData.role).to.eql(\"student\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/user/5e9170818d8b521f58e61e72",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"5e9170818d8b521f58e61e72"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

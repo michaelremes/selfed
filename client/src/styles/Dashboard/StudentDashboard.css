@@ -1,0 +1,64 @@
+@media all and (min-width: 480px) {
+
+
+  .logout {
+    padding: 10px;
+    font-size: calc(6px + 2vmin);
+    position: absolute;
+    right: 30px;
+    top: 100px;
+  }
+  .Dashboard-header {
+    background-color: #5280d1;
+    min-height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: white;
+  }
+
+  .StudentResults {
+    width: 80%;
+    display: flow;
+    float: right;
+    padding: 50px;
+
+  }
+
+  .points {
+    display: block;
+    width: 400px;
+    height: 100px;
+    background-color: gold;
+    padding: 20px 28px;
+    margin-left: 400px;
+    cursor: pointer;
+    text-align: center;
+    font-size: calc(6px + 2vmin);
+    border: solid 5px black;
+  }
+
+
+  .points form {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: lightgray;
+    padding: 70px;
+    text-align: center;
+  }
+
+  .logged-user{
+    position: absolute;
+    right: 30px;
+    top: 10px;
+    text-align: right;
+    font-size: calc(6px + 2vmin);;
+  }
+
+  body {
+    background-color: #282c34;
+  }
+
+}

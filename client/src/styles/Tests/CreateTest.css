@@ -1,0 +1,49 @@
+@media all and (min-width: 480px) {
+
+
+  .CreateTest-header {
+    background-color: #5280d1;
+    min-height: 21vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(30px + 2vmin);
+    color: white;
+  }
+
+  .CreateTest {
+    alignment: center;
+  }
+  .CreateTest form {
+    margin: 0 auto;
+    max-width: 800px;
+    background-color: lightgray;
+    padding: 70px;
+    text-align: center;
+  }
+  .CreateTest Button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: calc(8px + 2vmin);
+  }
+  .CreateTest input {
+    background-color: white;
+  }
+  .QuestionList {
+    border:1px solid;
+    padding: 12px;
+    font-size: calc(8px + 2vmin);
+
+    background-color: #5280d1;
+  }
+  #createTestButton {
+    margin-top: 40px;
+    padding: 20px;
+    border-color: orange;
+  }
+  body {
+    background-color: #282c34;
+  }
+
+}
