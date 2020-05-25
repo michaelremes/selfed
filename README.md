@@ -1,8 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inicializace
+Pro fungování prjektu je nutné v adresáři projektu nainstalovat npm dependencies <br />
+`npm install`
+
 
 ## Skripty dostupné pro spuštění
 
-Ve složce projektu můžete spustit:
+V adresáři projektu můžete spustit:
 
 ### `npm start`
 
