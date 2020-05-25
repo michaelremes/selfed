@@ -1,42 +1,40 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Inicializace
+Pro fungování prjektu je nutné v adresáři projektu nainstalovat npm dependencies.
 
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm run start:dev`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+### `npm install`
 
 
+## Skripty dostupné pro spuštění
 
-## Learn More
+V adresáři projektu můžete spustit:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### `npm start`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Spustí aplikaci.<br />
+Otevřete na adrese [http://localhost:8080](http://localhost:8080) k zobrazení aplikace ve vašem prohlížeči.
 
-### Code Splitting
+### `npm test-api`
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+Spustí API testy vytvořené v aplikaci Postman. Příkaz na spuštění kolekce testů je interně *Newman*. 
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## První přihlášení do aplikace
+Pro první přihlášení do aplikace je nutné vytvořit prvotního uživatele. Například admina.
+toho lze do databáze přidat POST requestem například přes Postmana: 
+```
+http://localhost:8080/api/account/add/user
+```
+Jako *body* příkazu je zapotřebí vyplnit informace o uživateli. Aby měl uživatel administrativní práva v systému, musí mít roli učitele (*teacher*)
+```
+{
+    "firstName": "test",
+    "lastName": "test",
+    "username": "admin",
+    "role": "teacher",
+    "password": "admin"
+}
+```
+### Databáze
+Databáze je dostupná na adrese: 
+`mongodb://localhost:27017/selfed`
