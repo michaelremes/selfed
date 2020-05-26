@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="workspace.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/App.test.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,19 +48,13 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.3.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
@@ -67,8 +62,28 @@
       <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Tests" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Users" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles\Questions" />
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
+    </key>
   </component>
-  <component name="RunManager" selected="Node.js.App.js">
+  <component name="RunManager" selected="Jest.renders">
+    <configuration name="renders" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/App.test.js" />
+      <test-names>
+        <test-name value="renders" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="App.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/src/App.js" working-dir="$PROJECT_DIR$/src">
       <method v="2" />
     </configuration>
@@ -77,11 +92,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.renders" />
         <item itemvalue="Node.js.App.js" />
         <item itemvalue="Node.js.Questions.js" />
         <item itemvalue="Node.js.App.js" />
         <item itemvalue="Node.js.Questions.js" />
-        <item itemvalue="Node.js.App.js" />
       </list>
     </recent_temporary>
   </component>
@@ -548,26 +563,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590397028214" />
-    <state width="1899" height="168" key="GridCell.Tab.0.bottom" timestamp="1587241879583">
+    <state width="1899" height="183" key="GridCell.Tab.0.bottom" timestamp="1590491836050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.bottom/0.23.1680.995@0.23.1680.995" timestamp="1582558024296" />
-    <state width="1899" height="168" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587241879583" />
-    <state width="1899" height="168" key="GridCell.Tab.0.center" timestamp="1587241879583">
+    <state width="1899" height="183" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491836050" />
+    <state width="1899" height="183" key="GridCell.Tab.0.center" timestamp="1590491836050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.center/0.23.1680.995@0.23.1680.995" timestamp="1582558024271" />
-    <state width="1899" height="168" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587241879583" />
-    <state width="1899" height="168" key="GridCell.Tab.0.left" timestamp="1587241879583">
+    <state width="1899" height="183" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491836050" />
+    <state width="1899" height="183" key="GridCell.Tab.0.left" timestamp="1590491836050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.left/0.23.1680.995@0.23.1680.995" timestamp="1582558024270" />
-    <state width="1899" height="168" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587241879583" />
-    <state width="1899" height="168" key="GridCell.Tab.0.right" timestamp="1587241879583">
+    <state width="1899" height="183" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491836050" />
+    <state width="1899" height="183" key="GridCell.Tab.0.right" timestamp="1590491836050">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.right/0.23.1680.995@0.23.1680.995" timestamp="1582558024272" />
-    <state width="1899" height="168" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1587241879583" />
+    <state width="1899" height="183" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491836050" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
