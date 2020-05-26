@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__mocks__/fileMock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/__mocks__/styleMock.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Adduser.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CreateMaterial.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CreateQuestion.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/CreateTest.test.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/SideBar.test.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.babelrc" beforeDir="false" afterPath="$PROJECT_DIR$/.babelrc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/SideBar/SideBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jest.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/jest.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/App.test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,8 +26,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="JavaScript File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -45,7 +55,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tests" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -58,11 +68,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\WebstormProjects\selfed\tests" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\styles" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Tests" />
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\src\components\Dashboard" />
-      <recent name="C:\Users\Michael\WebstormProjects\selfed\server\models" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\public" />
@@ -72,7 +82,21 @@
       <recent name="C:\Users\Michael\WebstormProjects\selfed\client\app\components\Questions" />
     </key>
   </component>
-  <component name="RunManager" selected="Node.js.Questions.js">
+  <component name="RunManager" selected="Jest.AddUser.renders component correctly">
+    <configuration name="AddUser.renders component correctly" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="TEST" />
+      <test-file value="$PROJECT_DIR$/tests/Adduser.test.js" />
+      <test-names>
+        <test-name value="AddUser" />
+        <test-name value="renders component correctly" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="renders" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -94,11 +118,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.AddUser.renders component correctly" />
         <item itemvalue="Node.js.Questions.js" />
         <item itemvalue="Node.js.App.js" />
         <item itemvalue="Jest.renders" />
         <item itemvalue="Node.js.App.js" />
-        <item itemvalue="Node.js.Questions.js" />
       </list>
     </recent_temporary>
   </component>
@@ -173,13 +197,6 @@
       <workItem from="1587453310374" duration="12118000" />
       <workItem from="1587541199159" duration="12845000" />
       <workItem from="1587630153686" duration="41950000" />
-    </task>
-    <task id="LOCAL-00033" summary="redux impl fo better debugging">
-      <created>1585671948640</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1585671948640</updated>
     </task>
     <task id="LOCAL-00034" summary="added delete button to checkbox answers">
       <created>1585990987644</created>
@@ -517,7 +534,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590491988902</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="fix">
+      <created>1590492813567</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1590492813567</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -525,7 +549,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="table of questions in create test" />
     <MESSAGE value="Latex in question task prototype" />
     <MESSAGE value="Latex Preview css" />
     <MESSAGE value="print list of added questions to test" />
@@ -550,7 +573,8 @@
     <MESSAGE value="compact sidebar implemented" />
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="testing" />
-    <option name="LAST_COMMIT_MESSAGE" value="testing" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -561,30 +585,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1590491988097">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1590492812798">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491988097" />
-    <state width="1899" height="385" key="GridCell.Tab.0.bottom" timestamp="1590491893217">
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590492812798" />
+    <state width="1899" height="385" key="GridCell.Tab.0.bottom" timestamp="1590500413941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.bottom/0.23.1680.995@0.23.1680.995" timestamp="1582558024296" />
-    <state width="1899" height="385" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491893217" />
-    <state width="1899" height="385" key="GridCell.Tab.0.center" timestamp="1590491893217">
+    <state width="1899" height="385" key="GridCell.Tab.0.bottom/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590500413941" />
+    <state width="1899" height="385" key="GridCell.Tab.0.center" timestamp="1590500413941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.center/0.23.1680.995@0.23.1680.995" timestamp="1582558024271" />
-    <state width="1899" height="385" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491893217" />
-    <state width="1899" height="385" key="GridCell.Tab.0.left" timestamp="1590491893217">
+    <state width="1899" height="385" key="GridCell.Tab.0.center/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590500413941" />
+    <state width="1899" height="385" key="GridCell.Tab.0.left" timestamp="1590500413941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.left/0.23.1680.995@0.23.1680.995" timestamp="1582558024270" />
-    <state width="1899" height="385" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491893217" />
-    <state width="1899" height="385" key="GridCell.Tab.0.right" timestamp="1590491893217">
+    <state width="1899" height="385" key="GridCell.Tab.0.left/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590500413941" />
+    <state width="1899" height="385" key="GridCell.Tab.0.right" timestamp="1590500413941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1659" height="269" key="GridCell.Tab.0.right/0.23.1680.995@0.23.1680.995" timestamp="1582558024272" />
-    <state width="1899" height="385" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590491893217" />
+    <state width="1899" height="385" key="GridCell.Tab.0.right/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590500413941" />
     <state width="1899" height="348" key="GridCell.Tab.1.bottom" timestamp="1584712125687">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
