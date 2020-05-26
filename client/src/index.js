@@ -67,7 +67,6 @@ render((
         <TeacherPrivateRoute path="/add/question" component={CreateQuestion}/>
         <TeacherPrivateRoute path="/add/material" component={CreateMaterial}/>
         <TeacherPrivateRoute path="/questions" component={Questions}/>
-        <TeacherPrivateRoute path="/homework" component={Homework}/>
         <TeacherPrivateRoute path="/results" component={UserResults}/>
 
         <StudentPrivateRoute path="/student/tests" component={StudentTests}/>
