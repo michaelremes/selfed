@@ -38,7 +38,4 @@ Jako *body* příkazu je zapotřebí vyplnit informace o uživateli. Aby měl u�
 ### Databáze
 Databáze je dostupná na adrese: 
 `mongodb://localhost:27017/selfed`
-K databázi se lze připojit přes apikaci MongoDB Compass nebo přes příkaz 
-```
-mongo "mongodb://localhost:27017/selfed"
-```
+K databázi se lze připojit například přes apikaci MongoDB Compass.
