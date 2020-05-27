@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9fc7427b-85db-4275-b45d-dbf8b30542ba" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/Dashboard.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Login.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Materials.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/StudentDashboard.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Tests.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Users.test.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Dashboard/StudentDashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Materials/Materials.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Materials/Materials.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/SideBar.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/tests/SideBar.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test.test.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,13 +184,6 @@
       <workItem from="1587453310374" duration="12118000" />
       <workItem from="1587541199159" duration="12845000" />
       <workItem from="1587630153686" duration="41950000" />
-    </task>
-    <task id="LOCAL-00036" summary="table of questions in create test">
-      <created>1586012629947</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1586012629947</updated>
     </task>
     <task id="LOCAL-00037" summary="Latex in question task prototype">
       <created>1586260973706</created>
@@ -539,7 +521,14 @@
       <option name="project" value="LOCAL" />
       <updated>1590563956922</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="basic tests">
+      <created>1590565784057</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1590565784057</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -570,9 +559,9 @@
     <MESSAGE value="workspace.xml" />
     <MESSAGE value="testing" />
     <MESSAGE value="fix" />
-    <MESSAGE value="basic tests" />
     <MESSAGE value="basic api tests added" />
-    <option name="LAST_COMMIT_MESSAGE" value="basic api tests added" />
+    <MESSAGE value="basic tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="basic tests" />
   </component>
   <component name="WindowStateProjectService">
     <state x="734" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1582838473554">
@@ -583,10 +572,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="268" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1586009827771" />
-    <state x="2110" y="41" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1590563955015">
-      <screen x="1920" y="0" width="2048" height="1112" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2" timestamp="1590565782468">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590500789974" />
+    <state x="178" y="38" width="1616" height="924" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@0.0.1920.1040" timestamp="1590565782468" />
     <state x="2110" y="41" key="CommitChangelistDialog2/1920.0.2048.1112/0.0.1920.1040@1920.0.2048.1112" timestamp="1590563955015" />
     <state width="1899" height="385" key="GridCell.Tab.0.bottom" timestamp="1590500413941">
       <screen x="0" y="0" width="1920" height="1040" />
