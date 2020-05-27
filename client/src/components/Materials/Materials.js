@@ -3,7 +3,6 @@ import React, {Component} from "react";
 import '../../styles/Materials/Materials.css';
 import MaterialTable from "material-table";
 import ReactMarkdown from "react-markdown";
-import {text} from "react-table/src/filterTypes";
 
 
 class Materials extends Component {

@@ -3,7 +3,6 @@ import React, {Component} from 'react';
 import "../../styles/Dashboard/StudentDashboard.css";
 
 import {addNotification} from "../App/Notification";
-import {FormGroup} from "react-bootstrap";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
 
@@ -30,10 +29,14 @@ class StudentDashboard extends Component {
         this.setState({
           user: user
         });
-      })
-      .then(res => console.log(res))
-
-
+      },
+        (error) => {
+          this.setState({
+            isLoading: true,
+            error
+          });
+        }
+        )
   };
 
 
@@ -71,7 +74,7 @@ class StudentDashboard extends Component {
           <LinearProgress
             variant="determinate"
             color="secondary"
-            value={user.totalPoints}
+            value={user.totalPoints ? user.totalPoints : 0}
           />
         </div>
         </form>

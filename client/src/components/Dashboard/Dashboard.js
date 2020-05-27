@@ -28,10 +28,13 @@ class Dashboard extends Component {
           this.setState({
             user: user
           });
-        })
-      .then(res => console.log(res))
-
-
+        }, (error) => {
+          this.setState({
+            isLoading: true,
+            error
+          });
+        }
+      )
   };
 
 

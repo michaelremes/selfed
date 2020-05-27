@@ -17,27 +17,6 @@ describe('Sidebar', () => {
   });
 
 
-  // it('renders correctly', () => {
-  //   const wrapper = shallow(<SideBar />);
-  //   expect(wrapper).toMatchSnapshot();
-  //   // On the first run of this test, Jest will generate a snapshot file automatically.
-  // });
-  // it('renders three <TreeItem /> components', () => {
-  //   const wrapper = shallow(SideBar);
-  //   expect(wrapper.find(SideBar)).to.have.lengthOf(3);
-  // // });
-  //
-  // test('snapshot renders', () => {
-  //   const component = renderer.create(<SideBar />);
-  //   let tree = component.toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // });
-
-
-  // it("matches snapshot", () => {
-  //   const tree = renderer.create(<SideBar/>).toJSON();
-  //   expect(tree).toMatchSnapshot();
-  // })
 
 
 
