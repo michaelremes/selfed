@@ -4,7 +4,7 @@ import '../../styles/Materials/Materials.css';
 import MaterialTable from "material-table";
 import ReactMarkdown from "react-markdown";
 
-
+//show text materials to student
 class Materials extends Component {
   constructor(props) {
     super(props);
@@ -130,7 +130,7 @@ class Materials extends Component {
   }
 
   render() {
-    /*render list of tests, if one test is selected, rerender the page and show test */
+    /*render list of materials, if one material is selected, rerender the page and show the material */
     return (
       <div>
         {

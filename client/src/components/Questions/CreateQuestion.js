@@ -80,7 +80,7 @@ class CreateQuestion extends Component {
      textAnswer: event.target.value
     });
   }
-
+ //save selected answer as correct one
   onChangeCorrectAnswer(event) {
 
     let index = event.target.value;
@@ -103,7 +103,7 @@ class CreateQuestion extends Component {
      });
 
   }
-
+  //add another answer to the question
   addItemAnswers() {
     this.setState(previousState => ({
       answers: [...previousState.answers, this.state.answer],
@@ -111,7 +111,7 @@ class CreateQuestion extends Component {
     }));
   }
 
-
+  //remove one of the answers
   removeItemAnswers(index) {
     let array = [...this.state.answers]; // make a separate copy of the array
 
@@ -172,6 +172,7 @@ class CreateQuestion extends Component {
       });
   }
 
+  //show selected type of answer to the question
   renderCorrectAnswer(param) {
     const {
       answer,

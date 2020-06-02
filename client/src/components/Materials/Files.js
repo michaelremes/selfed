@@ -5,6 +5,7 @@ import '../../styles/Materials/Files.css';
 
 import GetAppIcon from '@material-ui/icons/GetApp';
 
+//show downloadable file to student
 class Files extends Component {
   constructor(props) {
     super(props);

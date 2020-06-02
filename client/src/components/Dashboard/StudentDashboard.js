@@ -6,7 +6,6 @@ import {addNotification} from "../App/Notification";
 import LinearProgress from "@material-ui/core/LinearProgress";
 
 
-
 class StudentDashboard extends Component {
   constructor(props) {
     super(props);
@@ -19,26 +18,25 @@ class StudentDashboard extends Component {
   };
 
   componentDidMount() {
-
+    // load logged user to show info about logged user
     fetch('/api/user/' + localStorage.getItem('userId'), {
       method: 'GET',
     })
       .then(res => res.json())
       .then(
-      (user) => {
-        this.setState({
-          user: user
-        });
-      },
+        (user) => {
+          this.setState({
+            user: user
+          });
+        },
         (error) => {
           this.setState({
             isLoading: true,
             error
           });
         }
-        )
+      )
   };
-
 
 
   logout() {
@@ -69,14 +67,14 @@ class StudentDashboard extends Component {
         </header>
 
         <form>
-        <div className='points'>
-          Celkem získanych bodů: {user.totalPoints}
-          <LinearProgress
-            variant="determinate"
-            color="secondary"
-            value={user.totalPoints ? user.totalPoints : 0}
-          />
-        </div>
+          <div className='points'>
+            Celkem získanych bodů: {user.totalPoints}
+            <LinearProgress
+              variant="determinate"
+              color="secondary"
+              value={user.totalPoints ? user.totalPoints : 0}
+            />
+          </div>
         </form>
       </div>
 

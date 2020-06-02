@@ -33,7 +33,7 @@ class Login extends Component {
 
   componentDidMount() {
     const obj = getFromStorage('user_session');
-   // // error obj is null
+   // error obj is null
     if (obj && obj.token) {
 
       const {token} = obj;
@@ -97,6 +97,7 @@ class Login extends Component {
     }).then(res => res.json())
       .then(json => {
         if (json.success) {
+          //save info about logged user for later use
           setInStorage('user_session', {token: json.token});
           localStorage.setItem('username', signInUsername);
           localStorage.setItem('userId', json.user_id);
@@ -180,6 +181,7 @@ class Login extends Component {
         </div>
       );
     }
+    //check user role to do proper redirect
     if(localStorage.getItem('user_role') === 'teacher'){
       return <Redirect to="/dashboard" />
     }

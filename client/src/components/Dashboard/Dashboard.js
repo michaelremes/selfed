@@ -18,7 +18,7 @@ class Dashboard extends Component {
 
 
   componentDidMount() {
-
+    // load logged user to show info about logged user
     fetch('/api/user/' + localStorage.getItem('userId'), {
       method: 'GET',
     })

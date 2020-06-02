@@ -143,6 +143,7 @@ class StudentTests extends Component {
     this.props.history.push("/student/tests");
   }
 
+  //render proper answers to questions
   renderCorrectAnswer(question) {
     switch (question.type) {
       case 'text':
