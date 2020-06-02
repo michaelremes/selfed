@@ -1,6 +1,11 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+###Návod pro spuštění aplikace
+
+V systému je důležité mít nainstalovaný Node.js a npm.
+
+
+
 ## Inicializace
-Pro fungování prjektu je nutné v adresáři projektu nainstalovat npm dependencies.
+Pro fungování projektu je nutné v adresáři projektu nainstalovat npm dependencies.
 
 ### `npm install`
 
@@ -11,8 +16,8 @@ V adresáři projektu můžete spustit:
 
 ### `npm start`
 
-Spustí aplikaci.<br />
-Otevřete na adrese [http://localhost:8080](http://localhost:8080) k zobrazení aplikace ve vašem prohlížeči.
+Spustí aplikaci lokálně.<br />
+Otevřete na adrese http://localhost:8080 k zobrazení aplikace ve vašem prohlížeči.
 
 ### `npm test-api`
 
@@ -36,5 +41,10 @@ Jako *body* příkazu je zapotřebí vyplnit informace o uživateli. Aby měl u�
 }
 ```
 ### Databáze
+
+Pro zobrazení databáze je možné použít apliakci MongoDB Compass, kde stačí zadat adresu databáze.
+
 Databáze je dostupná na adrese: 
 `mongodb://localhost:27017/selfed`
+
+
