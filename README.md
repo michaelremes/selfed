@@ -10,7 +10,7 @@ Pro fungování projektu je nutné v adresáři projektu nainstalovat npm depend
 ### `npm install`
 
 
-## Skripty dostupné pro spuštění
+## Spuštění aplikace
 
 V adresáři projektu můžete spustit:
 
@@ -19,7 +19,18 @@ V adresáři projektu můžete spustit:
 Spustí aplikaci lokálně.<br />
 Apliakci můžete oveřít ve vašem prohlížeči na adrese http://localhost:8080
 
-Spustí API testy vytvořené v aplikaci Postman. Příkaz na spuštění kolekce testů je interně *Newman*. 
+## Příkazy pro testování apliakce 
+
+Pro spuštění api testů slouží příkaz:
+
+### `npm run test-api`
+
+Pro tento příkaz je nutné mít naistalovaný program *Newman*
+
+Pro spuštění JEST testů slouží příkaz:
+
+### `npm test`
+
 
 
 ## První přihlášení do aplikace
