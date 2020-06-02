@@ -29,7 +29,7 @@ const FileUpload = () => {
         if (json.success) {
           addNotification("Úspěch", "Materiál byl úspěšně nahrán.", "success");
         } else {
-          addNotification("Error", "Materiál nemohl být vytvoeřn.", "danger");
+          addNotification("Error", "Materiál nemohl být vytvořen.", "danger");
           this.setState({
             createQuestionError: json.message,
           });
