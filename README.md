@@ -1,4 +1,4 @@
-###Návod pro spuštění aplikace
+## Návod pro spuštění aplikace
 
 V systému je důležité mít nainstalovaný Node.js a npm.
 
