@@ -1,4 +1,4 @@
-## Návod pro spuštění aplikace
+###Návod pro spuštění aplikace
 
 V systému je důležité mít nainstalovaný Node.js a npm.
 
@@ -17,9 +17,7 @@ V adresáři projektu můžete spustit:
 ### `npm start`
 
 Spustí aplikaci lokálně.<br />
-Otevřete na adrese http://localhost:8080 k zobrazení aplikace ve vašem prohlížeči.
-
-### `npm test-api`
+Apliakci můžete oveřít ve vašem prohlížeči na adrese http://localhost:8080
 
 Spustí API testy vytvořené v aplikaci Postman. Příkaz na spuštění kolekce testů je interně *Newman*. 
 
