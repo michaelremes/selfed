@@ -19,13 +19,13 @@ V adresáři projektu můžete spustit:
 Spustí aplikaci lokálně.<br />
 Apliakci můžete oveřít ve vašem prohlížeči na adrese http://localhost:8080
 
-## Příkazy pro testování apliakce: 
+## Příkazy pro testování apliakce 
 
 Pro spuštění api testů slouží příkaz:
 
 ### `npm run test-api`
 
-Pro tento příkaz je nutné mít naistalovaný program *Newman*
+** Pro tento příkaz je nutné mít naistalovaný program *Newman* **
 
 Pro spuštění JEST testů slouží příkaz:
 
