@@ -25,7 +25,7 @@ Pro spuštění api testů slouží příkaz:
 
 ### `npm run test-api`
 
-** Pro tento příkaz je nutné mít naistalovaný program *Newman* **
+Pro tento příkaz je nutné mít naistalovaný program *Newman*
 
 Pro spuštění JEST testů slouží příkaz:
 
