@@ -2,7 +2,7 @@
 Selfed is a web application Developed to help create online tests for students and teachers.
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 ## Inicializace
-Pro fungování prjektu je nutné v adresáři projektu nainstalovat npm dependencies.
+install all dependecies
 
 ### `npm install`
 
