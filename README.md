@@ -29,7 +29,7 @@ JSON For User
     "password": "admin"
 }
 ```
-### Databast
+### Database
 at: 
 `mongodb://localhost:27017/selfed`
 MongoDB Commpass can be used
