@@ -9,7 +9,7 @@ install all dependecies
 ## Commands
 
 ### `npm start`
- [http://localhost:8080](http://localhost:8080) 
+starts application at [http://localhost:8080](http://localhost:8080) 
 
 ### `npm test-api
 run postman test collection
